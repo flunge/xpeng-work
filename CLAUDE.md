@@ -56,6 +56,7 @@ done
 | 聊天中的文档链接 | `docs +fetch --doc-format markdown` | 理解消息引用的实际内容 |
 
 - **智能纪要中必有「相关链接 → 文字记录」**，必须同时读取
+- **跨文档搜索项目/人名时，用 `--scope keyword`**，不下载全文
 - 每个文档读取后用 3 句话总结：①主题 ②谁说了什么关键话 ③与我组的关系
 
 #### Phase 3: 聊天上下文
@@ -166,7 +167,7 @@ lark-cli docs +fetch --api-version v2 --doc "<URL或token>" --doc-format markdow
 # 先看目录（结构未知时优先用）
 lark-cli docs +fetch --api-version v2 --doc "<URL或token>" --scope outline --max-depth 3 --format json
 
-# 按关键词定位
+# 按关键词定位（大文档/多文档搜索优先用，不下载全文）
 lark-cli docs +fetch --api-version v2 --doc "<URL或token>" --scope keyword --keyword "关键词1|关键词2" --format json
 
 # 按章节读取（需要 block_id）
