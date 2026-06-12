@@ -66,6 +66,8 @@ metadata:
 **用途**：数据可视化（KPI对比、进度Dashboard、架构图）
 **生成流程**：SoCheap API（key在 pipelines/media_key.txt）→ 存本地 → 手动贴图到飞书
 **贴图标记**：`【贴图：<filename>.png】`
+- **图片由李坤手动贴入飞书文档**，Agent 不贴图
+- Agent 把图片存到 `projects/GIC_report/`，文档中只放占位文字 `【此处贴图：xxx.png】`
 
 ## QA自检清单（GIC双周报版）
 
