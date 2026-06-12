@@ -88,6 +88,7 @@
 - [chat-log](insights/chat-log.md) — 群聊关键事件时间线
 - [meeting-rules](insights/meeting-rules.md) — 读纪要必须读文字记录
 - [doc-rules](insights/doc-rules.md) — 正式文档规范
+- [quality-rules](insights/quality-rules.md) — 🔴 记忆系统质检规则（17条，每次更新前后必检）
 
 ---
 
