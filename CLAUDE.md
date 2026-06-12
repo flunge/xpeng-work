@@ -272,3 +272,8 @@ lark-cli wiki +move --node-token <token> --target-space-id <space_id> --target-p
    - 不知道某个人是谁（如参会名单里的陌生名字）→ 问
    - 不确定数字/百分比是否准确 → 核实源文档，核实不了就问
    - 发现两个源文档信息矛盾 → 指出矛盾，问哪个为准
+9. **🔴 写出前先过质检**：以下场景在写入前必须逐条过 `insights/quality-rules.md` 的 22 条规则：
+   - 更新飞书周报/GIC报告等正式文档
+   - 创建/更新任何 project 文件
+   - 创建/更新任何 person 文件
+   - 违例：写完直接发，不过质检清单
