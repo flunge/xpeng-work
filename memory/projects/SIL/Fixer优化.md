@@ -32,10 +32,21 @@ SIL/HIL Fixer性能优化 + Diffsion新模型探索（O4-KR1）。
 - EXP_6(低层attn)1:15.5
 - HIL侧：v5降分辨率+batch优化→gpu0 193.1ms（baseline 528.7ms）
 
-### 2026-04 — Nvfixer探索
+### 2026-04-29 — 五一前冲刺
+- 跨车型106 case CCES任务进行中
+
+### 2026-04-22 — MVSA链路+DIFIX耗时
+- 周冯搭建MVSA链路批量化测试，单张DIFIX 75-76ms
+- 转TRT engine时遇到问题，预计本周完成
+- 计划周五在台架上测试实时运行
+- 李坤担心渲染链路branch，建议seal和HIL合并
+
+### 2026-04-20 — Fixer启动
+- 周冯负责AIFIX整体流程
+- 明后天完成环境和部署，预计周四-周五出第一版结论
 - Nvfixer TRT转换多项失败（VAE Encoder、DiT导出问题）
 - 推荐改法A（torch patcher + TRT core_encoder）
-- fp16前向通过，显存优化：13.3G→14.9G（优化前）
+- fp16前向通过
 
 ## 风险
 - 🔴 训练集群仅够并行2个实验（每个~2天），9种模式无法并行
