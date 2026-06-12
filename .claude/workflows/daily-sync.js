@@ -4,10 +4,11 @@ export const meta = {
   phases: [
     { title: '盘点', detail: '列出所有待读取的源文档 URL' },
     { title: '读源文档', detail: '逐篇读取会议逐字稿+智能纪要+Wiki+聊天链接文档' },
+    { title: '🔴老板逐字稿', detail: '高炳涛发言逐句提取——他的关注点决定汇报方向' },
     { title: '聊天上下文', detail: '补读父消息和消息中链接的文档' },
     { title: '人物画像分析', detail: '从逐字稿和IM提取每人行为/性格观察' },
     { title: '记忆写入', detail: '更新 members/*.md, current-initiatives.md, chat-insights.md' },
-    { title: '自检', detail: '逐条核查三不写，确认每条事实有出处' },
+    { title: '自检', detail: '逐条核查三不写+能回答"高炳涛说了什么"' },
   ],
 }
 
