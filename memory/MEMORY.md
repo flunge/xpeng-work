@@ -1,48 +1,113 @@
 # 仿真算法组 — 李坤的数字分身记忆索引
 
-## 核心
-- [likun-role](likun-role.md) — 李坤 P8组长，汇报GIC刘先明，4月入职
-- [boss-gaobingtao](boss-gaobingtao.md) — 高炳涛 P9 部门负责人画像（逐字稿分析）
-- [team-scope](team-scope.md) — Q2闭环仿真4个OKR，6大技术方向
-- [team-members](team-members.md) — 13人全景（冯美慧休产假，在岗12人）
-- [department-context](department-context.md) — 仿真部8组架构、GIC汇报线、上下游协作
-- [current-initiatives](current-initiatives.md) — 7个重点项目的状态、里程碑、风险
+## 线1：人物 (people/)
 
-## 每人详档（members/）
-- [zheng-lina](members/zheng-lina.md) — 郑丽娜 P7，4个OKR业务Owner
-- [yang-xinghao](members/yang-xinghao.md) — 杨星昊 P6A，4个OKR技术Owner
-- [zhou-weixu](members/zhou-weixu.md) — 周蔚旭 P6A，极速模式→UCP 6/10上线
-- [pei-jianhong](members/pei-jianhong.md) — 裴健宏 P6，场景编辑→CLI 6/12
-- [zhou-feng](members/zhou-feng.md) — 周冯 P6，Fixer+Diffusion
-- [lv-wenjie](members/lv-wenjie.md) — 吕文杰 P5，SIL评测+UCP迁移
-- [wang-yuding](members/wang-yuding.md) — 王禹丁 P5，AVM鱼眼（阻塞中）
-- [zhu-xiaofeng](members/zhu-xiaofeng.md) — 朱啸峰 P5，HIL部署+台架
-- [qu-xinyu](members/qu-xinyu.md) — 瞿鑫宇 P5，数据精简+HIL
-- [feng-meihui](members/feng-meihui.md) — 冯美慧 P6，**休产假中**
-- [jin-xirui](members/jin-xirui.md) — 靳希睿 P0，校招新人
-- [yan-xiaozhu](members/yan-xiaozhu.md) — 严潇竹 P0，Agent prompt
+### 我方（组内+老板）
+- [likun](people/likun.md) — 李坤 P8 组长 | active
+- [gaobingtao](people/gaobingtao.md) — 高炳涛 P9 老板 🔴 | active
+- [zheng-lina](people/zheng-lina.md) — 郑丽娜 P7 4OKR业务Owner | active
+- [yang-xinghao](people/yang-xinghao.md) — 杨星昊 P6A 4OKR技术Owner | active
+- [zhou-weixu](people/zhou-weixu.md) — 周蔚旭 P6A 极速模式 | active
+- [pei-jianhong](people/pei-jianhong.md) — 裴健宏 P6 场景编辑 | active
+- [zhou-feng](people/zhou-feng.md) — 周冯 P6 Fixer+Diffusion | active
+- [lv-wenjie](people/lv-wenjie.md) — 吕文杰 P5 复现率Agent | active
+- [wang-yuding](people/wang-yuding.md) — 王禹丁 P5 AVM鱼眼 | active
+- [zhu-xiaofeng](people/zhu-xiaofeng.md) — 朱啸峰 P5 HIL部署 | active
+- [qu-xinyu](people/qu-xinyu.md) — 瞿鑫宇 P5 慢速模式 | active
+- [jin-xirui](people/jin-xirui.md) — 靳希睿 P0 新人 | active
+- [yan-xiaozhu](people/yan-xiaozhu.md) — 严潇竹 P0 Prompt Agent | active
+- [feng-meihui](people/feng-meihui.md) — 冯美慧 P6 | on-leave
 
-## 项目（projects/）
-- [closed-loop-sim](projects/closed-loop-sim.md) — Q2核心战役全貌
+### 管理层
+- [liuxianming](people/liuxianming.md) — 刘先明 GIC负责人
+- [zhouyue](people/zhouyue.md) — 周月 HRBP
+
+### 上下游
+- [dengshuang](people/dengshuang.md) — 邓爽 业务组
+- [xulinkun](people/xulinkun.md) — 徐林鵾 平台组 P8
+- [xiazhixun](people/xiazhixun.md) — 夏志勋 评估组
+- [yangxuezhi](people/yangxuezhi.md) — 杨雪智 AI引擎
+- [laixihu](people/laixihu.md) — 赖西湖 引擎组
+- [zhangchi](people/zhangchi.md) — 张驰 硬件组
+- [wuyimin](people/wuyimin.md) — 吴益民 生产组
+- [liukaituo](people/liukaituo.md) — 刘开拓 闭环场景集PM
+- [huangbaimin](people/huangbaimin.md) — 黄佰民 平台组PM
+
+### 竞争
+- [zhangyu-wangboyang](people/zhangyu-wangboyang.md) — 张雨/王博洋 WM独立团队
+
+### 已离职
+- [du-sicong](people/_departed/du-sicong.md) — 杜思聪 6/5离职 O3技术Owner
+
+### 索引
+- [人物总览+交叉矩阵](people/_index.md)
+- [团队性格画像总集](people/personality-profiles.md)
+
+---
+
+## 线2：团队 (teams/)
+
+- [org-structure](teams/org-structure.md) — 仿真部8组架构+汇报线+会议体系
+- [algo-team](teams/algo-team.md) — 算法组13人+OKR+分工
+- [collaboration](teams/collaboration.md) — 上下游协作+依赖+痛点
+
+---
+
+## 线3：事情 (projects/)
+
+### 场景&生产
+- [_index](projects/场景&生产/_index.md) — Track总览+月目标
+- [极速模式](projects/场景&生产/极速模式.md) — 周蔚旭
+- [场景编辑](projects/场景&生产/场景编辑.md) — 裴健宏
+- [AVM鱼眼](projects/场景&生产/AVM鱼眼.md) — 王禹丁/杨星昊
+- [RC路线](projects/场景&生产/RC路线.md) — 杨星昊
+- [闭环场景集推进](projects/场景&生产/闭环场景集推进.md) — 刘开拓
+- [WM-内部探索](projects/场景&生产/WM-内部探索.md) — 杨星昊
+
+### SIL
+- [_index](projects/SIL/_index.md)
+- [车型泛化](projects/SIL/车型泛化.md) — 杨星昊/裴健宏
+- [Fixer优化](projects/SIL/Fixer优化.md) — 周冯
+- [CLIP-IQA](projects/SIL/CLIP-IQA.md) — 王禹丁
+
+### HIL
+- [_index](projects/HIL/_index.md)
+- [HIL链路部署](projects/HIL/HIL链路部署.md) — 朱啸峰
+- [慢速模式](projects/HIL/慢速模式.md) — 瞿鑫宇
+
+### Agents
+- [_index](projects/Agents/_index.md)
+- [复现率Agent](projects/Agents/复现率Agent.md) — 吕文杰/郑丽娜
+- [TopDiff-Agent](projects/Agents/TopDiff-Agent.md) — 吕文杰
+- [Prompt-Agent](projects/Agents/Prompt-Agent.md) — 严潇竹
+
+---
+
+## 洞察 (insights/)
+
+- [chat-log](insights/chat-log.md) — 群聊关键事件时间线
+- [meeting-rules](insights/meeting-rules.md) — 读纪要必须读文字记录
+- [doc-rules](insights/doc-rules.md) — 正式文档规范
+
+---
+
+## 参考 (refs/)
+
+- [frequent-docs](refs/frequent-docs.md) — 已读文档全量索引
+- [lark-cli](refs/lark-cli.md) — lark-cli命令速记
+- [image-agent](refs/image-agent.md) — 图像全流程
+- [project-context](refs/project-context.md) — lark-cli工作方式
+
+---
 
 ## 汇报
-- [gic-report-repo](gic-report-repo.md) — GIC双周会汇报仓库(Wiki)信息 + 已有报告链接 + Agent使用方法
-- [gic-report-style](gic-report-style.md) — 🔴 李坤三种汇报风格（周报/GIC双周报/日会）+ 使用GPT-Image-2配图规则 + GIC专属QA
-- [gic-report-judgment](gic-report-judgment.md) — 🔴 GIC汇报判断校准：进展≠做成，三级部门视角，问题也是进展
 
-## 竞争与风险
-- [world-model-competition](world-model-competition.md) — 🔴 World Model团队(张雨/王博洋)竞争态势，人多卡多vs我组人少卡少
+- [gic-report-repo](gic-report-repo.md) — GIC双周会仓库
+- [gic-report-style](gic-report-style.md) — 李坤汇报风格（周报/GIC/日会）
+- [gic-report-judgment](gic-report-judgment.md) — GIC汇报判断校准
+- [weekly-report-doc](weekly-report-doc.md) — 周报文档追踪
 
-## 人物画像
-- [personality-profiles](personality-profiles.md) — 组员/老板/Peer性格画像（基于逐字稿）
-- [meeting-agent](meeting-agent.md) — 李坤会议行为画像：发言模式、追问习惯、管理风格
+## 归档
 
-## 参考
-- [doc-writing-rules](doc-writing-rules.md) — 正式文档规范：不写晋升、不写人名、精准scope、简洁
-- [meeting-reading-rules](meeting-reading-rules.md) — 读纪要必须读文字记录，AI摘要丢失个体声音
-- [image-agent](image-agent.md) — 图像全流程：读图(Sonnet视觉)/生图(GPT-Image-2)/搬图/贴图
-- [project-context](project-context.md) — lark-cli工作方式
-- [frequent-doc-context](frequent-doc-context.md) — 已读文档全量索引+会议体系
-- [chat-insights](chat-insights.md) — 群聊关键决策、人员变动、技术突破、团队文化
-- [weekly-report-doc](weekly-report-doc.md) — 周报飞书文档追踪 + 历史归档
-- [weekly-reports/](weekly-reports/) — 每期周报Markdown存档
+- [weekly-reports/](weekly-reports/) — 每期周报存档
+- [daily-sync/](daily-sync/) — 每日采集数据

@@ -43,7 +43,7 @@ media_key.txt
 # Agent session data
 .agents/
 
-# Temporary project files
-projects/
-team_building/
-test-sandbox.txt
+# Temporary project files (root level only)
+/projects/
+/team_building/
+/test-sandbox.txt
