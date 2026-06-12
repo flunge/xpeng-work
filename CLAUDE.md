@@ -64,6 +64,7 @@ done
 - 有 `reply_to` 的消息 → **必须读取父消息**（`lark-cli im +messages-mget --message-ids "<parent_id>"`）
 - 消息中包含飞书 URL → **必须读取该 URL 指向的文档**
 - 成员搜索结果中有技术讨论 → 评估是否需要扩展读取上下文
+- **🔴 关键词搜索到消息后，必须读取对应 p2p/群聊的上下文**：`im search` 只能搜到含关键词的消息，搜不到不含关键词的回复。搜到一条消息后，用 `im +chat-messages-list --chat-id "<id>" --start/--end` 读前后的完整对话，确认是否有老板/关键人物的回复被遗漏
 
 #### Phase 4: 人物画像更新
 
@@ -79,6 +80,8 @@ done
 **每个在岗组员 + 高炳涛，每次同步至少检查是否有新观察可写入 `people/<name>.md`。**
 
 #### Phase 5: 记忆写入
+
+**写入前必读**：OKR文档 `LpbTdfU95oDnnTx5LmAc7Q1WnVg` 是项目边界的基准——创建/更新任何项目文件前，先确认其OKR归属、执行Owner、验收标准。
 
 **三级记忆更新体系**（按新结构）：
 
