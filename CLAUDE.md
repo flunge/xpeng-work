@@ -263,3 +263,9 @@ lark-cli wiki +move --node-token <token> --target-space-id <space_id> --target-p
 5. **写操作前确认**：创建、编辑、删除等写操作先向用户确认
 6. **优先用 shortcut**：`lark-cli <service> +<verb>` 形式优于直接调 API
 7. **不确定时查 skill 参考文档**：`.claude/skills/<service>/references/` 下有详细参数说明
+8. **🔴 不懂就问，严禁脑补**：遇到以下情况立即向用户确认，不跳过、不猜测、不瞎写：
+   - 不认识的缩写/术语（如 UCP、CPFS、Seal、Hail）→ 问
+   - 不确定项目边界（如"数据精简是独立项目还是HIL子任务"）→ 问
+   - 不知道某个人是谁（如参会名单里的陌生名字）→ 问
+   - 不确定数字/百分比是否准确 → 核实源文档，核实不了就问
+   - 发现两个源文档信息矛盾 → 指出矛盾，问哪个为准
