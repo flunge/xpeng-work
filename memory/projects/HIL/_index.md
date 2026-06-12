@@ -5,7 +5,7 @@ status: active
 since: 2026-04
 owner: 郑丽娜（业务Owner）/ 杨星昊（技术Owner）
 projects:
-  - HIL链路部署
+  - HIL链路部署（含数据精简/VM搭建/渲染回传）
   - 慢速模式
 ---
 
