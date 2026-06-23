@@ -12,7 +12,9 @@ memory/daily-sync/launchd-*
 
 # OS files
 .DS_Store
+**/.DS_Store
 Thumbs.db
+__MACOSX/
 
 # IDE
 .vscode/
@@ -21,8 +23,17 @@ Thumbs.db
 # Claude Code internal
 .claude/projects/
 
-# Skills lock
-skills-lock.json
+# Logs
+*.log
+meal/notifications/
+
+# Node
+node_modules/
+package-lock.json
+
+# Binary / large files
+*.pptx
+*.ppt
 
 # Large models / datasets
 CosyVoice/
