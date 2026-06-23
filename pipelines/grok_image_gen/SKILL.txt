@@ -1,0 +1,110 @@
+---
+name: socheap-grok-image-media-skill
+description: User-facing workflow for creating and polling Grok Imagine Image jobs through the SoCheap Media API, including text-to-image, image-to-image, multi-output handling, and output retrieval.
+---
+
+# Generate Grok Imagine Images
+
+Use this skill when a user wants to generate `grok-imagine-image` images through SoCheap's public Media API with a SoCheap Media API key.
+
+## Key And Endpoint
+
+- Base URL: `https://socheap.ai`.
+- Do not add `/api/v1`.
+- Create endpoint: `POST https://socheap.ai/media/image/generations`.
+- Get job endpoint: `GET https://socheap.ai/media/image/generations/:id`.
+- Cancel endpoint: `POST https://socheap.ai/media/image/generations/:id/cancel`.
+- Use `Authorization: Bearer $MEDIA_API_KEY`.
+- If the dashboard "Use Key" modal shows a different API endpoint, use that endpoint instead.
+
+## Secret Handling
+
+- Never include the API key in the final reply.
+- Do not write the API key into files or logs.
+- If saving response JSON, save response bodies only; do not save request headers.
+
+## Async Flow
+
+Create with `POST /media/image/generations`, then poll `GET /media/image/generations/:id` every `5` seconds until `completed`, `failed`, or `cancelled`. Default maximum wait is `10` minutes. On completion, generated image URLs are in `data.result.outputs`.
+
+## Request Contract
+
+- Model: `grok-imagine-image`.
+- Modes: `standard`, `quality`.
+- `standard` supports text-to-image and exactly `1` reference image.
+- `quality` supports text-to-image only; do not send `image_urls`.
+- Text-to-image `standard` may return multiple images.
+- Text-to-image `quality` may return multiple images.
+- Image-to-image `standard` may return multiple images.
+- Supported aspect ratios for `standard` text-to-image, `standard` image-to-image, and `quality` text-to-image: `1:1`, `16:9`, `9:16`, `3:2`, `2:3`.
+- For image-to-image, `aspect_ratio` is a requested target ratio; output pixels may not match it exactly.
+- For image-to-image, send exactly `1` public JPEG/PNG/WebP URL in `image_urls`, up to `10MB`.
+- Do not send `resolution` or `seed`.
+
+Do not send unsupported fields.
+
+## Quick Start
+
+```bash
+export BASE_URL="https://socheap.ai"
+BASE_URL="${BASE_URL%/}"
+export MEDIA_API_KEY="sk-your-media-group-key"
+export CLIENT_REQUEST_ID="grok-image-$(uuidgen)"
+```
+
+Text-to-image:
+
+```bash
+curl -sS -X POST "$BASE_URL/media/image/generations" \
+  -H "Authorization: Bearer $MEDIA_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "grok-imagine-image",
+    "mode": "standard",
+    "client_request_id": "'"$CLIENT_REQUEST_ID"'",
+    "prompt": "A cinematic futuristic sneaker ad on a clean studio floor",
+    "aspect_ratio": "16:9"
+  }'
+```
+
+Image-to-image:
+
+```bash
+curl -sS -X POST "$BASE_URL/media/image/generations" \
+  -H "Authorization: Bearer $MEDIA_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "grok-imagine-image",
+    "mode": "standard",
+    "client_request_id": "'"$CLIENT_REQUEST_ID"'",
+    "prompt": "Restyle this image as a cinematic studio ad",
+    "image_urls": ["https://example.com/reference.png"],
+    "aspect_ratio": "16:9"
+  }'
+```
+
+Poll:
+
+```bash
+curl -sS -X GET "$BASE_URL/media/image/generations/JOB_ID_FROM_CREATE_RESPONSE" \
+  -H "Authorization: Bearer $MEDIA_API_KEY"
+```
+
+Download each output URL promptly after completion:
+
+```bash
+curl -L "OUTPUT_URL_FROM_COMPLETED_RESPONSE" -o grok-image-output.png
+file grok-image-output.png
+```
+
+## Idempotency
+
+- Use a fresh UUID-like `client_request_id` for each new job.
+- If the create request disconnects, retry with the same `client_request_id` and the exact same body.
+- If prompt, media inputs, or parameters change, use a new `client_request_id`.
+
+## Final Reply Format
+
+For success: job ID, final status, saved file paths if downloaded, and output URLs if useful.
+
+For failure, cancellation, or timeout: job ID, final or last status, elapsed time for timeout, and user-facing error fields if present.
