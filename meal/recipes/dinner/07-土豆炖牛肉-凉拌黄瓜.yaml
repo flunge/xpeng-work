@@ -1,0 +1,76 @@
+title: "土豆炖牛肉 + 凉拌黄瓜"
+type: dinner
+difficulty: medium
+total_time: "60分钟（可用高压锅/炖锅预约）"
+servings: 4
+tools: [炖锅, 炒锅]
+series: "炖菜+凉菜"
+tags: [牛肉, 土豆, 胡萝卜, 炖]
+ingredient_tags: ['牛肉', '土豆', '胡萝卜', '黄瓜']
+ingredients:
+  土豆炖牛肉:
+    - name: 牛腩
+      amount: 400g
+      note: 切块
+    - name: 土豆
+      amount: 3个
+      note: 去皮切块
+    - name: 胡萝卜
+      amount: 1根
+      note: 切滚刀块
+    - name: 洋葱
+      amount: 半个
+      note: 切块
+    - name: 姜
+      amount: 3-4片
+    - name: 宝宝酱油
+      amount: 2大勺
+    - name: 冰糖
+      amount: 1小块
+    - name: 番茄酱
+      amount: 1大勺
+      note: 增加红色和酸甜味
+    - name: 八角
+      amount: 1个
+    - name: 葱花
+      amount: 少许
+  凉拌黄瓜:
+    - name: 黄瓜
+      amount: 2根
+    - name: 蒜
+      amount: 2瓣
+      note: 切末
+    - name: 醋
+      amount: 1大勺
+    - name: 宝宝酱油
+      amount: 1小勺
+    - name: 糖
+      amount: 少许
+    - name: 香油
+      amount: 几滴
+  主食:
+    - name: 大米
+      amount: 2杯
+steps:
+  - step: "牛腩冷水入锅，煮开后撇去浮沫，捞出冲洗干净"
+    tool: 炖锅
+  - step: "炖锅倒少许油，下姜片和洋葱炒香"
+    tool: 炖锅
+  - step: "加入牛肉块翻炒至表面微黄"
+    tool: 炖锅
+  - step: "加入酱油、冰糖、番茄酱、八角，翻炒上色"
+    tool: 炖锅
+  - step: "加入足量开水（没过牛肉），大火烧开后转小火炖40分钟"
+    tool: 炖锅
+  - step: "加入土豆块和胡萝卜块，继续炖15-20分钟至土豆软烂"
+    tool: 炖锅
+  - step: "大火收汁，撒葱花"
+  - step: "黄瓜拍碎切段，加入蒜末、醋、酱油、糖、香油拌匀即可"
+  - step: "和米饭一起上桌"
+night_prep:
+  - "牛腩切块，焯水后沥干冷藏"
+  - "土豆、胡萝卜去皮切块，泡在水中冷藏防氧化"
+  - "洋葱切块，姜切片"
+  - "黄瓜洗净，用保鲜膜包好冷藏"
+  - "酱汁调好冷藏"
+notes: "牛腩可以提前一天用炖锅炖好，第二天加热即可，会更入味。不加辣椒和花椒，用番茄酱提鲜。"

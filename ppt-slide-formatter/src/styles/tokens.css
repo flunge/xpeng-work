@@ -1,0 +1,46 @@
+/* ============================================================
+   tokens.css — 设计令牌（design §4）
+   集中管理配色 / 字体 / 尺寸，便于全局逐字微调
+   ============================================================ */
+:root {
+  /* —— 背景 —— */
+  --bg-deep-1: #0A0E17;
+  --bg-deep-2: #05080F;
+  --bg-panel: rgba(18, 26, 40, 0.55);
+  --bg-panel-solid: #0E141F;
+
+  /* —— 强调色 —— */
+  --accent-orange: #FF6A00;
+  --accent-orange-hover: #FF8A33;
+  --accent-cyan: #00B4FF;
+  --accent-cyan-soft: #3DD0FF;
+
+  /* —— 文本 —— */
+  --text-primary: #E8EEF6;
+  --text-muted: #8A97A8;
+  --text-dim: #5A6678;
+
+  /* —— HUD 线条 / 网格 —— */
+  --hud-line: rgba(0, 180, 255, 0.25);
+  --hud-line-strong: rgba(0, 180, 255, 0.5);
+  --hud-orange-line: rgba(255, 106, 0, 0.45);
+  --hud-grid: rgba(120, 150, 190, 0.06);
+
+  /* —— 字体 —— */
+  --font-mono: ui-monospace, "JetBrains Mono", "SF Mono", Consolas, "Liberation Mono", Menlo, monospace;
+  --font-cn: "Source Han Sans SC", "Noto Sans SC", "Microsoft YaHei", system-ui, -apple-system, sans-serif;
+
+  /* —— Logo —— */
+  --logo-size: clamp(28px, 3.2vw, 48px);
+  --logo-inset-x: 2.2vw;
+  --logo-inset-y: 2.2vh;
+
+  /* —— 舞台 16:9 —— */
+  --stage-w: 1280px;
+  --stage-h: 720px;
+
+  /* —— 半径 / 间距 —— */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 14px;
+}

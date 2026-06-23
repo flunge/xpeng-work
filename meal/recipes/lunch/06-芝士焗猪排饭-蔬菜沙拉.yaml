@@ -1,0 +1,66 @@
+title: "芝士焗猪排饭（空气炸锅版）+ 蔬菜沙拉"
+type: lunch
+difficulty: medium
+total_time: "45分钟"
+servings: 4
+tools: [空气炸锅, 炒锅]
+series: "焗饭+沙拉"
+tags: [猪肉, 起司, 西式, 孩子最爱]
+ingredient_tags: ['猪排', '芝士', '玉米', '生菜']
+ingredients:
+  芝士焗猪排饭:
+    - name: 猪里脊肉
+      amount: 4片
+      note: 每片约100g，用刀背拍松
+    - name: 姜片
+      amount: 3-4片
+    - name: 宝宝酱油
+      amount: 1大勺
+    - name: 玉米淀粉
+      amount: 适量
+      note: 裹粉用
+    - name: 鸡蛋
+      amount: 1个
+    - name: 面包糠
+      amount: 适量
+    - name: 剩米饭
+      amount: 4碗
+    - name: 番茄酱
+      amount: 3大勺
+    - name: 玉米粒
+      amount: 小半碗
+    - name: 青豆
+      amount: 小半碗
+    - name: 马苏里拉芝士碎
+      amount: 适量
+  蔬菜沙拉:
+    - name: 生菜
+      amount: 适量
+    - name: 黄瓜
+      amount: 1根
+      note: 切片
+    - name: 小番茄
+      amount: 8颗
+      note: 对半切
+    - name: 沙拉酱
+      amount: 适量
+      note: 香甜味
+steps:
+  - step: "猪里脊切片，用刀背两面拍松，加姜片和酱油腌制15分钟"
+  - step: "腌好的猪排依次蘸淀粉→蛋液→面包糠，压紧"
+  - step: "空气炸锅200℃预热3分钟，放入猪排，喷少许油（或用油刷刷一层薄油）"
+    tool: 空气炸锅
+  - step: "先烤10分钟，翻面再烤5分钟至表面金黄酥脆"
+    tool: 空气炸锅
+  - step: "炒锅加少许油，放入米饭、番茄酱、玉米粒、青豆翻炒均匀"
+    tool: 炒锅
+  - step: "耐热烤盘铺上番茄酱炒饭，猪排切条铺在饭上，撒满马苏里拉芝士碎"
+  - step: "空气炸锅转180℃，烤5-8分钟至芝士融化金黄"
+    tool: 空气炸锅
+  - step: "蔬菜洗净切好，拌入沙拉酱"
+  - step: "焗饭取出切块，搭配蔬菜沙拉上桌"
+night_prep:
+  - "猪排腌制好，裹好面包糠（不蘸蛋液）放烤盘冷藏，第二天早上再蘸蛋液和面包糠"
+  - "蔬菜洗净沥干，切好冷藏"
+  - "米饭煮好放凉或使用剩米饭"
+notes: "这道菜是孩子们的最爱——芝士焗饭+炸猪排+沙拉，三个让他们无法抗拒的元素。猪排可以先炸/烤好，吃之前再放芝士焗。"

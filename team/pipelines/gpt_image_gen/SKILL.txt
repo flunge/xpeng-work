@@ -1,0 +1,239 @@
+---
+name: socheap-gpt-image-media-skill
+description: Single-file workflow for using a SoCheap Media group API key to create and poll gpt-image-2 image jobs through the public Media API, including request constraints, text-to-image, image-to-image, and output retrieval.
+---
+
+# Generate GPT Image 2
+
+Use this skill when a user wants to generate `gpt-image-2` images through SoCheap's public Media API with a SoCheap Media API key.
+
+This is a single-file, user-facing workflow. It only assumes the user has a SoCheap API base URL and a SoCheap Media API key.
+
+## Key And Endpoint
+
+- Use a SoCheap Media API key.
+- Send it as `Authorization: Bearer $MEDIA_API_KEY`.
+- Do not use any key that is not issued by SoCheap for a Media group.
+- Base URL: `https://socheap.ai`.
+- Endpoint paths are mounted at the site root. Do not add `/api/v1`.
+- Create endpoint: `POST https://socheap.ai/media/image/generations`.
+- Get job endpoint: `GET https://socheap.ai/media/image/generations/:id`.
+- If the user's dashboard "Use Key" modal shows a different API endpoint, use that endpoint instead.
+
+## Base URL Rules
+
+- `$BASE_URL` is the origin/base API endpoint, not the media path.
+- Good: `https://socheap.ai`
+- Bad: `https://socheap.ai/`, `https://socheap.ai/media`, `https://socheap.ai/api/v1`
+- If the user gives a trailing slash, remove it.
+- If the user gives `https://socheap.ai/media`, normalize it to `https://socheap.ai`.
+- If the user gives a dashboard-provided endpoint, prefer that value, then remove a trailing slash.
+
+```bash
+export BASE_URL="https://socheap.ai"
+BASE_URL="${BASE_URL%/}"
+```
+
+## Secret Handling
+
+- Never include the API key in the final reply.
+- Do not write the API key into files.
+- Do not paste full shell history, request headers, or command output that includes the key.
+- If saving create or poll JSON for debugging, save only response bodies; do not save request headers.
+- Do not share temporary response JSON or logs unless the user explicitly asks.
+
+## Async Flow
+
+This is an asynchronous API.
+
+1. Call `POST /media/image/generations` to create a job.
+2. The create response returns a job ID in `data.id` and usually a `data.poll_url`.
+3. Call `GET /media/image/generations/:id` to check the job.
+4. Keep polling with `GET` until `data.status` is `completed`, `failed`, or `cancelled`.
+5. When `data.status` is `completed`, generated image URLs are in `data.result.outputs`.
+
+Common statuses:
+
+- `queued`: job accepted and waiting.
+- `processing`: job is running.
+- `completed`: generation finished; read `data.result.outputs`.
+- `failed`: generation failed; read `data.error_code` and `data.error_message`.
+- `cancelled`: job was cancelled.
+
+Polling strategy:
+
+- Poll every `5` seconds.
+- Default maximum wait: `10` minutes.
+- Continue waiting for `queued` and `processing`.
+- On `completed`, download the output URLs promptly.
+- On `failed` or `cancelled`, report `job_id`, `status`, `error_code`, and `error_message`.
+- On timeout, report `job_id`, last `status`, and elapsed time. Do not present timeout as a generation failure.
+
+## Request Contract
+
+Required:
+
+- `model = "gpt-image-2"`
+- `prompt`
+
+Recommended:
+
+- `client_request_id`, unique per create request. Reusing the same API key, same `client_request_id`, and same request body replays the existing job. Reusing the same `client_request_id` with a different body returns a conflict.
+- For a new generation, use a fresh UUID-like `client_request_id`.
+- If the create request disconnects and it is unclear whether the job was created, retry with the same `client_request_id` and the exact same request body.
+- If the user wants a different image or changed parameters, use a new `client_request_id`.
+
+Optional:
+
+- `mode = "standard"`; this is the only current public mode.
+- `resolution = "1K" | "2K" | "4K"`; default is `1K`.
+- `aspect_ratio = "auto" | "1:1" | "9:16" | "16:9" | "4:3" | "3:4"`; default is `auto`.
+- `image_urls`: omit or pass an empty list for text-to-image; pass `1-16` public image URLs for image-to-image. `POST /media/files` returned `data.file.uri` values are valid inputs.
+
+Hard rules:
+
+- `aspect_ratio=auto` is only valid with `resolution=1K`.
+- `resolution=4K` does not support `aspect_ratio=1:1`.
+- Do not send unsupported fields such as `seed`, `n`, `output_format`, `quality`, or alternate model names.
+- Public model stays `gpt-image-2`.
+
+Normalize natural-language parameters before sending:
+
+- `1k`, `1K`, `1024`, or "low/default resolution" -> `"1K"`
+- `2k`, `2K`, or "medium resolution" -> `"2K"`
+- `4k`, `4K`, or "high resolution" -> `"4K"`
+- If the user does not specify aspect ratio, use `"auto"` with `"1K"`.
+- If the user asks for square at `4K`, do not send it; ask for a different aspect ratio or use `2K`.
+- For text-to-image, omit `image_urls`.
+- For image-to-image, send `image_urls` with `1-16` public image URLs.
+
+## Quick Start
+
+Set variables:
+
+```bash
+export BASE_URL="https://socheap.ai"
+BASE_URL="${BASE_URL%/}"
+export MEDIA_API_KEY="sk-your-media-group-key"
+export CLIENT_REQUEST_ID="gpt-image-2-$(uuidgen)"
+```
+
+Create a text-to-image job:
+
+```bash
+curl -sS -X POST "$BASE_URL/media/image/generations" \
+  -H "Authorization: Bearer $MEDIA_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "gpt-image-2",
+    "mode": "standard",
+    "client_request_id": "'"$CLIENT_REQUEST_ID"'",
+    "prompt": "A simple red ceramic mug on a clean white studio background",
+    "resolution": "1K",
+    "aspect_ratio": "auto"
+  }'
+```
+
+The create request returns immediately. Copy `data.id` from the response, then use `GET` to poll:
+
+```bash
+curl -sS -X GET "$BASE_URL/media/image/generations/JOB_ID_FROM_CREATE_RESPONSE" \
+  -H "Authorization: Bearer $MEDIA_API_KEY"
+```
+
+Repeat polling until `data.status` is `completed`, `failed`, or `cancelled`. For a completed job, generated image URLs are in `data.result.outputs`.
+
+Minimal completed response shape:
+
+```json
+{
+  "code": 0,
+  "message": "success",
+  "data": {
+    "id": "JOB_ID",
+    "status": "completed",
+    "model": "gpt-image-2",
+    "result": {
+      "outputs": ["https://example.com/generated-image.png"]
+    }
+  }
+}
+```
+
+## Image-to-image
+
+Pass `image_urls` with `1-16` public image URLs:
+
+```bash
+curl -sS -X POST "$BASE_URL/media/image/generations" \
+  -H "Authorization: Bearer $MEDIA_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "gpt-image-2",
+    "mode": "standard",
+    "client_request_id": "gpt-image-i2i-demo-001",
+    "prompt": "Restyle this product photo as a premium studio catalog shot",
+    "resolution": "2K",
+    "aspect_ratio": "1:1",
+    "image_urls": ["https://example.com/reference.png"]
+  }'
+```
+
+## Download Output
+
+After completion, download any URL from `data.result.outputs` promptly. Output URLs may expire.
+
+```bash
+curl -L "OUTPUT_URL_FROM_COMPLETED_RESPONSE" -o gpt-image-2-output.png
+```
+
+Verify that the downloaded file is an image, not an error page:
+
+```bash
+file gpt-image-2-output.png
+```
+
+## Manual Curl
+
+Use this minimal request when you do not need examples with shell setup:
+
+```bash
+curl -X POST "$BASE_URL/media/image/generations" \
+  -H "Authorization: Bearer $MEDIA_API_KEY" \
+  -H "Content-Type: application/json" \
+  -d '{
+    "model": "gpt-image-2",
+    "mode": "standard",
+    "client_request_id": "gpt-image-demo-001",
+    "prompt": "A simple red ceramic mug on a clean white studio background",
+    "resolution": "1K",
+    "aspect_ratio": "auto"
+  }'
+```
+
+Poll the returned `data.poll_url` or `/media/image/generations/:id` until `status` is `completed`, `failed`, or `cancelled`.
+
+## Troubleshooting
+
+- `401` or `403`: check that the bearer token is a SoCheap API key assigned to a media group.
+- `400`: check unsupported fields, invalid `resolution` and `aspect_ratio` combinations, missing `prompt`, or too many `image_urls`.
+- `409`: `client_request_id` was reused with a different normalized request body.
+- Long `queued` or `processing`: wait and keep polling within the requested timeout; if it remains stuck, report the job ID, status, elapsed time, and visible error fields.
+
+## Final Reply Format
+
+For a completed job, reply with:
+
+- Job ID
+- Final status
+- Saved file path, if downloaded
+- Output URL, if useful
+
+For a failed, cancelled, or timed-out job, reply with:
+
+- Job ID
+- Final or last status
+- Elapsed time, for timeout
+- User-facing `error_code` and `error_message`, if present
+
+Never include the API key, request headers, full raw responses, or unrelated debug output.

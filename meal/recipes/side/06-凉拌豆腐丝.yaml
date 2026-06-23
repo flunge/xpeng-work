@@ -1,0 +1,33 @@
+title: "凉拌豆腐丝"
+type: side
+category: 凉菜
+difficulty: easy
+total_time: "12分钟"
+servings: 4
+tools: [玻璃锅]
+tags: [凉菜, 豆制品, 高蛋白]
+ingredient_tags: ['豆腐丝', '黄瓜']
+ingredients:
+  凉拌豆腐丝:
+    - name: 豆腐丝
+      amount: 200g
+    - name: 黄瓜
+      amount: 半根
+      note: 切丝
+    - name: 胡萝卜
+      amount: 少许
+      note: 切丝
+    - name: 蒜
+      amount: 2瓣
+      note: 切末
+    - name: 宝宝酱油
+      amount: 1大勺
+    - name: 香油
+      amount: 几滴
+steps:
+  - step: "玻璃锅烧开水，豆腐丝焯1分钟去豆腥，捞出过凉沥干"
+    tool: 玻璃锅
+  - step: "豆腐丝加黄瓜丝、胡萝卜丝、蒜末、酱油、香油拌匀即可"
+night_prep:
+  - "黄瓜、胡萝卜切丝冷藏；蒜切末"
+notes: "豆腐丝补充植物蛋白，黄瓜清爽，整体清淡少盐。"

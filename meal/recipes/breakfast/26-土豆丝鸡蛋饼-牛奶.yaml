@@ -1,0 +1,49 @@
+title: "土豆丝鸡蛋饼 + 纯牛奶"
+type: breakfast
+difficulty: easy
+total_time: "20分钟（前一晚10分钟 + 早上10分钟）"
+servings: 4
+tools: [不粘煎锅]
+series: "煎饼"
+week: 3
+day: saturday
+tags: [主食, 蔬菜, 蛋奶, 快手]
+ingredient_tags: ['土豆', '胡萝卜', '鸡蛋', '面粉', '牛奶']
+ingredients:
+  土豆丝鸡蛋饼:
+    - name: 土豆
+      amount: 2个
+      note: 中等大小，去皮擦丝
+    - name: 胡萝卜
+      amount: 半根
+      note: 去皮擦丝
+    - name: 鸡蛋
+      amount: 4个
+    - name: 面粉
+      amount: 3大勺
+    - name: 盐
+      amount: 少许
+    - name: 葱花
+      amount: 少许
+    - name: 食用油
+      amount: 适量
+  搭配:
+    - name: 纯牛奶
+      amount: 4杯
+    - name: 番茄酱
+      amount: 少许
+      optional: true
+      note: 蘸食
+night_prep:
+  - "土豆和胡萝卜擦丝，放入大碗中加少许盐抓匀，腌制5分钟"
+  - "用手挤掉土豆丝出的水分"
+  - "土豆丝、胡萝卜丝、鸡蛋、面粉、葱花混合拌匀成糊状，盖保鲜膜冷藏"
+morning_steps:
+  - "不粘锅刷薄油，中火烧热"
+  - "舀一勺土豆丝糊放入锅中，用铲子压平成圆饼状（约1cm厚）"
+  - "中小火煎至底部金黄定型（约3分钟）"
+  - "翻面继续煎3分钟至两面金黄"
+  - "重复做完所有饼（约做8个小饼，每人2个）"
+  - "搭配牛奶上桌，可蘸番茄酱吃"
+notes: "土豆丝挤掉水分后煎出来的饼更酥脆。可以提前一晚做好半成品冷藏，早上直接煎。也可以加鸡肉丁或虾仁碎增加蛋白质。"
+batch_prep: ""

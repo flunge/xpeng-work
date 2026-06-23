@@ -1,0 +1,40 @@
+# 家庭配置
+family:
+  members:
+    - role: 爸爸
+    - role: 妈妈
+    - role: 大宝
+      age: 7
+      gender: 男
+    - role: 二宝
+      age: 5
+      gender: 男
+  count: 4
+  preferences:
+    # 口味限制
+    no_spicy: true                        # 不吃辣
+    light_oil_salt: true                  # 少油少盐
+    # 儿童注意事项
+    kid_friendly: true                    # 儿童友好
+    # 有用厨具（充分利用）
+    appliances:
+      - 破壁机      # 米糊/豆浆/浓汤/果汁
+      - 空气炸锅    # 烘烤/炸物（少油）
+      - 不粘煎锅    # 煎饼/煎蛋/煎鱼
+      - 炖锅        # 炖汤/红烧
+      - 玻璃锅      # 煮面/煮汤/煮粥
+      - 炒锅        # 炒菜/炒饭
+      - 电饭煲      # 煮饭/预约/蒸菜
+      - 蒸锅        # 蒸馒头/蒸鱼/蒸蛋
+
+  # 早餐时间约束
+  breakfast:
+    max_morning_time: 30  # 早上最多30分钟
+    night_prep_ok: true    # 前一晚可以准备
+
+  # 节假日正餐要求（中餐/晚餐）
+  holiday_meal:
+    min_dishes: 3           # 每餐至少3道菜（节假日/周末加菜）
+    max_dishes: 3           # 最多3道菜
+    has_staple: true        # 必须有主食（饭/面/馒头）
+    soup_optional: true     # 汤可选

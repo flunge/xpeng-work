@@ -1,0 +1,47 @@
+title: "番茄鸡蛋面 + 纯牛奶"
+type: breakfast
+difficulty: easy
+total_time: "20分钟（前一晚10分钟 + 早上10分钟）"
+servings: 4
+tools: [玻璃锅]
+series: "汤面"
+week: 3
+day: sunday
+tags: [番茄, 鸡蛋, 汤面, 酸甜]
+ingredient_tags: ['番茄', '鸡蛋', '面条', '牛奶']
+ingredients:
+  番茄鸡蛋面:
+    - name: 番茄
+      amount: 3个
+      note: 中等大小，选熟透的
+    - name: 鸡蛋
+      amount: 4个
+    - name: 细挂面
+      amount: 250g
+    - name: 葱花
+      amount: 少许
+    - name: 盐
+      amount: 少许
+    - name: 糖
+      amount: 1小勺
+      note: 平衡酸味
+    - name: 生抽
+      amount: 1小勺
+    - name: 香油
+      amount: 几滴
+  搭配:
+    - name: 纯牛奶
+      amount: 4杯
+night_prep:
+  - "番茄顶部划十字，开水烫一下去皮，切小块，冷藏"
+  - "鸡蛋打散加少许盐，冷藏"
+  - "葱花切好，冷藏"
+morning_steps:
+  - "玻璃锅加少许油，放入番茄块中火炒至出汁软烂"
+  - "加入盐和糖，倒入适量开水（约800ml）"
+  - "水开后下挂面，煮至八分熟（约3分钟）"
+  - "淋入蛋液，不要立刻搅动，等蛋花浮起"
+  - "加生抽调味，撒葱花和香油"
+  - "盛碗，搭配牛奶上桌"
+notes: "番茄一定要炒出红油才香，选熟透的番茄味道更浓郁。面煮到八分熟就关火，余温会让面继续变软。酸甜开胃，孩子一般都爱。"
+batch_prep: ""

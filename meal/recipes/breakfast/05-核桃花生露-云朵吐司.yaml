@@ -1,0 +1,46 @@
+title: "核桃花生露 + 云朵吐司"
+type: breakfast
+difficulty: easy
+total_time: "20分钟（前一晚5分钟 + 早上15分钟）"
+servings: 4
+tools: [破壁机, 空气炸锅]
+series: "露+吐司"
+week: 1
+day: friday
+tags: [坚果, 蛋奶, 快手]
+ingredient_tags: ['吐司', '核桃', '花生', '鸡蛋', '芝士', '鸡胸肉']
+ingredients:
+  核桃花生露:
+    - name: 核桃仁
+      amount: 30g
+    - name: 花生仁
+      amount: 30g
+      note: 温水泡2小时去皮口感更顺滑
+    - name: 大米
+      amount: 10g
+    - name: 冰糖
+      amount: 适量
+  云朵吐司:
+    - name: 厚切吐司
+      amount: 4片
+    - name: 鸡蛋
+      amount: 4个
+    - name: 鸡胸肉
+      amount: 半块
+      note: 约80g，煮熟切小丁，代替火腿片
+    - name: 马苏里拉芝士碎
+      amount: 适量
+    - name: 葱花
+      amount: 少许
+      optional: true
+night_prep:
+  - "核桃仁、花生仁、大米放入破壁机，加水至450ml，预约'豆浆'功能"
+  - "鸡胸肉冷水下锅煮8分钟，焖5分钟至熟透，捞出切小丁，放入保鲜盒冷藏"
+  - "吐司片、鸡蛋、芝士碎备好"
+morning_steps:
+  - "核桃花生露已好，倒入杯中，可加冰糖调味"
+  - "吐司片放在铺了油纸的烤盘上，用勺子在中间压出一个凹坑"
+  - "每个凹坑打入一个鸡蛋，在蛋黄周围铺上鸡肉丁和芝士碎"
+  - "空气炸锅160℃预热2分钟，放入吐司烤10分钟"
+  - "烤至蛋清凝固、蛋黄全熟（约12-13分钟），撒葱花出锅"
+notes: "花生去皮后露更顺滑。如果大人想吃溏心可提前2分钟取出。云朵吐司的蛋黄烤到全熟切开吃更安心。"

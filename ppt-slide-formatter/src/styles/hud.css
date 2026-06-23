@@ -1,0 +1,141 @@
+/* ============================================================
+   hud.css — HUD 边框 / 四角 / 页眉页脚状态行 / Logo / 导航
+   ============================================================ */
+
+/* —— HUD 外框（四角括号 + 细边）—— */
+.hud-frame {
+  position: absolute;
+  inset: 24px;
+  border: 1px solid var(--hud-line);
+  border-radius: 2px;
+  pointer-events: none;
+  z-index: 1;
+}
+.hud-frame::before,
+.hud-frame::after {
+  content: "";
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border: 2px solid var(--hud-line-strong);
+}
+.hud-frame::before { top: -1px; left: -1px; border-right: 0; border-bottom: 0; }
+.hud-frame::after  { bottom: -1px; right: -1px; border-left: 0; border-top: 0; }
+
+/* 另一对角（用独立元素实现两侧括号对称） */
+.hud-frame .corner-tr,
+.hud-frame .corner-bl {
+  position: absolute;
+  width: 26px;
+  height: 26px;
+  border: 2px solid var(--hud-line-strong);
+}
+.hud-frame .corner-tr { top: -1px; right: -1px; border-left: 0; border-bottom: 0; }
+.hud-frame .corner-bl { bottom: -1px; left: -1px; border-right: 0; border-top: 0; }
+
+/* —— 页眉状态行 —— */
+.slide-hud-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  margin-bottom: 8px;
+  min-height: 16px;
+}
+.slide-hud-top .hud-on { color: #35E08A; }
+.slide-hud-top .hud-accent { color: var(--accent-cyan-soft); }
+
+/* —— 页脚状态行 —— */
+.slide-hud-bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  margin-top: auto;
+  padding-top: 12px;
+  font-family: var(--font-mono);
+  font-size: 12px;
+  letter-spacing: 0.06em;
+  color: var(--text-dim);
+  text-transform: uppercase;
+  border-top: 1px solid var(--hud-line);
+}
+.slide-hud-bottom .hud-on { color: #35E08A; }
+
+/* —— 右上角 XPENG Logo（JS 注入）—— */
+.slide-logo {
+  position: absolute;
+  top: var(--logo-inset-y);
+  right: var(--logo-inset-x);
+  height: var(--logo-size);
+  width: auto;
+  z-index: 5;
+  opacity: 0.96;
+  pointer-events: none;
+  filter: drop-shadow(0 1px 4px rgba(0, 0, 0, 0.6));
+}
+
+/* —— 顶部进度条 —— */
+#progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 3px;
+  width: 0%;
+  background: linear-gradient(90deg, var(--accent-cyan), var(--accent-orange));
+  z-index: 50;
+  transition: width 0.35s ease;
+  box-shadow: 0 0 8px var(--accent-cyan);
+}
+
+/* —— 页码 —— */
+#pager {
+  position: fixed;
+  right: 18px;
+  bottom: 14px;
+  font-family: var(--font-mono);
+  font-size: 13px;
+  letter-spacing: 0.1em;
+  color: var(--text-muted);
+  z-index: 50;
+}
+#pager .cur { color: var(--accent-orange); }
+
+/* —— 左右翻页按钮 —— */
+.nav-btn {
+  position: fixed;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 42px;
+  height: 64px;
+  display: grid;
+  place-items: center;
+  background: rgba(10, 16, 26, 0.5);
+  border: 1px solid var(--hud-line);
+  color: var(--text-muted);
+  font-size: 22px;
+  cursor: pointer;
+  z-index: 50;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+.nav-btn:hover { color: var(--accent-cyan); border-color: var(--hud-line-strong); }
+#nav-prev { left: 14px; }
+#nav-next { right: 14px; }
+
+/* —— 提示行 —— */
+#hint {
+  position: fixed;
+  left: 18px;
+  bottom: 14px;
+  font-family: var(--font-mono);
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--text-dim);
+  z-index: 50;
+}

@@ -1,0 +1,53 @@
+title: "绿豆百合浆 + 法式吐司"
+type: breakfast
+difficulty: easy
+total_time: "20分钟（前一晚5分钟 + 早上15分钟）"
+servings: 4
+tools: [破壁机, 不粘煎锅]
+series: "露+吐司"
+week: 2
+day: friday
+tags: [甜味, 豆类, 蛋奶]
+ingredient_tags: ['绿豆', '百合', '吐司', '牛奶', '鸡蛋']
+ingredients:
+  绿豆百合浆:
+    - name: 绿豆
+      amount: 50g
+    - name: 鲜百合
+      amount: 2个
+      note: 或干百合15g提前泡发
+    - name: 大米
+      amount: 15g
+    - name: 冰糖
+      amount: 适量
+  法式吐司:
+    - name: 吐司片
+      amount: 6片
+      note: 可以稍微放干一点更好吸收蛋液
+    - name: 鸡蛋
+      amount: 2个
+    - name: 牛奶
+      amount: 80ml
+    - name: 黄油
+      amount: 一小块
+      note: 煎吐司用
+    - name: 蜂蜜或枫糖浆
+      amount: 适量
+      optional: true
+  配餐:
+    - name: 时令水果
+      amount: 适量
+      note: 蓝莓、草莓或香蕉切片
+night_prep:
+  - "绿豆淘洗，百合洗净"
+  - "和米一起放入破壁机，加水至500ml，预约'豆浆'功能"
+  - "鸡蛋打散，加入牛奶搅匀成蛋奶液，冷藏备用"
+  - "吐司片切成三角形备好"
+  - "水果洗净沥干放入保鲜盒"
+morning_steps:
+  - "绿豆百合浆已好，倒入杯中，加冰糖调味"
+  - "不粘锅小火加热，放入黄油融化"
+  - "吐司片两面蘸上蛋奶液（不要浸泡太久）"
+  - "放入锅中，中小火煎至两面金黄（每面约1-2分钟）"
+  - "装盘，淋上蜂蜜或枫糖浆，搭配水果食用"
+notes: "绿豆不用提前泡，破壁机能打碎。法式吐司用稍干的面包更好吸收蛋液。如果孩子喜欢可以撒一点糖粉。"

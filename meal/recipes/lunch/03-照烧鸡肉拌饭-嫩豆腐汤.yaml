@@ -1,0 +1,70 @@
+title: "照烧鸡肉拌饭 + 嫩豆腐汤"
+type: lunch
+difficulty: easy
+total_time: "30分钟"
+servings: 4
+tools: [炒锅, 玻璃锅, 电饭煲]
+series: "拌饭+汤"
+tags: [鸡肉, 米饭, 日式, 蔬菜]
+ingredient_tags: ['鸡胸肉', '胡萝卜', '菠菜', '鸡蛋']
+ingredients:
+  照烧鸡肉拌饭:
+    - name: 热米饭
+      amount: 4碗
+    - name: 鸡胸肉
+      amount: 300g
+      note: 切薄片或条，用照烧汁腌制
+    - name: 照烧汁
+      amount: 适量
+      note: 生抽1大勺+蚝油1小勺+糖1小勺+姜末调匀
+    - name: 鸡蛋
+      amount: 4个
+    - name: 胡萝卜
+      amount: 1根
+      note: 切细丝
+    - name: 菠菜
+      amount: 1把
+      note: 约150g，焯水
+    - name: 豆芽
+      amount: 1把
+      note: 约100g，焯水
+    - name: 宝宝酱油
+      amount: 1大勺
+    - name: 香油
+      amount: 1小勺
+    - name: 白芝麻
+      amount: 少许
+    - name: 拌饭酱
+      amount: 适量
+      note: 选儿童不辣版
+  嫩豆腐汤:
+    - name: 嫩豆腐
+      amount: 1盒
+      note: 约300g
+    - name: 虾皮
+      amount: 一小把
+    - name: 葱花
+      amount: 少许
+    - name: 盐
+      amount: 少许
+    - name: 香油
+      amount: 几滴
+steps:
+  - step: "鸡胸肉切薄片，加照烧汁（生抽+蚝油+糖+姜末）腌制10分钟"
+  - step: "胡萝卜切细丝，菠菜切段，豆芽洗净"
+  - step: "分别将胡萝卜丝、菠菜、豆芽焯水烫熟，沥干水分"
+    tool: 玻璃锅
+  - step: "不粘锅刷薄油，放入腌好的鸡肉片，中火两面煎熟（每面约2-3分钟），盛出切条"
+    tool: 不粘煎锅
+  - step: "同一锅再煎4个太阳蛋（蛋白凝固、蛋黄半熟）"
+    tool: 炒锅
+  - step: "大碗中盛入热米饭，将胡萝卜丝、菠菜、豆芽、鸡肉条分别码在饭上"
+  - step: "中间放上煎蛋，撒白芝麻"
+  - step: "淋上酱油和香油，配上拌饭酱"
+  - step: "汤锅加两碗水烧开，放入切块的嫩豆腐和虾皮，煮3分钟"
+    tool: 玻璃锅
+  - step: "加盐调味，淋香油，撒葱花"
+night_prep:
+  - "胡萝卜切丝，菠菜切段，豆芽洗净，分别放入保鲜盒冷藏"
+  - "鸡胸肉切片，调好照烧汁，冷藏腌制过夜更入味"
+notes: "金枪鱼因汞含量不推荐给孩子，改用照烧鸡肉更安全健康。照烧汁的甜咸味孩子非常喜欢。拌饭是最适合孩子的料理之一——各种蔬菜营养丰富，拌在一起不知不觉就吃完了。"

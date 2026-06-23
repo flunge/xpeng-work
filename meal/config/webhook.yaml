@@ -1,0 +1,5 @@
+# 飞书 Webhook 配置
+# 群机器人 Webhook URL
+url: "https://open.feishu.cn/open-apis/bot/v2/hook/bf1a3954-8b4d-4c42-9deb-d09623a28356"
+# 通知发送时间
+send_time: "18:00"

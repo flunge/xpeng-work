@@ -1,0 +1,66 @@
+title: "南瓜鸡肉焖饭 + 黄瓜蛋汤"
+type: lunch
+difficulty: easy
+total_time: "35分钟（用电饭煲一锅出）"
+servings: 4
+tools: [电饭煲, 玻璃锅]
+series: "焖饭+汤"
+tags: [鸡肉, 南瓜, 一锅出, 营养丰富]
+ingredient_tags: ['南瓜', '鸡肉', '胡萝卜', '香菇']
+ingredients:
+  南瓜鸡肉焖饭:
+    - name: 大米
+      amount: 2杯
+    - name: 去骨鸡腿肉
+      amount: 300g
+      note: 切小块
+    - name: 南瓜
+      amount: 200g
+      note: 去皮切小丁
+    - name: 干香菇
+      amount: 4朵
+      note: 温水泡发后切丁
+    - name: 胡萝卜
+      amount: 半根
+      note: 切小丁
+    - name: 宝宝酱油
+      amount: 1大勺
+    - name: 蚝油
+      amount: 1小勺
+    - name: 姜末
+      amount: 少许
+    - name: 葱花
+      amount: 少许
+  黄瓜蛋汤:
+    - name: 黄瓜
+      amount: 1根
+      note: 切片
+    - name: 鸡蛋
+      amount: 2个
+    - name: 葱花
+      amount: 少许
+    - name: 盐
+      amount: 少许
+    - name: 香油
+      amount: 几滴
+steps:
+  - step: "鸡腿肉切小块，加酱油、蚝油、姜末腌制15分钟"
+  - step: "大米淘洗放入电饭煲，正常煮饭水量"
+    tool: 电饭煲
+  - step: "将南瓜丁、胡萝卜丁、香菇丁、腌好的鸡肉块铺在米上"
+    tool: 电饭煲
+  - step: "按下煮饭键，正常煮饭"
+    tool: 电饭煲
+  - step: "饭好后打开盖子，撒葱花，将南瓜和饭拌匀"
+  - step: "汤锅加水烧开，放入黄瓜片煮1分钟"
+    tool: 玻璃锅
+  - step: "淋入打散的蛋液，加盐调味"
+    tool: 玻璃锅
+  - step: "撒葱花，淋香油"
+  - step: "南瓜鸡肉焖饭和黄瓜蛋汤一起上桌"
+night_prep:
+  - "鸡腿肉切块加腌料拌匀，冷藏腌制过夜"
+  - "南瓜、胡萝卜切丁，冷藏"
+  - "干香菇泡发后切丁冷藏"
+  - "黄瓜切片、鸡蛋打好备用"
+notes: "南瓜焖饭是懒人一锅出，饭菜同时熟，而且南瓜融化后包裹着米饭，天然甜味孩子不用哄就吃光。鸡腿肉比鸡胸嫩，更适合孩子。"

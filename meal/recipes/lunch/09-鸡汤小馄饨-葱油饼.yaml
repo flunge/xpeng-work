@@ -1,0 +1,52 @@
+title: "鸡汤小馄饨 + 葱油饼"
+type: lunch
+difficulty: easy
+total_time: "25分钟"
+servings: 4
+tools: [玻璃锅, 不粘煎锅]
+series: "面食+主食"
+tags: [汤面, 主食, 快手]
+ingredient_tags: []
+ingredients:
+  鸡汤小馄饨:
+    - name: 速冻小馄饨
+      amount: 40-48个
+      note: 超市冷冻成品
+    - name: 鸡汤
+      amount: 1L
+      note: 可用浓汤宝或自制鸡汤
+    - name: 紫菜
+      amount: 少许
+    - name: 虾皮
+      amount: 少许
+    - name: 葱花
+      amount: 少许
+    - name: 香油
+      amount: 几滴
+  葱油饼:
+    - name: 手抓饼皮
+      amount: 4张
+      note: 冷冻成品
+    - name: 葱花
+      amount: 少许
+    - name: 蛋液
+      amount: 少许
+night_prep:
+  - "速冻小馄饨从冷冻室移至冷藏室解冻"
+  - "手抓饼皮移至冷藏室解冻"
+  - "紫菜撕碎，虾皮、葱花备好"
+morning_steps:
+  - step: "鸡汤倒入锅中烧开，放入小馄饨煮5-6分钟至浮起熟透"
+    tool: 玻璃锅
+  - step: "碗中放入紫菜、虾皮、葱花，将煮好的馄饨连汤一起倒入碗中"
+  - step: "淋几滴香油"
+  - step: "手抓饼皮撒上葱花，卷起来再盘成圆形，擀平成饼"
+  - step: "不粘锅不放油，中小火将饼煎至两面金黄酥脆（每面约2-3分钟）"
+    tool: 不粘煎锅
+  - step: "切块装盘，搭配馄饨一起上桌"
+night_prep:
+  - "速冻馄饨移至冷藏解冻"
+  - "手抓饼皮移至冷藏解冻"
+  - "紫菜撕碎、虾皮备好"
+  - "葱花切好放入小盒冷藏"
+notes: "没有鸡汤可以用清水+鸡精替代。葱油饼可以直接用手抓饼皮原味煎，更省时。"

@@ -1,0 +1,48 @@
+title: "杂粮豆浆 + 黄金馒头片 + 煎蛋"
+type: breakfast
+difficulty: easy
+total_time: "20分钟（前一晚5分钟 + 早上15分钟）"
+servings: 4
+tools: [破壁机, 不粘煎锅]
+series: "豆浆+煎点"
+week: 3
+day: thursday
+tags: [杂粮, 主食, 高蛋白, 经典]
+ingredient_tags: ['黄豆', '馒头', '鸡蛋']
+ingredients:
+  杂粮豆浆:
+    - name: 黄豆
+      amount: 40g
+    - name: 红豆
+      amount: 15g
+    - name: 花生
+      amount: 15g
+    - name: 红枣
+      amount: 4颗
+      note: 去核，增加甜味
+    - name: 冰糖
+      amount: 少许
+  黄金馒头片:
+    - name: 馒头
+      amount: 2个
+      note: 大馒头，或4个小馒头；建议从小区馒头店买新鲜馒头，比超市真空包装的添加剂少
+    - name: 鸡蛋
+      amount: 2个
+    - name: 盐
+      amount: 少许
+  配餐:
+    - name: 鸡蛋
+      amount: 4个
+      note: 煎荷包蛋
+night_prep:
+  - "黄豆、红豆、花生淘洗，和红枣一起放入破壁机，加水至500ml，预约'豆浆'功能"
+  - "馒头切成1cm厚的片，放入密封袋冷藏"
+  - "2个鸡蛋打散加少许盐搅匀，冷藏备用"
+morning_steps:
+  - "杂粮豆浆已好，倒入杯中，可加冰糖调味"
+  - "馒头片两面蘸上蛋液（不要泡太久，蘸一下即拿出）"
+  - "不粘锅刷薄油，中小火烧热，放入馒头片"
+  - "煎至两面金黄（每面约2分钟），外酥里软"
+  - "同一锅再煎4个荷包蛋"
+  - "馒头片、荷包蛋、豆浆一起上桌"
+notes: "杂粮豆浆比单纯黄豆浆营养更全面，孩子喝不出豆腥味。馒头片蘸蛋液煎是很多人的童年记忆，外酥里软很香，搭配豆浆是中式经典早餐。"

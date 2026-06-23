@@ -1,0 +1,70 @@
+title: "糖醋里脊（儿童版）+ 清炒西兰花"
+type: dinner
+difficulty: medium
+total_time: "40分钟"
+servings: 4
+tools: [炒锅, 空气炸锅]
+series: "热菜+蔬菜"
+tags: [猪肉, 酸甜, 孩子最爱, 下饭]
+ingredient_tags: ['猪肉', '西兰花']
+ingredients:
+  糖醋里脊:
+    - name: 猪里脊肉
+      amount: 400g
+      note: 切手指粗的条
+    - name: 玉米淀粉
+      amount: 适量
+    - name: 鸡蛋
+      amount: 1个
+    - name: 番茄酱
+      amount: 3大勺
+    - name: 白糖
+      amount: 1.5大勺
+    - name: 白醋
+      amount: 1大勺
+      note: 可用苹果醋代替，更柔和
+    - name: 生抽
+      amount: 半大勺
+    - name: 水
+      amount: 50ml
+    - name: 姜片
+      amount: 2片
+    - name: 料酒
+      amount: 1小勺
+    - name: 白芝麻
+      amount: 少许
+  清炒西兰花:
+    - name: 西兰花
+      amount: 1颗
+    - name: 蒜
+      amount: 3瓣
+      note: 切片
+    - name: 盐
+      amount: 少许
+  主食:
+    - name: 大米
+      amount: 2杯
+steps:
+  - step: "猪里脊切手指粗的条（约1cm×1cm×5cm），加姜片、料酒、少许盐腌制15分钟"
+  - step: "鸡蛋打散，腌好的肉条先裹一层淀粉，再蘸蛋液，再裹一层淀粉"
+  - step: "空气炸锅200℃预热，将肉条摆入烤盘（留空隙），喷少许油"
+    tool: 空气炸锅
+  - step: "烤12分钟至表面金黄酥脆，中途翻一次面"
+    tool: 空气炸锅
+  - step: "同时调糖醋汁：番茄酱+白糖+白醋+生抽+水调匀"
+  - step: "炒锅小火，倒入糖醋汁，边加热边搅拌至冒泡浓稠"
+    tool: 炒锅
+  - step: "将炸好的里脊条倒入锅中快速翻炒，让每根都裹上糖醋汁"
+    tool: 炒锅
+  - step: "撒白芝麻出锅"
+  - step: "西兰花掰小朵，焯水1分钟沥出"
+    tool: 玻璃锅
+  - step: "炒锅加少许油，下蒜片炒香，放入西兰花快速翻炒，加盐调味"
+    tool: 炒锅
+  - step: "和米饭一起上桌"
+night_prep:
+  - "猪里脊切条，加姜片、料酒和盐腌制，冷藏"
+  - "西兰花掰小朵洗净沥干，冷藏"
+  - "糖醋汁调好放入小碗冷藏"
+  - "蒜切片"
+notes: "用空气炸锅代替油炸，大幅减少油量但依然酥脆。不加番茄酱的糖醋汁颜色不够红，不建议省略。这道菜酸甜口味非常适合孩子，米饭都能多吃半碗。"

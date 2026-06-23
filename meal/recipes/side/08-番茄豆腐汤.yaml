@@ -1,0 +1,37 @@
+title: "番茄豆腐汤"
+type: side
+category: 汤
+difficulty: easy
+total_time: "15分钟"
+servings: 4
+tools: [玻璃锅]
+tags: [汤, 番茄, 豆制品]
+ingredient_tags: ['番茄', '豆腐']
+ingredients:
+  番茄豆腐汤:
+    - name: 番茄
+      amount: 2个
+      note: 切块
+    - name: 嫩豆腐
+      amount: 1盒
+      note: 切小块
+    - name: 鸡蛋
+      amount: 1个
+      note: 打散
+      optional: true
+    - name: 葱花
+      amount: 少许
+    - name: 盐
+      amount: 少许
+    - name: 香油
+      amount: 几滴
+steps:
+  - step: "玻璃锅倒少许油，番茄块炒出沙出汁"
+    tool: 玻璃锅
+  - step: "加适量水烧开，放入嫩豆腐块煮5分钟"
+    tool: 玻璃锅
+  - step: "可淋入蛋液成蛋花，加少许盐、葱花和香油即可"
+    tool: 玻璃锅
+night_prep:
+  - "番茄切块、豆腐切块冷藏（豆腐当天切更佳）"
+notes: "番茄开胃、豆腐补钙，酸甜口孩子很喜欢，少油少盐。"

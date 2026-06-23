@@ -1,0 +1,46 @@
+title: "红枣黑米糊 + 奶香小馒头"
+type: breakfast
+difficulty: easy
+total_time: "20分钟（前一晚5分钟 + 早上15分钟）"
+servings: 4
+tools: [破壁机, 蒸锅]
+series: "糊+饭团"
+week: 1
+day: sunday
+tags: [甜味, 杂粮, 主食]
+ingredient_tags: ['黑米', '红枣', '鸡蛋']
+ingredients:
+  黑米糊:
+    - name: 黑米
+      amount: 50g
+    - name: 红枣
+      amount: 6颗
+      note: 去核
+    - name: 花生
+      amount: 20g
+    - name: 红糖
+      amount: 适量
+      optional: true
+  配餐:
+    - name: 速冻奶香小馒头
+      amount: 8-12个
+      note: 可周末自制小馒头蒸熟冷冻，吃前蒸8分钟即可；或买新鲜小馒头
+    - name: 炼乳
+      amount: 少许
+      optional: true
+  搭配2:
+    - name: 鸡蛋
+      amount: 4个
+      note: 炒熟切碎
+night_prep:
+  - "黑米淘洗，红枣去核，花生洗净"
+  - "全部放入破壁机，加水至500ml，预约'米糊'功能"
+  - "速冻小馒头从冷冻室移至冷藏室解冻"
+  - "或使用电饭煲自带蒸格预约蒸馒头（无蒸格配件则早上用蒸锅蒸）"
+morning_steps:
+  - "黑米糊已好，倒入碗中，可加红糖调味"
+  - "鸡蛋打散，炒锅加少许油，倒入蛋液炒熟，用锅铲切碎"
+  - "蒸锅加水烧开，放入小馒头蒸8-10分钟"
+  - "小馒头搭配炼乳，撒上炒蛋碎搭配黑米糊一起食用"
+batch_prep: "小馒头：周末做一次蒸熟冷冻，约24个"
+notes: "黑米糊比普通米糊更有饱腹感。小馒头也可以前一晚蒸好，早上再蒸5分钟即热透。"

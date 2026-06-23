@@ -1,0 +1,15 @@
+{
+  "name": "ppt-slide-formatter",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "小鹏自动驾驶仿真算法 15 页可编辑网页版 PPT（HUD 深色科技风格）",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "devDependencies": {
+    "vite": "5.4.10"
+  }
+}

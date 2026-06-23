@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>打破工程困局 · 小鹏自动驾驶仿真算法</title>
+</head>
+<body>
+  <div id="progress"></div>
+
+  <div id="deck">
+    <div id="stage">
+
+      <!-- ============ Slide 01 · 标题页 ============ -->
+      <section class="slide is-active layout-title" data-index="1">
+        <div class="hud-frame"><span class="corner-tr"></span><span class="corner-bl"></span></div>
+        <header class="slide-hud-top">
+          <span># PROJECT_LEAD: 仿真算法负责人</span>
+          <span class="hud-accent"># TARGET: 2026 Intern Technical Onboarding</span>
+        </header>
+        <div class="slide-body" contenteditable="true">
+          <h1 class="title-main">打破工程困局</h1>
+          <p class="title-sub">如何在<span class="q">“不确定”</span>的物理世界里，为自动驾驶大模型构建<span class="q">“确定”</span>的运行闭环</p>
+          <div class="title-speaker">
+            <span class="dot"></span>
+            <span class="role">仿真算法负责人：</span>
+            <span class="name">Li Kun</span>
+          </div>
+          <!-- 团队署名（副信息，如需隐藏可删除本行，见 README） -->
+          <div class="title-team">XPENG AUTOMOTIVE SIMULATION ALGORITHM TEAM</div>
+        </div>
+        <footer class="slide-hud-bottom">
+          <span>RFC-SIM-2024-V2.0 // PROPOSAL / INTERNAL ONLY</span>
+          <span>SYSTEM_STATUS: <span class="hud-on">ONLINE</span></span>
+        </footer>
+      </section>
+
+      <!-- ============ Slide 02 · 范式转移（双栏对比）============ -->
+      <section class="slide" data-index="2">
+        <div class="hud-frame"><span class="corner-tr"></span><span class="corner-bl"></span></div>
+        <header class="slide-hud-top">
+          <span></span>
+          <span class="hud-accent">DATA.STREAM: VLA-2.0-LIVE</span>
+        </header>
+        <h2 class="slide-title" contenteditable="true">范式转移：VLA 2.0 端到端架构彻底抽离了<span class="hl-o">“安全拐杖”</span></h2>
+        <div class="slide-lead" contenteditable="true">端到端架构的引入，意味着我们再也无法通过简单的静态代码 Review 确保安全性。</div>
+        <div class="slide-body" contenteditable="true">
+          <div class="compare-2col">
+            <div class="cmp-col is-legacy">
+              <h3>传统模块化（Legacy）</h3>
+              <div class="cmp-row"><span class="k">核心输入</span><span class="v"><span class="del">BBox / 车道线轨迹</span></span></div>
+              <div class="cmp-row"><span class="k">逻辑载体</span><span class="v"><span class="del">C++ Hard Rules</span></span></div>
+              <div class="cmp-row"><span class="k">演进路径</span><span class="v"><span class="del">人工修 Bug</span></span></div>
+            </div>
+            <div class="cmp-col is-new">
+              <h3>VLA 2.0（端到端）</h3>
+              <div class="cmp-row"><span class="k">核心输入</span><span class="v">原始视频流 / 点云流</span></div>
+              <div class="cmp-row"><span class="k">逻辑载体</span><span class="v">深度神经网络参数</span></div>
+              <div class="cmp-row"><span class="k">演进路径</span><span class="v">数据闭环驱动参数迭代</span></div>
+            </div>
+          </div>
+          <div class="mini-cards">
+            <div class="mini-card"><h4>隐式物理建模</h4><p>模型不再依赖硬编码，通过 Transformer 学习空间连贯性。</p></div>
+            <div class="mini-card"><h4>极低延迟</h4><p>决策链路极度压缩，端到端推理时延 &lt;80ms。</p></div>
+            <div class="mini-card"><h4>常识涌现</h4><p>在无标线乡村路段展现出类人博弈避让能力。</p></div>
+          </div>
+        </div>
+        <footer class="slide-hud-bottom">
+          <span>SYS.STATUS: <span class="hud-on">ACTIVE</span></span>
+          <span>DATA.STREAM: VLA-2.0-LIVE</span>
+          <span>LATENCY: &lt;80MS</span>
+        </footer>
+      </section>
+
+      <!-- ============ Slide 03 · 数据闭环（论点 + 飞轮）============ -->
+      <section class="slide" data-index="3">
+        <div class="hud-frame"><span class="corner-tr"></span><span class="corner-bl"></span></div>
+        <header class="slide-hud-top">
+          <span>SYS.STATUS: <span class="hud-on">ACTIVE</span> // LATENCY: &lt;80MS</span>
+          <span class="hud-accent">DATA.STREAM: VLA-2.0-LIVE // DATE: 2024-05-15</span>
+        </header>
+        <h2 class="slide-title" contenteditable="true">数据闭环：VLA 模型进化的唯一<span class="hl-o">“强核燃料”</span></h2>
+        <div class="slide-body" contenteditable="true">
+          <div class="split-2">
+            <div>
+              <p class="big-statement">仿真不仅是测试工具，更是车端 VLA 2.0 模型进行<span class="hl-c">强化学习（RL）</span>的虚拟教练。</p>
+              <div class="terminal">
+                <div class="term-bar"><span class="term-dots"><i></i><i></i><i></i></span><span>scaling_law.py</span></div>
+                <pre><span class="c-dim"># Scaling Law of Simulation</span>
+Model_Intelligence = Data_Diversity * Loop_Iterations * Sim_Realism
+Target_Cost_Per_Mile_Sim = <span class="c-orange">0.01</span> * Real_World_Test_Cost</pre>
+              </div>
+            </div>
+            <div class="flywheel">
+              <span class="fw-title">Flywheel Loop</span>
+              <div class="fw-node"><h4>大规模并发（Massive Mining）</h4><p>每日千万级里程并行验证。仿真系统是版本准出的 Gatekeeper。</p></div>
+              <div class="fw-node"><h4>Case 集验证（Variant Bombing）</h4><p>自动提取路测 Hard Case，泛化 100 倍变体场景进行极限考题轰炸。</p></div>
+              <div class="fw-node"><h4>版本筛选（Filtering）</h4><p>筛选正向收益模型权重，剔除端到端黑盒导致的逻辑退化。</p></div>
+            </div>
+          </div>
+        </div>
+        <footer class="slide-hud-bottom">
+          <span>SYS.STATUS: <span class="hud-on">ACTIVE</span> // DATA.STREAM: VLA-2.0-LIVE</span>
+          <span>LATENCY: &lt;80MS // DATE: 2024-05-15</span>
+        </footer>
+      </section>
+
+      <!-- ============ Slide 04 · 双重死局（branch / dual）============ -->
+      <section class="slide" data-index="4">
+        <div class="hud-frame"><span class="corner-tr"></span><span class="corner-bl"></span></div>
+        <header class="slide-hud-top">
+          <span>DATA.STREAM: VLA-LEGACY-SIM-CRISIS // SYS.STATUS: <span class="hud-on">ACTIVE</span></span>
+          <span class="hud-accent">LATENCY: &lt;80NS</span>
+        </header>
+        <h2 class="slide-title" contenteditable="true">技术债危机：传统仿真架构面对 VLA 的<span class="hl-o">“双重死局”</span></h2>
+        <div class="slide-body" contenteditable="true">
+          <div class="center-note">面对 VLA 端到端，我们必须找到一种<span class="hl-c">“既有 LogSim 真实度，又有 WorldSim 交互性”</span>的新方案。</div>
+          <div class="dual-deadlock">
+            <div class="deadlock-card">
+              <h3>LogSim（数据回放）</h3>
+              <p class="mech"><span class="lbl">机制</span>回放实车录制的传感器 Log。</p>
+              <p class="weak"><span class="lbl">致命弱点</span>开环（Open-loop）。环境不随本车动作改变。VLA 内部没有 BBox 接口，我们根本无法 Assert“是否检测到行人”。</p>
+              <span class="dead-tag">DEAD END: VLA INCOMPATIBLE</span>
+            </div>
+            <div class="deadlock-card">
+              <h3>WorldSim（白模规则）</h3>
+              <p class="mech"><span class="lbl">机制</span>手工搭建 3D 资产，编写 NPC 规则。</p>
+              <p class="weak"><span class="lbl">致命弱点</span>Sim2Real Gap。画面因为过于“整洁”而严重失真，视觉大模型根本不认 WorldSim 生成的“游戏画面”。</p>
+              <span class="dead-tag">DEAD END: VLA INCOMPATIBLE</span>
+            </div>
+          </div>
+        </div>
+        <footer class="slide-hud-bottom">
+          <span>SYS.STATUS: <span class="hud-on">ACTIVE</span></span>
+          <span>LATENCY: &lt;80MS // DATE: 2024-05-15</span>
+        </footer>
+      </section>
+
+      <!-- ============ Slide 05 · 时空连续性编辑（branch-flow）============ -->
+      <section class="slide" data-index="5">
+        <div class="hud-frame"><span class="corner-tr"></span><span class="corner-bl"></span></div>
+        <header class="slide-hud-top">
+          <span>DATA.STREAM: SPATIOTEMPORAL-EDITING // SYS.STATUS: <span class="hud-on">ACTIVE</span> // LATENCY: &lt;10MS</span>
+          <span class="hud-accent">SYSTEM_MODE = REALTIME_INTERVENTION</span>
+        </header>
+        <h2 class="slide-title" contenteditable="true">时空连续性编辑：从<span class="hl-o">“录像重放”</span>到<span class="hl-o">“无限变体考场”</span></h2>
+        <div class="slide-lead" contenteditable="true">借助自研 3DGS 引擎结合时空连续性算法，我们能对场景中的每一个 Gaussian 实体进行实时干预，彻底解决纯 2D 扩散模型视角闪烁与畸变的痛点。</div>
+        <div class="slide-body" contenteditable="true">
+          <div class="branch-flow">
+            <div class="branch-root">
+              <div class="node-box">⎇</div>
+              <span class="node-label">Baseline Log Root</span>
+            </div>
+            <div class="branch-list">
+              <div class="branch-item">
+                <h4>NPC 变轨 <span class="en">(Trajectory Hack)</span></h4>
+                <p>抽离原始 Log 里的正常行驶车辆，修改轨迹，令其对本车执行<span class="hl-o">“强行 Cut-in”</span>（闭环博弈一致性）。</p>
+              </div>
+              <div class="branch-item">
+                <h4>资产替换 <span class="en">(Asset Swap)</span></h4>
+                <p>像素级<span class="hl-o">抠除路边的一棵树</span>，无缝替换为横穿马路的行人。</p>
+              </div>
+              <div class="branch-item">
+                <h4>无限繁衍 <span class="en">(Infinite Spawning)</span></h4>
+                <p>在同一地段瞬间生成<span class="hl-o">上百个差异化的高保真 Corner Case</span>。</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <footer class="slide-hud-bottom">
+          <span>LATENCY: &lt;10MS</span>
+          <span>DATE: 2024-05-15</span>
+        </footer>
+      </section>
+
+      <!-- ============ Slide 06 · 协变量偏移灾难链条（cascade）============ -->
+      <section class="slide" data-index="6">
+        <div class="hud-frame"><span class="corner-tr"></span><span class="corner-bl"></span></div>
+        <header class="slide-hud-top">
+          <span>DATA.STREAM: COVARIATE-SHIFT-CASCADE // SYS.STATUS: <span class="hud-on">ACTIVE</span> // LATENCY: &lt;80MS</span>
+          <span></span>
+        </header>
+        <h2 class="slide-title" contenteditable="true">深度推演：协变量偏移（Covariate Shift）灾难链条</h2>
+        <div class="slide-body" contenteditable="true">
+          <div class="cascade">
+            <div class="cascade-steps">
+              <div class="cascade-step"><div class="t">T=0s</div><p>本车 Action 与原始记录产生微小的 0.1° 偏差。</p></div>
+              <div class="cascade-step"><div class="t">T=5s</div><p>偏差由于时间累积，车辆实际物理位置已偏离 1.5 米！</p></div>
+              <div class="cascade-step"><div class="t">T=5s+（空间错乱）</div><p>视野与录像中的背景发生严重空间错乱（Spatial Misalignment）。</p></div>
+              <div class="cascade-step is-crash"><div class="t">Result（模型崩溃）</div><p>看到的画面与其所处的动作逻辑完全脱节。无法测试 VLA 在偏差后的纠偏能力。</p></div>
+            </div>
+            <div class="cascade-bottom">
+              <p><b class="hl-o">黑盒测试的唯一出口：</b>我们只能通过<span class="hl-o">闭环（Closed-loop）</span>来观察——如果不接管，车会不会撞？</p>
+              <p><b class="hl-o">仿真底线：</b>必须提供<span class="hl-o">实时渲染</span>，以<span class="hl-o">毫秒级响应</span> VLA 的每一个转角输出。</p>
+            </div>
+          </div>
+        </div>
+        <footer class="slide-hud-bottom">
+          <span>SYS.STATUS: <span class="hud-on">ACTIVE</span> / DATA.STREAM: COVARIATE-SHIFT-CASCADE</span>
+          <span>LATENCY: &lt;80MS / DATE: 2024-05-15</span>
+        </footer>
+      </section>
+
+      <!-- ============ Slide 07 · NeRF vs 3DGS（对比表）============ -->
+      <section class="slide" data-index="7">
+        <div class="hud-frame"><span class="corner-tr"></span><span class="corner-bl"></span></div>
+        <header class="slide-hud-top">
+          <span>DATA.STREAM: NERF-3DGS-EVOLUTION // SYS.STATUS: <span class="hud-on">ACTIVE</span> // LATENCY: &lt;10MS</span>
+          <span></span>
+        </header>
+        <h2 class="slide-title" contenteditable="true">神经场景基石：从隐式 NeRF 到显式 3DGS 的质变</h2>
+        <div class="slide-body" contenteditable="true">
+          <table class="cmp-table">
+            <thead>
+              <tr>
+                <th>技术 (Tech)</th><th>表示形式 (Rep)</th><th>存储成本</th><th>渲染延迟</th><th>编辑性 (Editability)</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="tech-legacy">NeRF</td>
+                <td class="cell-legacy">MLP Weights（隐式）</td>
+                <td class="cell-legacy">~50MB（极小）</td>
+                <td class="cell-legacy">1-2s / 帧（极慢）</td>
+                <td class="cell-legacy">极难 (Implicit Field)<small>-&gt; 无法支持 20Hz 闭环仿真需求</small></td>
+              </tr>
+              <tr>
+                <td class="tech-new">3DGS</td>
+                <td class="cell-new">Explicit Splats（显式）</td>
+                <td class="cell-new">~300MB（较大）</td>
+                <td class="cell-new">100+ FPS（极速）</td>
+                <td class="cell-new">易于编辑 (Point-based)<small>-&gt; 实现照片级真实度的实时交互</small></td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="terminal" style="margin-top:18px; max-width:480px; margin-left:auto;">
+            <div class="term-bar"><span class="term-dots"><i></i><i></i><i></i></span><span># Gaussian Map Profiling</span></div>
+            <pre>Total_Splat_Count = <span class="c-orange">2,500,000</span>
+Memory_Usage = <span class="c-orange">420 MB</span>
+Inference_Time_Per_View = <span class="c-orange">8.5ms</span>
+System_Status = <span class="c-orange">READY_FOR_CLOSED_LOOP</span></pre>
+          </div>
+        </div>
+        <footer class="slide-hud-bottom">
+          <span>SYS.STATUS: <span class="hud-on">ACTIVE</span></span>
+          <span>LATENCY: &lt;10MS // DATE: 2024-05-15</span>
+        </footer>
+      </section>
+
+      <!-- ============ Slide 08 · DrivingGaussian 管线（pipeline）============ -->
+      <section class="slide" data-index="8">
+        <div class="hud-frame"><span class="corner-tr"></span><span class="corner-bl"></span></div>
+        <header class="slide-hud-top">
+          <span>DATA.STREAM: DRIVING-GAUSSIAN-PIPELINE // SYS.STATUS: <span class="hud-on">AUTOMATED</span> // LATENCY: &lt;50MS</span>
+          <span></span>
+        </header>
+        <h2 class="slide-title" contenteditable="true">工业化管线：DrivingGaussian 大规模自动化重建</h2>
+        <div class="slide-body" contenteditable="true">
+          <div class="pipeline">
+            <div class="pipe-step"><h4>数据对齐<br>(Data Alignment)</h4><p>Camera + LiDAR 高精度时空同步。</p></div>
+            <span class="pipe-arrow">▶</span>
+            <div class="pipe-step"><h4>静态背景构建<br>(Static Core)</h4><p>LiDAR Prior 引导，利用点云滤除视觉幽灵噪点。</p></div>
+            <span class="pipe-arrow">▶</span>
+            <div class="pipe-step is-key"><h4>动态物体绑定<br>(Dynamic Binding)</h4><p>核心难点突破！将 Gaussian 点绑定至运动轨迹，实现完美的“动静分离”。</p></div>
+            <span class="pipe-arrow">▶</span>
+            <div class="pipe-step"><h4>实时光栅化<br>(Rasterization)</h4><p>1080P / 120FPS 极速出图。</p></div>
+          </div>
+          <div class="callout-roi">
+            <b>ROI：</b>将单个街区的重建时间从 <span class="big">2 周</span>（依赖美术人工）瞬间压缩至 <span class="big">2 小时</span>（全自动流水线）。场景还原度 PSNR 指标突破 <span class="big">32dB+</span>。
+          </div>
+        </div>
+        <footer class="slide-hud-bottom">
+          <span>LATENCY: &lt;50MS / DATE: 2024-05-15</span>
+          <span>SYSTEM_MODE = FULL_AUTO_RECONSTRUCTION</span>
+        </footer>
+      </section>
+
+      <!-- ============ Slide 09 · Gen-Sim 世界模型（node-cards）============ -->
+      <section class="slide" data-index="9">
+        <div class="hud-frame"><span class="corner-tr"></span><span class="corner-bl"></span></div>
+        <header class="slide-hud-top">
+          <span>DATA.STREAM: WORLD-MODEL-PREDICTION // SYS.STATUS: <span class="hud-on">ACTIVE</span> // LATENCY: &lt;15MS</span>
+          <span></span>
+        </header>
+        <h2 class="slide-title" contenteditable="true">Gen-Sim 世界模型：为环境注入预测未来的<span class="hl-o">“脑力”</span></h2>
+        <div class="slide-lead lead-plain" contenteditable="true">环境不再是被动的静态贴图，而是具备物理常识的智能体集合。这是解决“仿真太假”与“NPC 太呆”的终极武器。</div>
+        <div class="slide-body" contenteditable="true">
+          <div class="node-cards">
+            <div class="node-card pos-tl">
+              <h4>时空预测 <span class="en">(Spatiotemporal)</span></h4>
+              <p>给定 {当前帧 + 本车 Action}，精准推演未来 T 秒的连续场景变化。</p>
+            </div>
+            <div class="node-center">
+              <div class="globe">🌐</div>
+              <span class="node-name">Digital World Model Node</span>
+            </div>
+            <div class="node-card pos-tr">
+              <h4>因果推理 <span class="en">(Causality)</span></h4>
+              <p>打破死板的逻辑树。“如果我急刹车，后方 NPC 必定根据物理常识做出减速博弈的反应。”</p>
+            </div>
+            <div class="node-card pos-b">
+              <h4>万物多样性 <span class="en">(Diversity)</span></h4>
+              <p>对同一路口，自由且符合常理地生成雨、雾、黄昏等多重光影与气候状态。</p>
+            </div>
+          </div>
+        </div>
+        <footer class="slide-hud-bottom">
+          <span>LATENCY: &lt;15MS // DATE: 2024-05-15</span>
+          <span>SYSTEM_MODE = PREDICTIVE_GEN-SIM</span>
+        </footer>
+      </section>
+
+      <!-- ============ Slide 10 · 维度碾压（对比表）============ -->
+      <section class="slide" data-index="10">
+        <div class="hud-frame"><span class="corner-tr"></span><span class="corner-bl"></span></div>
+        <header class="slide-hud-top">
+          <span>DATA.STREAM: WORLD-MODEL-COMPARISON // SYS.STATUS: <span class="hud-on">ACTIVE</span> // LATENCY: &lt;15MS</span>
+          <span></span>
+        </header>
+        <h2 class="slide-title" contenteditable="true">维度碾压：传统白模规则 vs AI 生成式世界模型</h2>
+        <div class="slide-body" contenteditable="true">
+          <table class="cmp-table dim-table">
+            <thead>
+              <tr>
+                <th style="background:var(--bg-panel-solid);color:var(--text-primary)">核心维度 (Dimension)</th>
+                <th>传统规则引擎（WorldSim）</th>
+                <th>AI 世界模型（Gen-Sim）</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td class="row-label">场景生成</td>
+                <td class="cell-legacy">人工白模 / 样条线铺设（耗时极长）</td>
+                <td class="cell-new2">基于文本或参考视频的秒级生成（极速）</td>
+              </tr>
+              <tr>
+                <td class="row-label">NPC 行为</td>
+                <td class="cell-legacy">固化逻辑树（If-Else，易发生死锁）</td>
+                <td class="cell-new2">基于物理常识的自博弈（复杂、类人）</td>
+              </tr>
+              <tr>
+                <td class="row-label">长尾覆盖</td>
+                <td class="cell-legacy">工程师手动硬刚（永远挂一漏万）</td>
+                <td class="cell-new2">AI 自动泛化出大量边缘场景（涌现能力）</td>
+              </tr>
+              <tr>
+                <td class="row-label">物理反馈</td>
+                <td class="cell-legacy">粗糙刚体碰撞（缺乏真实传感器细节）</td>
+                <td class="cell-new2">精确复现运动模糊、雨天反光等高频细节</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="center-note" style="margin-top:16px;">
+            <p style="font-size:18px;line-height:1.5;color:var(--text-primary)">“世界模型不是在‘播放视频’，而是在‘即时构思物理现实’。这是 VLA 模型进行 RL 训练的唯一高保真土壤。”</p>
+          </div>
+        </div>
+        <footer class="slide-hud-bottom">
+          <span>DATE: 2024-05-15</span>
+          <span>SYSTEM_MODE = PREDICTIVE_GEN-SIM</span>
+        </footer>
+      </section>
+
+      <!-- ============ Slide 11 · 终极拓扑 3DGS + DiT（layered）============ -->
+      <section class="slide" data-index="11">
+        <div class="hud-frame"><span class="corner-tr"></span><span class="corner-bl"></span></div>
+        <header class="slide-hud-top">
+          <span>DATA.STREAM: HYBRID-ARCH-TOPO // SYS.STATUS: <span class="hud-on">ACTIVE</span> // LATENCY: &lt;5MS</span>
+          <span class="hud-accent">SYSTEM_MODE = PREDICTIVE_GEN-SIM</span>
+        </header>
+        <h2 class="slide-title" contenteditable="true">终极拓扑：3DGS 与 DiT 生成式模型的最强混合架构</h2>
+        <div class="slide-body" contenteditable="true">
+          <div class="layered">
+            <div class="layer-list">
+              <div class="layer-box dit">
+                <h4>预测生成引擎（DiT Engine）</h4>
+                <p>提供“时空生成能力”与底层物理因果推理。</p>
+              </div>
+              <div class="layer-box gs">
+                <h4>基础空间层（3DGS Base）</h4>
+                <p>提供极致的“显式空间一致性”与极速实时光栅化能力。</p>
+              </div>
+            </div>
+            <div class="terminal">
+              <div class="term-bar"><span class="term-dots"><i></i><i></i><i></i></span><span>TERMINAL</span></div>
+              <pre>Input: <span class="c-dim">{3DGS_Scene, Ego_Action}</span>
+Process: DiT predicts Delta_Gaussian_Parameters
+Output: <span class="c-orange">Dynamic Closed-loop Render (120 FPS)</span></pre>
+            </div>
+          </div>
+          <div class="callout-roi" style="font-size:16px;text-align:left;">
+            <b class="hl-o">破局意义：</b>纯 2D Sora 路线无法保证多摄像头的严格对齐。通过在 <span class="hl-c">3D 特征空间</span> 直接进行生成，我们彻底解决了环视拼缝失真的工业级难题。
+          </div>
+        </div>
+        <footer class="slide-hud-bottom">
+          <span>DATA.STREAM: HYBRID-ARCH-TOPO // SYS.STATUS: <span class="hud-on">ACTIVE</span> // LATENCY: &lt;5MS</span>
+          <span>SYSTEM_MODE = PREDICTIVE_GEN-SIM // DATE: 2024-05-16</span>
+        </footer>
+      </section>
+
+      <!-- ============ Slide 12 · VLM 自动化资产沉淀（refinery）============ -->
+      <section class="slide" data-index="12">
+        <div class="hud-frame"><span class="corner-tr"></span><span class="corner-bl"></span></div>
+        <header class="slide-hud-top">
+          <span>DATA.STREAM: VLM-ASSET-REFINERY // SYS.STATUS: <span class="hud-on">ACTIVE</span> // LATENCY: &lt;8MS</span>
+          <span class="hud-accent">SYSTEM_MODE = AUTOMATED_LOG_PROCESSING</span>
+        </header>
+        <h2 class="slide-title" contenteditable="true">AI 重塑管线 01：VLM（视觉大模型）自动化资产沉淀</h2>
+        <div class="slide-lead lead-plain" contenteditable="true"><b class="hl-c">核心痛点：</b>人力根本无法 Review 每天产生的 TB 级路测 Log 录像。</div>
+        <div class="slide-body" contenteditable="true">
+          <div class="refinery">
+            <div class="refinery-left">
+              <div class="scanner-box">Industrial Refinery · Raw Logs &nbsp;→&nbsp; VLM Scanner</div>
+              <div class="tag-item">
+                <h4>场景理解（Semantic Understanding）</h4>
+                <p>自动扫描并输出“无保护左转”、“复杂路口博弈”等高价值语义标签。</p>
+              </div>
+              <div class="tag-item">
+                <h4>缺陷发现（Defect Discovery）</h4>
+                <p>自动化寻找 VLA 表现不佳（如急刹车）的薄弱片段，直接送入飞轮供模型重新训练。</p>
+              </div>
+            </div>
+            <div class="terminal">
+              <div class="term-bar"><span class="term-dots"><i></i><i></i><i></i></span><span>Agent Log</span></div>
+              <pre>Agent Log:
+&gt; Analyzing Video Segment #1024...
+&gt; Scenario Detected: <span class="c-orange">"Aggressive Cut-in by Truck"</span>
+&gt; VLA Performance: <span class="c-orange">"Late Braking (TTC=0.8s)"</span>
+&gt; Recommendation: Extract to High-Priority Training Set.</pre>
+            </div>
+          </div>
+        </div>
+        <footer class="slide-hud-bottom">
+          <span>DATA.STREAM: VLM-ASSET-REFINERY // SYS.STATUS: <span class="hud-on">ACTIVE</span> // LATENCY: &lt;8MS</span>
+          <span>SYSTEM_MODE = AUTOMATED_LOG_PROCESSING // DATE: 2024-05-17</span>
+        </footer>
+      </section>
+
+      <!-- ============ Slide 13 · 智能工程超级助理（cards-3）============ -->
+      <section class="slide" data-index="13">
+        <div class="hud-frame"><span class="corner-tr"></span><span class="corner-bl"></span></div>
+        <header class="slide-hud-top">
+          <span>DATA.STREAM: AI-AGENT-ASSISTANTS // SYS.STATUS: <span class="hud-on">ACTIVE</span> // LATENCY: &lt;5MS</span>
+          <span class="hud-accent">SYSTEM_MODE = BUILD-INTEGRATION</span>
+        </header>
+        <h2 class="slide-title" contenteditable="true">AI 重塑管线 02：构建智能工程超级助理</h2>
+        <div class="slide-lead lead-plain" contenteditable="true">不仅是写代码，更是重构整个研发工作流。</div>
+        <div class="slide-body" contenteditable="true">
+          <div class="cards-3">
+            <div class="agent-card">
+              <span class="agent-tag">Agent Node</span>
+              <h3>Data Agent (Text2SQL)</h3>
+              <p>支持自然语言极速查询仿真大盘看板。AI 会自动追踪和归因“某次版本迭代导致接管率飙升”的底层逻辑。</p>
+            </div>
+            <div class="agent-card">
+              <span class="agent-tag">Agent Node</span>
+              <h3>Code Copilot</h3>
+              <p>高级辅助工具，帮助仿真工程师快速编写复杂的 C++/Python 车辆动力学插件与海量的系统回归测试用例。</p>
+            </div>
+            <div class="agent-card">
+              <span class="agent-tag">Agent Node</span>
+              <h3>Case Reviewer</h3>
+              <p>每日生成的千万级里程仿真报告，由 Agent 自动阅读、汇总异常、提炼 Insight，并直接推送到企业微信。</p>
+            </div>
+          </div>
+        </div>
+        <footer class="slide-hud-bottom">
+          <span>DATA.STREAM: AI-AGENT-ASSISTANTS // SYS.STATUS: <span class="hud-on">ACTIVE</span> // LATENCY: &lt;5MS</span>
+          <span>SYSTEM_MODE = BUILD-INTEGRATION // DATE: 2024-05-17</span>
+        </footer>
+      </section>
+
+      <!-- ============ Slide 14 · 工程哲学（statement）============ -->
+      <section class="slide layout-statement" data-index="14">
+        <div class="hud-frame"><span class="corner-tr"></span><span class="corner-bl"></span></div>
+        <header class="slide-hud-top">
+          <span class="hud-accent">致未来的战友：拥抱“不确定”的工程哲学</span>
+          <span></span>
+        </header>
+        <div class="slide-body" contenteditable="true">
+          <p class="statement-quote">算法团队负责跑分，我们负责修考场。</p>
+          <p class="statement-mission"><span class="lead-en">Our Mission:</span> 用最前沿的 3DGS 与世界模型，在充满物理噪声的平行世界里，为自动驾驶打磨出最“确定”的准出标准。</p>
+          <div class="principles">
+            <div class="p-title">Geek Principles</div>
+            <ul>
+              <li><b>接口第一（Interface First）：</b>架构的灵活性，永远来源于极简与清晰的代码抽象。</li>
+              <li><b>不迷信日志（Data over Dogma）：</b>在闭环数据与真实物理碰撞面前，任何主观的借口都是苍白的。</li>
+            </ul>
+          </div>
+        </div>
+        <footer class="slide-hud-bottom">
+          <span>DATA.STREAM: ENGINEER-MANIFESTO // SYS.STATUS: <span class="hud-on">ACTIVE</span> // LATENCY: &lt;1MS</span>
+          <span>SYSTEM_MODE = PHILOSOPHY-DEPLOYMENT // DATE: 2024-05-20</span>
+        </footer>
+      </section>
+
+      <!-- ============ Slide 15 · JOIN US（closing）============ -->
+      <section class="slide layout-closing" data-index="15">
+        <div class="hud-frame"><span class="corner-tr"></span><span class="corner-bl"></span></div>
+        <header class="slide-hud-top">
+          <span>DATA.STREAM: RECRUITMENT-CALL // SYS.STATUS: <span class="hud-on">ACTIVE</span> // LATENCY: &lt;1MS</span>
+          <span></span>
+        </header>
+        <div class="slide-body" contenteditable="true" style="align-items:center;justify-content:center;">
+          <h1 class="closing-big">JOIN US.</h1>
+          <p class="closing-sub">JOIN US. 共同定义<span class="q">“虚拟未来”</span>的物理法则。</p>
+          <p class="closing-desc">在自动驾驶迈入 2.0 时代的浩荡浪潮中，我们缺一个你。</p>
+          <div class="closing-box">
+            <span class="window-open">[ 校招 / 实习转正窗口：OPEN ]</span>
+            <span class="email">Email: <a href="mailto:sim-algo-lead@xpeng.com">sim-algo-lead@xpeng.com</a></span>
+          </div>
+        </div>
+        <footer class="slide-hud-bottom">
+          <span>END OF DOCUMENT // SYSTEM.HALT(SUCCESS)</span>
+          <span>DATA.STREAM: RECRUITMENT-CALL // SYS.STATUS: <span class="hud-on">ACTIVE</span></span>
+        </footer>
+      </section>
+
+    </div>
+  </div>
+
+  <!-- 导航 chrome -->
+  <button id="nav-prev" class="nav-btn" aria-label="上一页">‹</button>
+  <button id="nav-next" class="nav-btn" aria-label="下一页">›</button>
+  <div id="pager"></div>
+  <div id="hint">← / → 翻页 · Space 下一页 · Home/End 首末页 · F 全屏</div>
+
+  <script type="module" src="/src/main.js"></script>
+</body>
+</html>

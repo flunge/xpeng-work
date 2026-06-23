@@ -1,0 +1,34 @@
+title: "紫菜蛋花汤"
+type: side
+category: 汤
+difficulty: easy
+total_time: "10分钟"
+servings: 4
+tools: [玻璃锅]
+tags: [汤, 快手]
+ingredient_tags: ['紫菜', '鸡蛋']
+ingredients:
+  紫菜蛋花汤:
+    - name: 紫菜
+      amount: 1小把
+      note: 撕碎
+    - name: 鸡蛋
+      amount: 2个
+      note: 打散
+    - name: 虾皮
+      amount: 1小勺
+      optional: true
+    - name: 葱花
+      amount: 少许
+    - name: 盐
+      amount: 少许
+    - name: 香油
+      amount: 几滴
+steps:
+  - step: "玻璃锅加水烧开，放入紫菜和虾皮煮2分钟"
+    tool: 玻璃锅
+  - step: "淋入蛋液搅成蛋花，加少许盐、葱花和香油即可"
+    tool: 玻璃锅
+night_prep:
+  - "鸡蛋打散冷藏；紫菜撕碎备好"
+notes: "紫菜含碘和矿物质，蛋花汤清淡暖胃，5分钟搞定的快手汤。"

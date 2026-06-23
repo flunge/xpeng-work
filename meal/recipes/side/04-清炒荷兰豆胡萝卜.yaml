@@ -1,0 +1,30 @@
+title: "清炒荷兰豆胡萝卜"
+type: side
+category: 素菜
+difficulty: easy
+total_time: "12分钟"
+servings: 4
+tools: [玻璃锅, 炒锅]
+tags: [蔬菜, 快手, 配色]
+ingredient_tags: ['荷兰豆', '胡萝卜']
+ingredients:
+  清炒荷兰豆胡萝卜:
+    - name: 荷兰豆
+      amount: 200g
+      note: 撕去筋
+    - name: 胡萝卜
+      amount: 半根
+      note: 切薄片
+    - name: 蒜
+      amount: 2瓣
+      note: 切末
+    - name: 盐
+      amount: 少许
+steps:
+  - step: "荷兰豆和胡萝卜片入开水焯1分钟，捞出沥干"
+    tool: 玻璃锅
+  - step: "炒锅倒少许油，下蒜末炒香，放入荷兰豆和胡萝卜快炒，加少许盐调味即可"
+    tool: 炒锅
+night_prep:
+  - "荷兰豆撕筋洗净，胡萝卜切片，蒜切末，冷藏"
+notes: "焯水后快炒颜色翠绿好看，荷兰豆清甜，孩子接受度高。"

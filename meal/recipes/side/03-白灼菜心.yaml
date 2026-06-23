@@ -1,0 +1,28 @@
+title: "白灼菜心"
+type: side
+category: 素菜
+difficulty: easy
+total_time: "12分钟"
+servings: 4
+tools: [玻璃锅]
+tags: [蔬菜, 绿叶菜, 少油]
+ingredient_tags: ['菜心']
+ingredients:
+  白灼菜心:
+    - name: 菜心
+      amount: 1把
+      note: 洗净
+    - name: 宝宝酱油
+      amount: 1大勺
+    - name: 蒜
+      amount: 2瓣
+      note: 切末
+    - name: 香油
+      amount: 几滴
+steps:
+  - step: "玻璃锅烧开水，滴几滴油，放入菜心焯30-60秒至断生，捞出沥干装盘"
+    tool: 玻璃锅
+  - step: "蒜末加宝宝酱油、香油和1勺热水调成料汁，淋在菜心上即可"
+night_prep:
+  - "菜心洗净沥干冷藏，蒜切末"
+notes: "白灼做法几乎不用油，最大程度保留蔬菜清甜，料汁清淡适合孩子。"

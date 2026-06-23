@@ -1,0 +1,70 @@
+title: "香烤鸡翅根 + 烤薯角 + 蔬菜沙拉"
+type: dinner
+difficulty: easy
+total_time: "40分钟"
+servings: 4
+tools: [空气炸锅]
+series: "一锅烤+沙拉"
+tags: [鸡肉, 土豆, 西式, 无油烟]
+ingredient_tags: ['鸡肉', '土豆', '生菜']
+ingredients:
+  香烤鸡翅根:
+    - name: 鸡翅根
+      amount: 12个
+      note: 约600g
+    - name: 宝宝酱油
+      amount: 2大勺
+    - name: 蚝油
+      amount: 1大勺
+    - name: 蜂蜜
+      amount: 1小勺
+    - name: 番茄酱
+      amount: 1小勺
+    - name: 蒜末
+      amount: 2瓣
+    - name: 姜片
+      amount: 2-3片
+    - name: 白芝麻
+      amount: 少许
+  烤薯角:
+    - name: 土豆
+      amount: 3个
+      note: 中等大小，带皮切角
+    - name: 橄榄油
+      amount: 1大勺
+    - name: 盐
+      amount: 少许
+    - name: 迷迭香或孜然粉
+      amount: 少许
+      optional: true
+  蔬菜沙拉:
+    - name: 生菜或混合沙拉菜
+      amount: 适量
+    - name: 小番茄
+      amount: 8颗
+    - name: 黄瓜
+      amount: 半根
+    - name: 沙拉酱
+      amount: 适量
+steps:
+  - step: "鸡翅根洗净，用厨房纸吸干水分，在肉厚处划两刀方便入味"
+  - step: "将酱油、蚝油、蜂蜜、番茄酱、蒜末、姜片混合成腌料，放入鸡翅根拌匀"
+  - step: "腌制至少30分钟（前一晚腌制更入味）"
+  - step: "土豆洗净（不去皮），切成船形薯角（每个土豆切6-8块）"
+  - step: "薯角用清水浸泡10分钟去除多余淀粉，沥干"
+  - step: "薯角加橄榄油、盐和香料拌匀"
+  - step: "空气炸锅200℃预热，先放入薯角烤10分钟"
+    tool: 空气炸锅
+  - step: "打开炸锅，放入鸡翅根（和薯角一起），200℃继续烤15分钟"
+    tool: 空气炸锅
+  - step: "中间翻面一次，最后3分钟刷一层腌料汁上色"
+    tool: 空气炸锅
+  - step: "取出撒白芝麻"
+  - step: "蔬菜洗净切好，拌入沙拉酱"
+  - step: "鸡翅根、薯角、沙拉一起上桌"
+night_prep:
+  - "鸡翅根腌制好，装入密封袋冷藏过夜（更入味）"
+  - "土豆切薯角，泡水后沥干，放入密封盒冷藏"
+  - "蔬菜洗净沥干，放入保鲜盒冷藏"
+  - "沙拉酱装入小碟"
+notes: "空气炸锅同时烤鸡翅和薯角，一次搞定主菜和主食，不用看火、无油烟。沙拉提供清脆的口感和新鲜蔬菜，搭配刚好解腻。鸡翅根孩子拿在手上啃，吃起来很有乐趣。"

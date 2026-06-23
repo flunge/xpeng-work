@@ -1,0 +1,60 @@
+title: "香菇肉末拌面 + 番茄蛋汤"
+type: lunch
+difficulty: easy
+total_time: "30分钟"
+servings: 4
+tools: [炒锅, 玻璃锅]
+series: "面食+汤"
+tags: [面食, 菌菇, 快手]
+ingredient_tags: ['猪肉', '香菇', '油菜', '番茄']
+ingredients:
+  香菇肉末拌面:
+    - name: 干香菇
+      amount: 8朵
+      note: 温水泡发
+    - name: 猪瘦肉末
+      amount: 250g
+    - name: 面条
+      amount: 400g
+      note: 鲜面条
+    - name: 小油菜
+      amount: 4颗
+    - name: 宝宝酱油
+      amount: 1大勺
+    - name: 蚝油
+      amount: 1小勺
+    - name: 淀粉
+      amount: 1小勺
+      note: 腌肉用
+    - name: 姜末
+      amount: 少许
+    - name: 糖
+      amount: 少许
+  番茄蛋汤:
+    - name: 番茄
+      amount: 1个
+    - name: 鸡蛋
+      amount: 2个
+    - name: 葱花
+      amount: 少许
+    - name: 盐
+      amount: 少许
+steps:
+  - step: "干香菇温水泡发后切丁（泡香菇水留用）"
+  - step: "肉末加姜末、酱油、淀粉腌制10分钟"
+  - step: "炒锅放油，下肉末炒至变色，加入香菇丁翻炒"
+    tool: 炒锅
+  - step: "加蚝油、糖和少许泡香菇水，焖煮3分钟至入味"
+    tool: 炒锅
+  - step: "水烧开，下面条煮至软硬适中，捞出过凉水沥干"
+    tool: 玻璃锅
+  - step: "小油菜烫熟捞出"
+  - step: "面条装碗，浇上香菇肉末酱，摆上小油菜"
+  - step: "番茄切片，锅中烧水加番茄片煮开，淋入打散的蛋液"
+    tool: 炒锅
+  - step: "加盐调味，撒葱花即可"
+night_prep:
+  - "干香菇温水泡发后切丁，冷藏"
+  - "肉末加腌料拌匀，冷藏"
+  - "番茄、小油菜洗净备好"
+notes: "泡香菇的水不要倒掉，含有香菇的鲜味。如果孩子喜欢芝士，可以在拌面上撒一些芝士碎。"

@@ -1,0 +1,51 @@
+title: "午餐肉黄瓜玉米饭团 + 纯牛奶"
+type: breakfast
+difficulty: easy
+total_time: "15分钟（前一晚10分钟 + 早上5分钟）"
+servings: 4
+tools: [电饭煲]
+series: "饭团"
+week: 2
+day: wednesday
+tags: [主食, 快手]
+ingredient_tags: ['午餐肉', '玉米', '黄瓜', '海苔']
+ingredients:
+  午餐肉黄瓜玉米饭团:
+    - name: 熟米饭
+      amount: 3碗
+      note: 剩米饭或前一晚新煮
+    - name: 午餐肉
+      amount: 半罐
+      note: 约100g，切小丁（备选，添加剂比火腿肠少；更优选择为鸡胸肉丁）
+    - name: 甜玉米粒
+      amount: 小半碗
+      note: 熟的，罐头或冷冻煮熟均可
+    - name: 蛋黄酱
+      amount: 2大勺
+      note: 或改用生抽1小勺+香油1小勺，日式饭团风味
+    - name: 盐
+      amount: 少许
+    - name: 海苔片
+      amount: 4片
+      note: 包饭团用
+    - name: 黄瓜
+      amount: 1根
+      note: 切小丁
+  搭配:
+    - name: 纯牛奶
+      amount: 4杯
+    - name: 小番茄
+      amount: 8颗
+      optional: true
+night_prep:
+  - "午餐肉切小丁，和蛋黄酱、玉米粒拌匀冷藏"
+  - "米饭煮好，舀出放凉，盖保鲜膜冷藏"
+morning_steps:
+  - "黄瓜洗净切小丁"
+  - "将黄瓜丁和午餐肉沙拉、米饭混合均匀"
+  - "手上沾少许凉开水防粘，取适量米饭握成紧实的圆形或三角形"
+  - "底部贴上海苔片条"
+  - "搭配牛奶和洗好的小番茄一起上桌"
+  - "如果饭团是凉的，不粘锅小火两面煎热，或蒸锅蒸5分钟即可"
+notes: ""
+batch_prep: ""

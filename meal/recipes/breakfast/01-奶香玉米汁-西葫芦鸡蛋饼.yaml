@@ -1,0 +1,47 @@
+title: "奶香玉米汁 + 西葫芦鸡蛋饼"
+type: breakfast
+difficulty: easy
+total_time: "25分钟（前一晚15分钟 + 早上10分钟）"
+servings: 4
+tools: [破壁机, 不粘煎锅]
+series: "饮品+饼"
+week: 1
+day: monday
+tags: [甜味, 蔬菜, 蛋奶, 快手]
+ingredient_tags: ['玉米', '西葫芦', '面粉', '鸡蛋']
+ingredients:
+  玉米汁:
+    - name: 甜玉米
+      amount: 2根
+      note: 剥粒备用
+    - name: 牛奶
+      amount: 300ml
+    - name: 大米
+      amount: 一小把
+      note: 约20g，增加浓稠度
+    - name: 白糖
+      amount: 适量
+      optional: true
+  鸡蛋饼:
+    - name: 西葫芦
+      amount: 1根
+    - name: 鸡蛋
+      amount: 3个
+    - name: 面粉
+      amount: 100g
+    - name: 小葱
+      amount: 3根
+    - name: 盐
+      amount: 少许
+    - name: 水
+      amount: 适量
+night_prep:
+  - "玉米粒剥好，和牛奶、300ml水、大米一起放入破壁机，预约'豆浆'或'米糊'功能（设好早上完成时间）"
+  - "西葫芦擦丝，加少许盐腌制10分钟，挤干水分"
+  - "将西葫芦丝、鸡蛋、面粉、葱花、少许水混合成可流动的面糊，盖上保鲜膜冷藏"
+morning_steps:
+  - "玉米汁已打好，倒入杯中，根据口味加糖"
+  - "不粘锅刷薄油，中火烧热"
+  - "倒入面糊摊平成圆饼，中小火煎至两面金黄（每面约2分钟）"
+  - "切块装盘"
+notes: "西葫芦面糊不要太稀，否则煎的时候容易散。玉米汁预约时水量不要太多，否则不够浓稠。"
