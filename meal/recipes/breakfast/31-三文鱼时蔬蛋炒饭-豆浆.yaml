@@ -1,0 +1,40 @@
+title: "三文鱼时蔬蛋炒饭 + 原味豆浆"
+type: breakfast
+difficulty: easy
+total_time: "20分钟（用隔夜饭，早上15分钟）"
+servings: 4
+tools: [炒锅, 破壁机]
+series: "炒饭+豆浆"
+tags: [咸味, 三文鱼, 鸡蛋, 主食]
+ingredient_tags: ['三文鱼', '大米', '鸡蛋', '豌豆', '胡萝卜', '黄豆']
+ingredients:
+  三文鱼时蔬蛋炒饭:
+    - name: 熟米饭
+      amount: 4碗
+      note: 隔夜饭更好炒
+    - name: 三文鱼
+      amount: 200g
+      note: 切丁，富含DHA促进大脑发育
+    - name: 鸡蛋
+      amount: 4个
+    - name: 豌豆
+      amount: 小半碗
+    - name: 胡萝卜
+      amount: 半根
+      note: 切小丁
+    - name: 葱花
+      amount: 少许
+    - name: 盐
+      amount: 少许
+  原味豆浆:
+    - name: 黄豆
+      amount: 60g
+      note: 提前泡发
+night_prep:
+  - "黄豆泡发；三文鱼切丁、胡萝卜切丁冷藏；豌豆焯水冷藏"
+morning_steps:
+  - "黄豆放破壁机加水打豆浆"
+  - "炒锅少油，鸡蛋打散炒熟盛出；下三文鱼丁煎变色"
+  - "下胡萝卜、豌豆翻炒1分钟，倒入米饭压散大火炒匀"
+  - "回锅鸡蛋、加盐和葱花炒匀，配豆浆上桌"
+notes: "三文鱼富含DHA和优质蛋白，对孩子大脑和身高发育很好；用隔夜饭最易炒散。鱼丁要煎到位去腥。"

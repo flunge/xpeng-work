@@ -1,4 +1,4 @@
-title: "香菇鸡肉粥 + 煮鸡蛋"
+title: "香菇鸡肉粥 + 煮鸡蛋 + 牛奶"
 type: breakfast
 difficulty: easy
 total_time: "25分钟（前一晚10分钟 + 早上15分钟）"
@@ -35,6 +35,9 @@ ingredients:
     - name: 宝宝酱油
       amount: 少许
       note: 蘸蛋吃
+    - name: 纯牛奶
+      amount: 4小杯
+      note: 配粥喝，补钙促发育
 night_prep:
   - "大米淘洗，放入电饭煲，加水至煮粥水位线（约1:8比例）"
   - "鸡胸肉切小丁，香菇泡发切丁，姜切丝"

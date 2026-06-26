@@ -1,0 +1,76 @@
+
+##### RC路线(生产) #####
+BMNPwB5C6iMCTPkTCTVcFjwungd|2026-05-28|吕文杰|长里程生产任务文档
+
+##### 极速模式 #####
+DpxXbIryNatyMvs14T8c7zPmnty|2025-10-28|飞书多维表格|电商行业一张表管公司
+MA5xdOwnWoSJqZxLLa6cJKw9nkh|2026-06-18|李坤|文字记录：06-18 | 仿真算法组周会 2026年6月18日
+FR0sdlM5SobxuPxm27rcS7ANnPe|2026-05-29|李坤|文字记录：仿真算法组周会 2026年5月29日
+XJYydy8Pyo6BcuxbhE9clR62nPg|2026-05-09|李坤|文字记录：05-09 | 仿真算法组周会 2026年5月9日
+ZOicdHME2oT7gTx6t1ecTUKsn6g|2026-04-24|李坤|文字记录：04-24 | 仿真算法组周会 2026年4月24日
+BZYrdcNO9o9hGqxni05c9bI2noe|2026-06-16|黄佰民|文字记录：双周汇报材料review 2026年6月16日
+
+##### 闭环场景集 #####
+WX5twqI8nipfV2khQsxc0unLn2d|2026-04-03|黄俊|FM闭环情况汇总
+
+##### 场景编辑 #####
+ELjkwAsaaiNiKxk3JmscMWKfnLc|2025-11-13|高炳涛(Bingtao)|资产库&amp;场景编辑方案文档
+
+##### 车型泛化 #####
+E7klwTcSEieyYNkNdXJcFsZHnr7|2026-06-16|李坤|仿真车型泛化验证报告
+
+##### RC-SIL #####
+NxBmwuHcqieJXzkmLFzcQ8bMnFe|2026-05-19|李坤|广州RC路线SIL仿真结果
+
+##### CLIP-IQA #####
+
+##### Fixer #####
+STxrwJBKGi1QPOk1OXrcENZInG6|2026-06-25|周冯|SIL &amp; HIL fixer性能优化实验
+A8aowUZtRifVwkkYN9QcgNgZnRh|2026-05-15|周冯|HIL fixer性能优化
+PfELwI4x6ibiMykS6aOccbABnBg|2026-05-25|郑丽娜|历史周计划归档记录
+
+##### 复现率Agent #####
+
+##### 闭环Diff/TopDiff #####
+NdEGwDJn6iRcdEkTgF2clKSbn7e|2026-06-22|邓爽|CCES Metric 评测体系介绍
+VBZVwXcImi9oNmkvkeBcZEZonbg|2026-06-18|吕文杰|Topdiff Agent Review
+CsCfw229bixjB8kqeLRc8spWnwf|2026-04-30|王禹丁|闭环Metric测评
+NNHAwfr8Vi0t3RkGxGacCvmrnDb|2026-06-22|邓爽|车型泛化应用-实验汇总
+ELmuwmwcsiClzIkgnLWcNcSinYb|2026-06-10|张振宇|Draft: Top Diff Agent计划
+
+##### HIL链路 #####
+SrBaw7zqsivm3ik1an6cXy9In5g|2025-12-12|肖宝平|HIL台架测试报告
+QlSrw3e4Ciuc6vkgZgdcNuHZnOb|2026-06-25|朱啸峰|HIL 闭环仿真阶段性验收报告
+Jplzw5aDvi1uY3kYs9Xca3B9nds|2026-05-11|肖宝平|3DGS_HIL台架内部培训
+IPWmwIROOi28vWkxRJHct4Lln3e|2025-08-28|张驰|HIL台架仿真测试一致性报告
+PgHwwq1MbiNbEhksV8qcutLSnqd|2025-08-28|张驰|HIL台架仿真测试一致性测试报告
+VL3JwbvOwiyEafkDI0lcL64Zn1g|2025-04-25|张驰|HIL台架仿真人员培训记录
+
+##### 慢速模式 #####
+VxL2wV146iP7N4klfQ9ccptSnQb|2026-05-29|瞿鑫宇|慢速模式+nvfix耗时估算
+XhawdZLWBoZawhxypnncy7dJnLg|2026-06-12|李坤|文字记录：仿真算法组周会 2026年6月12日
+
+##### AVM鱼眼 #####
+N8Ocw8BrhiFnjskRzeicK4VOnmg|2026-06-05|罗伦|[XA 196822] [CU8导航]VLA模型-周会
+
+##### Feedforward/WM #####
+R65tw0Tg4iKdAnkvN64cmR6ynPg|2026-03-31|李坤|Feedforward Gaussian 详细技术综述 - 15 篇论文完整
+GWcHw65bjinbYlk1e6jcI0genNe|2026-03-16|朱啸峰|场景重建前沿技术调研
+
+##### 场景泛化 #####
+PLfYwqP23iO2jnk6VnKcRgSXnAg|2026-06-22|王禹丁|3DGS 场景天气/光照泛化能力
+
+##### 通用Evaluator #####
+G0BGwftdsiIkKJkLeTKcne5hnhe|2026-06-23|樊世洲|研发闭环agent：编包 - 任务提交 - 结果分析
+P6vewCllBiD4tCkCrlbcqVSPngh|2025-01-14|邓爽|4 黑盒仿真测试 
+NkxxwF8wQiTm7nkldCscbHZRnqg|2026-01-09|邓爽|XP5仿真链路与结果验证过程记录
+MrB1wqFcRiyFa6kKYFtcTZW5nJe|2025-11-17|赖西湖|仿真引擎周会文档(2025.11.10-2025.11.14)
+C1oJwkfXOiTvXKkXZzbcPUi0n7f|2025-07-02|邓爽|4月&amp;5月&amp;6月 进展
+IxPlw2czGiVCXjkInnWcR7Nfnag|2024-12-30|高炳涛(Bingtao)|Black-Box 双日报
+
+##### Simworld治理 #####
+S2vew8uQ1iYyBGkRKEIcTVYLnO0|2026-05-21|朱啸峰|HIL 排障索引
+ERscwpow5itnkwkMWn2c72vBnme|2026-06-23|朱啸峰|HIL 3DGS 渲染（主控 + 渲染服务）
+IOWEds7uboKVpQxpv6Tce7nRnUc|2026-05-19|None|3DGS任务 TASK-000049
+LO4YwKcfiiTTack8RI9cA6KJnph|2026-05-27|高文翰|E2E仿真对外接口文档
+HjfpwgmuTiQYnGkih8CcZHV8n7j|2025-08-25|邓爽|仿真引擎周会文档(2025.08.25-2025.08.29)

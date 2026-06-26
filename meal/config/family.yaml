@@ -16,6 +16,13 @@ family:
     light_oil_salt: true                  # 少油少盐
     # 儿童注意事项
     kid_friendly: true                    # 儿童友好
+    # 口味偏好（孩子爱吃才会吃，口味很重要！）
+    kid_favorite_flavors: [酸甜, 番茄味, 芝士/奶香, 照烧/微甜咸香, 蜂蜜烤香, 玉米/南瓜/紫薯自然甜, 肉松/海苔鲜香]
+    taste_priority: true                  # 在营养均衡前提下，优先选孩子爱吃的口味
+    # 烹饪方式约束
+    no_deep_fry: true                     # 不用油锅油炸（不健康）；例外：炸葱油等小型熬油可以
+    air_fryer_ok: true                    # 空气炸锅常用、首选（少油"炸/烤"，是油炸的健康替代）
+    no_microwave: true                    # 没有微波炉，任何步骤不得依赖微波加热
     # 有用厨具（充分利用）
     appliances:
       - 破壁机      # 米糊/豆浆/浓汤/果汁
@@ -27,14 +34,30 @@ family:
       - 电饭煲      # 煮饭/预约/蒸菜
       - 蒸锅        # 蒸馒头/蒸鱼/蒸蛋
 
+  # 份量基准：每餐 4 人 = 2 成人 + 2 儿童（7岁/5岁男孩），食谱 amount 按此推断
+  servings_basis:
+    adults: 2
+    kids: 2          # 7岁、5岁男孩，两小孩合计约 1 个成人饭量、但正在长身体需保证优质蛋白
+
   # 早餐时间约束
   breakfast:
     max_morning_time: 30  # 早上最多30分钟
     night_prep_ok: true    # 前一晚可以准备
+    # 早餐"三件套"硬要求：每份早餐必须同时含 主食 + 蛋 + 饮品
+    components_required: [主食, 蛋, 饮品]   # 主食(面/饭/馒头/饼/包/吐司/饭团/粥) + 蛋(各种蛋各种做法) + 饮品(奶/豆浆/米糊/果蔬汁/糊露)
+    month_no_repeat: true                   # 一个月内不重样（食谱池 ≥31）
+    nutrition_for_kids: true                # 针对 5/7 岁男孩促进身体/身高发育：保证优质蛋白(蛋/奶/鱼虾牛肉)、钙(奶/芝麻/虾)、DHA(三文鱼/核桃)、粗粮膳食纤维
 
-  # 节假日正餐要求（中餐/晚餐）
+  # 节假日/周末正餐要求（中餐/晚餐）
   holiday_meal:
-    min_dishes: 3           # 每餐至少3道菜（节假日/周末加菜）
-    max_dishes: 3           # 最多3道菜
+    min_dishes: 2           # 每餐至少2道菜（通常2-3道）
+    max_dishes: 3
     has_staple: true        # 必须有主食（饭/面/馒头）
     soup_optional: true     # 汤可选
+    meat_veg_balance: true  # 荤素搭配：正餐主菜含荤(肉/鱼/鸡/虾)，加菜配素菜
+    coarse_fine_grain: true # 粗细搭配：细粮主食(米/面) + 至少1道粗粮(玉米/红薯/紫薯/南瓜/山药/杂粮糙米) —— 由晚餐加菜优先选"粗粮"类保证
+
+  # 食材最小购买量 / 跨天消耗（减少浪费）
+  ingredient_economy:
+    min_pack_note: "蔬菜/肉通常最小 500g 起买"
+    cross_day_reuse: true   # 某天买的食材若一餐用不完，优先安排接下来几天继续消耗（生成器按 ingredient_tags 做跨天食材聚类）

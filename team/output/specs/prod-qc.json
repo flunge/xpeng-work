@@ -1,0 +1,6 @@
+{"name":"prod-qc","title":"生产质检 / gating","subtitle":"目标：建生产 golden testcase + 自动化质检 / gating 卡口，挡住低质数据入库，建质量看板支撑规模化生产",
+"highlight":[["质检 gating","合入 IPS"],["质检","自动化"],["CLIP-IQA","已接入"]],
+"cards":[
+{"t":"方案与进展","type":"bullets","items":["裴健宏：场景重建质检概要设计","质检 gating 代码合入 IPS 生产流程","结合 CLIP-IQA 做图像质量自动过滤","按场景规模 / 复现率分级统计入库质量"]},
+{"t":"现状","type":"bullets","items":["gating 卡口已在产线生效","golden testcase 集建设中","与生产链路、看板联动"]},
+{"t":"计划","type":"bullets","items":["完善 golden testcase 与阈值","自动化质检全面接入产线放行","版本迭代可复用准入判断"]}]}

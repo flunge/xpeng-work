@@ -1,60 +1,42 @@
-# Python virtual environments
-venv/
-venv-cosyvoice/
-.venv/
-*.pyc
+# ── 依赖 / 构建产物 ──
+node_modules/
+dist/
+build/
+.vite/
+
+# ── Python ──
 __pycache__/
+*.py[cod]
+.venv/
+venv/
 
-# Daily sync data (large JSON files, personal data)
-memory/daily-sync/*.json
-memory/daily-sync/*.log
-memory/daily-sync/launchd-*
+# ── 日志 ──
+*.log
 
-# OS files
+# ── 操作系统 / 压缩残留 ──
 .DS_Store
-**/.DS_Store
 Thumbs.db
 __MACOSX/
+._*
 
-# IDE
+# ── 编辑器 / IDE ──
 .vscode/
 .idea/
-
-# Claude Code internal
-.claude/projects/
-
-# Logs
-*.log
-meal/notifications/
-
-# Node
-node_modules/
-package-lock.json
-
-# Binary / large files
-*.pptx
-*.ppt
-
-# Large models / datasets
-CosyVoice/
-*.pth
-*.onnx
-*.bin
-
-# Temp files
-*.tmp
 *.swp
 *.swo
 *~
 
-# Sensitive
-media_key.txt
+# ── 敏感信息 ──
+.env
+.env.*
 *.key
+media_key.txt
 
-# Agent session data
-.agents/
-
-# Temporary project files (root level only)
-/projects/
-/team_building/
-/test-sandbox.txt
+# ── 大文件 / 归档 ──
+*.tar.gz
+*.zip
+*.rar
+*.7z
+*.pptx
+*.ppt
+*.pdf

@@ -1,4 +1,4 @@
-title: "小米南瓜粥 + 煮鹌鹑蛋"
+title: "小米南瓜粥 + 煮鹌鹑蛋 + 牛奶"
 type: breakfast
 difficulty: easy
 total_time: "20分钟（前一晚5分钟 + 早上15分钟）"
@@ -25,6 +25,9 @@ ingredients:
   配餐:
     - name: 鹌鹑蛋
       amount: 16个
+    - name: 纯牛奶
+      amount: 4小杯
+      note: 配粥喝，补钙促发育
 night_prep:
   - "小米淘洗，南瓜去皮切小丁，红枣去核切碎"
   - "全部放入电饭煲，加水（约1:10比例），预约煮粥模式"

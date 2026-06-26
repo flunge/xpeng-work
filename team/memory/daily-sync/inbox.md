@@ -1,3 +1,25 @@
+## 2026-06-24 自动采集摘要
+
+- 📋 会议纪要: https://xiaopeng.feishu.cn/docx/KLgwddU9RotzbsxAi7xcDoIjnPf (2026-06-24 13:09)
+- 📋 会议纪要: https://xiaopeng.feishu.cn/docx/RN1ydJzcKoqMdAxAKrwccs0PnJg (2026-06-24 10:16)
+- 📋 会议纪要: https://xiaopeng.feishu.cn/docx/C8r2d0lwIo1nGzxL59tcbr9Rn2g (2026-06-24 02:05)
+- 📅 仿真核心日会 @2026-06-24T01:30
+- 📅 每日例会 @2026-06-24T09:30
+- 📅 聊天茶水间 @2026-06-24T12:00
+- 📝 Q2 Wiki rev: 32940
+- 💬 IM: 29组员命中 + 0群聊消息 + 8条@我
+  - 组员提到:
+    · 郑丽娜 (5条)
+    · 杨星昊 (5条)
+    · 周蔚旭 (1条)
+    · 裴健宏 (3条)
+    · 周冯 (2条)
+    · 吕文杰 (1条)
+    · 王禹丁 (4条)
+    · 朱啸峰 (1条)
+    · 瞿鑫宇 (1条)
+    · 严潇竹 (5条)
+    · 靳希睿 (1条)
 ## 2026-06-23 自动采集摘要
 
 - 📋 会议纪要: https://xiaopeng.feishu.cn/docx/DPDodnttcoQQEbx3piqcrszpnvb (2026-06-23 11:32)

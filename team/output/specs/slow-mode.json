@@ -1,0 +1,62 @@
+{
+ "name": "slow-mode",
+ "title": "慢速模式",
+ "subtitle": "牺牲实时性换 Difix 画质（带 difix ≤1:8），同时解决多轮运行一致性",
+ "cards": [
+  {
+   "t": "① 目标与动机",
+   "type": "lines",
+   "html": "实时模式只能到 1:3、撑不起更高质量 Difix。<br><br>慢速模式让系统时钟按比例降速（1:5 / 1:8）换画质，<b>带 difix 目标 ≤1:8</b>。<br><br>也是解一致性的候选（常规模式由到达时序驱动、DDS jitter 致多轮不可复现）。"
+  },
+  {
+   "t": "② 进展",
+   "type": "bullets",
+   "items": [
+    "链路跑通",
+    "自动化编译部署（x64 / PC / replayer / template）完成",
+    "系统公共库慢速时钟代码改完、支持按参数设降速比例",
+    "慢速 + 正常模式代码合并并 rebase 新 dev"
+   ]
+  },
+  {
+   "t": "③ latent 方案",
+   "type": "bullets",
+   "items": [
+    "带 ref 图慢速读 latent（H265→NVFixer VAE encoder latent）适配 <b>50%</b>",
+    "上海台架配置慢速跑通（不带 nvfix）",
+    "选 4 个 case 用 H265 解码从原始 DDS 取原图"
+   ]
+  },
+  {
+   "t": "④ 现状与 Gap",
+   "type": "bullets",
+   "items": [
+    "latent 方案适配 50%、效率比尚未实测达标",
+    "P0 目标：跑通带 nvfix 慢速、效率比 1:8 以内"
+   ]
+  },
+  {
+   "t": "⑤ 计划",
+   "type": "bullets",
+   "items": [
+    "跑通带 nvfix 慢速、实测效率比",
+    "推进 latent 方案剩余适配"
+   ]
+  }
+ ],
+ "conclusion": "链路跑通、自动化部署完成、慢速时钟支持降速；带 ref latent 方案适配 50%，待跑通带 nvfix 慢速实测效率比。",
+ "highlight": [
+  [
+   "latent 适配",
+   "50%"
+  ],
+  [
+   "带 difix 目标",
+   "≤1:8"
+  ],
+  [
+   "一致性目标",
+   "≥90%"
+  ]
+ ]
+}

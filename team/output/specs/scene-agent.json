@@ -1,0 +1,6 @@
+{"name":"scene-agent","title":"场景编辑 Smart Agent","subtitle":"目标：用 Agent 自动化场景编辑(选点 / 轨迹 / 参数)，进一步降低人工、提升 corner case 产能",
+"highlight":[["规则轨迹","已通"],["CLI 自动化","完成"],["Agent 化","推进"]],
+"cards":[
+{"t":"进展","type":"bullets","items":["规则轨迹自动生成已打通(RI Local Map + TTC)","CLI 场景编辑自动化改造完成、批量(本地/UCP)","与场景编辑生产线(资产库/和谐化)打通"]},
+{"t":"现状","type":"bullets","items":["规则 / 半自动已用，Agent 全自动在探索","细业务逻辑在调"]},
+{"t":"计划","type":"bullets","items":["Agent 自动选点 / 轨迹 / 参数","与业务对接场景集与用法"]}]}

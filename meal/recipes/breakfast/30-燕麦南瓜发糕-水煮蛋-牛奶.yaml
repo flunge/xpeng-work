@@ -1,0 +1,36 @@
+title: "燕麦南瓜发糕 + 水煮蛋 + 牛奶"
+type: breakfast
+difficulty: medium
+total_time: "前一晚发酵 + 早上15分钟"
+servings: 4
+tools: [蒸锅, 玻璃锅]
+series: "发糕+蛋+奶"
+tags: [甜味, 粗粮, 南瓜, 主食]
+ingredient_tags: ['面粉', '燕麦', '南瓜', '鸡蛋', '牛奶']
+ingredients:
+  燕麦南瓜发糕:
+    - name: 中筋面粉
+      amount: 250g
+    - name: 即食燕麦
+      amount: 50g
+      note: 粗粮
+    - name: 南瓜
+      amount: 200g
+      note: 蒸熟压泥，天然甜
+    - name: 酵母
+      amount: 3g
+    - name: 牛奶
+      amount: 100ml
+  配餐:
+    - name: 鸡蛋
+      amount: 4个
+      note: 水煮蛋
+    - name: 纯牛奶
+      amount: 4杯
+night_prep:
+  - "南瓜蒸熟压泥，与面粉、燕麦、酵母、牛奶拌成糊，倒入抹油容器，冷藏慢发酵过夜"
+morning_steps:
+  - "发酵好的面糊（涨至2倍）冷水上锅，大火蒸25分钟、焖3分钟，取出切块"
+  - "鸡蛋冷水下锅煮7分钟，过冷水剥壳"
+  - "发糕配水煮蛋和热牛奶上桌"
+notes: "南瓜发糕松软微甜、含粗粮燕麦，不加糖也好吃；前一晚冷藏发酵，早上直接蒸。蛋+奶补足蛋白和钙，促进长高。"

@@ -1,0 +1,39 @@
+title: "红豆薏米糊 + 鸡蛋全麦吐司"
+type: breakfast
+difficulty: easy
+total_time: "20分钟（前一晚5分钟 + 早上15分钟）"
+servings: 4
+tools: [破壁机, 不粘煎锅]
+series: "糊+吐司"
+tags: [甜味, 粗粮, 全麦, 主食]
+ingredient_tags: ['红豆', '薏米', '全麦面包', '鸡蛋', '牛奶']
+ingredients:
+  红豆薏米糊:
+    - name: 红豆
+      amount: 50g
+      note: 提前泡发
+    - name: 薏米
+      amount: 30g
+      note: 提前泡发，粗粮祛湿
+    - name: 燕麦
+      amount: 20g
+    - name: 冰糖
+      amount: 少许
+      optional: true
+  鸡蛋全麦吐司:
+    - name: 全麦吐司
+      amount: 8片
+      note: 粗粮，膳食纤维
+    - name: 鸡蛋
+      amount: 4个
+    - name: 牛奶
+      amount: 50ml
+      note: 蘸蛋液用
+night_prep:
+  - "红豆、薏米、燕麦混合泡发过夜"
+morning_steps:
+  - "泡好的红豆薏米燕麦放破壁机加水700ml打糊（约25分钟，可加冰糖）"
+  - "鸡蛋加50ml牛奶打散，全麦吐司双面蘸蛋液"
+  - "不粘锅小火把吐司煎至金黄（法式吐司做法）"
+  - "红豆薏米糊配鸡蛋全麦吐司上桌"
+notes: "红豆薏米是经典粗粮组合、补铁祛湿；全麦吐司比白吐司纤维高更顶饱。蛋液裹吐司一起吃，主食+蛋一步到位。"

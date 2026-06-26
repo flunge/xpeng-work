@@ -125,7 +125,7 @@ def pick_recipes(recipes_pool, count, used_titles, day_index=0, preferred_tags=N
     return selected
 
 
-def pick_side(sides, used_side, day_index, preferred_tags=None, exclude_titles=None):
+def pick_side(sides, used_side, day_index, preferred_tags=None, exclude_titles=None, prefer_category=None):
     """
     为全餐日挑选 1 道加菜。
     - 优先选与所属正餐共享食材的加菜（减少食材浪费）
@@ -133,18 +133,24 @@ def pick_side(sides, used_side, day_index, preferred_tags=None, exclude_titles=N
     - exclude_titles 保证同一天午/晚餐加菜不重复
     """
     exclude_titles = exclude_titles or set()
-    avail = [s for s in sides
+    base = sides
+    if prefer_category:
+        cat = [s for s in sides if s.get("category") == prefer_category]
+        if cat:
+            base = cat
+    avail = [s for s in base
              if s["title"] not in used_side and s["title"] not in exclude_titles]
     if not avail:
-        # 一轮加菜已用尽，重置循环（仍排除当天已选）
-        used_side.clear()
-        avail = [s for s in sides if s["title"] not in exclude_titles]
+        # 该类加菜已用尽，重置其循环（仍排除当天已选）
+        for s in base:
+            used_side.discard(s["title"])
+        avail = [s for s in base if s["title"] not in exclude_titles]
     if not avail:
-        avail = list(sides)
+        avail = list(base)
 
     if preferred_tags:
         ordered = sorted(avail, key=lambda r: (-_ingredient_score(r, preferred_tags),
-                                               sides.index(r)))
+                                               base.index(r)))
         if _ingredient_score(ordered[0], preferred_tags) > 0:
             return ordered[0]
     return avail[day_index % len(avail)]
@@ -231,7 +237,8 @@ def generate_month_plan(year, month, recipes, holidays):
                 if entry.get("lunch_extra"):
                     exclude.add(entry["lunch_extra"]["title"])
                 s = pick_side(sides, used_side, day_index,
-                              preferred_tags=last_dinner_tags, exclude_titles=exclude)
+                              preferred_tags=last_dinner_tags, exclude_titles=exclude,
+                              prefer_category="粗粮")
                 entry["dinner_extra"] = s
                 used_side.add(s["title"])
 

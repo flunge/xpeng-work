@@ -1,0 +1,61 @@
+{
+ "name": "ff-wm",
+ "title": "Feedforward / 世界模型内部探索",
+ "subtitle": "用 Feedforward 缩短 3D 重建耗时、服务 1 小时极速；WM 内部探索改善 3DGS 链路新视角问题",
+ "cards": [
+  {
+   "t": "① 目标",
+   "type": "lines",
+   "html": "<b>Feedforward</b>：大幅缩短 3D 重建耗时、提升自动化，直接服务 O3 的 1 小时极速。<br><br><b>WM 内部探索</b>（区别于外部 WM 团队、规模更小）：6 月内拿到能解决新视角问题的可用效果。"
+  },
+  {
+   "t": "② 进展",
+   "type": "bullets",
+   "items": [
+    "feedforward 已并入极速链路（约 100 分钟含前处理+feedforward）",
+    "WM 用 Inspatio-world 做 LoRA 微调（约 750 steps、700 clips）",
+    "修复多卡训练报错、cache latent 提速（32 卡半天训 10 epoch）"
+   ]
+  },
+  {
+   "t": "③ 关键发现",
+   "type": "bullets",
+   "items": [
+    "feedforward 输入训 diffusion 会“抄 ref 图”",
+    "疑信息量少、模型仅 1.3B ≈ Difix",
+    "3DGS 渲染效果更好"
+   ]
+  },
+  {
+   "t": "④ 现状与 Gap",
+   "type": "bullets",
+   "items": [
+    "效率有收益但效果待提升",
+    "输入用 feedforward 还是 3DGS 待定"
+   ]
+  },
+  {
+   "t": "⑤ 计划",
+   "type": "bullets",
+   "items": [
+    "Q3 继续优化 feedforward 算法、定输入方案",
+    "与 AI 引擎组分工、不重复造轮子"
+   ]
+  }
+ ],
+ "conclusion": "feedforward 已并入极速、WM LoRA 微调推进；输入选择与效果待定，Q3 继续优化并定方案。",
+ "highlight": [
+  [
+   "并入极速",
+   "~100min"
+  ],
+  [
+   "LoRA",
+   "~750步/700clip"
+  ],
+  [
+   "训练",
+   "32 卡半天 10ep"
+  ]
+ ]
+}

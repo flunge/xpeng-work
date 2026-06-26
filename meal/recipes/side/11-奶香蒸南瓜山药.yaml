@@ -1,0 +1,29 @@
+title: "奶香蒸南瓜山药"
+type: side
+category: 粗粮
+difficulty: easy
+total_time: "20分钟"
+servings: 4
+tools: [蒸锅]
+tags: [粗粮, 蒸, 甜味, 无油]
+ingredient_tags: ['南瓜', '山药', '牛奶']
+ingredients:
+  奶香蒸南瓜山药:
+    - name: 南瓜
+      amount: 250g
+      note: 去皮切块
+    - name: 铁棍山药
+      amount: 1根
+      note: 去皮切段，健脾养胃
+    - name: 牛奶
+      amount: 50ml
+      note: 出锅淋上，增香补钙
+      optional: true
+steps:
+  - step: "南瓜、山药去皮切块，摆盘"
+    tool: 蒸锅
+  - step: "蒸锅水开中火蒸15分钟至软，可淋少许温牛奶提香"
+    tool: 蒸锅
+night_prep:
+  - "南瓜切块冷藏；山药去皮切段泡水防氧化（戴手套防痒）"
+notes: "南瓜山药都是温和粗粮、健脾养胃，蒸制无油很适合孩子；与细粮主食搭配做到粗细均衡。"

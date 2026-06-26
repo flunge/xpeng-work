@@ -1,93 +1,55 @@
 # lik44-star-team
 
-
-
-## Getting started
-
-To make it easy for you to get started with GitLab, here's a list of recommended next steps.
-
-Already a pro? Just edit this README.md and make it your own. Want to make it easy? [Use the template at the bottom](#editing-this-readme)!
-
-## Add your files
-
-- [ ] [Create](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#create-a-file) or [upload](https://docs.gitlab.com/ee/user/project/repository/web_editor.html#upload-a-file) files
-- [ ] [Add files using the command line](https://docs.gitlab.com/ee/gitlab-basics/add-file.html#add-a-file-using-the-command-line) or push an existing Git repository with the following command:
+「灵犀」运行的多项目工作空间（monorepo）。仓库根下并列三个**相互独立**的项目，外加一层把它们的自动化任务串起来的**根触发层**。
 
 ```
-cd existing_repo
-git remote add origin http://gitlab.xiaopeng.local:18080/lx_one_step/307096493098057728/lik44-star-team.git
-git branch -M master
-git push -uf origin master
+/workspace
+├── bootstrap.sh           # Pod 启动自愈：补运行依赖（PyYAML 等）
+├── lingxi-trigger.sh      # 统一任务触发入口：food | risk | sync
+│
+├── meal/                  # ① 家庭食谱自动化（Python + YAML + 飞书 Webhook）
+├── team/                  # ② 仿真部飞书工作空间交互（lark-cli + 记忆库）
+└── ppt-slide-formatter/   # ③ 网页版可编辑 PPT（Vite）
 ```
 
-## Integrate with your tools
+> ⚠️ 三个项目各自独立，无代码依赖。根目录的两个脚本是**已部署运行**的触发层，
+> 硬编码了 `/workspace/meal`、`/workspace/team/scripts/...` 等绝对路径，
+> 并被飞书消息驱动 / crontab 调用——**请勿移动项目根目录或重命名顶层目录**。
 
-- [ ] [Set up project integrations](http://gitlab.xiaopeng.local:18080/lx_one_step/307096493098057728/lik44-star-team/-/settings/integrations)
+---
 
-## Collaborate with your team
+## 项目一览
 
-- [ ] [Invite team members and collaborators](https://docs.gitlab.com/ee/user/project/members/)
-- [ ] [Create a new merge request](https://docs.gitlab.com/ee/user/project/merge_requests/creating_merge_requests.html)
-- [ ] [Automatically close issues from merge requests](https://docs.gitlab.com/ee/user/project/issues/managing_issues.html#closing-issues-automatically)
-- [ ] [Enable merge request approvals](https://docs.gitlab.com/ee/user/project/merge_requests/approvals/)
-- [ ] [Set auto-merge](https://docs.gitlab.com/ee/user/project/merge_requests/merge_when_pipeline_succeeds.html)
+| 目录 | 用途 | 技术栈 | 详细文档 |
+|------|------|--------|----------|
+| [`meal/`](meal/) | 一家四口的自动化食谱：每日推送明日食谱 + 采购清单，月末生成下月计划 | Python3 + PyYAML + Shell + 飞书 Webhook | [meal/README.md](meal/README.md) · [meal/WORKFLOW.md](meal/WORKFLOW.md) |
+| [`team/`](team/) | 通过 `lark-cli` 读写飞书文档、采集会议纪要、维护团队记忆库、推送项目风险 | Python3 + Shell + Node.js + lark-cli | [team/CLAUDE.md](team/CLAUDE.md) |
+| [`ppt-slide-formatter/`](ppt-slide-formatter/) | 小鹏自动驾驶仿真算法 15 页可编辑网页版 PPT（HUD 深色科技风格） | Vite + 原生 JS/HTML/CSS | [ppt-slide-formatter/package.json](ppt-slide-formatter/package.json) |
 
-## Test and Deploy
+---
 
-Use the built-in continuous integration in GitLab.
+## 根触发层
 
-- [ ] [Get started with GitLab CI/CD](https://docs.gitlab.com/ee/ci/quick_start/index.html)
-- [ ] [Analyze your code for known vulnerabilities with Static Application Security Testing (SAST)](https://docs.gitlab.com/ee/user/application_security/sast/)
-- [ ] [Deploy to Kubernetes, Amazon EC2, or Amazon ECS using Auto Deploy](https://docs.gitlab.com/ee/topics/autodevops/requirements.html)
-- [ ] [Use pull-based deployments for improved Kubernetes management](https://docs.gitlab.com/ee/user/clusters/agent/)
-- [ ] [Set up protected environments](https://docs.gitlab.com/ee/ci/environments/protected_environments.html)
+任何触发源（飞书消息、外部调度器）都只调用统一入口：
 
-***
+```bash
+bash /workspace/lingxi-trigger.sh <task>
+```
 
-# Editing this README
+| task | 动作 | 落到 |
+|------|------|------|
+| `food` | 推送「明日食谱」到飞书 | `meal/scripts/notify_daily.py` |
+| `risk` | 推送「项目风险播报」到飞书 | `team/scripts/risk-push.py` |
+| `sync` | 采集会议纪要 / 主文档更新并更新记忆 | `team/scripts/daily-sync.sh` |
 
-When you're ready to make this README your own, just edit this file and use the handy template below (or feel free to structure it however you want - this is just a starting point!). Thanks to [makeareadme.com](https://www.makeareadme.com/) for this template.
+Pod 重启后补依赖：
 
-## Suggestions for a good README
+```bash
+bash /workspace/bootstrap.sh
+```
 
-Every project is different, so consider which of these sections apply to yours. The sections used in the template are suggestions for most open source projects. Also keep in mind that while a README can be too long and detailed, too long is better than too short. If you think your README is too long, consider utilizing another form of documentation rather than cutting out information.
+---
 
-## Name
-Choose a self-explaining name for your project.
+## 部署说明
 
-## Description
-Let people know what your project can do specifically. Provide context and add a link to any reference visitors might be unfamiliar with. A list of Features or a Background subsection can also be added here. If there are alternatives to your project, this is a good place to list differentiating factors.
-
-## Badges
-On some READMEs, you may see small images that convey metadata, such as whether or not all the tests are passing for the project. You can use Shields to add some to your README. Many services also have instructions for adding a badge.
-
-## Visuals
-Depending on what you are making, it can be a good idea to include screenshots or even a video (you'll frequently see GIFs rather than actual videos). Tools like ttygif can help, but check out Asciinema for a more sophisticated method.
-
-## Installation
-Within a particular ecosystem, there may be a common way of installing things, such as using Yarn, NuGet, or Homebrew. However, consider the possibility that whoever is reading your README is a novice and would like more guidance. Listing specific steps helps remove ambiguity and gets people to using your project as quickly as possible. If it only runs in a specific context like a particular programming language version or operating system or has dependencies that have to be installed manually, also add a Requirements subsection.
-
-## Usage
-Use examples liberally, and show the expected output if you can. It's helpful to have inline the smallest example of usage that you can demonstrate, while providing links to more sophisticated examples if they are too long to reasonably include in the README.
-
-## Support
-Tell people where they can go to for help. It can be any combination of an issue tracker, a chat room, an email address, etc.
-
-## Roadmap
-If you have ideas for releases in the future, it is a good idea to list them in the README.
-
-## Contributing
-State if you are open to contributions and what your requirements are for accepting them.
-
-For people who want to make changes to your project, it's helpful to have some documentation on how to get started. Perhaps there is a script that they should run or some environment variables that they need to set. Make these steps explicit. These instructions could also be useful to your future self.
-
-You can also document commands to lint the code or run tests. These steps help to ensure high code quality and reduce the likelihood that the changes inadvertently break something. Having instructions for running tests is especially helpful if it requires external setup, such as starting a Selenium server for testing in a browser.
-
-## Authors and acknowledgment
-Show your appreciation to those who have contributed to the project.
-
-## License
-For open source projects, say how it is licensed.
-
-## Project status
-If you have run out of energy or time for your project, put a note at the top of the README saying that development has slowed down or stopped completely. Someone may choose to fork your project or volunteer to step in as a maintainer or owner, allowing your project to keep going. You can also make an explicit request for maintainers.
+本工作空间部署在 Agent Pod。工程文件（`/workspace`）与飞书授权（`/platform/.lark-cli`）在持久盘，Pod 重启不丢；PyYAML、crontab、cron 守护进程在容器临时层，重启后由 `bootstrap.sh` / 各项目 `setup.sh` 恢复。
