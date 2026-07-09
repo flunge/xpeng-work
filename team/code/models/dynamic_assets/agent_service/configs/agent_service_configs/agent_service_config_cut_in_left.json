@@ -1,0 +1,59 @@
+{
+    "keep_original_objects": false,
+    "objects": [
+        {
+            "id": 999,
+            "agent_configs": {
+                "agent_attributes": {
+                    "data_uid": 16,
+                    "type": "AGENT_VEHICLE",
+                    "driver_model": "DRIVER_MODEL_DEFAULT"
+                },
+                "init_state_spec": {
+                    "pos_type": "RELATIVE_EGO_POS",
+                    "relative_ego_pos": {
+                        "ds": 7,
+                        "dl": 2.5,
+                        "v_param": 1.1,
+                        "dangle": 0
+                    }
+                }
+            },
+            "action_configs": [
+                {
+                    "action_type": "ACTION_CHANGE_LANE",
+                    "action_change_lane_spec": {
+                        "target_lane_index": 1,
+                        "lane_change_duration": 3
+                    },
+                    "trigger_config": [
+                        {
+                            "trigger_type": "TRIGGER_EGO_TIME",
+                            "repeat": false,
+                            "ego_time": {
+                                "seconds": 7
+                            }
+                        }
+                    ]
+                },
+                {
+                    "action_type": "ACTION_AGENT_ACCEL",
+                    "speed_accel_spec": {
+                    "accel_property": {
+                        "a": -1.5
+                    }
+                    },
+                    "trigger_config": [
+                        {
+                            "trigger_type": "TRIGGER_EGO_TIME",
+                            "repeat": false,
+                            "ego_time": {
+                                "seconds": 10
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

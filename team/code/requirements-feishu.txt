@@ -1,0 +1,14 @@
+# 飞书相关 Python 依赖（仓库根 pip 安装）
+# 用法：pip install -r requirements-feishu.txt
+# 或：bash agents/scripts/setup-dev-environment.sh（同时装 lark-cli）
+#
+# 本文件【不包含】lark-cli 命令行 —— lark-cli 是独立二进制，请执行：
+#   bash agents/scripts/install-lark-cli.sh
+# 文档：docs/feishu/lark-cli-setup.md
+#
+# Python 包含：
+#   agents/requirements.txt  — FastAPI、uvicorn（跑 Bot）
+#   requests                            — cloudsim 等 skill 脚本
+
+-r agents/requirements.txt
+requests>=2.28,<3

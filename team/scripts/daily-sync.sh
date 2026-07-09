@@ -11,6 +11,9 @@ PROJECT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 SYNC_DIR="$PROJECT_DIR/memory/daily-sync"
 # 可传入日期参数回填历史（默认今天）：daily-sync.sh 2026-06-12
 TODAY="${1:-$(date +%Y-%m-%d)}"
+# 第 2 个参数可传起始日期，做"滚动窗口/多天回填"采集：daily-sync.sh 2026-06-30 2026-06-18
+# 不传则起点=终点=TODAY（单日采集，与历史行为一致）
+START="${2:-$TODAY}"
 OUTFILE="$SYNC_DIR/$TODAY.json"
 LOGFILE="$SYNC_DIR/sync.log"
 TMPFILE="$OUTFILE.tmp"
@@ -42,17 +45,38 @@ from datetime import datetime
 LARK_CLI = "$LARK_CLI"
 SYNC_DIR = "$SYNC_DIR"
 TODAY = "$TODAY"
+START = "$START"   # 采集窗口起始日（含），终点 = TODAY 当天 23:59
 VC_CHAT_ID = "$VC_CHAT_ID"
 WIKI_DOC = "$WIKI_DOC"
+# 时间窗口：START 00:00 → TODAY 23:59（START==TODAY 即单日）
+WIN_START = f"{START}T00:00:00+08:00"
+WIN_END = f"{TODAY}T23:59:59+08:00"
+# 老板高炳涛 open_id（必抓：其全部发言 + 与李坤的 p2p）
+BOSS_OPEN_ID = "ou_8bcf2bb3c23a679a7c19bfcc80b4cdda"
+# 组员群（组员名单的权威来源，动态拉取——含新入职实习生，不手维护）
+TEAM_CHAT_ID = "oc_bb2cf097e2d3efc34a4bc37ebd9225d9"
 
-# 组员名单 + 关键群聊
-TEAM_MEMBERS = ["郑丽娜", "杨星昊", "周蔚旭", "裴健宏", "周冯", "吕文杰", "王禹丁", "朱啸峰", "瞿鑫宇", "严潇竹", "靳希睿"]
+def fetch_team_members():
+    """从组员群动态拉成员姓名，排除李坤自己；失败则回退到静态名单。"""
+    fallback = ["郑丽娜", "杨星昊", "周蔚旭", "裴健宏", "周冯", "吕文杰", "王禹丁", "朱啸峰", "瞿鑫宇", "严潇竹", "靳希睿", "樊世洲", "李祉浚", "谷佳萱"]
+    try:
+        r = run_lark(["api", "GET", f"/open-apis/im/v1/chats/{TEAM_CHAT_ID}/members",
+                      "--params", '{"member_id_type":"open_id","page_size":"100"}'])
+        items = r.get("data", {}).get("items", []) if isinstance(r, dict) else []
+        names = [m.get("name", "") for m in items if m.get("name") and m.get("name") != "李坤"]
+        return names if names else fallback
+    except Exception:
+        return fallback
+
+# 组员名单（动态，含新入职实习生）
+TEAM_MEMBERS = None  # 延迟到 run_lark 定义后再拉
 TEAM_CHATS = [
     ("oc_bb2cf097e2d3efc34a4bc37ebd9225d9", "仿真算法组"),
     ("oc_af64a74c337b188fd3a95734e9aca29c", "Simworld MR Sync"),
 ]
 WATCH_CHATS = [
     ("oc_4b720d9eedc8192372fb5af253dfcf12", "通用智能中心"),
+    ("oc_a19cd7f6afaf38d949a036b88779136d", "HR-周秀丽(招聘/入职)"),  # 待入职/新人信息源，组员群拉不到
 ]
 
 def run_lark(args):
@@ -65,8 +89,35 @@ def run_lark(args):
     except Exception as e:
         return {"error": str(e)}
 
+def list_chat_messages(chat_id, start, end, max_pages=20):
+    """im +chat-messages-list 不支持 --page-all，需手动翻页（曾因误传 --page-all 致群聊采集全失败）。"""
+    out = []
+    page_token = None
+    for _ in range(max_pages):
+        args = ["im", "+chat-messages-list", "--as", "user",
+                "--chat-id", chat_id, "--start", start, "--end", end,
+                "--page-size", "50", "--format", "json"]
+        if page_token:
+            args += ["--page-token", page_token]
+        r = run_lark(args)
+        if not isinstance(r, dict):
+            break
+        data = r.get("data", {})
+        out.extend(data.get("messages", []))
+        if not data.get("has_more") or not data.get("page_token"):
+            break
+        page_token = data.get("page_token")
+    return out
+
+# run_lark 已定义，动态拉组员名单（含新入职实习生）
+TEAM_MEMBERS = fetch_team_members()
+sys.stderr.write(f"[{datetime.now().strftime('%H:%M:%S')}] Team members ({len(TEAM_MEMBERS)}): {', '.join(TEAM_MEMBERS)}\n")
+
 result = {
     "date": TODAY,
+    "window_start": WIN_START,
+    "window_end": WIN_END,
+    "team_members": TEAM_MEMBERS,
     "sync_time": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
 }
 
@@ -147,8 +198,8 @@ for name in TEAM_MEMBERS:
     try:
         r = run_lark(["im", "+messages-search", "--as", "user",
             "--query", name,
-            "--start", f"{TODAY}T00:00:00+08:00",
-            "--end", f"{TODAY}T23:59:59+08:00",
+            "--start", WIN_START,
+            "--end", WIN_END,
             "--page-all", "--format", "json"])
         msgs = r.get("data", {}).get("messages", []) if isinstance(r, dict) else []
         if msgs:
@@ -166,16 +217,10 @@ im_chat_messages = {}
 all_chats = TEAM_CHATS + WATCH_CHATS
 for chat_id, chat_name in all_chats:
     try:
-        r = run_lark(["im", "+chat-messages-list", "--as", "user",
-            "--chat-id", chat_id,
-            "--start", f"{TODAY}T00:00:00+08:00",
-            "--end", f"{TODAY}T23:59:59+08:00",
-            "--page-all", "--format", "json"])
-        msgs = r.get("data", {}).get("messages", []) if isinstance(r, dict) else []
-        today_msgs = [m for m in msgs if TODAY in str(m.get("create_time", ""))]
-        if today_msgs:
-            im_chat_messages[chat_name] = today_msgs
-            sys.stderr.write(f"  {chat_name}: {len(today_msgs)} messages today\n")
+        msgs = list_chat_messages(chat_id, WIN_START, WIN_END)
+        if msgs:
+            im_chat_messages[chat_name] = msgs
+            sys.stderr.write(f"  {chat_name}: {len(msgs)} messages in window\n")
         else:
             sys.stderr.write(f"  {chat_name}: 0\n")
     except Exception as e:
@@ -187,8 +232,8 @@ sys.stderr.write(f"[{datetime.now().strftime('%H:%M:%S')}] Step 7: IM @me...\n")
 try:
     at_me = run_lark(["im", "+messages-search", "--as", "user",
         "--is-at-me",
-        "--start", f"{TODAY}T00:00:00+08:00",
-        "--end", f"{TODAY}T23:59:59+08:00",
+        "--start", WIN_START,
+        "--end", WIN_END,
         "--page-all", "--format", "json"])
     at_msgs = at_me.get("data", {}).get("messages", []) if isinstance(at_me, dict) else []
     result["im_at_me"] = at_msgs
@@ -196,6 +241,33 @@ try:
 except Exception as e:
     result["im_at_me"] = []
     sys.stderr.write(f"  @me: error - {e}\n")
+
+# Step 7.5: IM - 老板高炳涛相关（必抓）：① 其全部发言（sender）② 与李坤的 p2p 单聊
+sys.stderr.write(f"[{datetime.now().strftime('%H:%M:%S')}] Step 7.5: IM boss (高炳涛)...\n")
+boss = {}
+try:
+    # 老板在窗口内发出的全部消息（任何群/单聊，按 sender 过滤）
+    r = run_lark(["im", "+messages-search", "--as", "user",
+        "--sender", BOSS_OPEN_ID,
+        "--start", WIN_START, "--end", WIN_END,
+        "--page-all", "--format", "json"])
+    boss["sent"] = r.get("data", {}).get("messages", []) if isinstance(r, dict) else []
+    sys.stderr.write(f"  boss sent: {len(boss['sent'])} messages\n")
+except Exception as e:
+    boss["sent"] = []
+    sys.stderr.write(f"  boss sent: error - {e}\n")
+try:
+    # 老板与李坤的 p2p 单聊（chat-type p2p + sender），抓老板私聊李坤的话
+    r = run_lark(["im", "+messages-search", "--as", "user",
+        "--sender", BOSS_OPEN_ID, "--chat-type", "p2p",
+        "--start", WIN_START, "--end", WIN_END,
+        "--page-all", "--format", "json"])
+    boss["p2p"] = r.get("data", {}).get("messages", []) if isinstance(r, dict) else []
+    sys.stderr.write(f"  boss p2p: {len(boss['p2p'])} messages\n")
+except Exception as e:
+    boss["p2p"] = []
+    sys.stderr.write(f"  boss p2p: error - {e}\n")
+result["im_boss"] = boss
 
 # Step 8: 生成每日摘要（即使不开 Claude Code 也能更新记忆文件）
 # Step 9: 分发今日会议内容到各项目 ledger

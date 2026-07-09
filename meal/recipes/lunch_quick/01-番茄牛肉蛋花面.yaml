@@ -1,0 +1,41 @@
+title: "番茄牛肉蛋花面"
+type: lunch_quick
+difficulty: easy
+total_time: "中午约20分钟"
+servings: 2
+serving_note: "一大一小（1成人+1儿童）"
+tools: [玻璃锅, 不粘煎锅]
+tags: [牛肉, 番茄, 面, 蛋]
+ingredient_tags: ['牛肉末', '番茄', '鸡蛋']
+ingredients:
+  番茄牛肉蛋花面:
+    - name: 牛肉末
+      amount: 120g
+      note: 前晚用生抽+少许糖+淀粉抓匀冷藏
+    - name: 番茄
+      amount: 2个
+      note: 前晚去皮切丁
+    - name: 鸡蛋
+      amount: 1个
+      note: 打散
+    - name: 儿童面条
+      amount: 130g
+      note: 细面/宝宝面易熟
+    - name: 番茄沙司
+      amount: 1小勺
+      note: 提酸甜味，孩子爱
+    - name: 葱花
+      amount: 少许
+    - name: 盐
+      amount: 少许
+    - name: 香油
+      amount: 几滴
+night_prep:
+  - "牛肉末加生抽、少许糖、淀粉抓匀，保鲜盒冷藏腌制"
+  - "番茄去皮切丁，装盒冷藏"
+noon_steps:
+  - "锅热少许油，下牛肉末炒散变色"
+  - "加番茄丁炒出沙，加番茄沙司和一碗半水煮开"
+  - "下面条煮约5分钟至软"
+  - "淋蛋液成蛋花，加盐调味，撒葱花、滴香油"
+notes: "番茄+牛肉是孩子接受度最高的酸甜咸鲜组合，一锅出主食+蛋白+蔬菜。"

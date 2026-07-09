@@ -1,0 +1,30 @@
+title: "红薯燕麦小饼"
+type: side
+category: 粗粮
+difficulty: easy
+total_time: "20分钟"
+servings: 4
+tools: [蒸锅, 空气炸锅]
+tags: [粗粮, 主食, 烤, 微甜]
+ingredient_tags: ['红薯', '燕麦']
+ingredients:
+  红薯燕麦小饼:
+    - name: 红薯
+      amount: 300g
+      note: 去皮切块
+    - name: 即食燕麦片
+      amount: 40g
+    - name: 鸡蛋
+      amount: 1个
+      note: 打散做粘合
+    - name: 熟白芝麻
+      amount: 少许
+steps:
+  - step: "红薯块蒸15分钟至软，压成泥"
+    tool: 蒸锅
+  - step: "红薯泥加燕麦片、蛋液拌匀，团成小圆饼，撒芝麻"
+  - step: "空气炸锅180℃烤10分钟至定型微脆"
+    tool: 空气炸锅
+night_prep:
+  - "红薯蒸熟压泥，与燕麦、蛋液拌好团成饼，冷藏；次日直接烤"
+notes: "红薯+燕麦双粗粮，鸡蛋加优质蛋白；无油少糖、天然甜，孩子当主食或点心都爱吃。"

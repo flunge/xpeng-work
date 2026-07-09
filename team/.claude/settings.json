@@ -1,5 +1,29 @@
 {
   "additionalWorkingDirectories": [
     "/Users/xpeng/Documents/team"
-  ]
+  ],
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /workspace/team/scripts/hooks/asr_guard.py"
+          }
+        ]
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Bash",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "python3 /workspace/team/scripts/hooks/docx_write_verify.py"
+          }
+        ]
+      }
+    ]
+  }
 }

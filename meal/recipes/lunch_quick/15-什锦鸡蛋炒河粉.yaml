@@ -1,0 +1,36 @@
+title: "什锦鸡蛋炒河粉"
+type: lunch_quick
+difficulty: easy
+total_time: "中午约18分钟"
+servings: 2
+serving_note: "一大一小（1成人+1儿童）"
+tools: [炒锅]
+tags: [河粉, 蛋, 炒粉]
+ingredient_tags: ['河粉', '鸡蛋', '火腿', '豆芽']
+ingredients:
+  什锦鸡蛋炒河粉:
+    - name: 鲜河粉
+      amount: 250g
+      note: 前晚冷藏，炒前用温水拌散
+    - name: 鸡蛋
+      amount: 2个
+    - name: 无淀粉火腿
+      amount: 2片
+      note: 切条；或用瘦肉丝
+    - name: 豆芽
+      amount: 1把
+    - name: 胡萝卜
+      amount: 半根
+      note: 切丝
+    - name: 生抽
+      amount: 1勺
+    - name: 葱段
+      amount: 少许
+night_prep:
+  - "胡萝卜切丝、火腿切条、豆芽洗净装盒冷藏"
+  - "河粉冷藏（炒前温水拌散防粘）"
+noon_steps:
+  - "鸡蛋炒散盛出"
+  - "锅中炒香火腿条、胡萝卜丝、豆芽"
+  - "下河粉和生抽快炒，回锅蛋炒匀，撒葱段"
+notes: "河粉滑嫩易嚼，配蛋和蔬菜营养均衡。火腿选无淀粉款更健康，也可换瘦肉丝。"

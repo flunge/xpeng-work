@@ -57,6 +57,16 @@ family:
     meat_veg_balance: true  # 荤素搭配：正餐主菜含荤(肉/鱼/鸡/虾)，加菜配素菜
     coarse_fine_grain: true # 粗细搭配：细粮主食(米/面) + 至少1道粗粮(玉米/红薯/紫薯/南瓜/山药/杂粮糙米) —— 由晚餐加菜优先选"粗粮"类保证
 
+  # 暑假工作日快手午餐（详见 RECIPE_RULES.md 五·B；范围见 config/vacations-2026.yaml）
+  vacation_quick_lunch:
+    enabled: true
+    trigger: "假期内的工作日（孩子在家），早餐之外再加一道快手午餐"
+    servings: 2              # 一大一小：1成人 + 1儿童
+    max_noon_time: 30        # 中午操作最多30分钟
+    night_prep_ok: true      # 前一晚备好（腌/切/预约电饭煲）
+    recipes_dir: lunch_quick # recipes/lunch_quick/*.yaml
+    note: "非假期工作日不变（仍只早餐）；周末/节假日走完整午餐(lunch)，不加快手午餐"
+
   # 食材最小购买量 / 跨天消耗（减少浪费）
   ingredient_economy:
     min_pack_note: "蔬菜/肉通常最小 500g 起买"

@@ -1,0 +1,37 @@
+title: "虾仁西兰花拌面"
+type: lunch_quick
+difficulty: easy
+total_time: "中午约20分钟"
+servings: 2
+serving_note: "一大一小（1成人+1儿童）"
+tools: [玻璃锅, 不粘煎锅]
+tags: [虾仁, 西兰花, 拌面]
+ingredient_tags: ['虾仁', '西兰花', '鸡蛋', '胡萝卜']
+ingredients:
+  虾仁西兰花拌面:
+    - name: 儿童面条
+      amount: 130g
+    - name: 虾仁
+      amount: 100g
+      note: 前晚解冻去虾线腌好
+    - name: 西兰花
+      amount: 半棵
+      note: 前晚切小朵
+    - name: 胡萝卜
+      amount: 半根
+      note: 切丝
+    - name: 鸡蛋
+      amount: 1个
+    - name: 蚝油
+      amount: 1勺
+      note: 加生抽半勺、香油调成拌面汁
+    - name: 香油
+      amount: 几滴
+night_prep:
+  - "虾仁去虾线，少许盐淀粉抓匀冷藏"
+  - "西兰花切小朵、胡萝卜切丝装盒；调好拌面汁冷藏"
+noon_steps:
+  - "面条煮熟过凉水，沥干装碗"
+  - "西兰花、胡萝卜焯熟；虾仁焯熟或快煎"
+  - "面上码虾仁和蔬菜，煎一个蛋盖上，淋拌面汁拌匀"
+notes: "虾仁+西兰花高蛋白高纤维，拌面清爽。蔬菜焯水比炒更少油。"

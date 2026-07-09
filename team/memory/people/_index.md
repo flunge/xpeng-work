@@ -17,7 +17,19 @@
 | [qu-xinyu](qu-xinyu.md) | 瞿鑫宇 | P5 | active | 慢速模式/数据精简 |
 | [jin-xirui](jin-xirui.md) | 靳希睿 | P0 | active | 校招新人 |
 | [yan-xiaozhu](yan-xiaozhu.md) | 严潇竹 | P0 | active | Prompt Agent |
+| [fanshizhou](fanshizhou.md) | 樊世洲 | P0 | active | 实习生 — 障碍车智能体/编包Agent |
+| 李祉浚 | 李祉浚 | P0 | active | 实习生 — 生产OnCall Agent（待建画像） |
+| 谷佳萱 | 谷佳萱 | P0 | active | 实习生 — 场景编辑（待建画像） |
+| [zhaohaonan](zhaohaonan.md) | 赵浩南 | P0 | active | 实习生 — Diffusion/WorldModel预研（6/30入职） |
 | [feng-meihui](feng-meihui.md) | 冯美慧 | P6 | on-leave | 产假中 |
+| 韩阿东 | 韩阿东 | P5 | active | 校招应届 — 视觉SLAM/车型泛化（7/1入职，待建画像） |
+| 张友健 | 张友健 | P7 | active | 悉尼大博/博世 — 3DGS重建+视频生成+闭环仿真（7/7入职，待建画像） |
+| 王哲成 | 王哲成 | P6A | active | 静态感知算法背景 — 重建/后续产线（7/9入职，待建画像） |
+
+### 待入职
+
+（当前无待入职；韩阿东7/1、张友健7/7、王哲成7/9 均已入职，见上表）
+
 
 ## 管理层/GIC
 

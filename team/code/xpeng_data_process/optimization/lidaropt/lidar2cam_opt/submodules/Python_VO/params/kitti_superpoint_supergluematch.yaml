@@ -1,0 +1,21 @@
+dataset:
+  name: KITTILoader
+  root_path: /mnt/pfs/users/xu.chi/recon/xpeng_data/c-c97eb151-fd9d-3159-b273-36db11ab54b8/pcd_cvt_0
+  start: 0
+
+detector:
+  name: SuperPointDetector
+  descriptor_dim: 256
+  nms_radius: 4
+  keypoint_threshold: 0.005
+  max_keypoints: -1
+  remove_borders: 4
+  cuda: 1
+
+matcher:
+  name: SuperGlueMatcher
+  descriptor_dim: 256
+  weights: "outdoor"
+  sinkhorn_iterations: 100
+  match_threshold: 0.2
+  cuda: 1

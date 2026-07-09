@@ -1,0 +1,35 @@
+title: "三文鱼蔬菜焖饭"
+type: lunch_quick
+difficulty: easy
+total_time: "中午约25分钟（电饭煲）"
+servings: 2
+serving_note: "一大一小（1成人+1儿童）"
+tools: [电饭煲, 不粘煎锅]
+tags: [三文鱼, 焖饭, 蔬菜, DHA]
+ingredient_tags: ['三文鱼', '胡萝卜', '玉米', '豌豆']
+ingredients:
+  三文鱼蔬菜焖饭:
+    - name: 三文鱼
+      amount: 120g
+      note: 前晚切块，少许盐和柠檬汁腌冷藏
+    - name: 大米
+      amount: 1.5杯
+    - name: 胡萝卜
+      amount: 半根
+      note: 切丁
+    - name: 玉米粒
+      amount: 1小把
+    - name: 豌豆粒
+      amount: 1小把
+    - name: 生抽
+      amount: 1勺
+    - name: 葱花
+      amount: 少许
+night_prep:
+  - "三文鱼切块，加少许盐、柠檬汁去腥腌好冷藏"
+  - "胡萝卜切丁，与玉米豌豆装盒冷藏；大米可淘好冷藏"
+noon_steps:
+  - "大米加水入电饭煲，铺上胡萝卜丁、玉米、豌豆，开始煮"
+  - "米饭收水时铺上三文鱼块，盖盖焖至跳闸"
+  - "淋一勺生抽、撒葱花，拌匀即可"
+notes: "三文鱼富含 DHA 健脑，电饭煲一锅出几乎不用看火，中午最省心。"

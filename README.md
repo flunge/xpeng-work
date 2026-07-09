@@ -1,6 +1,6 @@
 # lik44-star-team
 
-「灵犀」运行的多项目工作空间（monorepo）。仓库根下并列三个**相互独立**的项目，外加一层把它们的自动化任务串起来的**根触发层**。
+「灵犀」运行的多项目工作空间（monorepo）。仓库根下并列两个**相互独立**的项目，外加一层把它们的自动化任务串起来的**根触发层**。
 
 ```
 /workspace
@@ -8,9 +8,10 @@
 ├── lingxi-trigger.sh      # 统一任务触发入口：food | risk | sync
 │
 ├── meal/                  # ① 家庭食谱自动化（Python + YAML + 飞书 Webhook）
-├── team/                  # ② 仿真部飞书工作空间交互（lark-cli + 记忆库）
-└── ppt-slide-formatter/   # ③ 网页版可编辑 PPT（Vite）
+└── team/                  # ② 仿真部飞书工作空间交互（lark-cli + 记忆库）
 ```
+
+> 注：原 ③ `ppt-slide-formatter/`（网页版可编辑 PPT）已于 2026-07-06 下线（分享课已讲完），制作方法论沉淀在 [team/docs/webppt-guide.md](team/docs/webppt-guide.md)。
 
 > ⚠️ 三个项目各自独立，无代码依赖。根目录的两个脚本是**已部署运行**的触发层，
 > 硬编码了 `/workspace/meal`、`/workspace/team/scripts/...` 等绝对路径，
@@ -24,7 +25,6 @@
 |------|------|--------|----------|
 | [`meal/`](meal/) | 一家四口的自动化食谱：每日推送明日食谱 + 采购清单，月末生成下月计划 | Python3 + PyYAML + Shell + 飞书 Webhook | [meal/README.md](meal/README.md) · [meal/WORKFLOW.md](meal/WORKFLOW.md) |
 | [`team/`](team/) | 通过 `lark-cli` 读写飞书文档、采集会议纪要、维护团队记忆库、推送项目风险 | Python3 + Shell + Node.js + lark-cli | [team/CLAUDE.md](team/CLAUDE.md) |
-| [`ppt-slide-formatter/`](ppt-slide-formatter/) | 小鹏自动驾驶仿真算法 15 页可编辑网页版 PPT（HUD 深色科技风格） | Vite + 原生 JS/HTML/CSS | [ppt-slide-formatter/package.json](ppt-slide-formatter/package.json) |
 
 ---
 

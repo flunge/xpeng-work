@@ -1,0 +1,35 @@
+datasets:
+  - dataset_name: vision_dataset_1021
+    root: /workspace/yangxh7@xiaopeng.com/datasets/xpeng/ppu_full_depth
+    clip_id: c-93d52601-92a8-3c57-b56d-50ea05b2c9d2
+    enable_canbus_topic: True
+    canbus_topic_list:
+      - DynamicXNetTopic
+      - StaticXNetTopic
+      - MfLocalPoseTopic
+      - SensorFusionTopic
+    ips_deploy: True
+    use_raw_localpose: True
+    steps_controller:
+      source: vision
+      vision_data_fetcher: False
+      json_processor: True
+      img_processor: True
+      opt_processor: True
+      sam3d_processor: True
+      pose_processor: True
+      mvsnet_processor: True
+      ground_processor: True
+      pcd_fusion_processor: True
+      colmap_processor: False
+      point_densifier: False
+      point_processor: True
+      depth_processor: True
+      evosplat_processor: True
+      trafficlight_processor: True
+    processor:
+      object_bbox_src: "dxnet"
+    ground_processor:
+      z_weight_from_mvsnet: 0.01
+    depth_processor:
+      depth_source: "complete"

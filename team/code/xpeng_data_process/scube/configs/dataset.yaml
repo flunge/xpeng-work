@@ -1,0 +1,23 @@
+# Xpeng GSM: set root_data_folder and case_id for val/test/infer.
+# Train split in XpengDataset still uses fixed root lists in code unless changed there.
+root_data_folder: '/workspace/group_share/adc-sim/users/dsc/xpeng_train_data_0323'
+case_id: 'c-30735867-bc7b-35d1-ba64-25a624f3f9e6'
+
+train_dataset: XpengDataset
+train_val_num_workers: 4
+train_kwargs:
+  split: train
+  case_id: ${case_id}
+  root_data_folder: ${root_data_folder}
+
+val_dataset: XpengDataset
+val_kwargs:
+  split: val
+  case_id: ${case_id}
+  root_data_folder: ${root_data_folder}
+
+test_dataset: XpengDataset
+test_kwargs:
+  split: test
+  case_id: ${case_id}
+  root_data_folder: ${root_data_folder}

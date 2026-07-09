@@ -1,0 +1,36 @@
+title: "西红柿鸡蛋打卤面"
+type: lunch_quick
+difficulty: easy
+total_time: "中午约18分钟"
+servings: 2
+serving_note: "一大一小（1成人+1儿童）"
+tools: [玻璃锅, 炒锅]
+tags: [番茄, 蛋, 面]
+ingredient_tags: ['番茄', '鸡蛋']
+ingredients:
+  西红柿鸡蛋打卤面:
+    - name: 儿童面条
+      amount: 130g
+    - name: 番茄
+      amount: 2个
+      note: 前晚去皮切丁
+    - name: 鸡蛋
+      amount: 2个
+    - name: 青菜
+      amount: 2棵
+      note: 小油菜，洗净
+    - name: 番茄沙司
+      amount: 1勺
+    - name: 盐
+      amount: 少许
+    - name: 香油
+      amount: 几滴
+night_prep:
+  - "番茄去皮切丁装盒冷藏"
+  - "青菜洗净沥干冷藏"
+noon_steps:
+  - "鸡蛋炒成块盛出"
+  - "番茄丁炒出沙，加番茄沙司和两碗水煮开成卤"
+  - "另锅煮面，最后30秒下青菜烫熟，捞入碗"
+  - "浇上番茄蛋卤，加盐、滴香油"
+notes: "最经典的儿童面，酸甜开胃。番茄前晚切好中午更快。"

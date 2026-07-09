@@ -1,3 +1,57 @@
+## 2026-06-28 自动采集摘要
+
+- 📅 HIL链路演示/AB Review Agent Demo @2026-06-29T05:30
+- 📅 仿真核心日会 @2026-06-29T05:30
+- 📅 每日例会 @2026-06-29T09:30
+- 📝 Q2 Wiki rev: 34561
+- 💬 IM: 2组员命中 + 0群聊消息 + 2条@我
+  - 组员提到:
+    · 靳希睿 (2条)
+## 2026-06-27 自动采集摘要
+
+- 📅 HIL链路演示/AB Review Agent Demo @2026-06-29T05:30
+- 📅 仿真核心日会 @2026-06-29T05:30
+- 📅 每日例会 @2026-06-29T09:30
+- 📝 Q2 Wiki rev: 34561
+- 💬 IM: 0组员命中 + 0群聊消息 + 2条@我
+## 2026-06-26 自动采集摘要
+
+- 📋 会议纪要: https://xiaopeng.feishu.cn/docx/ZsRMdWGvKom0YPxgNeQcteWtnof (2026-06-26 10:03)
+- 📋 会议纪要: https://xiaopeng.feishu.cn/docx/BLCgdkPdhoJp8DxGqgxcmXi7nGc (2026-06-26 02:19)
+- 📋 会议纪要: https://xiaopeng.feishu.cn/docx/YMyudyWVRo1xgPxWBIPc4CjZnwe (2026-06-26 02:05)
+- 📅 HIL链路演示/AB Review Agent Demo @2026-06-29T05:30
+- 📅 仿真核心日会 @2026-06-29T05:30
+- 📅 每日例会 @2026-06-29T09:30
+- 📝 Q2 Wiki rev: 34561
+- 💬 IM: 24组员命中 + 0群聊消息 + 8条@我
+  - 组员提到:
+    · 郑丽娜 (4条)
+    · 杨星昊 (2条)
+    · 王禹丁 (1条)
+    · 朱啸峰 (12条)
+    · 靳希睿 (5条)
+## 2026-06-25 自动采集摘要
+
+- 📋 会议纪要: https://xiaopeng.feishu.cn/docx/BnvRd7LMqowxmOxjQQRcDzernhh (2026-06-25 10:33)
+- 📋 会议纪要: https://xiaopeng.feishu.cn/docx/JQWHd7osvoVDFqxHj2mcVpggnRb (2026-06-25 10:01)
+- 📋 会议纪要: https://xiaopeng.feishu.cn/docx/R3BzdeiFoogW0Gxch9xclxAvnoh (2026-06-25 07:31)
+- 📋 会议纪要: https://xiaopeng.feishu.cn/docx/DnOMdVfxnogBolxvQCLc1cIhnAc (2026-06-25 05:54)
+- 📋 会议纪要: https://xiaopeng.feishu.cn/docx/TUwpdyT3xohJ4bx3r6kcR2uVndd (2026-06-25 02:08)
+- 📅 仿真核心日会 @2026-06-29T01:30
+- 📅 HIL链路演示/AB Review Agent Demo @2026-06-29T05:30
+- 📅 每日例会 @2026-06-29T09:30
+- 📝 Q2 Wiki rev: 34561
+- 💬 IM: 58组员命中 + 0群聊消息 + 16条@我
+  - 组员提到:
+    · 郑丽娜 (7条)
+    · 杨星昊 (9条)
+    · 裴健宏 (5条)
+    · 周冯 (1条)
+    · 吕文杰 (2条)
+    · 王禹丁 (3条)
+    · 朱啸峰 (24条)
+    · 严潇竹 (2条)
+    · 靳希睿 (5条)
 ## 2026-06-24 自动采集摘要
 
 - 📋 会议纪要: https://xiaopeng.feishu.cn/docx/KLgwddU9RotzbsxAi7xcDoIjnPf (2026-06-24 13:09)

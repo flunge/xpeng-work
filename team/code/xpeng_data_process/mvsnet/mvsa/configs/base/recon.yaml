@@ -1,0 +1,87 @@
+version: 1.4
+mode: recon
+ips: false
+dump_data_threads: 64
+single_sfm_threads: 16
+
+base_dir: /workspace/group_share/adc-sim/users/zf/vision_exp/c-43df1bb8-eb78-37af-b4fa-1e0c71f339ad/vision/data
+exp_dir: /workspace/group_share/adc-sim/users/zf/vision_exp/c-43df1bb8-eb78-37af-b4fa-1e0c71f339ad/vision/recon
+
+dataset_name: 43d_test
+record_type: SENSOR_CLIP_RECORD_TYPE
+data_cache_saving_dir: /workspace/group_share/users/zf/warmup_cache
+sql_filter : id like '6167f785529d2e2bf2b7db06'
+clip_list:
+- c-bc26ed1c-3205-3295-a906-0399c6385107
+
+XData:
+  config: {'data_dir': "/dataset/downloader_v2/repository",
+            'data_cache': "/dataset_perf1/simulation",
+            'allow_use_cache_only': false}
+
+slice_angle_diff_threshold: 2.0
+slice_distance_diff_threshold: 1.0
+single_sfm_success_ratio_thre: 0.75
+merge_success_ratio_thre: 0.5
+
+batch_size: 4
+bev_resolution: 0.1
+use_mvs_supervise: true
+replace_translation_calibration: true
+check_calibration: true
+max_angle_diff_thr: 10.0
+
+lidar_list: []
+cam_list:
+- cam0
+- cam2
+- cam3
+- cam4
+- cam5
+- cam6
+- cam7
+center_point:
+  x: 0.0
+  y: 0.0
+colmap_ref_cam: cam0
+cut_range: 20
+epochs: 9
+eval: false
+extrinsic:
+  rotation_deg: 0.5
+  start_epoch: 0
+  translation_m: 0.5
+image_height: 800
+image_width: 800
+laplacian_loss_weight: 1
+lr:
+  rotations: 0.01
+  translations: 0.01
+  vertices_label: 0.1
+  vertices_rgb: 0.1
+  vertices_z: 0.001
+lr_gamma: 0.1
+lr_milestones:
+- 1
+- 7
+min_distance: 0.2
+normal_loss_weight: 0
+num_workers: 4
+pos_enc: 5
+pose_source: colmap
+rand_seed: 17
+ref_cam: cam2
+replace_name: false
+rigid_ba: true
+seg_loss_weight: 1
+depth_loss_weight: 100
+# colmap_config:
+#   image_undistored_with_cuda: false # [false(default), true]
+#   patch_match_stereo_type: "sweep" # [sweep(default), ACMH]
+#   num_patch_match_src_images: 8 # default=8
+#   fusion_type: "sweep" # [sweep(default), ACMH]
+#   fusion_num_consistent: 4 # [default=4]
+#   fusion_num_neighbors: 50 # [default=50]
+# cross_trip_image_match_model: roma
+est_plane_use_adaptive_offset: True
+# rome_cam_list_mode: 3

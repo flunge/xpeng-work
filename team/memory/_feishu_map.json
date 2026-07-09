@@ -1,0 +1,320 @@
+{
+  "_comment": "本地 memory 内容型文档已迁飞书；本表供定时 agent 定位写入目标。key 为本地原路径或标识，value 为飞书文档。规则/索引未迁，仍读本地。",
+  "root_folder": "W7rqfwqnnlzSfUdEcIGcjcTNnqe",
+  "index_doc": {
+    "token": "UwiEdTJJ2oRGokxtkE2cJXjwnyb",
+    "type": "docx",
+    "url": "https://xiaopeng.feishu.cn/docx/UwiEdTJJ2oRGokxtkE2cJXjwnyb"
+  },
+  "projects": {
+    "memory/projects/HIL/慢速模式/ledger.md": {
+      "token": "J138dPjiBoYdBHxAniacGSlWnXe",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/J138dPjiBoYdBHxAniacGSlWnXe",
+      "project": "慢速模式"
+    },
+    "memory/projects/HIL/HIL链路部署/ledger.md": {
+      "token": "OhGEd5E11oPTZJxWbqrcs3A9nRn",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/OhGEd5E11oPTZJxWbqrcs3A9nRn",
+      "project": "HIL链路部署"
+    },
+    "memory/projects/SIL/CLIP-IQA/ledger.md": {
+      "token": "HprzdXgC6ooqIIxUQYZcADBRnrg",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/HprzdXgC6ooqIIxUQYZcADBRnrg",
+      "project": "CLIP-IQA"
+    },
+    "memory/projects/SIL/Fixer优化/ledger.md": {
+      "token": "TBKFdCZLfo3RKJxG2Nzc5ePCned",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/TBKFdCZLfo3RKJxG2Nzc5ePCned",
+      "project": "Fixer优化"
+    },
+    "memory/projects/SIL/RC路线SIL验证/ledger.md": {
+      "token": "DwKhdjNZZoKwPixy4FzczXJSnMg",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/DwKhdjNZZoKwPixy4FzczXJSnMg",
+      "project": "RC路线SIL验证"
+    },
+    "memory/projects/场景&生产/WM-内部探索/ledger.md": {
+      "token": "N65zd5za0odP0NxrNmAcGZILnsi",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/N65zd5za0odP0NxrNmAcGZILnsi",
+      "project": "WM-内部探索"
+    },
+    "memory/projects/场景&生产/场景编辑/ledger.md": {
+      "token": "NAqbdVbuxoDn7jxjrEzcyHmynDe",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/NAqbdVbuxoDn7jxjrEzcyHmynDe",
+      "project": "场景编辑"
+    },
+    "memory/projects/场景&生产/极速模式/ledger.md": {
+      "token": "QU57dwOQLoxKOnxsApAcObUynUc",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/QU57dwOQLoxKOnxsApAcObUynUc",
+      "project": "极速模式"
+    },
+    "memory/projects/场景&生产/AVM鱼眼/ledger.md": {
+      "token": "JeGldUTfvodnFcxun08cezZunue",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/JeGldUTfvodnFcxun08cezZunue",
+      "project": "AVM鱼眼"
+    },
+    "memory/projects/场景&生产/闭环场景集推进/ledger.md": {
+      "token": "Bak7dBobCodJpLxZNe5cqRjQnyc",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/Bak7dBobCodJpLxZNe5cqRjQnyc",
+      "project": "闭环场景集推进"
+    },
+    "memory/projects/场景&生产/RC路线/ledger.md": {
+      "token": "AC3VdcT1soh6nmxxWdxcltgXnhd",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/AC3VdcT1soh6nmxxWdxcltgXnhd",
+      "project": "RC路线"
+    },
+    "memory/projects/Agents/Prompt-Agent/ledger.md": {
+      "token": "MQrKdvOKVoO25Nx5jFmcCZWenWf",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/MQrKdvOKVoO25Nx5jFmcCZWenWf",
+      "project": "Prompt-Agent"
+    },
+    "memory/projects/Agents/TopDiff-Agent/ledger.md": {
+      "token": "NDPod85sAo0rGgxXkVgcw74Anyc",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/NDPod85sAo0rGgxXkVgcw74Anyc",
+      "project": "TopDiff-Agent"
+    },
+    "memory/projects/Agents/复现率Agent/ledger.md": {
+      "token": "G9fDdbV91oxLopxFLY6cKX2qnRA",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/G9fDdbV91oxLopxFLY6cKX2qnRA",
+      "project": "复现率Agent"
+    },
+    "memory/projects/SIL/车型泛化/ledger.md": {
+      "token": "MeLRd4JRTojlQ5xKsuWcqiYAnmd",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/MeLRd4JRTojlQ5xKsuWcqiYAnmd",
+      "project": "车型泛化"
+    }
+  },
+  "people": {
+    "memory/people/_departed/du-sicong.md": {
+      "token": "PG0cdm3vcoXKcRxXv3xcchzbnKc",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/PG0cdm3vcoXKcRxXv3xcchzbnKc",
+      "person": "杜思聪"
+    },
+    "memory/people/zhu-xiaofeng.md": {
+      "token": "AcdLdk5XmoKFZ4xJDFVcaiqynub",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/AcdLdk5XmoKFZ4xJDFVcaiqynub",
+      "person": "zhu-xiaofeng"
+    },
+    "memory/people/zhouyue.md": {
+      "token": "YtkgduqyBopWBXxueX4cK4Tgn5g",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/YtkgduqyBopWBXxueX4cK4Tgn5g",
+      "person": "zhouyue"
+    },
+    "memory/people/zhou-weixu.md": {
+      "token": "CVKQdjsEJoF9lgxDz89cWFGgnWc",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/CVKQdjsEJoF9lgxDz89cWFGgnWc",
+      "person": "zhou-weixu"
+    },
+    "memory/people/zhou-feng.md": {
+      "token": "QCK1d6WMNoXqycxnTRNcGDVQn9u",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/QCK1d6WMNoXqycxnTRNcGDVQn9u",
+      "person": "zhou-feng"
+    },
+    "memory/people/zheng-lina.md": {
+      "token": "ZK2TdYxlVotLDXxIWTlcjwp5nBc",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/ZK2TdYxlVotLDXxIWTlcjwp5nBc",
+      "person": "zheng-lina"
+    },
+    "memory/people/zhaohaonan.md": {
+      "token": "DrmddJms1o7ddbxZbWYcQhLLnCd",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/DrmddJms1o7ddbxZbWYcQhLLnCd",
+      "person": "zhaohaonan"
+    },
+    "memory/people/zhangyu-wangboyang.md": {
+      "token": "Sk6IdP8OfoFsafx4AWAc9fVHnpg",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/Sk6IdP8OfoFsafx4AWAc9fVHnpg",
+      "person": "zhangyu-wangboyang"
+    },
+    "memory/people/zhangchi.md": {
+      "token": "XCa7d3LU3ob8lVx6zXccvsvonPb",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/XCa7d3LU3ob8lVx6zXccvsvonPb",
+      "person": "zhangchi"
+    },
+    "memory/people/yangxuezhi.md": {
+      "token": "Wu7QdkLIVougfzxT5q1cSisgnyg",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/Wu7QdkLIVougfzxT5q1cSisgnyg",
+      "person": "yangxuezhi"
+    },
+    "memory/people/yang-xinghao.md": {
+      "token": "E4UQdTEhiooZlxxxqqtc1VYxnUd",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/E4UQdTEhiooZlxxxqqtc1VYxnUd",
+      "person": "yang-xinghao"
+    },
+    "memory/people/yan-xiaozhu.md": {
+      "token": "FLaedAw3Po6a1PxUwBFcj43jnC2",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/FLaedAw3Po6a1PxUwBFcj43jnC2",
+      "person": "yan-xiaozhu"
+    },
+    "memory/people/xulinkun.md": {
+      "token": "AXRadrolPoh7SbxeAFKcPBI7n4e",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/AXRadrolPoh7SbxeAFKcPBI7n4e",
+      "person": "xulinkun"
+    },
+    "memory/people/xiazhixun.md": {
+      "token": "SsT9dQXQWoDVfnxwWx3cVJfDnVd",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/SsT9dQXQWoDVfnxwWx3cVJfDnVd",
+      "person": "xiazhixun"
+    },
+    "memory/people/wang-yuding.md": {
+      "token": "NeSsdIGJ0oQzOCxEubVc8hACnzc",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/NeSsdIGJ0oQzOCxEubVc8hACnzc",
+      "person": "wang-yuding"
+    },
+    "memory/people/qu-xinyu.md": {
+      "token": "W9yRdWnbeo10TgxoqpLcOLFunoc",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/W9yRdWnbeo10TgxoqpLcOLFunoc",
+      "person": "qu-xinyu"
+    },
+    "memory/people/personality-profiles.md": {
+      "token": "TQCcdB52UoPXHyxJA4ccPWzZnAg",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/TQCcdB52UoPXHyxJA4ccPWzZnAg",
+      "person": "personality-profiles"
+    },
+    "memory/people/pei-jianhong.md": {
+      "token": "IjvVdFZ9moV1pJxSvkTcfnkrnuc",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/IjvVdFZ9moV1pJxSvkTcfnkrnuc",
+      "person": "pei-jianhong"
+    },
+    "memory/people/lv-wenjie.md": {
+      "token": "IZ59d5sYUo2k7IxPhNgcNMZ1nPd",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/IZ59d5sYUo2k7IxPhNgcNMZ1nPd",
+      "person": "lv-wenjie"
+    },
+    "memory/people/liuxianming.md": {
+      "token": "WeBgd2fcLoCTZexLyW8cINHdn2d",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/WeBgd2fcLoCTZexLyW8cINHdn2d",
+      "person": "liuxianming"
+    },
+    "memory/people/liukaituo.md": {
+      "token": "XXtodfPiBoYTE0xsBReczT6fn8g",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/XXtodfPiBoYTE0xsBReczT6fn8g",
+      "person": "liukaituo"
+    },
+    "memory/people/likun.md": {
+      "token": "GvkodksuLo2tTwx489tcB1mdnBe",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/GvkodksuLo2tTwx489tcB1mdnBe",
+      "person": "likun"
+    },
+    "memory/people/laixihu.md": {
+      "token": "O9vRdNU5BoxJjmxpDqLcQDq4nrg",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/O9vRdNU5BoxJjmxpDqLcQDq4nrg",
+      "person": "laixihu"
+    },
+    "memory/people/jin-xirui.md": {
+      "token": "NgmCdrUMgoJVDOxp5lSc77WanFf",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/NgmCdrUMgoJVDOxp5lSc77WanFf",
+      "person": "jin-xirui"
+    },
+    "memory/people/huangbaimin.md": {
+      "token": "E4Tqdxuz7oc4hSxO04ZcrXcMn1c",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/E4Tqdxuz7oc4hSxO04ZcrXcMn1c",
+      "person": "huangbaimin"
+    },
+    "memory/people/wuyimin.md": {
+      "token": "ZVMmd7MnloSUwwxWZwQcEkTjncc",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/ZVMmd7MnloSUwwxWZwQcEkTjncc",
+      "person": "wuyimin"
+    },
+    "memory/people/gaobingtao.md": {
+      "token": "OT67drCymoz5u1xQ2VAcq2sEnOc",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/OT67drCymoz5u1xQ2VAcq2sEnOc",
+      "person": "gaobingtao"
+    },
+    "memory/people/feng-meihui.md": {
+      "token": "IOZ5drrnOoXUanxz5e4cHKwhnKb",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/IOZ5drrnOoXUanxz5e4cHKwhnKb",
+      "person": "feng-meihui"
+    },
+    "memory/people/fanshizhou.md": {
+      "token": "FSTgdMsj6oHzdnxve5QcAPCYnZg",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/FSTgdMsj6oHzdnxve5QcAPCYnZg",
+      "person": "fanshizhou"
+    },
+    "memory/people/dengshuang.md": {
+      "token": "DJH0d5qMQos5DZxmvbacLfVEndb",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/DJH0d5qMQos5DZxmvbacLfVEndb",
+      "person": "dengshuang"
+    }
+  },
+  "insights": {
+    "memory/insights/chat-log.md": {
+      "token": "EJ5TdKIJPoD2MyxAwutcxIqAn3f",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/EJ5TdKIJPoD2MyxAwutcxIqAn3f"
+    }
+  },
+  "weekly-reports": {
+    "memory/weekly-reports/2026-06-11.md": {
+      "token": "UxPqdkcKrod0lVxBCRCcov2bnSf",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/UxPqdkcKrod0lVxBCRCcov2bnSf"
+    }
+  },
+  "teams": {
+    "memory/teams/algo-team.md": {
+      "token": "Mdt9dH1QWomuH1xU4gFceERHnXg",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/Mdt9dH1QWomuH1xU4gFceERHnXg"
+    },
+    "memory/teams/collaboration.md": {
+      "token": "KvkvdNEaboMLRZxNFtkc8iiZn8g",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/KvkvdNEaboMLRZxNFtkc8iiZn8g"
+    },
+    "memory/teams/org-structure.md": {
+      "token": "G7PUdqUIRo2l4LxtAbCcQdLin2e",
+      "type": "docx",
+      "url": "https://xiaopeng.feishu.cn/docx/G7PUdqUIRo2l4LxtAbCcQdLin2e"
+    }
+  },
+  "source_index": {
+    "token": "SsWCdQbVZohGHFxhE3RcCmJ2nSb",
+    "type": "docx",
+    "url": "https://xiaopeng.feishu.cn/docx/SsWCdQbVZohGHFxhE3RcCmJ2nSb",
+    "desc": "原始资料溯源总索引:9篇基线+232篇Q2纪要"
+  }
+}

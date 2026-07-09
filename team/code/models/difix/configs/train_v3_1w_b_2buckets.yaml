@@ -1,0 +1,36 @@
+# 全量数据集训练配置
+# 使用: 在 deploy/run 中指定 config=train_full_dataset
+output_dir: "/workspace/yangxh7@xiaopeng.com/difix3D_train/train_v3_1w_b/v3_2buckets"
+dataset_path: "/workspace/yangxh7@xiaopeng.com/difix3D_train/train_v3_1w_b/output_dataset_interval24_ref_with_test.json"
+resume: "/workspace/yangxh7@xiaopeng.com/difix3D_train/train_v3_1w_b/v3_2buckets/checkpoints_epoch_0043_step_258000"
+use_ref_img: true
+
+image_height: 576
+image_width: 1024
+enable_dual_resolution_bucket: true
+bucket_16_9_height: 576
+bucket_16_9_width: 1024
+bucket_5_4_height: 768
+bucket_5_4_width: 960
+lora_rank_vae: 4
+timestep: 199
+
+lambda_lpips: 0.1
+lambda_l2: 1.0
+lambda_gram: 0.1
+gram_loss_warmup_steps: 999999999999
+
+eval_freq: 12000
+viz_freq: 5000
+train_batch_size: 1
+num_training_epochs: 100
+checkpointing_epoch: 1
+gradient_accumulation_steps: 1
+max_steps_per_epoch: 6000
+learning_rate: 5.0e-5
+lr_scheduler: "constant"
+dataloader_num_workers: 4
+
+gradient_checkpointing: true
+enable_xformers_memory_efficient_attention: true
+set_grads_to_none: true

@@ -1,0 +1,193 @@
+# 群内共享文档目录（2026-03底~07 · 来自 7 大核心群第一手采集）
+
+> 共 174 篇（wiki/docx/sheets/base）。来源=群聊消息第一手；每次重新拉群提炼时增补。技术类并入溯源索引「三、项目维度」、管理类并入「四、团队管理」逐篇溯源。
+
+
+## 团队管理/HR/季度节奏（15）
+
+- [@_all请大家今天(3.31)完成一下，Q1的OKR复盘哈。](https://xiaopeng.feishu.cn/wiki/DvWzwKZdsiH8crkpT0KcufE5nuf) · `wiki` · 班委群SMG · 2026-03-31 02:02
+- [、外勤打卡等见操作指引。   5. **往期调休:  **自闭环，尽量在6月前休完。6月后我这边不可](https://xiaopeng.feishu.cn/docx/BjF0dtxiLoNm2hx3J6cc1Nk6nXe) · `docx` · HRBP群 · 2026-04-02 03:04
+- [四），请大家尽快把文档内的**Q2的OKR目标完善下**      [ 2026 Q2 OKR 初版](https://xiaopeng.feishu.cn/wiki/Dp7Ww4oIsiZxD6kUPPScV3QJnXd) · `wiki` · HRBP群 · 2026-04-03 09:05
+- [@_all 大家按照文档拆解OKR，并录入对齐](https://xiaopeng.feishu.cn/docx/LpbTdfU95oDnnTx5LmAc7Q1WnVg) · `docx` · 组员群 · 2026-04-14 02:55
+- [5jY)    4. **Q1 OKR复盘 & Q2 OKR填写（全员）DDL:4月15日（明天）*](https://xiaopeng.feishu.cn/wiki/EsfdwOdbUi7vvekWdNKcUlBIn9d) · `wiki` · HRBP群 · 2026-04-14 06:37
+- [这个是完成情况表哈，大家写完OKR，记得发起确认哈~](https://xiaopeng.feishu.cn/wiki/Gpv0wAM7FicOJokpI9jcEsPYnbc) · `wiki` · 全员群 · 2026-04-14 09:15
+- [><p>使用文档：https://docs.qoder.com/zh/quick-start</p>](https://xiaopeng.feishu.cn/wiki/Efa8w1dkdiAOP9k0mLocVPD1nMh) · `wiki` · 全员群 · 2026-04-20 01:17
+- [请及时处理考勤异常哦！4月的调休，请在今天上午前填写好哈   仿真的调休表：[仿真部调休/加班记录表](https://xiaopeng.feishu.cn/wiki/Lbi0w1WIwi3wnWkq7tEcHs77nkd) · `wiki` · 全员群 · 2026-04-30 01:08
+- [@_all 请大家5.10号前，填写一下 4月月度的OKR进展](https://xiaopeng.feishu.cn/wiki/FNo6wIKWmiog5JkNCRmcKYgDnCe) · `wiki` · 班委群SMG · 2026-05-06 02:11
+- [开发**</u>**序列人员并更改序列，5月11日前**   2. 按需刷新各团队序列/职务/通道，](https://xiaopeng.feishu.cn/base/N6EZbp8LFaIJhasP0n1cuHmen4c) · `base` · HRBP群 · 2026-05-09 05:52
+- [@_all 大家可以陆续开始总结一下5月的月度OKR PDCA文档。](https://xiaopeng.feishu.cn/wiki/MvBdwdiHsiVCDzkFoVUc4iqCn0f) · `wiki` · 班委群SMG · 2026-05-29 08:41
+- [@高炳涛 中心的项目部在拟定 功能开发的管理办法 [](https://xiaopeng.feishu.cn/wiki/BduvwHKddiBzBek0drVcRS5anqb) · `wiki` · 班委群SMG · 2026-06-24 08:04
+- [<at user_id="all"></at>    1. 26 Q2 季度复盘 [](https://xiaopeng.feishu.cn/wiki/Xic1wOtsTiVCE5kKXR9cwIsrnfd) · `wiki` · 班委群SMG · 2026-06-25 08:07
+- [c1wOtsTiVCE5kKXR9cwIsrnfd) ETA 7.10之前   2. 26 Q3 O](https://xiaopeng.feishu.cn/wiki/C9iYwU5JoirP93kUmz2cnklDnrc) · `wiki` · 班委群SMG · 2026-06-25 08:07
+- [user_id="all"></at>   1. **【7月9日10点前】**完成26年H1各组绩效](https://xiaopeng.feishu.cn/base/AtfybXJumaVKqYsVhsrcYLeOnMd) · `base` · HRBP群 · 2026-07-06 09:44
+
+## 项目/技术方案（11）
+
+- [在SIL的链路测试了3dgs 渲染batch/串行，整卡/mig的资源消耗情况：](https://xiaopeng.feishu.cn/wiki/Gn8zwgUt0iQq5LkSFlicLV7GnXc) · `wiki` · 算法组+高炳涛群 · 2026-04-10 06:57
+- [#share-O4n0dtrlnoAcL3xfczicWYnxnxg   昨日118条长里程数据CC](https://xiaopeng.feishu.cn/wiki/G1DYwUMm0iMdBhkWA7CcKSannYj) · `wiki` · 组员群 · 2026-04-16 08:37
+- [测结果已出，共跑了rl15、rl38的两个FM模型以及有无difix 共4个实验。118条数据无fa](https://xiaopeng.feishu.cn/wiki/RMDWwQOHoiIsgjksew3cnJU6npf) · `wiki` · 组员群 · 2026-04-16 08:37
+- [@_all 我拆了一下闭环的目标，大家可以看下是否合适，可以在表格里面直接修改](https://xiaopeng.feishu.cn/wiki/SBUYwm8Lri9aJ6kmexFcBAuGnlh) · `wiki` · 班委群SMG · 2026-04-20 12:25
+- [?sheet=wmc406   表格 长路线_0424 是跑的昨天生产的长里程case 的cces结](https://xiaopeng.feishu.cn/wiki/SDLQwuAbSirfZHk7J0fc4ktnnlf) · `wiki` · 组员群 · 2026-04-24 03:00
+- [写了个初版训练仿真评测闭环Agent开发方案](https://xiaopeng.feishu.cn/wiki/ZUGCwVB3fiDcRDkwqYbcCDyInxf) · `wiki` · 组员群 · 2026-06-12 09:32
+- [s渲染链路对动态车的加载问题，保证编辑车与真实动态车共存   2. 优化轨迹生成规则   详细结果已](https://xiaopeng.feishu.cn/wiki/EeemwpVwdiJ1l0kEs9bc3ryZnUe) · `wiki` · 组员群 · 2026-06-24 06:18
+- [有新老metric错位的问题，实际都是pat的metric   线下和鵾总沟通，下周需要把流程交互上](https://xiaopeng.feishu.cn/wiki/Qy7aw1j9CiQxSBkG0xich5OvnWc) · `wiki` · 班委群SMG · 2026-06-26 07:09
+- [@李坤 @郑丽娜 @瞿鑫宇 @周冯 整理了下目前HIL 3DGS欠的账，大佬们检阅一下](https://xiaopeng.feishu.cn/wiki/A94TwINDAir7GSkOL5lcUgqJnpe) · `wiki` · 组员群 · 2026-06-29 04:21
+- [对应的编包方式可以参考[](https://xiaopeng.feishu.cn/wiki/L41IwsWGTi24f4kYScYcQ4OZnQc) · `wiki` · 组员群 · 2026-06-29 09:16
+- [大概拟定了一下车型泛化7月高优事宜，时间有点紧，需要最近开始做起来了 [双手合十]](https://xiaopeng.feishu.cn/wiki/SlC6wQUZjiz8vnkDcMVc9MjAnuc) · `wiki` · 组员群 · 2026-07-02 03:32
+
+## 工具/平台（2）
+
+- [新的copilot额度申请入口](https://xiaopeng.feishu.cn/wiki/ZMkmwHnJeilXCNk6ttScedBKnEf) · `wiki` · 组员群 · 2026-06-11 08:45
+- [目前研发自测任务主要是基于ucp和fuyao进行，在操作流程上会比较繁琐，后续准备把研发自测任务也完](https://xiaopeng.feishu.cn/wiki/CDv7wbMFmiYW1EkYRNRcnnBinah) · `wiki` · 组员群 · 2026-06-16 06:26
+
+## 汇报材料/纪要（5）
+
+- [@高炳涛 嗯，雪智准备的材料](https://xiaopeng.feishu.cn/docx/LX04dWCu5oS70NxZoVZcPjuCnIc) · `docx` · 核心日会群 · 2026-05-28 09:35
+- [汇报的主要内容，我们先按照先明上一次给的重点来准备哈，我们今天和明天，完成吧，周四请@高炳涛 rev](https://xiaopeng.feishu.cn/wiki/Pz0pw4xODifpb7kEfJhc5n76nWc) · `wiki` · 班委群SMG · 2026-06-02 06:28
+- [@高炳涛 改到本周三11:00-12:00汇报，今天大家需要准备一下材料。](https://xiaopeng.feishu.cn/wiki/YsEkwaS2ZifRQKkO451cGiwVnpc) · `wiki` · 班委群SMG · 2026-06-15 03:46
+- [<at user_id="all"></at> 大家需要补充一下，以下材料：   1. 第一优先级，](https://xiaopeng.feishu.cn/wiki/QO94w51w1iiRdBk2wsccFArIn7e) · `wiki` · 班委群SMG · 2026-06-30 02:24
+- [/wiki/QO94w51w1iiRdBk2wsccFArIn7e)，ETA 6.30   2. 第](https://xiaopeng.feishu.cn/docx/VQcodfKnNopaNyxE7dzcyW2ynqe) · `docx` · 班委群SMG · 2026-06-30 02:24
+
+## 其它（141）
+
+- [@_all 大家快速更新下周会文档](https://xiaopeng.feishu.cn/wiki/RYw5wVLAEiY2FPk4GRecRUmNnGb) · `wiki` · 算法组+高炳涛群 · 2026-03-20 07:33
+- [@_all 大家简单写一下本周计划](https://xiaopeng.feishu.cn/wiki/McfrwKO62izp7MknPJIc94Q5nnc) · `wiki` · 算法组+高炳涛群 · 2026-03-23 02:26
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/Xz2bwL64jiIp4Gkb5lPc9edMnve) · `wiki` · 算法组+高炳涛群 · 2026-03-23 06:08
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/EEJxw0wKWizoQOk9xRXcnjuzngf) · `wiki` · 算法组+高炳涛群 · 2026-03-25 09:43
+- [[A100实验汇总（Hil链路预研）](](https://xiaopeng.feishu.cn/wiki/SIsJw6AdViyX4SklncvcUzbRnud) · `wiki` · 算法组+高炳涛群 · 2026-03-26 10:20
+- [本周周会页面](https://xiaopeng.feishu.cn/wiki/ZjwPwuYJvio72rkLAZscVbiTnng) · `wiki` · 算法组+高炳涛群 · 2026-03-27 05:58
+- [?from=from_copylink   早，如各支持团队有清明假期加班4号、5号（法定）、6号，](https://xiaopeng.feishu.cn/wiki/CAfuwnWW5ipZQDkKkuYcIrAmnfc) · `wiki` · HRBP群 · 2026-03-31 01:23
+- [59:07Z] 杨星昊:       能帮忙快速确认下这个需求里面的jira case的红绿灯，生产](https://xiaopeng.feishu.cn/wiki/INzrwpX0liJXdukHlbDcVpBCnYc) · `wiki` · 算法组+高炳涛群 · 2026-03-31 06:14
+- [?table=tblQUjemQrHRAxy3&view=vewf1AbzGF robotaxi 不](https://xiaopeng.feishu.cn/wiki/XWshwrUWXiA1yCkHz9hcmj8HnDc) · `wiki` · 算法组+高炳涛群 · 2026-04-02 08:29
+- [<p>](https://xiaopeng.feishu.cn/wiki/KyHqwYkE1ifpIYkH5Fucm2fpnkf) · `wiki` · 算法组+高炳涛群 · 2026-04-03 06:51
+- [aopeng.com/hdb/login/home#/home/section/0)   国栋、爽姐](https://xiaopeng.feishu.cn/base/ZIQ9b3ndCa4BVNsrwLpcaHEBnug) · `base` · HRBP群 · 2026-04-03 07:57
+- [?from=vc_group_doc_link#doxcnD2iMDb4oKyg0Kr5VrTtHH](https://xiaopeng.feishu.cn/docx/CYWxdSlPCoIS2pxOGhEc3culnEc) · `docx` · 班委群SMG · 2026-04-07 11:46
+- [@高炳涛9000+ case 的场景分布](https://xiaopeng.feishu.cn/sheets/FFlxsRzzLhye3nthGLlcVzgDnac) · `sheets` · 班委群SMG · 2026-04-07 16:18
+- [@邓爽 @李坤 @赖西湖 @夏志勋 @颜国栋 @吴益民 做了个表格，大家根据组内情况填一下呢](https://xiaopeng.feishu.cn/wiki/AA0aw9tCaiYqMYkLP8tcSlu0nGb) · `wiki` · 班委群SMG · 2026-04-08 02:07
+- [[](https://xiaopeng.feishu.cn/wiki/AfHawLfYvi3ZNOk2tnzcE47sn1d) · `wiki` · 算法组+高炳涛群 · 2026-04-10 06:36
+- [周会页面哈各位更新下](https://xiaopeng.feishu.cn/wiki/Oq96wT2qziv8VFkXLRCco0cpnCc) · `wiki` · 组员群 · 2026-04-10 07:24
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/OrSEwsAQgieGG8kfHxHcnH96nc9) · `wiki` · 班委群SMG · 2026-04-12 02:38
+- [mage](img_v3_0210n_ffdcc970-0d54-4d9c-b660-e6562b5](https://xiaopeng.feishu.cn/wiki/FPA4wTnYdiejhOkMn4Bc6IpvnTg) · `wiki` · HRBP群 · 2026-04-13 08:47
+- [样了30个左右case，问题还是不少的，这些问题做一下根因分析和归类，本周周会上讨论下下一步的解决方](https://xiaopeng.feishu.cn/docx/RVqndaMkso4pEKxMFOlcHNiqnRh) · `docx` · 组员群 · 2026-04-14 03:33
+- [mage](img_v3_0210o_0e25336f-4e37-4355-94a9-aa46881](https://xiaopeng.feishu.cn/wiki/DNZkweW6zidq8OkM9nlcXEPTnGb) · `wiki` · HRBP群 · 2026-04-14 06:37
+- [<p>@周月](https://xiaopeng.feishu.cn/base/LabNbctqPapdC6sfFtHclBjPn5e) · `base` · HRBP群 · 2026-04-14 07:22
+- [ttps://xiaopeng.feishu.cn/wiki/Gpv0wAM7FicOJokpI9j](https://xiaopeng.feishu.cn/wiki/OFnzww2S4iK6fmkwkx8ccBkyn4g) · `wiki` · 全员群 · 2026-04-14 09:15
+- [@_all hi all，这是今天组会上提到的，请大家帮忙筛查数据问题的操作指南：](https://xiaopeng.feishu.cn/wiki/WIMcw5Vjmi9MtEkcsb8cEqsBnkd) · `wiki` · 组员群 · 2026-04-14 11:14
+- [g.feishu.cn/wiki/WIMcw5Vjmi9MtEkcsb8cEqsBnkd，这个是大家](https://xiaopeng.feishu.cn/sheets/MG3jsA54ShaFfdtmyFEceQMjnRh) · `sheets` · 组员群 · 2026-04-14 11:14
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/Qj4hwVUZZild5wkhAI4cquRznXc) · `wiki` · 组员群 · 2026-04-15 11:05
+- [:       XP5的么？ 这个就是曝光时间吧， 这个可能要问ICC的同学。 ORIN上 定义是这](https://xiaopeng.feishu.cn/docx/VwTIdMIoOogRhdxur0ScCp0tnS4) · `docx` · 组员群 · 2026-04-15 12:16
+- [?from=vc_group_doc_link#doxcn0zqiuz0dOWUewItXcDwwl](https://xiaopeng.feishu.cn/docx/UkxZd7tlDom6Gax64vycCuy7nnr) · `docx` · 组员群 · 2026-04-15 12:45
+- [开发，已完成开发任务拆解及明确各阶段工作目标。目前正推进第一阶段开发工作，计划完成时间节点为4月30](https://xiaopeng.feishu.cn/wiki/RgQCwR3jEigDT7kVRq9cdrQHnwh) · `wiki` · 算法组+高炳涛群 · 2026-04-17 02:02
+- [tps://xiaopeng.feishu.cn/wiki/RgQCwR3jEigDT7kVRq9c](https://xiaopeng.feishu.cn/wiki/KGAWwhB9ziDQYokR2dFcvMgKnvd) · `wiki` · 算法组+高炳涛群 · 2026-04-17 02:02
+- [@_all](https://xiaopeng.feishu.cn/wiki/Oy6XwbD5Vi8QMGkmLOTc9yF2nVg) · `wiki` · 组员群 · 2026-04-17 06:19
+- [高老师，我汇总了一个本周的简报：](https://xiaopeng.feishu.cn/wiki/ALsrwpTfuizFwakYXW2cMnxbnXc) · `wiki` · 高炳涛私聊 · 2026-04-17 12:48
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/RGk1wm2gUicQ76khHqXcn3ManXb) · `wiki` · 组员群 · 2026-04-17 12:49
+- [e](img_v3_0210t_6faa98a8-b36b-4756-9863-e3a8d9989f](https://xiaopeng.feishu.cn/wiki/DKjDwTYULiJt7eknboicLXVun8c) · `wiki` · 班委群SMG · 2026-04-19 13:31
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/SitYwe48ZiXTzTk3WCCcNADWnKd) · `wiki` · 班委群SMG · 2026-04-20 07:29
+- [@高炳涛 和@张驰 @赖西湖 讨论的：   - [](https://xiaopeng.feishu.cn/wiki/C1YYwH8zziQifgkk9sxcB2Din1e) · `wiki` · 班委群SMG · 2026-04-21 04:02
+- [//xiaopeng.feishu.cn/wiki/C1YYwH8zziQifgkk9sxcB2Di](https://xiaopeng.feishu.cn/wiki/RkHIwGL5NirXvVkdbRmcAnyunKf) · `wiki` · 班委群SMG · 2026-04-21 04:02
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/SwotwdmZGiF08Akjywdc9pvPnNh) · `wiki` · 班委群SMG · 2026-04-21 08:07
+- [https://xiaopeng.feishu.cn/wiki/CsCfw229bixjB8kqeL](https://xiaopeng.feishu.cn/wiki/HV16wwt71iFNNEkmwPHcoUDWn6g) · `wiki` · 组员群 · 2026-04-21 09:24
+- [ttps://xiaopeng.feishu.cn/wiki/HV16wwt71iFNNEkmwPH](https://xiaopeng.feishu.cn/wiki/CsCfw229bixjB8kqeLRc8spWnwf) · `wiki` · 组员群 · 2026-04-21 09:24
+- [@高炳涛 昨天会议](https://xiaopeng.feishu.cn/docx/AoSedY9cMoyoXMxZay5cgd43nkh) · `docx` · 班委群SMG · 2026-04-22 01:41
+- [?from=vc_group_doc_link#doxcnEtZ1Sm8h08ap5VPGetbXD](https://xiaopeng.feishu.cn/docx/WqKOdNATuoNEZUxIwQNctizTnHK) · `docx` · 班委群SMG · 2026-04-22 08:26
+- [22T06:43:05Z] 夏志勋:       @罗军   [2026-04-22T06:45:0](https://xiaopeng.feishu.cn/wiki/ZdaAwYizciBkwykZlC0ceeuYnTh) · `wiki` · 组员群 · 2026-04-22 08:28
+- [@高炳涛 大的阶段对齐过。引擎具体任务跟踪在](https://xiaopeng.feishu.cn/wiki/YeaTwG2ufiMkKCkZaEQcE3e8nKc) · `wiki` · 核心日会群 · 2026-04-23 03:38
+- [@高炳涛](https://xiaopeng.feishu.cn/wiki/FXVWwPOUIiZ4ZjkSWgJcBJEgnvd) · `wiki` · 核心日会群 · 2026-04-23 06:34
+- [@高炳涛](https://xiaopeng.feishu.cn/docx/YUv6dTRUDowxAvxEip1cSE3Vnpf) · `docx` · 核心日会群 · 2026-04-23 07:42
+- [_98cd0afc-97f3-4d1e-a116-e78e5cc1381g)      有整理一个文](https://xiaopeng.feishu.cn/wiki/F2SWwviHPidCjjkympgc3xlJn7d) · `wiki` · 核心日会群 · 2026-04-23 10:21
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/PLWTw4agRiI8NUkEdFMcornFnOb) · `wiki` · 高炳涛私聊 · 2026-04-24 03:07
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/Td6xwEcweiWsoTklYapcMVHkngc) · `wiki` · 组员群 · 2026-04-24 07:58
+- [?from=vc_group_doc_link#doxcnuC7HKZowNtcodfxOvb1XT](https://xiaopeng.feishu.cn/docx/FMyadNLqxoUkbrxgjajczAZenQd) · `docx` · 核心日会群 · 2026-04-27 02:00
+- [?from=vc_group_doc_link#doxcnOAWBWdSxif3jpH4xlBoSB](https://xiaopeng.feishu.cn/docx/C6p3d55IvoRt75xQHgIc3oc1nNe) · `docx` · 组员群 · 2026-04-27 06:10
+- [?from=vc_group_doc_link#doxcnYmd92t9w9qPLjnByfq1Ch](https://xiaopeng.feishu.cn/docx/QHDHdsckRou8vxxoNfHcKX85n3b) · `docx` · 核心日会群 · 2026-04-28 01:52
+- [Hi，各位同学，五一长假临近，为了方便后续的任务排期，今天下班前请大家根据五一的计划，填写假期前后的](https://xiaopeng.feishu.cn/wiki/NLsXwTh9yiDQ12k8kgfcQTFBncb) · `wiki` · 全员群 · 2026-04-28 07:15
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/PJ9iwSbhCipqgkk980Dcla8tnKW) · `wiki` · 核心日会群 · 2026-04-29 00:47
+- [?from=vc_group_doc_link#doxcnIZmTPD4BbUwRscNI2ND2D](https://xiaopeng.feishu.cn/docx/E0EfdVvjXoVfgwxRKYqccXdonVd) · `docx` · 核心日会群 · 2026-04-29 01:59
+- [?from=vc_group_doc_link#doxcnY1VCis5JGnBPp13oOsSzh](https://xiaopeng.feishu.cn/docx/C4zudqKXLo4rI5xo8OccSCBinhe) · `docx` · 核心日会群 · 2026-04-30 01:58
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/CdyDwdoEQijOi6km7pAcLNJmnjb) · `wiki` · 组员群 · 2026-04-30 06:16
+- [[](https://xiaopeng.feishu.cn/wiki/QRSaw4yndiXIvEkg35wcX11NnFe) · `wiki` · 核心日会群 · 2026-05-06 01:02
+- [?from=vc_group_doc_link#doxcncAop4vm5KBxdTot89U2dt](https://xiaopeng.feishu.cn/docx/EZpsdJu2xoCM9RxGdSvcfD33nkf) · `docx` · 核心日会群 · 2026-05-06 06:02
+- [?from=vc_group_doc_link#doxcnPre8lKcstnGqdkYNNrfqm](https://xiaopeng.feishu.cn/docx/OBM4drBj8oSybrxIYi3ckjWjnPg) · `docx` · 核心日会群 · 2026-05-07 02:01
+- [?from=vc_group_doc_link#doxcnB2ivqe8XZc2jAYqrR9ROr](https://xiaopeng.feishu.cn/docx/JsJZdUEtXoypepxqQNGceXFnnEg) · `docx` · 核心日会群 · 2026-05-08 02:17
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/HceTwonjai46HZkpjg5cTm9qnWe) · `wiki` · 核心日会群 · 2026-05-08 05:46
+- [<p>](https://xiaopeng.feishu.cn/wiki/Hek0wsQ9fix3zckYRbvcNUMJn2c) · `wiki` · 组员群 · 2026-05-09 07:04
+- [，一起挖掘业务场景 AI 创新思路，轻松组队、安心备赛，一起站上 AI 公开赛舞台   [一键进入G](https://xiaopeng.feishu.cn/wiki/QZNGwVRpAieUI1kg8JjculL7nif) · `wiki` · 全员群 · 2026-05-09 08:05
+- [?from=vc_group_doc_link#doxcn04qg2qrlgv2hJXGaUhY0O](https://xiaopeng.feishu.cn/docx/VKpwdVGUko7SgjxSsXQcAfXpnJe) · `docx` · 核心日会群 · 2026-05-11 02:12
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/EfCWwDHHaiIlT4k2E2ocm3gfnEb) · `wiki` · 核心日会群 · 2026-05-11 04:21
+- [?from=vc_group_doc_link#doxcnUU3fDaqgdvaPOfZOKmu3N](https://xiaopeng.feishu.cn/docx/RkMgdpPzZoOM6ZxryjocEA85nqb) · `docx` · 核心日会群 · 2026-05-12 02:19
+- [?from=vc_group_doc_link#doxcnA2zdMapcwCb5Qx5z5Qckb](https://xiaopeng.feishu.cn/docx/Qxyedmsy2oKbqhx64Lzctagwnwg) · `docx` · 核心日会群 · 2026-05-13 02:08
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/YhGNwOzXTiJOrOkhkFAcpWgonih) · `wiki` · 核心日会群 · 2026-05-13 06:34
+- [?from=vc_group_doc_link#doxcnHwp9RVgLhskVpotVMxsX1](https://xiaopeng.feishu.cn/docx/OzmRd6RI2oQGH4xOBe8c5OvynJc) · `docx` · 核心日会群 · 2026-05-14 04:10
+- [clip_iqa数据集及评分辛苦大家人工review一下，主要是看一下仿真车图像质量问题+仿真车与实](https://xiaopeng.feishu.cn/wiki/XFwfwaAXxic8V1k3kK1cUazfn5g) · `wiki` · 组员群 · 2026-05-15 03:30
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/UXLJwAGpei90YfkfaD9cLwy4nVM) · `wiki` · 核心日会群 · 2026-05-18 02:15
+- [?from=vc_group_doc_link#doxcnk8D6ZeqUpQaTVUfq06zX7](https://xiaopeng.feishu.cn/docx/EtVXd7uAVorUHSx1gNocl4qOnIg) · `docx` · 核心日会群 · 2026-05-18 02:21
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/NLZDwyaJwiwhHvki3sgckyEpnnh) · `wiki` · 核心日会群 · 2026-05-19 01:57
+- [?from=vc_group_doc_link#doxcntgkzkSd3lInH3Ksf0jY6j](https://xiaopeng.feishu.cn/docx/XZkOdeaNBob9K3xwd9EcR5G1nvh) · `docx` · 核心日会群 · 2026-05-19 02:17
+- [[](https://xiaopeng.feishu.cn/docx/B65jdV4fCow2DJxO64ncnepEnVe) · `docx` · 组员群 · 2026-05-20 02:18
+- [?from=vc_group_doc_link#doxcnFeP3EaG3o6WmTBDmYuBVg](https://xiaopeng.feishu.cn/docx/WyR6dvs5LoGRafxK0zQccUn9ni1) · `docx` · 核心日会群 · 2026-05-20 02:29
+- [@张驰 @夏志勋@赖西湖  @徐林鵾@邓爽@吴益民@郑丽娜 @李坤  Cc  @刘开拓 @高炳涛](https://xiaopeng.feishu.cn/wiki/HZuWwCXkzibbehk47dEc9C0EnNc) · `wiki` · 核心日会群 · 2026-05-20 07:53
+- [?from=vc_group_doc_link#doxcnVt2ICTJPGCU521JH5CtYU](https://xiaopeng.feishu.cn/docx/KFEbdnkS1oaCxjx5ccEcFAqdnFf) · `docx` · 核心日会群 · 2026-05-21 02:02
+- [?sheet=b901dc](https://xiaopeng.feishu.cn/wiki/MKhAwxLK3id7FLkVT6McyHx1neg) · `wiki` · 组员群 · 2026-05-21 10:37
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/EldlwToy4iYKkwkFEbEcnqB6nIf) · `wiki` · 核心日会群 · 2026-05-22 14:13
+- [?from=vc_group_doc_link#doxcnAD1krNb9yMKaszG3GiRhg](https://xiaopeng.feishu.cn/docx/TOybdZFnDog3fjxvTBZcjRCGnEf) · `docx` · 核心日会群 · 2026-05-25 01:58
+- [?from=vc_group_doc_link#doxcnn2fP9zI9ZuW7tGTDt3HUJ](https://xiaopeng.feishu.cn/docx/AjdhdGu7eo1bEoxfbkPcUk2sni2) · `docx` · 核心日会群 · 2026-05-26 02:10
+- [?from=vc_group_doc_link#doxcngg70nLnaVX1imZN9p6G4n](https://xiaopeng.feishu.cn/docx/UN1ldTqX0o8LqrxszDiclAyfnXe) · `docx` · 核心日会群 · 2026-05-27 02:04
+- [?from=vc_group_doc_link#doxcn5LzzQPzEVGsbFZ4jaBDlR](https://xiaopeng.feishu.cn/docx/IH7wd2k1ZotCCbxmSJMc4ij8nsg) · `docx` · 核心日会群 · 2026-05-28 02:03
+- [@徐林鵾 @Shuo Chen 可以让大家试试我们的inference platform](https://xiaopeng.feishu.cn/wiki/Ny7lwWCSOiwwXBkBlpec3Ii4nrg) · `wiki` · 全员群 · 2026-05-28 06:46
+- [?from=vc_group_doc_link#doxcnKBdZuu4XmQI0m3qn2drvE](https://xiaopeng.feishu.cn/docx/EfxydPgU6oOJ36xU7yCclICfnOb) · `docx` · 核心日会群 · 2026-05-29 02:07
+- [?from=vc_group_doc_link#doxcnirE2xm7jrqgSzniaWyyLN](https://xiaopeng.feishu.cn/docx/E98Fdqk3Vofp6wx69p3cOVpwnGh) · `docx` · 核心日会群 · 2026-06-01 01:48
+- [?from=vc_group_doc_link#doxcnBjy8tVc1hNLcFH04dt9be](https://xiaopeng.feishu.cn/docx/JWWvdvU61ozRohxR5iXc8BzAnKb) · `docx` · 核心日会群 · 2026-06-02 02:01
+- [?from=vc_group_doc_link#doxcnnDOa4JWiPzi3DIYypNqim](https://xiaopeng.feishu.cn/docx/PlBQd6E5RoYoB6x3auYcE3Gcn4f) · `docx` · 核心日会群 · 2026-06-03 02:09
+- [?from=vc_group_doc_link#doxcnhEUq800L53vLIfh0aJwvV](https://xiaopeng.feishu.cn/docx/X0AtdKAmwoTJHQx2Qa5cfXDZnWg) · `docx` · 核心日会群 · 2026-06-04 03:19
+- [?from=vc_group_doc_link#doxcnIlWmX0Ik0shpX0cKgSMlx](https://xiaopeng.feishu.cn/docx/RCmadiBMVobOMcx99JvccRgnnnC) · `docx` · 核心日会群 · 2026-06-05 01:59
+- [mage](img_v3_0212c_28a10c20-ee2b-4449-858f-6ffa932](https://xiaopeng.feishu.cn/wiki/MQoLwJKhAi6Ma1kCSRwcbfZXnth) · `wiki` · HRBP群 · 2026-06-05 08:08
+- [call跟进/线上问题处理4个场景为切入点，构建统一的链路/框架，围绕场景进行skills的迭代。欢](https://xiaopeng.feishu.cn/docx/LRazdfc91oyFqjx2RKrctwe6nJV) · `docx` · 核心日会群 · 2026-06-08 02:46
+- [?from=vc_group_doc_link#doxcnPqCjWwV0QU9vbo2FmLAhr](https://xiaopeng.feishu.cn/docx/UHCRdIr8poZLB3xYGTTcvb7cnif) · `docx` · 核心日会群 · 2026-06-09 02:41
+- [t user_id="all"></at>    1. 主管输出物@各主管，更新在一个文档，DLL6](https://xiaopeng.feishu.cn/wiki/EHXpwax93ig3PEkCDcic8d6xn2c) · `wiki` · HRBP群 · 2026-06-09 03:15
+- [EHXpwax93ig3PEkCDcic8d6xn2c)   2. 部门输出物@周月@炳涛，DLL6](https://xiaopeng.feishu.cn/wiki/SI6gwWrfmiiHq6kesSLcSPZMnDc) · `wiki` · HRBP群 · 2026-06-09 03:15
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/YrlRwtI81i1lfLkxEZMcUoc2n2b) · `wiki` · 班委群SMG · 2026-06-09 08:23
+- [确或者是否需要补充 （我写了初稿，gemini发挥了一下），主要是用于写  GIC中心的研发质量的一](https://xiaopeng.feishu.cn/wiki/ZIRNwpAvBiPEPIkbiRpcaxMlnag) · `wiki` · 班委群SMG · 2026-06-09 14:22
+- [?from=vc_group_doc_link#doxcntsv2SU8E4JjmXLZ6G6uBh](https://xiaopeng.feishu.cn/docx/NmbKdb20VoK0JoxuVeRcLkadnFc) · `docx` · 核心日会群 · 2026-06-10 02:01
+- [?from=navigation](https://xiaopeng.feishu.cn/docx/J0W3dX4gQoc07lxBMdYcWXW9nkc) · `docx` · 组员群 · 2026-06-10 10:10
+- [?from=vc_group_doc_link#doxcnVtrOPxvb7ZjE0bLbY0DZN](https://xiaopeng.feishu.cn/docx/BDROdkbNQoQ0dzxRSB4cbWOtnTb) · `docx` · 核心日会群 · 2026-06-11 02:17
+- [@李坤](https://xiaopeng.feishu.cn/wiki/O917wTFJJi4eHHkfOXtcjtesn1d) · `wiki` · 组员群 · 2026-06-11 10:10
+- [?from=vc_group_doc_link#doxcniI1d38iuKV2UdstCQUwYv](https://xiaopeng.feishu.cn/docx/AmTUd86HRoUf7QxEYPLchYr5nXg) · `docx` · 核心日会群 · 2026-06-12 02:07
+- [?from=vc_group_doc_link#doxcnpuvVO6Ac5ZZZnQxycSxp2](https://xiaopeng.feishu.cn/docx/Hi5hdhLicoEalyxrV3fc4tFXnvc) · `docx` · 核心日会群 · 2026-06-15 01:57
+- [?from=vc_group_doc_link#doxcnNiyTQFUKuEvHZOrpHp0Ut](https://xiaopeng.feishu.cn/docx/OG2zdNqJUocuaSxZhlHci83znQh) · `docx` · 核心日会群 · 2026-06-16 02:07
+- [?from=vc_group_doc_link#doxcngDLZTsPOAxVHt3MLqxOFS](https://xiaopeng.feishu.cn/docx/NUPzdvDXvoaCAyxOPmNcl7bNnqf) · `docx` · 核心日会群 · 2026-06-17 02:02
+- [节点（6月22日前完成）完成学习👇**      📌 **第一期：《守住口，对外沟通要谨慎，付费访谈](https://xiaopeng.feishu.cn/wiki/RtJ7wUMvqiF7PlkPn2AcbnVZnRc) · `wiki` · 全员群 · 2026-06-17 09:04
+- [律拒绝，不确定的情况请提前联系合规部报备！**      **📌 第二期：《管住手，不拷贝、不截图、](https://xiaopeng.feishu.cn/wiki/LmS3wrqPqiZJblkFshRcA1TNnqb) · `wiki` · 全员群 · 2026-06-17 09:04
+- [/私人设备，飞书文档权限请严格按部门规则配置。**      **📌 第三期：《守好物，物理保密不能](https://xiaopeng.feishu.cn/wiki/PbENw0Kx4iAFrIkLlqDc2m5wnOt) · `wiki` · 全员群 · 2026-06-17 09:04
+- [?from=vc_group_doc_link#doxcn8Kz8tHMnsbmcz1iX5lo1m](https://xiaopeng.feishu.cn/docx/LC0qd7ejjohnPuxoH7DcR9CCnQh) · `docx` · 核心日会群 · 2026-06-18 01:43
+- [?from=vc_group_doc_link#doxcnaxwbAxL6J8OjdSjN6JG2W](https://xiaopeng.feishu.cn/docx/T6y0diJvZoW1JsxD24dczYugnih) · `docx` · 核心日会群 · 2026-06-22 01:58
+- [?from=vc_group_doc_link#doxcntf8B1IBrOIVzjNUJWCCNA](https://xiaopeng.feishu.cn/docx/NG1QdscHQoM4PAxOrRxcCvFMnSe) · `docx` · 核心日会群 · 2026-06-23 02:05
+- [(https://luban.x-peng.com/ai-coding-tool/my-tool) ](https://xiaopeng.feishu.cn/wiki/XCjjwvbM8iv73MkOa60cFr0BnlV) · `wiki` · 组员群 · 2026-06-23 07:27
+- [?from=vc_group_doc_link#doxcnxJI8h9xsngpDvaL8Rg9KH](https://xiaopeng.feishu.cn/docx/C8r2d0lwIo1nGzxL59tcbr9Rn2g) · `docx` · 核心日会群 · 2026-06-24 02:05
+- [?from=vc_group_doc_link#doxcnSDYdDXpMjSsS6xzQmrz2U](https://xiaopeng.feishu.cn/docx/TUwpdyT3xohJ4bx3r6kcR2uVndd) · `docx` · 核心日会群 · 2026-06-25 02:08
+- [@高炳涛嗯，原生报告是这个](https://xiaopeng.feishu.cn/wiki/WeiDwsCDEiad0ekvDULcSSqLnAb) · `wiki` · 班委群SMG · 2026-06-25 03:58
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/PQ0GwKCfQi9k1RkOtNLcHYAGnUh) · `wiki` · 班委群SMG · 2026-06-25 09:12
+- [?from=vc_group_doc_link#doxcnYSxlImf5331HvjLH1WHpm](https://xiaopeng.feishu.cn/docx/YMyudyWVRo1xgPxWBIPc4CjZnwe) · `docx` · 核心日会群 · 2026-06-26 02:05
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/QlSrw3e4Ciuc6vkgZgdcNuHZnOb) · `wiki` · 核心日会群 · 2026-06-29 01:52
+- [?from=vc_group_doc_link#doxcnKfRjAmPmVQ81NSYr45qzy](https://xiaopeng.feishu.cn/docx/SdULd0jepoNfVrxMbJJcHCkynjf) · `docx` · 核心日会群 · 2026-06-29 06:10
+- [?from=vc_group_doc_link#doxcnlUlPOqmzFkaRYeynOvQwP](https://xiaopeng.feishu.cn/docx/JThRd3n5IoFpJFxjtSCcCws8nHe) · `docx` · 核心日会群 · 2026-06-30 02:11
+- [<p>@高炳涛 大部分都汇总在总的日会文档：](https://xiaopeng.feishu.cn/wiki/Wu6ywIOM6iEucDkmx3hcEgLHnmg) · `wiki` · 核心日会群 · 2026-06-30 02:54
+- [https://xiaopeng.feishu.cn/wiki/ZCx8wIk4UiE4cUkBzG](https://xiaopeng.feishu.cn/wiki/WLp7whFhTihS7qkj1pIcgTLcnNf) · `wiki` · 核心日会群 · 2026-06-30 02:54
+- [ttps://xiaopeng.feishu.cn/wiki/WLp7whFhTihS7qkj1pI](https://xiaopeng.feishu.cn/wiki/ZCx8wIk4UiE4cUkBzGFczVqTnIK) · `wiki` · 核心日会群 · 2026-06-30 02:54
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/PDJ2wKHnciz3rgkF1jlcoJVQnQc) · `wiki` · 核心日会群 · 2026-06-30 02:55
+- [还需要让TC的同学来一起处理计划今天下午先拉个会，已经有一个初始文档，   5. **最终留存数据 ](https://xiaopeng.feishu.cn/wiki/VW5lw0kH5icyAOkiRK2cbJOyneh) · `wiki` · 核心日会群 · 2026-06-30 06:43
+- [大家今天核对和填写好里面的内容信息哈，包含每一列。27届的校招开始咯，提前确认好，可以早点发布岗位信](https://xiaopeng.feishu.cn/wiki/QKUEwrEY7i6xl1kPgPlc7Y4lnwg) · `wiki` · HRBP群 · 2026-06-30 06:56
+- [?from=vc_group_doc_link#doxcn43jRZNVcKcOV4R9lW8lDe](https://xiaopeng.feishu.cn/docx/NtMAdx4ZfoEXmYxNgGVcIirKnYf) · `docx` · 核心日会群 · 2026-07-01 02:16
+- [@_all](https://xiaopeng.feishu.cn/wiki/ZfJyw7stvihOqqkI7Awcz7TKnWL) · `wiki` · 组员群 · 2026-07-01 02:30
+- [<p>](https://xiaopeng.feishu.cn/wiki/XXvewamYMiJJQekhP8FcJPU9n4d) · `wiki` · 组员群 · 2026-07-01 04:51
+- [家确认repo权限符合最小要求后再走正式流程。也便于流程走到bingtao审批的时候可以对照。 大家](https://xiaopeng.feishu.cn/wiki/NOoMwJPz9iQg1zk2bkecY8nonMe) · `wiki` · 核心日会群 · 2026-07-02 07:37
+- [?from=vc_group_doc_link#doxcnM7AwFuxhupUZa5h4gj6f2](https://xiaopeng.feishu.cn/docx/GXncdgbIKo4HaAxZKIEcRWXCn6e) · `docx` · 核心日会群 · 2026-07-03 01:54
+- [?from=vc_group_doc_link#doxcnognQCzAy3julSRSQZVjPY](https://xiaopeng.feishu.cn/docx/IA9ddfMefoy6GRxZJUfcw4HSn5b) · `docx` · 核心日会群 · 2026-07-06 02:02
+- [到的同学，把反馈集中起来写出来   2. 其次用户问卷，会包含内部和外部用户，Q2结束，这一周我们收](https://xiaopeng.feishu.cn/wiki/Q9BVwAnu0iq2UTkj2neckfvOnhb) · `wiki` · 组员群 · 2026-07-06 02:56
+- [ube点云到高斯链路的持续优化，这一块我先来看看具体优化项，后续直接补充到文档中。   大家有什么建](https://xiaopeng.feishu.cn/wiki/GSeJwH9lsirCvmkYkCycoTXzn2e) · `wiki` · 组员群 · 2026-07-06 05:27
+- [?from=vc_group_doc_link#doxcnIhPOTUtjDBvmJSYEqgyQx](https://xiaopeng.feishu.cn/docx/CLaQdep2go2H5mxu6pncIOObnwc) · `docx` · HRBP群 · 2026-07-06 08:56
+- [?from=vc_group_doc_link#doxcnnZgqXi52WPgtpy3P5SoGQ](https://xiaopeng.feishu.cn/docx/OIZKdP7RpoGRhJxInEIcNaKun9Y) · `docx` · 核心日会群 · 2026-07-07 01:57
+- [7月每周的计划提前拆解，大家关注下哈](https://xiaopeng.feishu.cn/wiki/TGrAwdMz1igqOsklBqDc4Wr0n6e) · `wiki` · 组员群 · 2026-07-07 03:40
+- [?from=vc_group_doc_link#doxcn507eUw0AqoeRhVzI2dJ0S](https://xiaopeng.feishu.cn/docx/Tu9rdASMeozNRXxE7aicG9GSnuf) · `docx` · 组员群 · 2026-07-07 09:46
+- [?from=vc_group_doc_link#doxcnkI1ljWFCxHpF0NnTqad8P](https://xiaopeng.feishu.cn/docx/S0uudrpz9oYyqCxhd5ScZmvbnMc) · `docx` · 核心日会群 · 2026-07-08 01:54
+- [(无上下文)](https://xiaopeng.feishu.cn/wiki/LwGYwEtsRi6B6NkOaX9cwZijnWb) · `wiki` · 班委群SMG · 2026-07-08 09:01

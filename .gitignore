@@ -32,11 +32,36 @@ __MACOSX/
 *.key
 media_key.txt
 
-# ── 大文件 / 归档 ──
+# ── 二进制数据库 / 大压缩包（含敏感凭据）──
+*.db
 *.tar.gz
-*.zip
-*.rar
-*.7z
-*.pptx
-*.ppt
-*.pdf
+
+# ── 临时产物（图片切片/草稿/读图中间件，勿提交到根目录）──
+/okr_band_*.jpg
+/okr_kr3_check.jpg
+/top_check.jpg
+/r[0-9].jpg
+/ref_top.png
+/ref_bot.png
+/okr_auth_qr.png
+*-backup.xlsx
+
+# ── 参考源码（team/code 已跟踪历史快照；防止其下缓存/构建产物等新增文件误入库）──
+# 注：已跟踪的文件不受影响；仅拦截该目录下未来新增的非源码文件
+team/code/**/__pycache__/
+team/code/**/*.pyc
+team/code/**/.cache/
+team/code/**/build/
+team/code/**/dist/
+
+# ── 运行时状态 / 敏感原始数据 ──
+team/.sync_done.txt
+team/.weekly_tok.txt
+team/memory/.last-memory-update
+team/memory/chat-raw/
+team/.CLAUDE.md.bak-*
+
+# ── 中间工作文件（周表快照 / ACX 审计日志）──
+team/.W*v*.xml
+team/.a_cx.xml
+team/.b2_*.xml

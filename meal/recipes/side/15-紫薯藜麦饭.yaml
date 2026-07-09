@@ -1,0 +1,27 @@
+title: "紫薯藜麦饭"
+type: side
+category: 粗粮
+difficulty: easy
+total_time: "电饭煲30分钟"
+servings: 4
+tools: [电饭煲]
+tags: [粗粮, 主食, 蒸, 无油]
+ingredient_tags: ['紫薯', '藜麦', '大米']
+ingredients:
+  紫薯藜麦饭:
+    - name: 紫薯
+      amount: 200g
+      note: 去皮切小块
+    - name: 三色藜麦
+      amount: 40g
+      note: 提前冲洗
+    - name: 大米
+      amount: 1杯
+steps:
+  - step: "大米、藜麦淘净，紫薯块铺在上层，按正常米饭水量"
+    tool: 电饭煲
+  - step: "电饭煲煮饭模式，跳闸后焖5分钟，拌匀即可"
+    tool: 电饭煲
+night_prep:
+  - "藜麦冲洗、紫薯切块冷藏；次日与米同煮"
+notes: "紫薯+藜麦补花青素与完全蛋白，一锅出粗细搭配主食；紫色卖相孩子爱，无需调味。"

@@ -1,0 +1,35 @@
+<callout><p>本月目标由 Q3 OKR 拆解到 9 月（Q3 收官，task 化，可勾选）。数字为灵犀据爬坡推导，李坤可改。每日进展见下方日报表（按「9月」筛选）。</p></callout>
+
+<h2>9 月目标（Q3 收官）</h2>
+
+<h3>O1 SIL</h3>
+<ul>
+<li><checkbox done="false">【KR1】SIL 正式成为 FM 发版算法评测标准，漏报率达标并固化流程</checkbox></li>
+<li><checkbox done="false">【KR2】CLIP-IQA 召回 99%/准确 95% 达成，质检卡口全量上线</checkbox></li>
+<li><checkbox done="false">【KR3】difix（MIG）1:9→冲 1:5；NVFixer ref 达 1:5；单帧 0.5s 内；H265 1:2</checkbox></li>
+</ul>
+
+<h3>O2 HIL</h3>
+<ul>
+<li><checkbox done="false">【KR1】HIL 成为发版上车最终 gating，稳定性 95%+ 固化</checkbox></li>
+<li><checkbox done="false">【KR2】综合复现率达 80%，difix 60% / 纯 3DGS 50% 达标</checkbox></li>
+<li><checkbox done="false">【KR3】等效性验证卡口 + 200+ 台架规模化闭环准出全流程跑通</checkbox></li>
+</ul>
+
+<h3>O3 规模化生产</h3>
+<ul>
+<li><checkbox done="false">【KR1】RC 长里程累计 10000km（1wkm）达成，日产稳定 1000 case</checkbox></li>
+<li><checkbox done="false">【KR2】高价值 CornerCase（主动安全/泊车/VRU）定制开发全覆盖</checkbox></li>
+<li><checkbox done="false">【KR3】1 小时极速验证 + golden testcase + 自动质检 gating 体系成型，入库复现率 50% 达标</checkbox></li>
+</ul>
+
+<h3>O4 算法预研</h3>
+<ul>
+<li><checkbox done="false">【KR1】Diffusion 新模型（轻量化/多摄一致/新视角）阶段性验证完成、给 Q4 落地方案</checkbox></li>
+<li><checkbox done="false">【KR2】Feedforward 新方法重建提速结论 + 生产自动化落地评估</checkbox></li>
+<li><checkbox done="false">【KR3】Smart Agent 动态交互场景 case 形成可复用能力</checkbox></li>
+<li><checkbox done="false">【KR4】3DGS 场景泛化能力边界明确，输出 Q4 预研方向</checkbox></li>
+</ul>
+
+<h2>9 月每日进展</h2>
+<p>数据源：Q3仿真算法日报-数据源（多维表格）。组员每天自助新增一行：选「月份=9月」「链路」「关联月目标」，填今日进展 + 卡点 + 状态。</p>

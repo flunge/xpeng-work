@@ -36,15 +36,20 @@ def beijing_now():
     return datetime.utcnow() + timedelta(hours=8)
 
 
-def find_target_daily_card():
-    """按北京时间选食谱：18:00 前发『今日』，18:00 及以后发『明日』。"""
-    now = beijing_now()
-    if now.hour < 18:
-        target = now.date()
-        label = "今日食谱"
+def find_target_daily_card(force_date=None):
+    """选食谱：显式传 force_date 则用它；否则按北京时间 18:00 前发『今日』、之后发『明日』。"""
+    if force_date is not None:
+        target = force_date
+        today = beijing_now().date()
+        label = "明日食谱" if target > today else ("今日食谱" if target == today else "食谱")
     else:
-        target = now.date() + timedelta(days=1)
-        label = "明日食谱"
+        now = beijing_now()
+        if now.hour < 18:
+            target = now.date()
+            label = "今日食谱"
+        else:
+            target = now.date() + timedelta(days=1)
+            label = "明日食谱"
     filename = DAILY_DIR / f"{target.year}-{target.month:02d}-{target.day:02d}.md"
     if not filename.exists():
         print(f"⚠️ 未找到食谱文件: {filename}")
@@ -214,8 +219,13 @@ def send_simple_text(webhook_url, text):
 
 
 def main():
-    # 按北京时间选今日/明日食谱
-    content, target, label = find_target_daily_card()
+    # 支持 --date YYYY-MM-DD 指定日期；不传则按北京时间自动选今日/明日
+    force_date = None
+    if "--date" in sys.argv:
+        idx = sys.argv.index("--date")
+        if idx + 1 < len(sys.argv):
+            force_date = datetime.strptime(sys.argv[idx + 1], "%Y-%m-%d").date()
+    content, target, label = find_target_daily_card(force_date)
 
     if not content:
         print(f"⚠️ 未找到 ({target}) 的食谱文件")

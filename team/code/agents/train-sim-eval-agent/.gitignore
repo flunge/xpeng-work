@@ -1,0 +1,28 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.eggs/
+build/
+dist/
+.venv/
+venv/
+
+# Env & secrets
+.env
+
+# 运行时生成的 open_id 缓存（按邮箱解析后复用）
+.feishu_open_id_cache.json
+
+# Databases
+*.db
+*.db-wal
+*.db-shm
+tse.db
+temporal.db
+
+# Test / tooling caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+

@@ -1,0 +1,144 @@
+{
+  "rules": [
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && echo \"=== verify key files ===\" && ls -la .claude/CLAUDE.md meal/README.md team/CLAUDE.md README.md .gitignore && echo \"=== verify new directories ===\" && ls -d meal/plans/daily/ team/memory/ team/code/ team/output/ team/backups/ 2>/dev/null",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && echo \"=== Top-level dirs ===\" && ls -d */ .*/  2>/dev/null | grep -v '^\\.$' | grep -v '^\\.\\.$' && echo \"=== File counts by area ===\" && echo \"meal: $(find meal -type f | wc -l)\" && echo \"team: $(find team -type f | wc -l)\" && echo \"ppt-slide-formatter: $(find ppt-slide-formatter -type f | wc -l)\" && echo \".claude: $(find .claude -type f | wc -l)\"",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && echo \"=== Modified (M) ===\" && git status --short | grep '^ M' | wc -l && echo \"=== Deleted (D) ===\" && git status --short | grep '^ D' | wc -l && echo \"=== New (??) ===\" && git status --short | grep '^??' | wc -l && echo \"=== Total changed ===\" && git status --short | wc -l",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && git status --short | grep '^??' | head -30 && echo \"...\" && git status --short | grep '^??' | wc -l",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && git status --short | wc -l && echo \"=== sample changes ===\" && git status --short | head -30",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && rsync -a --exclude='.git' /tmp/tar_extract/ ./ 2>&1 | head -20 && echo \"=== rsync done ===\"",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "# Files only in repo (deleted in tar)\ncomm -13 /tmp/tar_files.txt /tmp/repo_all_files.txt",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /tmp/tar_extract && find . -type f ! -path './.git/*' | sed 's|^\\./||' | sort > /tmp/tar_files.txt && echo \"tar files: $(wc -l < /tmp/tar_files.txt)\" && echo \"=== files only in tar (new/updated) ===\" && comm -23 /tmp/tar_files.txt /tmp/repo_all_files.txt | wc -l && echo \"=== files only in repo (not in tar) ===\" && comm -13 /tmp/tar_files.txt /tmp/repo_all_files.txt | wc -l && echo \"=== common files ===\" && comm -12 /tmp/tar_files.txt /tmp/repo_all_files.txt | wc -l",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && git ls-files -z | tr '\\0' '\\n' | sort > /tmp/repo_tracked.txt && git ls-files --others --exclude-standard -z | tr '\\0' '\\n' | sort > /tmp/repo_untracked.txt && cat /tmp/repo_tracked.txt /tmp/repo_untracked.txt | sort > /tmp/repo_all_files.txt && echo \"tracked: $(wc -l < /tmp/repo_tracked.txt), untracked: $(wc -l < /tmp/repo_untracked.txt), total: $(wc -l < /tmp/repo_all_files.txt)\"",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && echo \"=== files only in repo (deleted in tar) ===\" && comm -13 /tmp/tar_files.txt /tmp/repo_all_files.txt | head -50 && echo \"...\" && comm -13 /tmp/tar_files.txt /tmp/repo_all_files.txt | wc -l",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /tmp/tar_extract && find . -type f | sed 's|^\\./||' | sort > /tmp/tar_files.txt && cd /Users/xpeng/Documents/daily && (git ls-files; git ls-files --others --exclude-standard) | sort > /tmp/repo_all_files.txt && echo \"=== files only in tar (new files) ===\" && comm -23 /tmp/tar_files.txt /tmp/repo_all_files.txt | head -50 && echo \"...\" && comm -23 /tmp/tar_files.txt /tmp/repo_all_files.txt | wc -l",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && git ls-files | sort > /tmp/repo_files.txt && wc -l /tmp/repo_files.txt",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /tmp/tar_extract && find . -type f ! -path './.git/*' | sed 's|^\\./||' | sort > /tmp/tar_files.txt && wc -l /tmp/tar_files.txt",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "mkdir -p /tmp/tar_extract && cd /tmp/tar_extract && tar xzf /Users/xpeng/Documents/daily/312959975957377024.tar.gz 2>&1 | tail -5 && echo \"=== done ===\" && ls -la",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && tar tzf 312959975957377024.tar.gz | sed -n '700,900p'",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && tar tzf 312959975957377024.tar.gz | grep '^\\.zod' | head -20 && echo \"---\" && tar tzf 312959975957377024.tar.gz | grep '^\\.kiro' | head -20",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && tar tzf 312959975957377024.tar.gz | grep -v '/$' | awk -F/ '{print $1}' | sort -u",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && tar tzf 312959975957377024.tar.gz | grep -c '^\\.' && echo \"---has .git?---\" && tar tzf 312959975957377024.tar.gz | grep '^\\.git/' | head -5 && echo \"---has .claude?---\" && tar tzf 312959975957377024.tar.gz | grep '^\\.claude/' | head -5 && echo \"---has .zod?---\" && tar tzf 312959975957377024.tar.gz | grep '^\\.zod/' | head -5",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && git log --oneline -5 && echo \"===working tree status===\" && git status --short | head -5 && echo \"...\" && git status --short | wc -l && echo \"===tracked file count===\" && git ls-files | wc -l",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && tar tzf 312959975957377024.tar.gz | sed -n '500,700p'",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && git ls-files | wc -l && echo \"---\" && git ls-files | head -30",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && git status --short | head -30 && echo \"---total---\" && git status --short | wc -l",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && tar tzf 312959975957377024.tar.gz | sed -n '300,500p'",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && tar tzf 312959975957377024.tar.gz | sed -n '100,300p'",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && tar tzf 312959975957377024.tar.gz | wc -l && echo \"---\" && tar tzf 312959975957377024.tar.gz | head -100",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && find . -maxdepth 2 -type d ! -path './.git*' ! -path './node_modules*' | sort",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && tar tzf 312959975957377024.tar.gz | head -50",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "cd /Users/xpeng/Documents/daily && git log --oneline -20",
+      "action": "allow"
+    }
+  ]
+}

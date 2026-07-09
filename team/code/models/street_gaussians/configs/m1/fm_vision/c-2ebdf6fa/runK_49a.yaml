@@ -1,0 +1,147 @@
+data:
+  cam7_after_pos_optim: 1.0
+  cameras:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  - 7
+  extent: 10
+  filter_colmap: true
+  frame_stride: 1
+  input_ground_downsample: 0.0
+  resolution: 1
+  save_log_images: true
+  save_tensorboard: false
+  selected_frames:
+  - 10
+  - 60
+  split_test: -1
+  split_train: 1
+  type: Xpeng
+  use_cam2_extended_l1mask:
+  - 0
+  - 0
+  use_colmap: true
+  use_lidar_normal: false
+  use_lidar_slice_depth: false
+  use_surfel: false
+  white_background: false
+  write_obj_bound: false
+dilate_mask: 40
+exp_name: runK_49a
+fixer:
+  cam:
+  - 1
+  - 2
+  - 3
+  - 4
+  - 5
+  - 6
+  compile_pipeline: false
+  fp16: true
+  guidance_scale: 3.0
+  pretrained_path: /workspace/group_share/adc-sim/users/led/ckpts/difix
+  prompt: remove degradation
+  scale: 1
+  timesteps:
+  - 200
+  use_reference_image: false
+  xformers: true
+loaded_iter: -1
+mode: train
+model:
+  gaussian:
+    flip_prob: 0.5
+    fourier_dim: 5
+    fourier_scale: 1.0
+    sh_degree: 1
+    use_tracklets_world: false
+  nsg:
+    include_bkgd: true
+    include_ground: true
+    include_obj: false
+    include_quasi_static_obj: true
+    include_sky: true
+    opt_track: true
+optim:
+  densification_interval: 100
+  densify_from_iter: 4200
+  densify_grad_abs_bkgd: true
+  densify_grad_abs_obj: false
+  densify_grad_threshold: 0.0002
+  densify_grad_threshold_bkgd: 0.0006
+  densify_grad_threshold_obj: 0.0002
+  densify_until_iter: 21000
+  feature_lr: 0.0025
+  lambda_background_init_lidar_constraint:
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  - 0.0
+  lambda_background_maxscale:
+  - 100.0
+  - 2.0
+  lambda_background_on_ground_penalty: 0.0
+  lambda_depth_lidar: 0.0
+  lambda_dssim: 0.8
+  lambda_ground_acc: 1.0
+  lambda_ground_flatten: 1000.0
+  lambda_ground_symmetry: 10000.0
+  lambda_l1: 0.5
+  lambda_mask: 0.1
+  lambda_novel_ground_acc: 10.0
+  lambda_object_maxscale:
+  - 0.0
+  - 0.2
+  lambda_reg: 0.1
+  lambda_sky: 0.05
+  lambda_sky_scale: []
+  max_screen_size: 250
+  min_opacity: 0.005
+  min_opacity_bkgd: 0.02
+  min_opacity_grd: 0.02
+  opacity_lr: 0.05
+  opacity_reset_interval: 3000
+  percent_big_ws: 0.1
+  percent_dense: 0.01
+  position_lr_delay_mult: 0.01
+  position_lr_final: 1.6e-05
+  position_lr_final_obj: 1.6e-06
+  position_lr_init: 0.00016
+  position_lr_init_obj: 0.00016
+  position_lr_max_steps: 24000
+  prune_after_densify: true
+  prune_box_interval: 100
+  rotation_lr: 0.001
+  scaling_lr: 0.005
+  scaling_lr_final: 0.001
+  semantic_lr: 0.01
+  track_position_lr_delay_mult: 0.01
+  track_position_lr_final: 5.0e-05
+  track_position_lr_init: 0.005
+  track_position_max_steps: 26000
+  track_rotation_lr_delay_mult: 0.01
+  track_rotation_lr_final: 1.0e-05
+  track_rotation_lr_init: 0.001
+  track_rotation_max_steps: 26000
+render:
+  concat_cameras: []
+  fix: false
+  fps: 10
+  save_image: false
+  save_video: true
+  save_video_merged: true
+source_path: /workspace/yangxh7@xiaopeng.com/datasets/xpeng/fm_vision_new/c-2ebdf6fa-619e-384a-bcaf-398c718f06d4
+task: m1/fm_vision/c-2ebdf6fa
+train:
+  checkpoint_iterations:
+  - 30000
+  iterations: 30000
+  save_iterations:
+  - 30000
+  test_iterations:
+  - 300000

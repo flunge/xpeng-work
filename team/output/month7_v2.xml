@@ -1,0 +1,23 @@
+<title>Q3-7月目标&进展</title>
+
+<h2>一、7 月月度目标</h2>
+<callout><p>承接 Q3 OKR，结合 6 月末现状优化。每条为本月要达成的结果。</p></callout>
+<p><b>场景&生产</b>：RC 长里程从 2500km 累计到 5000km、4 城铺开，日产稳定 1000 case；anti-distort 卡死修复、入库失败率压到 10% 内；极速模式漏斗常态化、入库复现率冲 50%；场景编辑从 cut-in 扩到靠边停车/VRU 两类并批量出 case。</p>
+<p><b>SIL</b>：SIL 闭环基准在 3 类问题集跑通、出首版漏报率（目标不超过 20%）；CLIP-IQA 质检卡口上线、准确率 75%→85%；difix（MIG 口径）1:14.8→1:12、NVFixer ref 1:7.2→1:6.5。</p>
+<p><b>HIL</b>：5 节点（004/005）调通、可用率 92%→95%；difix 复现率首版达 50%、慢速 latent 链路 100% 适配跑 50 case；闭环 metric 七类验收、出带 PAT 阶段报告。</p>
+<p><b>算法预研</b>：NVFixer V3C/V3D 64 卡全量训练出结论、冻结架构；feedforward 训练 200/500/1000 步对比、定输入方案；鱼眼颜色差异接 difix 修复。</p>
+<p><b>Agents</b>：复现率 Agent 各专项准确率补齐到 80%+、全量集成；metric diff review agent 准确率 50%→70%、解决开发与使用脱节；oncall/融合机器人上线后稳定运行。</p>
+
+<h2>二、每周进展</h2>
+<callout><p>每周一个表格（与 Q2 作战表一致）：列为「链路 | 目标 | 核心进展-MMDD（每天一列）」。表前写本周目标。每天每块单元格按模板填：【项目】进展点 / 卡点 / 次日计划。组员每天在本人链路行的当日列补写。</p></callout>
+
+<h3>W28（7/6–7/10）</h3>
+<p><b>本周目标</b>：RC 日产爬到 1000 case、累计破 3500km；HIL 005 接入跑稳；NVFixer 64 卡训练启动；CLIP-IQA 上线联调。</p>
+<table>
+<tr><td><b>链路</b></td><td><b>目标</b></td><td><b>核心进展-07.06</b></td><td><b>核心进展-07.07</b></td><td><b>核心进展-07.08</b></td><td><b>核心进展-07.09</b></td><td><b>核心进展-07.10</b></td></tr>
+<tr><td><b>场景&生产</b></td><td>日产1000case/累计3500km</td><td>【RC长里程】（示例）日产__case、累计__km；卡点__；次日__</td><td></td><td></td><td></td><td></td></tr>
+<tr><td><b>SIL</b></td><td>difix1:12/CLIP-IQA上线</td><td>【渲染优化】difix MIG__；【CLIP-IQA】__</td><td></td><td></td><td></td><td></td></tr>
+<tr><td><b>HIL</b></td><td>005接入/复现率50%</td><td>【节点部署】005__；【复现率】__</td><td></td><td></td><td></td><td></td></tr>
+<tr><td><b>算法预研</b></td><td>NVFixer训练/ff定方案</td><td>【NVFixer】64卡__；【feedforward】__</td><td></td><td></td><td></td><td></td></tr>
+<tr><td><b>Agents</b></td><td>准确率补齐80%+</td><td>【复现率Agent】__；【metric diff】__</td><td></td><td></td><td></td><td></td></tr>
+</table>

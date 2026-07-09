@@ -1,0 +1,46 @@
+# 错误定义表（错误类型 / 错误ID / 匹配关键字）
+#
+# 每条定义：
+#   error_id   : 唯一错误ID
+#   error_type : 中文可读的错误类型标签
+#   match      : 匹配关键字列表，任意一个出现在异常消息里即命中该错误
+#
+# 按列表顺序匹配，命中第一条即返回；都没命中则归入兜底分类（未知错误 / 999999）。
+# 新增错误类型时，在此处加一条即可，无需改动代码。
+errors:
+  - error_id: 100001
+    error_type: pose数量不满足18s的要求
+    match:
+      - data too short for 3dgs
+
+  - error_id: 100002
+    error_type: 行驶里程不足8m
+    match:
+      - localpose总位移仅为
+      - 小于阈值
+
+  - error_id: 100003
+    error_type: 超时未执行完成
+    match:
+      - Processing timeout
+      - seconds exceeded
+
+  - error_id: 100004
+    error_type: 图像间隔时间超过0.5s
+    match:
+      - Timestamp discontinuity
+
+  - error_id: 100005
+    error_type: 获取车型信息失败
+    match:
+      - "TProtocolException: Invalid data"
+
+  - error_id: 100006
+    error_type: 相机外参标定失败
+    match:
+      - 位移阈值筛帧未满足要求
+
+  - error_id: 100007
+    error_type: 训练完后文件夹清理失败
+    match:
+      - novel_view_data

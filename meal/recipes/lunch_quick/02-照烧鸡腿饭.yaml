@@ -1,0 +1,40 @@
+title: "照烧鸡腿饭"
+type: lunch_quick
+difficulty: easy
+total_time: "中午约25分钟"
+servings: 2
+serving_note: "一大一小（1成人+1儿童）"
+tools: [不粘煎锅, 电饭煲]
+tags: [鸡腿, 米饭, 照烧]
+ingredient_tags: ['鸡腿肉', '西兰花', '鸡蛋', '胡萝卜']
+ingredients:
+  照烧鸡腿饭:
+    - name: 去骨鸡腿
+      amount: 2块
+      note: 前晚用照烧汁腌好冷藏
+    - name: 照烧汁
+      amount: 适量
+      note: 生抽1勺+蚝油半勺+糖半勺+姜末
+    - name: 热米饭
+      amount: 2碗
+      note: 电饭煲前晚预约
+    - name: 西兰花
+      amount: 半棵
+      note: 前晚切小朵冷藏
+    - name: 胡萝卜
+      amount: 半根
+      note: 切片
+    - name: 鸡蛋
+      amount: 1个
+    - name: 白芝麻
+      amount: 少许
+night_prep:
+  - "鸡腿用照烧汁腌好，保鲜盒冷藏过夜"
+  - "西兰花切小朵、胡萝卜切片，装盒冷藏"
+  - "电饭煲预约第二天中午的米饭"
+noon_steps:
+  - "西兰花、胡萝卜入开水焯2分钟捞出"
+  - "不粘锅刷薄油，鸡腿皮朝下中火煎至两面金黄、淋腌汁收浓，盛出切块"
+  - "同锅煎一个荷包蛋"
+  - "米饭上码鸡腿块、西兰花、胡萝卜、荷包蛋，淋锅中照烧汁、撒白芝麻"
+notes: "照烧微甜咸香孩子最爱；鸡腿比鸡胸嫩。焯菜和煎肉同步进行省时间。"

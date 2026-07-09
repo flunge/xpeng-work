@@ -1,0 +1,237 @@
+{
+    "agent_configs": [
+        {
+            "agent_attributes": {
+                "id": 999,
+                "data_uid": 4,
+                "type": "AGENT_VEHICLE",
+                "driver_model": "DRIVER_MODEL_DEFAULT"
+            },
+            "init_state_spec": {
+                "pos_type": "RELATIVE_EGO_PATH_POS",
+                "relative_ego_path_pos": {
+                    "ds": 80,
+                    "dl": 0
+                }
+            }
+        },
+        {
+            "agent_attributes": {
+                "id": 998,
+                "data_uid": 7,
+                "type": "AGENT_VEHICLE",
+                "driver_model": "DRIVER_MODEL_DEFAULT"
+            },
+            "init_state_spec": {
+                "pos_type": "RELATIVE_EGO_PATH_POS",
+                "relative_ego_path_pos": {
+                    "ds": 80,
+                    "dl": 0.5
+                }
+            }
+        },
+        {
+            "agent_attributes": {
+                "id": 997,
+                "data_uid": 8,
+                "type": "AGENT_VEHICLE",
+                "driver_model": "DRIVER_MODEL_DEFAULT"
+            },
+            "init_state_spec": {
+                "pos_type": "RELATIVE_EGO_PATH_POS",
+                "relative_ego_path_pos": {
+                    "ds": 80,
+                    "dl": -0.5
+                }
+            }
+        },
+        {
+            "agent_attributes": {
+                "id": 996,
+                "data_uid": 9,
+                "type": "AGENT_VEHICLE",
+                "driver_model": "DRIVER_MODEL_DEFAULT"
+            },
+            "init_state_spec": {
+                "pos_type": "RELATIVE_EGO_PATH_POS",
+                "relative_ego_path_pos": {
+                    "ds": 80.5,
+                    "dl": 1
+                }
+            }
+        },
+        {
+            "agent_attributes": {
+                "id": 995,
+                "data_uid": 10,
+                "type": "AGENT_VEHICLE",
+                "driver_model": "DRIVER_MODEL_DEFAULT"
+            },
+            "init_state_spec": {
+                "pos_type": "RELATIVE_EGO_PATH_POS",
+                "relative_ego_path_pos": {
+                    "ds": 80.5,
+                    "dl": -1
+                }
+            }
+        },
+        {
+            "agent_attributes": {
+                "id": 994,
+                "data_uid": 12,
+                "type": "AGENT_VEHICLE",
+                "driver_model": "DRIVER_MODEL_DEFAULT"
+            },
+            "init_state_spec": {
+                "pos_type": "RELATIVE_EGO_PATH_POS",
+                "relative_ego_path_pos": {
+                    "ds": 80,
+                    "dl": 1
+                }
+            }
+        },
+        {
+            "agent_attributes": {
+                "id": 993,
+                "data_uid": 15,
+                "type": "AGENT_VEHICLE",
+                "driver_model": "DRIVER_MODEL_DEFAULT"
+            },
+            "init_state_spec": {
+                "pos_type": "RELATIVE_EGO_PATH_POS",
+                "relative_ego_path_pos": {
+                    "ds": 80,
+                    "dl": -1
+                }
+            }
+        }
+    ],
+    "action_configs": [
+        {
+            "action_type": "ACTION_AGENT_ACCEL",
+            "speed_accel_spec": {
+            "agent_id": 999,
+            "accel_property": {
+                "a": -10.0
+            }
+            },
+            "trigger_config": [
+            {
+                "trigger_type": "TRIGGER_EGO_MILEAGE",
+                "repeat": false,
+                "ego_mileage": {
+                    "mileage": 0
+                }
+            }
+            ]
+        },
+        {
+            "action_type": "ACTION_AGENT_ACCEL",
+            "speed_accel_spec": {
+            "agent_id": 998,
+            "accel_property": {
+                "a": -10.0
+            }
+            },
+            "trigger_config": [
+            {
+                "trigger_type": "TRIGGER_EGO_MILEAGE",
+                "repeat": false,
+                "ego_mileage": {
+                    "mileage": 0
+                }
+            }
+            ]
+        },
+        {
+            "action_type": "ACTION_AGENT_ACCEL",
+            "speed_accel_spec": {
+            "agent_id": 997,
+            "accel_property": {
+                "a": -10.0
+            }
+            },
+            "trigger_config": [
+            {
+                "trigger_type": "TRIGGER_EGO_MILEAGE",
+                "repeat": false,
+                "ego_mileage": {
+                    "mileage": 0
+                }
+            }
+            ]
+        },
+        {
+            "action_type": "ACTION_AGENT_ACCEL",
+            "speed_accel_spec": {
+            "agent_id": 996,
+            "accel_property": {
+                "a": -10.0
+            }
+            },
+            "trigger_config": [
+            {
+                "trigger_type": "TRIGGER_EGO_MILEAGE",
+                "repeat": false,
+                "ego_mileage": {
+                    "mileage": 0
+                }
+            }
+            ]
+        },
+        {
+            "action_type": "ACTION_AGENT_ACCEL",
+            "speed_accel_spec": {
+            "agent_id": 995,
+            "accel_property": {
+                "a": -10.0
+            }
+            },
+            "trigger_config": [
+            {
+                "trigger_type": "TRIGGER_EGO_MILEAGE",
+                "repeat": false,
+                "ego_mileage": {
+                    "mileage": 0
+                }
+            }
+            ]
+        },
+        {
+            "action_type": "ACTION_AGENT_ACCEL",
+            "speed_accel_spec": {
+            "agent_id": 994,
+            "accel_property": {
+                "a": -10.0
+            }
+            },
+            "trigger_config": [
+            {
+                "trigger_type": "TRIGGER_EGO_MILEAGE",
+                "repeat": false,
+                "ego_mileage": {
+                    "mileage": 0
+                }
+            }
+            ]
+        },
+        {
+            "action_type": "ACTION_AGENT_ACCEL",
+            "speed_accel_spec": {
+            "agent_id": 993,
+            "accel_property": {
+                "a": -10.0
+            }
+            },
+            "trigger_config": [
+            {
+                "trigger_type": "TRIGGER_EGO_MILEAGE",
+                "repeat": false,
+                "ego_mileage": {
+                    "mileage": 0
+                }
+            }
+            ]
+        }
+    ]
+}

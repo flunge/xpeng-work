@@ -1,0 +1,21 @@
+# Exclude checkpoints, output, and specific test dirs
+checkpoints
+output/
+input/
+data/
+predata/
+condaenv.pkapro9t.requirements.txt
+prompt_embeds.pt
+prompt.txt
+
+# Common Python ignores
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.eggs/
+dist/
+build/
+*.so
+.env
+Readme_code.py

@@ -1,0 +1,35 @@
+title: "虾仁蒸蛋盖饭"
+type: lunch_quick
+difficulty: easy
+total_time: "中午约20分钟"
+servings: 2
+serving_note: "一大一小（1成人+1儿童）"
+tools: [蒸锅, 电饭煲]
+tags: [虾仁, 蒸蛋, 盖饭]
+ingredient_tags: ['虾仁', '鸡蛋']
+ingredients:
+  虾仁蒸蛋盖饭:
+    - name: 鸡蛋
+      amount: 3个
+    - name: 虾仁
+      amount: 80g
+      note: 前晚解冻去虾线
+    - name: 温水
+      amount: 蛋液1.5倍
+    - name: 热米饭
+      amount: 2碗
+    - name: 生抽
+      amount: 1勺
+      note: 蒸好后淋
+    - name: 香油
+      amount: 几滴
+    - name: 葱花
+      amount: 少许
+night_prep:
+  - "虾仁去虾线冲净冷藏"
+  - "电饭煲预约米饭"
+noon_steps:
+  - "蛋打散加1.5倍温水、少许盐，滤去泡沫"
+  - "摆上虾仁，水开后中小火蒸10分钟（盖留缝/盖盘子防蜂窝）"
+  - "蒸好淋生抽、香油，撒葱花，连碗浇饭或拌饭"
+notes: "蒸蛋滑嫩入口即化，虾仁补蛋白，几乎零看护。蒸时可同时煮个青菜。"

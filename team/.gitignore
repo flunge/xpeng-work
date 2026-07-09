@@ -40,6 +40,9 @@ CosyVoice/
 media_key.txt
 *.key
 
+# 迁移/编辑前的一次性备份
+backups/
+
 # Agent session data
 .agents/
 

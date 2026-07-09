@@ -1,5 +1,18 @@
 # 仿真算法组 — 李坤的数字分身记忆索引
 
+> 🔴 **高频内容已迁飞书（2026-07-06）**：项目 ledger、人物画像、chat-log、周报等**内容型文档**现以飞书云文档为准，
+> 供本地定时 agent 每日汇总写入、AI 助手读取，实现多 agent 协作。
+> **飞书总索引**：https://xiaopeng.feishu.cn/docx/UwiEdTJJ2oRGokxtkE2cJXjwnyb
+> （根文件夹 https://xiaopeng.feishu.cn/drive/folder/W7rqfwqnnlzSfUdEcIGcjcTNnqe ，下设 projects / people / teams / insights / weekly-reports 五层，共 50 篇）
+>
+> **本地仅保留**：铁律 `rules/`、命令 `commands/`、速查 `refs/`、内容级规则 `insights/{doc-rules,quality-rules,meeting-rules}.md`、`gic-*`、本索引 + 各 `_index`。
+>
+> 🧭 **规则/命令导航（2026-07-09 重构，单一事实源）**：入口见 `CLAUDE.md`（导航页）。
+> - 命令 `commands/`：[update-memory](commands/update-memory.md)（唯一记忆同步命令，原三套流程已合并）、[weekly-report](commands/weekly-report.md)
+> - 铁律 `rules/`：[sourcing](rules/sourcing.md)（溯源/回源/读图/数字口径/读逐字稿/跨会议信号）、[writing](rules/writing.md)（飞书写作/工具/画图/认证）、[memory-model](rules/memory-model.md)（golden模板/三线/不写边界/两索引维护/记忆质检/回填/绩效）、[publish-gate](rules/publish-gate.md)（发布前闸）、[report-writing](rules/report-writing.md)（对外文档/汇报叙事/私下话术/ASR表）
+> - 速查 `refs/`：[tokens](refs/tokens.md)（群ID/组员p2p/文档token）
+> 下方本地链接为迁移前的历史索引，最新内容请以上方飞书文档为准。
+
 ## 线1：人物 (people/)
 
 ### 我方（组内+老板）
@@ -86,9 +99,9 @@
 ## 洞察 (insights/)
 
 - [chat-log](insights/chat-log.md) — 群聊关键事件时间线
-- [meeting-rules](insights/meeting-rules.md) — 读纪要必须读文字记录
-- [doc-rules](insights/doc-rules.md) — 正式文档规范
-- [quality-rules](insights/quality-rules.md) — 🔴 记忆系统质检规则（17条，每次更新前后必检）
+- [meeting-rules](insights/meeting-rules.md) → 已并入 [rules/sourcing §9](rules/sourcing.md)
+- [doc-rules](insights/doc-rules.md) → 已并入 [rules/report-writing](rules/report-writing.md)
+- [quality-rules](insights/quality-rules.md) → 已并入 [rules/memory-model §8-10](rules/memory-model.md) + [report-writing](rules/report-writing.md)（记忆质检/回填/绩效/汇报叙事，2026-07-09 重构）
 
 ---
 

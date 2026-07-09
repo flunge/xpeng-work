@@ -15,6 +15,7 @@
 | 开发 | [development.md](development.md) | 按任务实现、每步编译验证、需求覆盖自检 |
 | 测试 | [testing.md](testing.md) | 真实测试（UI/API/平台），如实报告 |
 | 审查 | [review.md](review.md) | 只审不改、安全扫描、可操作的改进建议 |
+| 审稿 | [reviewer.md](reviewer.md) | 述职/汇报内容审稿人：以「不了解你工作的领域专家」视角，审内容能否听懂 + 格式 + 口吻 |
 
 ## 使用约定
 
@@ -22,4 +23,4 @@
 - **复杂任务（5+ 文件 / 多模块）**：用待办列表分解，按"先定位→实现→每步验证"推进，必要时显式经过设计/任务阶段。
 - 全流程的通用安全红线、工作方式、输出格式见上级 [../CLAUDE.md](../CLAUDE.md)，此处不重复。
 - 平台原有的 `spec_dir`（requirements.md/design.md/tasks.md）产出物机制在本仓库**默认不落盘**（快速模式）；
-  确需 spec 文档时，放到对应项目的 `docs/spec/` 下（参照 `ppt-slide-formatter/docs/spec/`）。
+  确需 spec 文档时，放到对应项目的 `docs/spec/` 下。

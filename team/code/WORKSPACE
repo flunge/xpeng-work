@@ -1,0 +1,15 @@
+workspace(name = "simworld")
+
+## Load main workspace repo
+local_repository(
+    name = "xpilot_build_tools",
+    path = "../bazel_configs",
+)
+
+local_repository(
+    name = "third_party",
+    path = "../third_party"
+)
+
+load("@third_party//:xrepo_third_party.bzl", "declare_xrepo_third_party_repositories")
+declare_xrepo_third_party_repositories()

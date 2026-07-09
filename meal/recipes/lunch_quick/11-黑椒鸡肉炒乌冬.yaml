@@ -1,0 +1,36 @@
+title: "豉香鸡肉炒乌冬"
+type: lunch_quick
+difficulty: easy
+total_time: "中午约18分钟"
+servings: 2
+serving_note: "一大一小（1成人+1儿童）"
+tools: [炒锅]
+tags: [鸡肉, 乌冬, 炒面]
+ingredient_tags: ['鸡胸肉', '乌冬面', '甘蓝', '胡萝卜']
+ingredients:
+  豉香鸡肉炒乌冬:
+    - name: 乌冬面
+      amount: 2袋
+      note: 即食乌冬，无需久煮
+    - name: 鸡胸肉
+      amount: 100g
+      note: 前晚切条，生抽淀粉抓匀冷藏
+    - name: 圆白菜
+      amount: 几片
+      note: 切丝
+    - name: 胡萝卜
+      amount: 半根
+      note: 切丝
+    - name: 蚝油
+      amount: 1勺
+      note: 加生抽半勺调味（不辣）
+    - name: 葱段
+      amount: 少许
+night_prep:
+  - "鸡胸切条，生抽、淀粉抓匀冷藏"
+  - "圆白菜、胡萝卜切丝装盒冷藏"
+noon_steps:
+  - "乌冬面用温水泡散"
+  - "锅中少许油炒鸡条至变白，下胡萝卜、圆白菜丝炒软"
+  - "下乌冬面，加蚝油生抽炒匀，撒葱段"
+notes: "即食乌冬免煮最快手，蚝油咸鲜不辣孩子能吃。蔬菜切丝易熟。"

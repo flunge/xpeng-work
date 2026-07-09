@@ -1,0 +1,40 @@
+{
+    "objects": [
+        {
+            "id": 999,
+            "agent_configs": {
+                "agent_attributes": {
+                    "data_uid": 4,
+                    "type": "AGENT_VEHICLE",
+                    "driver_model": "DRIVER_MODEL_DEFAULT"
+                },
+                "init_state_spec": {
+                    "pos_type": "RELATIVE_EGO_PATH_POS",
+                    "relative_ego_path_pos": {
+                        "ds": 40,
+                        "dl": 0
+                    }
+                }
+            },
+            "action_configs": [
+                {
+                    "action_type": "ACTION_AGENT_ACCEL",
+                    "speed_accel_spec": {
+                    "accel_property": {
+                        "a": -5.0
+                    }
+                    },
+                    "trigger_config": [
+                        {
+                            "trigger_type": "TRIGGER_EGO_MILEAGE",
+                            "repeat": false,
+                            "ego_mileage": {
+                                "mileage": 0
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

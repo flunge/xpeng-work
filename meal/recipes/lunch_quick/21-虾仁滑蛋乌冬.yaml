@@ -1,0 +1,36 @@
+title: "虾仁滑蛋乌冬"
+type: lunch_quick
+difficulty: easy
+total_time: "中午约18分钟"
+servings: 2
+serving_note: "一大一小（1成人+1儿童）"
+tools: [不粘煎锅, 玻璃锅]
+tags: [虾仁, 蛋, 乌冬, 鲜香]
+ingredient_tags: ['虾仁', '鸡蛋', '乌冬']
+ingredients:
+  虾仁滑蛋乌冬:
+    - name: 虾仁
+      amount: 100g
+      note: 前晚去虾线，用少许盐、淀粉抓匀冷藏
+    - name: 鸡蛋
+      amount: 2个
+      note: 打散
+    - name: 熟乌冬面
+      amount: 1袋
+      note: 约200g，免煮型
+    - name: 西兰花
+      amount: 几小朵
+      note: 前晚焯水
+    - name: 宝宝酱油
+      amount: 1小勺
+    - name: 葱花
+      amount: 少许
+    - name: 香油
+      amount: 几滴
+night_prep:
+  - "虾仁去线、盐+淀粉抓匀冷藏；西兰花焯水切小朵冷藏"
+noon_steps:
+  - "锅热少许油，下虾仁快炒变色盛出"
+  - "倒入蛋液炒成大片滑蛋，加乌冬、西兰花和小半碗水略煮"
+  - "回锅虾仁，加宝宝酱油拌匀，撒葱花、滴香油"
+notes: "虾仁滑蛋鲜嫩、乌冬免煮更快手；优质蛋白双份（虾+蛋），鲜香不辣孩子爱吃。"

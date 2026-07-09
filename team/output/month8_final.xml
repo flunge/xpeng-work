@@ -1,0 +1,68 @@
+<title>Q3-8月目标&进展</title>
+
+<h2>一、8 月月度目标</h2>
+<callout><p>承接 Q3 OKR，在 7 月基础上爬坡。每条为本月要达成的结果。</p></callout>
+<p><b>场景&生产</b>：RC 长里程 5000km→7500km、4 城覆盖；CornerCase 扩到主动安全/泊车；质检 gating 自动化、入库复现率稳定 50%。</p>
+<p><b>SIL</b>：闭环基准扩到 6 类问题集、漏报率稳定不超过 20% 并接入 FM 发版试运行；CLIP-IQA 准确率 85%→90%；difix(MIG) 1:12→1:9、NVFixer ref 1:6.5→1:6；H265 解码侧给出 1:2 方案。</p>
+<p><b>HIL</b>：网时比压到 1:3 以内、1000km RC 全量稳定运行；difix 复现率 50%→60%、纯 3DGS 稳定 50%；台架规模扩 200+、等效性卡口可对外输出闭环准出。</p>
+<p><b>算法预研</b>：Diffusion 新模型轻量化+多摄一致性出阶段性结论；feedforward 重建提速进生产验证；3DGS 场景泛化在多天气/多城市验证。</p>
+<p><b>Agents</b>：复现率 Agent 难场景准确率提升；metric diff agent 70%→85%；Agent 输出带置信度+证据链。</p>
+
+<h2>二、每周进展</h2>
+<callout><p>每周一表：项目横展、时间纵向。每格分「业务交付 / 算法优化」，按【项目】进展/卡点/次日计划填。组员每天补本人所在格。</p></callout>
+
+<h3>W31（8/3-8/7）</h3>
+<table>
+<tr><td align="center"><b>W31</b></td><td align="center"><b>场景&生产</b></td><td align="center"><b>SIL</b></td><td align="center"><b>HIL</b></td><td align="center"><b>Agents&预研</b></td></tr>
+<tr><td align="center"><b>周目标</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>核心风险</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周一 8/3</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周二 8/4</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周三 8/5</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周四 8/6</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周五 8/7</b></td><td></td><td></td><td></td><td></td></tr>
+</table>
+
+<h3>W32（8/10-8/14）</h3>
+<table>
+<tr><td align="center"><b>W32</b></td><td align="center"><b>场景&生产</b></td><td align="center"><b>SIL</b></td><td align="center"><b>HIL</b></td><td align="center"><b>Agents&预研</b></td></tr>
+<tr><td align="center"><b>周目标</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>核心风险</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周一 8/10</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周二 8/11</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周三 8/12</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周四 8/13</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周五 8/14</b></td><td></td><td></td><td></td><td></td></tr>
+</table>
+
+<h3>W33（8/17-8/21）</h3>
+<table>
+<tr><td align="center"><b>W33</b></td><td align="center"><b>场景&生产</b></td><td align="center"><b>SIL</b></td><td align="center"><b>HIL</b></td><td align="center"><b>Agents&预研</b></td></tr>
+<tr><td align="center"><b>周目标</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>核心风险</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周一 8/17</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周二 8/18</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周三 8/19</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周四 8/20</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周五 8/21</b></td><td></td><td></td><td></td><td></td></tr>
+</table>
+
+<h3>W34（8/24-8/28）</h3>
+<table>
+<tr><td align="center"><b>W34</b></td><td align="center"><b>场景&生产</b></td><td align="center"><b>SIL</b></td><td align="center"><b>HIL</b></td><td align="center"><b>Agents&预研</b></td></tr>
+<tr><td align="center"><b>周目标</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>核心风险</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周一 8/24</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周二 8/25</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周三 8/26</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周四 8/27</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周五 8/28</b></td><td></td><td></td><td></td><td></td></tr>
+</table>
+
+<h3>W35（8/31）</h3>
+<table>
+<tr><td align="center"><b>W35</b></td><td align="center"><b>场景&生产</b></td><td align="center"><b>SIL</b></td><td align="center"><b>HIL</b></td><td align="center"><b>Agents&预研</b></td></tr>
+<tr><td align="center"><b>周目标</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>核心风险</b></td><td></td><td></td><td></td><td></td></tr>
+<tr><td align="center"><b>周一 8/31</b></td><td></td><td></td><td></td><td></td></tr>
+</table>

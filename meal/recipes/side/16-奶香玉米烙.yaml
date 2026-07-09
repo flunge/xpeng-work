@@ -1,0 +1,29 @@
+title: "奶香玉米烙"
+type: side
+category: 粗粮
+difficulty: easy
+total_time: "15分钟"
+servings: 4
+tools: [不粘煎锅]
+tags: [粗粮, 主食, 煎, 奶香]
+ingredient_tags: ['玉米', '牛奶']
+ingredients:
+  奶香玉米烙:
+    - name: 甜玉米粒
+      amount: 200g
+      note: 鲜玉米粒或冷冻玉米粒，焯水沥干
+    - name: 玉米淀粉
+      amount: 2大勺
+    - name: 牛奶
+      amount: 2大勺
+    - name: 黄油
+      amount: 5g
+      note: 煎锅薄薄一层，少油
+steps:
+  - step: "玉米粒焯水沥干，加牛奶、玉米淀粉拌匀成挂糊状"
+  - step: "不粘锅小火化少许黄油，倒入玉米粒铺平压实，小火煎至底部金黄成型"
+    tool: 不粘煎锅
+  - step: "翻面或直接切块装盘"
+night_prep:
+  - "玉米粒焯水沥干冷藏；次日拌粉快速煎"
+notes: "少油版玉米烙（非油炸），玉米天然甜+奶香，孩子超爱的粗粮主食；用不粘锅薄油替代传统炸法，更健康。"

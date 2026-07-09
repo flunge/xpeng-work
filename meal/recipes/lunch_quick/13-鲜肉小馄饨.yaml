@@ -1,0 +1,34 @@
+title: "鲜肉小馄饨"
+type: lunch_quick
+difficulty: easy
+total_time: "中午约15分钟"
+servings: 2
+serving_note: "一大一小（1成人+1儿童）"
+tools: [玻璃锅]
+tags: [猪肉, 馄饨, 汤]
+ingredient_tags: ['猪肉末', '馄饨皮', '虾皮']
+ingredients:
+  鲜肉小馄饨:
+    - name: 馄饨皮
+      amount: 约30张
+    - name: 猪肉末
+      amount: 120g
+      note: 前晚加葱姜末、生抽、香油拌成馅冷藏
+    - name: 紫菜
+      amount: 1小撮
+    - name: 虾皮
+      amount: 1小撮
+    - name: 小油菜
+      amount: 2棵
+    - name: 葱花
+      amount: 少许
+    - name: 香油
+      amount: 几滴
+night_prep:
+  - "猪肉末加葱姜末、生抽、香油拌成肉馅冷藏"
+  - "（可选）前晚把馄饨包好摆盘冷冻，中午直接下锅"
+noon_steps:
+  - "碗底放紫菜、虾皮、葱花、香油、少许生抽，冲入少量热水做汤底"
+  - "水开下馄饨，包好则煮约5分钟，浮起后再煮1分钟"
+  - "起锅前30秒下小油菜烫熟，连汤盛入碗中"
+notes: "前晚包好冷冻，中午只需煮，最快手。皮薄馅嫩孩子爱吃，一碗有主食+蛋白+菜+汤。"
