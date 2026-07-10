@@ -18,8 +18,8 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 FEEDBACK_DIR = BASE_DIR / "notifications"
 FEEDBACK_FILE = FEEDBACK_DIR / "feedback.md"
 
-# 食谱推送群ID
-CHAT_ID = "oc_c7c387e2f4a4a849aee503b04c62a442"
+# 食谱推送单聊ID（bot 与用户的 P2P 会话）
+CHAT_ID = "oc_bc5bb378d432fca62a7786e26cf82578"
 
 # 反馈关键词
 FEEDBACK_KEYWORDS = [
@@ -31,8 +31,8 @@ FEEDBACK_KEYWORDS = [
 
 
 def run_lark(args):
-    """运行 lark-cli 命令并返回解析后的 JSON"""
-    cmd = ["lark-cli"] + args
+    """运行 lark-cli 命令并返回解析后的 JSON（使用 meal profile）"""
+    cmd = ["lark-cli", "--profile", "meal"] + args
     result = subprocess.run(cmd, capture_output=True, text=True, timeout=15)
     if result.returncode != 0:
         print(f"⚠️ lark-cli 错误: {result.stderr[:200]}")

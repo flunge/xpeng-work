@@ -21,9 +21,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 CONFIG_DIR = BASE_DIR / "config"
 DAILY_DIR = BASE_DIR / "plans" / "daily"
 
-# 推送目标：与机器人(cli_aaad7e4c46f95bb4)的单聊会话（已弃用群 webhook）
+# 推送目标：用 bot 身份给用户发单聊（bot 会自动创建与该用户的单聊会话）
 import subprocess
-DM_CHAT = "oc_bc5bb378d432fca62a7786e26cf82578"
+DM_USER_ID = "ou_f9cd23092a356c297d6a9f38fd7cfd5e"
 
 
 def load_yaml(path):
@@ -255,12 +255,12 @@ def main():
     date_str = f"{target.month}月{target.day}日"
     card_msg = format_lark_card(date_str, weekday_cn, sections, holiday_name, label)
 
-    # 通过 app 机器人发送到单聊（已弃用群 webhook）
+    # 通过 app 机器人发送到单聊（用 user-id 让 bot 主动发起单聊）
     print(f"📤 正在发送{label}({date_str})到单聊...")
     content_json = json.dumps(card_msg["card"], ensure_ascii=False)
     r = subprocess.run(
-        ["lark-cli", "im", "+messages-send", "--as", "bot",
-         "--chat-id", DM_CHAT, "--msg-type", "interactive", "--content", content_json],
+        ["lark-cli", "--profile", "meal", "im", "+messages-send", "--as", "bot",
+         "--user-id", DM_USER_ID, "--msg-type", "interactive", "--content", content_json],
         capture_output=True, text=True, timeout=30,
     )
     if r.returncode == 0:
