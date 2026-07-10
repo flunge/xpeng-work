@@ -10,8 +10,8 @@ def download_file_from_oss2(
         bucket_name=None
     ):
     # Replace these with your actual values
-    access_key_id = "OSS_ACCESS_KEY_ID_REDACTED"
-    access_key_secret = "OSS_ACCESS_KEY_SECRET_REDACTED"
+    access_key_id = os.environ.get("OSS_ACCESS_KEY_ID", "")
+    access_key_secret = os.environ.get("OSS_ACCESS_KEY_SECRET", "")
     if bucket_name is None:
         bucket_name = "cloudsim-ci-sh"
     endpoint = "http://oss-cn-wulanchabu-internal.aliyuncs.com"  # Replace with your region
@@ -47,8 +47,8 @@ def download_file_from_oss2(
 
 def get_bucket():
     # Replace these with your actual values
-    access_key_id = "OSS_ACCESS_KEY_ID_REDACTED"
-    access_key_secret = "OSS_ACCESS_KEY_SECRET_REDACTED"
+    access_key_id = os.environ.get("OSS_ACCESS_KEY_ID", "")
+    access_key_secret = os.environ.get("OSS_ACCESS_KEY_SECRET", "")
     bucket_name = "cloudsim-ci-sh"
     endpoint = "http://oss-cn-wulanchabu-internal.aliyuncs.com"  # Replace with your region
     # Initialize the OSS Auth and Bucket

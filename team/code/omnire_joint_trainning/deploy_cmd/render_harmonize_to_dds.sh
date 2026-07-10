@@ -23,8 +23,8 @@ oss_endpoint="http://oss-cn-wulanchabu-internal.aliyuncs.com"
 output_tar_dir="${output_dir}/${edited_3dgs_version}/"
 # run cmd to 
 # download from oss://cloudsim-ci-sh/3dgs_scenario_engine/{edited_3dgs_version}/3dgs_model_edited.tgz
-# ossutil -e http://oss-cn-wulanchabu-internal.aliyuncs.com -i OSS_ACCESS_KEY_ID_REDACTED -k OSS_ACCESS_KEY_SECRET_REDACTED -r --parallel 8 cp -f "oss://cloudsim-ci-sh/sim_engine/artificially_created_scenes/c-4155db0f-0930-3e4b-bda2-56555b893ee5/trained_model_202509031406/3dgs_model.tgz" ./
-ossutil -e $oss_endpoint -i OSS_ACCESS_KEY_ID_REDACTED -k OSS_ACCESS_KEY_SECRET_REDACTED -r --parallel 8 cp -f "oss://cloudsim-ci-sh/3dgs_scenario_engine/${edited_3dgs_version}/3dgs_model_edited.tgz" "$output_tar_dir"
+# ossutil -e http://oss-cn-wulanchabu-internal.aliyuncs.com -i ${OSS_ACCESS_KEY_ID} -k ${OSS_ACCESS_KEY_SECRET} -r --parallel 8 cp -f "oss://cloudsim-ci-sh/sim_engine/artificially_created_scenes/c-4155db0f-0930-3e4b-bda2-56555b893ee5/trained_model_202509031406/3dgs_model.tgz" ./
+ossutil -e $oss_endpoint -i ${OSS_ACCESS_KEY_ID} -k ${OSS_ACCESS_KEY_SECRET} -r --parallel 8 cp -f "oss://cloudsim-ci-sh/3dgs_scenario_engine/${edited_3dgs_version}/3dgs_model_edited.tgz" "$output_tar_dir"
 
 output_tar_path="${output_tar_dir}/3dgs_model_edited.tgz"
 
@@ -57,7 +57,7 @@ dds_dir="/root/origin_dds_dat_files/"
 rm -rf "${dds_dir}"
 
 # download oss all .dat files
-# ossutil -e $oss_endpoint -i OSS_ACCESS_KEY_ID_REDACTED -k OSS_ACCESS_KEY_SECRET_REDACTED -r --parallel 8 cp -f -r "${origin_dds_bucket}/${origin_dds_oss_dir}/" "${dds_dir}"
+# ossutil -e $oss_endpoint -i ${OSS_ACCESS_KEY_ID} -k ${OSS_ACCESS_KEY_SECRET} -r --parallel 8 cp -f -r "${origin_dds_bucket}/${origin_dds_oss_dir}/" "${dds_dir}"
 
 dds_studio_path="$workspace_path/workspace/process_script/dds/dds_converter/convert/e2e_pytorch_job"
 echo $dds_studio_path
@@ -78,11 +78,11 @@ upload_dds_oss_dir="demo/aeb_test_dds/${edited_3dgs_version}/"
 # /home/wangyl11/dev/sim_world_3dgs/simworld/models/dynamic_assets/scenario_edit/image_3dgs_to_dds.py
 python ./scenario_edit/image_3dgs_to_dds.py --dat_dir "${dds_dir}" --base_dir $output_dir --mode "encode" --scenario_id "${cloudsim_scenario_id}"  --edited_3dgs_version ${edited_3dgs_version} --upload_dds_oss_dir "${upload_dds_oss_dir}"
 
-# ossutil -e $oss_endpoint -i OSS_ACCESS_KEY_ID_REDACTED -k OSS_ACCESS_KEY_SECRET_REDACTED -r --parallel 8 cp -f -r "${dds_dir}" "${origin_dds_bucket}/${upload_dds_oss_dir}"
+# ossutil -e $oss_endpoint -i ${OSS_ACCESS_KEY_ID} -k ${OSS_ACCESS_KEY_SECRET} -r --parallel 8 cp -f -r "${dds_dir}" "${origin_dds_bucket}/${upload_dds_oss_dir}"
 
 # upload all mp4 files in $output_dir/simulator_render to "oss://cloudsim-ci-sh/3dgs_scenario_engine/${edited_3dgs_version}/videos/"
-ossutil -e $oss_endpoint -i OSS_ACCESS_KEY_ID_REDACTED -k OSS_ACCESS_KEY_SECRET_REDACTED -r --parallel 8 cp -f -r "${output_dir}/simulator_render/" "oss://cloudsim-ci-sh/3dgs_scenario_engine/${edited_3dgs_version}/videos/" --include "*.mp4"
-ossutil -e $oss_endpoint -i OSS_ACCESS_KEY_ID_REDACTED -k OSS_ACCESS_KEY_SECRET_REDACTED -r --parallel 8 cp -f -r "${output_dir}/simulator_render/hevc_videos/" "oss://cloudsim-ci-sh/3dgs_scenario_engine/${edited_3dgs_version}/videos/hevc_videos/" --include "*.mp4"
+ossutil -e $oss_endpoint -i ${OSS_ACCESS_KEY_ID} -k ${OSS_ACCESS_KEY_SECRET} -r --parallel 8 cp -f -r "${output_dir}/simulator_render/" "oss://cloudsim-ci-sh/3dgs_scenario_engine/${edited_3dgs_version}/videos/" --include "*.mp4"
+ossutil -e $oss_endpoint -i ${OSS_ACCESS_KEY_ID} -k ${OSS_ACCESS_KEY_SECRET} -r --parallel 8 cp -f -r "${output_dir}/simulator_render/hevc_videos/" "oss://cloudsim-ci-sh/3dgs_scenario_engine/${edited_3dgs_version}/videos/hevc_videos/" --include "*.mp4"
 
 rm -rf "${dds_dir}"
 
