@@ -1,0 +1,15 @@
+2026-07-06 01:28	周月	post	![Image](img_v3_0213b_838d48a5-0678-4d19-b18e-15ebd974fe0g) ⏎ 还有这几个同学的绩效自评没有写哈。请催促下哦，今天还可以再提交一次，但能提交一次后不能修改
+2026-07-06 08:25	周月	text	@_all 大家这会空吗？会议现在开吧
+2026-07-06 08:25		system	Meeting has started. New messages will be synced in the group chat and in-meeting chat.
+2026-07-06 08:25	周月	video_chat	[Video call]
+2026-07-06 08:53		system	
+2026-07-06 08:56	cli_a6ba	text	https://xiaopeng.feishu.cn/docx/CLaQdep2go2H5mxu6pncIOObnwc?from=vc_group_doc_link#doxcnIhPOTUtjDBvmJSYEqgyQxc
+2026-07-06 09:33		system	周月 invited IRON2.0 to the group. New members can view all chat history.
+2026-07-06 09:44	周月	post	<at user_id="all"></at> ⏎ 1. **【7月9日10点前】**完成26年H1各组绩效 ⏎   a.  [https://xiaopeng.feishu.cn/base/AtfybXJumaVKqYsVhsrcYLeOnMd?table=tblsBursqY3URYP2&view=vewdWnd6sK](https://xiaopeng.feishu.cn/base/AtfybXJumaVKqYsVhsrcYLeOnMd?table=tblsBursqY3URYP2&view=vewdWnd6sK) ⏎ ![Image](img_v3_0213b_0269c37a-5fcc-4b78-975d-46187ce2379g) ⏎   b. 绩效系统确定了也可以填写：[飞书绩效](https://xiaopeng.feishu.cn/perf/home/7650307418865290420?from=bot) ⏎   c. 文档内容汇总：[https://xiaopeng.feishu.cn/wiki/EsfdwOdbUi7vvekWdNKcUlBIn9d](https://xiaopeng.feishu.cn/wiki/EsfdwOdbUi7vvekWdNKcUlBIn9d) ⏎ 2. **【7月10日前】**全体干部：完成Q2 OKR复盘，作为年中战略复盘的输入 ⏎ 3. **【7月15日前】**其他同学：完成Q2 OKR复盘 ⏎  ⏎ @IRON2.0 新增以上三个任务给@张驰 @李坤 @邓爽 @吴益民 @徐林鵾 @夏志勋 @杨雪智 @赖西湖，并帮忙适时催促完成。
+2026-07-06 09:47	cli_a94f	post	搞定啦🥳 已经给张驰、李坤、邓爽、吴益民、徐林鵾、夏志勋、杨雪智、赖西湖8位同学创建了3个任务，统一设置了截止前1天的提醒： ⏎ 1. [26年H1各组绩效提交](https://applink.feishu.cn/client/todo/detail?guid=12d39b66-0aab-46fd-8c4a-0d71405839e3&suite_entity_num=t1593799)（截止：2026-07-09 10:00） ⏎ 2. [Q2 OKR复盘（干部）](https://applink.feishu.cn/client/todo/detail?guid=6ec8cd51-509e-4659-a79d-a722e6f71e10&suite_entity_num=t1593800)（截止：2026-07-10） ⏎ 3. [Q2 OKR复盘（其他同学）](https://applink.feishu.cn/client/todo/detail?guid=49320432-fecb-4c93-a7e8-e178c1986214)（截止：2026-07-15） ⏎  ⏎ 注：张驰、李坤存在同名人员，已优先选择近期联系、所属部门为通用智能中心/仿真部的账号分配，若有错误可以随时告诉我调整哦~
+2026-07-08 11:37	周月	post	[https://xiaopeng.feishu.cn/wiki/QKUEwrEY7i6xl1kPgPlc7Y4lnwg](https://xiaopeng.feishu.cn/wiki/QKUEwrEY7i6xl1kPgPlc7Y4lnwg) ⏎ ![Image](img_v3_0213d_2864503e-a8ad-4e2e-a067-d01d6b261c4g) ⏎ 7月10日需要把标黄色的地方再补一下哈，比如是否需要笔试、简历筛选人是谁等等，下周就可以收简历了 ⏎  ⏎ @IRON2.0  新增以上任务给@张驰 @李坤 @徐林鵾 @夏志勋 @杨雪智 @赖西湖，截止日期7月10日上午12点。
+2026-07-08 11:39	cli_a94f	post	搞定啦🥳 已经给张驰、李坤、徐林鵾、夏志勋、杨雪智、赖西湖创建了补全招聘文档的任务，设置了截止前1天提醒： ⏎ [补全招聘需求文档黄色标注内容](https://applink.feishu.cn/client/todo/detail?guid=1b9313b1-109d-40df-a805-dc66ee8cec77&suite_entity_num=t1599505)（截止：2026-07-10 12:00） ⏎  ⏎ 张驰、李坤还是沿用之前匹配的通用智能中心/仿真部的同名人员哦，有问题随时告诉我调整~
+2026-07-08 11:40	李坤	text	@周月 笔试要选的话，有默认的题库么？
+2026-07-08 11:43	周月	text	一般都不选择笔试，因为现在直接AI就有答案了，有默认的题库，但好多人都没咋采用
+2026-07-08 11:43	周月	text	所以应该要自己出题的
+2026-07-09 01:29	周月	post	![Image](img_v3_0213e_5a5d10dc-1dd5-4ac9-a412-bae75412184g) ⏎ 再提醒下哈，**绩效比例先按照这个打，**如果不太明白的可以1v1辅导:Lark_Emoji_EyesClosed_0:。 ⏎  ⏎ 晋升不用这么早确认具体名单，预计8月初才会确认。**先确认绩效**，晋升可以按照文档要求先**保住要晋升同学的绩效**，去年的晋升名额大致是22%（子等12%，大级10%），其中探索者满足绩效要求即可暂无名额限制

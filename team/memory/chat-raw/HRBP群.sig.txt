@@ -1,0 +1,75 @@
+2026-03-23 05:54	周月	text	之前默认仿真与验证部-实车验证组，这个组是买了高额保险 ⏎ 这个保险一般是给经常路测的同学买的，实车验证现在转到测试了
+2026-03-23 05:54	周月	text	<p>大家看看还有要经常做路测吗？我理解应该没有了哈？有的话说一下哈</p>
+2026-03-23 06:05	邓爽	text	@周月 我们只是跟车，测试同学开车
+2026-03-23 06:05	周月	text	好，那我们就不涉及了
+2026-03-30 09:12	周月	post	![Image](img_v3_02109_1905b9ec-13a4-4f5e-8ff1-6b163a2bf9dg) ⏎ 今天的会议内容放在这里了哈
+2026-03-31 01:23	周月	text	https://xiaopeng.feishu.cn/wiki/CAfuwnWW5ipZQDkKkuYcIrAmnfc?from=from_copylink ⏎ 早，如各支持团队有清明假期加班4号、5号（法定）、6号，和bingtao同步后，可以在本表登记【新建行】，DDL: 这周四下班前完成收集哈
+2026-04-01 06:59	周月	text	欢迎@李坤 同学加入[冲！]，一起做大做强！
+2026-04-02 02:26	周月	text	清明节加班（如有）大家别忘了提报哦，今天下班前要确认好哈。
+2026-04-02 03:04	周月	post	之前说的调休上系统的事情，请大家及时宣贯到小组内部哈，可用以下文档在组内进行宣贯哈。 ⏎  ⏎ 1. **适用对象**：2026年4月1日起的中国大陆总部正式员工（**不含一线岗位）**。原则上不支持加班，确需加班须由主管事先系统审批。 ⏎ 2. **加班计算**：休息日加班最小申请4小时（调休0.5天），每月不超36小时。系统按申请与打卡交集扣除休息时段计算有效时长，单次不足4小时无调休。 ⏎ 3. **调休**：每月最多4天，以0.5天为单位，有效期6个月，员工系统申请、主管审批。 ⏎ 4. **其他**：补卡、外勤打卡等见操作指引。 ⏎ 5. **往期调休:  **自闭环，尽量在6月前休完。6月后我这边不可以统一补卡了 ⏎ [https://xiaopeng.feishu.cn/docx/BjF0dtxiLoNm2hx3J6cc1Nk6nXe](https://xiaopeng.feishu.cn/docx/BjF0dtxiLoNm2hx3J6cc1Nk6nXe)
+2026-04-02 10:29	周月	text	<p>清明加班，目前收到仿真业务组，范裴沛（加班提报3天，4日~6日）</p><p></p><p>主要投入：VLA2.0模型仿真，1. 园区与城区模型仿真验证与问题分析；2. 市场问题处理。cc:@邓爽 @高炳涛</p>
+2026-04-03 07:57	周月	text	2025年年终反馈，DDL：4月9日。 ⏎ 还没聊的话，需要稍微抓紧了哈，还有3个工作日啦~聊完的记得反馈到表格内哈（沟通感知及如有沟通信息反馈） ⏎  ⏎ 林鵾、吴益民、bingtao，沟通反馈填写地址：[主页](https://xhr-bonus.xiaopeng.com/hdb/login/home#/home/section/0) ⏎ 国栋、爽姐，沟通反馈填写地址：https://xiaopeng.feishu.cn/base/ZIQ9b3ndCa4BVNsrwLpcaHEBnug?table=tblDzlbnFFbQj8FC&view=vew9h4YRXg
+2026-04-03 09:05	周月	post	**【Q2-OKR对齐/Q1-OKR复盘会议】**<at user_id="all"></at>  ⏎ 时间：节后4月9日（下周四），请大家尽快把文档内的**Q2的OKR目标完善下** ⏎  ⏎ [ 2026 Q2 OKR 初版 - 飞书云文档](https://xiaopeng.feishu.cn/wiki/Dp7Ww4oIsiZxD6kUPPScV3QJnXd) ⏎ **主要议程事项如下：** ⏎ - Bingtao Q1 OKR复盘-15min ⏎ - 各位主管 Q2 OKR目标陈述-10min/人 ⏎ - 主管 Q2 OKR目标补充及关键事项同步-15min
+2026-04-09 03:19	周月	text	今天下午的会议，文档大家记得及时更新好哦，我定了2个会议室，到时候可以过去哈 ⏎ T2-03F-336（A区）(7) 广州小鹏科技园（总部） ⏎ T5-08F-人民公园(6) 上海研发中心
+2026-04-10 02:00	徐林鵾	text	@周月 跟@高炳涛 @邓爽 @夏志勋 商量了下，江自豪入职的组改成仿真业务组，主要用他数理统计方面的长处帮助数据集分布、评估结果归一化这两方面的方法改进。另外也帮忙跟踪下他有没有什么异动，如果有的话我们得尽快开始补招[双手合十]  cc @童伟
+2026-04-10 02:03	周月	text	刚收到信息，学校给的反馈，说要解约了
+2026-04-13 08:11	周月	text	咱们有参与到海外业务的同学吗？有的话找我一下~
+2026-04-13 08:16	ou_3ee0c	text	@周月 海外法规认证相关的工作算吗
+2026-04-13 08:47	周月	post	先算上哈，先写到这个里面哈~周三写好哈 ⏎ 1. **需完成：表格中黄色列【是否参与海外业务】-下拉选择、【海外投入占比】-下拉选择、【投入的主要工作内容】** ⏎ 2. 时间要求：请在**4月15日（周三）中午前**<u>**完成反馈**</u>。 ⏎ ![Image](img_v3_0210n_ffdcc970-0d54-4d9c-b660-e6562b567a2g) ⏎ [https://xiaopeng.feishu.cn/wiki/FPA4wTnYdiejhOkMn4Bc6IpvnTg](https://xiaopeng.feishu.cn/wiki/FPA4wTnYdiejhOkMn4Bc6IpvnTg)
+2026-04-14 06:37	周月	post	**TO-DO：** ⏎ 1. 输出物（明天）[https://xiaopeng.feishu.cn/wiki/FPA4wTnYdiejhOkMn4Bc6IpvnTg](https://xiaopeng.feishu.cn/wiki/FPA4wTnYdiejhOkMn4Bc6IpvnTg)  ⏎ 2. HC确认（明天），详见文档汇总 ⏎ 3. 输出物（这周五）：核心人才盘点20%， ⏎ ![Image](img_v3_0210o_0e25336f-4e37-4355-94a9-aa46881e112g) ⏎ [https://xiaopeng.feishu.cn/wiki/DNZkweW6zidq8OkM9nlcXEPTnGb?table=tblmn6F8UxZUecLe&view=vewuYT05jY](https://xiaopeng.feishu.cn/wiki/DNZkweW6zidq8OkM9nlcXEPTnGb?table=tblmn6F8UxZUecLe&view=vewuYT05jY)  ⏎ 4. **Q1 OKR复盘 & Q2 OKR填写（全员）DDL:4月15日（明天）** ⏎ 文档汇总：[https://xiaopeng.feishu.cn/wiki/EsfdwOdbUi7vvekWdNKcUlBIn9d](https://xiaopeng.feishu.cn/wiki/EsfdwOdbUi7vvekWdNKcUlBIn9d)
+2026-04-14 07:22	徐林鵾	text	<p>@周月 https://xiaopeng.feishu.cn/base/LabNbctqPapdC6sfFtHclBjPn5e?table=tbly80bY244CcMGb&view=vew9R2i4vX 这个链接和你之前发的不一样：https://xiaopeng.feishu.cn/wiki/FPA4wTnYdiejhOkMn4Bc6IpvnTg，我们是不是填仿真这个</p>
+2026-04-14 07:40	夏志勋	text	@周月 [【GIC】核心人才看板（季度更新）](https://xiaopeng.feishu.cn/wiki/DNZkweW6zidq8OkM9nlcXEPTnGb?table=tblmn6F8UxZUecLe&view=vewuYT05jY) 这个文档没有编辑权限
+2026-04-14 12:38	邓爽	post	@周月  ⏎ 1. 海外业务人员，填写了 ⏎ 2. HC确认 ⏎ 3. 核心人才盘点，确认 ⏎ 4. 公司主体变更3个人，已确认，都同意转 ⏎ 5. Q1OKR复盘，都完成了 ⏎ 6. Q2OKR，还差 8个人，填写中
+2026-04-15 05:55	邓爽	text	@童伟 好。上周给雪智买了冰美式，感谢他的支持
+2026-04-24 03:28	周月	post	<at user_id="all"></at>  ⏎ 1. 五一加班提报：[https://xiaopeng.feishu.cn/wiki/CAfuwnWW5ipZQDkKkuYcIrAmnfc?from=from_copylink](https://xiaopeng.feishu.cn/wiki/CAfuwnWW5ipZQDkKkuYcIrAmnfc?from=from_copylink) **DDL：周一晚18:00** ⏎ 2.  非法定加班，走加班系统申请的，无需在此重复登记。 ⏎ 3. 申请了休息日的加班，然后<u>**同学出勤必须打卡**</u>，两者比卡后的有效结果才会生成调休假额度
+2026-04-27 05:47	周月	text	这个大家别忘了收集&填写下哈
+2026-04-27 10:50	周月	post	仿真部，5.1加班需求汇总： ⏎ ![Image](img_v3_02115_4e2b7623-5966-4dd4-9b62-e4c1dc185a8g) ⏎ **仿真业务组：** ⏎ 1. 莫春媚：1、3日 ⏎ 2. 范裴沛：2、4、5日 ⏎ **加班原因：**支持 XOS620，ultra车型发布的仿真验证（涵盖业务：城区、园区/地库） ⏎ @邓爽 @高炳涛
+2026-04-28 02:22	周月	text	公司准备5.1前发个推文，明确要加班的团队 之前的照片也可以，如果没有的话，可以现拍一个 这个主要是一个致敬+感谢 感谢大家五一坚守哈。
+2026-04-28 02:23	周月	text	<p>爽姐已经提供了我一些急战室的，如果你们有的话也可以发给我，上午给我哈</p>
+2026-04-28 02:23	周月	merge_forward	<forwarded_messages> ⏎ [2026-04-27T08:43:26Z] 邓爽: ⏎     [Image: img_v3_02116_68ee74d5-47bd-442b-ae62-90f939e8209g] ⏎ [2026-04-27T08:43:42Z] 邓爽: ⏎     [Image: img_v3_02116_8e9a2935-6dbf-4aee-819f-a03ee7e796eg] ⏎ [2026-04-27T08:45:03Z] 邓爽: ⏎     [Image: img_v3_02116_a60231dd-2b35-4185-9151-b3764fee2fcg] ⏎ [2026-04-27T08:45:04Z] 邓爽: ⏎     [Image: img_v3_02116_55176dba-cd3b-4582-8016-c4f7f7232eeg] ⏎ [2026-04-27T08:45:04Z] 邓爽: ⏎     [Image: img_v3_02116_db4b95bc-7753-4342-a158-188de9fd545g] ⏎ [2026-04-27T08:45:04Z] 邓爽: ⏎     [Image: img_v3_02116_3d7a89b3-1cfd-495e-8df3-0729ee47564g] ⏎ [2026-04-27T08:45:05Z] 邓爽: ⏎     [Image: img_v3_02116_bdfdec2e-d3c2-4cec-96ef-9531d26eaa5g] ⏎ [2026-04-27T08:45:05Z] 邓爽: ⏎     [Image: img_v3_02116_a390f906-4394-4a78-a11d-a867234fa77g] ⏎ [2026-04-27T08:47:13Z] 邓爽: ⏎     [Image: img_v3_02116_34e288d0-1032-4035-93f0-3213c99e8f0g] ⏎ [2026-04-27T08:47:14Z] 邓爽: ⏎     [Image: img_v3_02116_eeac2cb8-0aa9-48b7-a1bc-af5c4c811d1g] ⏎ [2026-04-27T08:47:14Z] 邓爽: ⏎     [Image: img_v3_02116_b9f46805-b6ae-43d3-995e-26d560815ddg] ⏎ [2026-04-27T08:47:14Z] 邓爽: ⏎     [Image: img_v3_02116_894e4288-579c-4b3a-be0e-557f7443c7eg] ⏎ [2026-04-27T08:47:15Z] 邓爽: ⏎     [Image: img_v3_02116_b3196f87-017c-4a42-a020-1428410e825g] ⏎ [2026-04-27T08:47:16Z] 邓爽: ⏎     [Image: img_v3_02116_109563cb-293b-4d20-85f4-20cc020c466g] ⏎ </forwarded_messages>
+2026-05-07 06:51	周月	post	【PDCA温馨提醒】DDL 5月10日，请大家及时完成哈 ⏎ :Loudspeaker: 每月OKR PDCA开始啦，请各位干部在**5月10日前完成**:7542883908084432899:@所有人  ⏎ - <u>**进展记录文档路径指引：飞书OKR-复盘-【2026年4-6月】-进展报告 处**</u> ⏎ ![Image](img_v3_0211f_db0d7626-f89f-41f2-85a7-c242940729fg)
+2026-05-07 06:51	周月	text	<p>这周日前，需要完成下OKR PDCA哈</p>
+2026-05-07 07:10	邓爽	text	@周月 昨天大家开始写了
+2026-05-07 07:15	周月	text	嗯嗯，小组内也可以落地但不强制 ⏎ 你们需要按时间点完成哈
+2026-05-09 05:52	周月	post	1. **【优先级高】识别**<u>**AI软件开发**</u>**序列人员并更改序列，5月11日前** ⏎ 2. 按需刷新各团队序列/职务/通道，5月20日前 ⏎ [https://xiaopeng.feishu.cn/base/N6EZbp8LFaIJhasP0n1cuHmen4c?table=tbldR68xBDsJVtVH&view=vewrVGEo27](https://xiaopeng.feishu.cn/base/N6EZbp8LFaIJhasP0n1cuHmen4c?table=tbldR68xBDsJVtVH&view=vewrVGEo27)
+2026-05-09 05:52	周月	post	通用智能中心新增【AI软件开发】序列通道，以下是他的定义，如需刷新，请更新表格，原则上是整组刷新，不要个别单点修改（理论上咱不涉及） ⏎ ![Image](img_v3_0211h_91fe82f8-141a-42f1-8711-65fb8ab36c8g) ⏎  ⏎ 不过可以识别下是否有**序列/职务/通道**之前错的，错的话可以在表内修正哈👆**（上面的表格）**
+2026-05-09 05:53	周月	text	@张驰欢迎加入哈，帮忙看下仿真硬件组的，如有疑问可以私聊我~
+2026-05-11 10:24	周月	post	![Image](img_v3_0211j_6083c96e-703d-40b4-bdee-2047f526be0g) ⏎ **【员工子女2026年秋季入学绿色通道提醒】** ⏎ <u>**广州/肇庆/武汉，这几个区域的学校**</u>，报名时间在<u>**5月14日12:00截止**</u> ⏎ 其他区域暂时没有哈，如果有可以报名给我哈，但不能保证100%成功
+2026-05-11 10:25	周月	text	@夏志勋 罗军有通过IRON反馈登记了，我单点联系他哈
+2026-06-05 07:34	周月	text	<p>@_all 参与机器人项目的人员名单，如果有的话，今天提报给我哦</p><p>校准标准：</p><p>①支持机器人业务时间占比≥50%的兼职人员</p><p>②1月1日-5月31日投入＞2.5人月</p><p>主要影响：</p><p>这部分员工将按“60%矩阵考核+40%行政考核”的比例进行绩效评估</p>
+2026-06-05 07:57	邓爽	text	@周月 之前 @谭海盈 让填过一次，bp你有那个名单吗？
+2026-06-05 08:08	周月	post	有的@徐林鵾 @赖西湖 @邓爽 ，你们填写下哈，如果其他项目有增加的也可以填写进去 ⏎ ![Image](img_v3_0212c_28a10c20-ee2b-4449-858f-6ffa9320fa4g) ⏎ [https://xiaopeng.feishu.cn/wiki/MQoLwJKhAi6Ma1kCSRwcbfZXnth](https://xiaopeng.feishu.cn/wiki/MQoLwJKhAi6Ma1kCSRwcbfZXnth)
+2026-06-09 01:06	周月	text	今天OKR  PDCA  今天最后一天哈，还没更新的要更新下哦
+2026-06-09 02:11	周月	text	https://xiaopeng.feishu.cn/wiki/EsfdwOdbUi7vvekWdNKcUlBIn9d@_all 一会的开会文档，大家可以提前看下~
+2026-06-09 03:15	周月	post	<at user_id="all"></at>  ⏎ 1. 主管输出物@各主管，更新在一个文档，DLL6月11日（周四）：[https://xiaopeng.feishu.cn/wiki/EHXpwax93ig3PEkCDcic8d6xn2c](https://xiaopeng.feishu.cn/wiki/EHXpwax93ig3PEkCDcic8d6xn2c) ⏎ 2. 部门输出物@周月@炳涛，DLL6月14日（周末）：[https://xiaopeng.feishu.cn/wiki/SI6gwWrfmiiHq6kesSLcSPZMnDc?from=space_mine&pre_pathname=%2Fdrive%2Fhome%2Fmine%2F&previous_navigation_time=1780969114560](https://xiaopeng.feishu.cn/wiki/SI6gwWrfmiiHq6kesSLcSPZMnDc?from=space_mine&pre_pathname=%2Fdrive%2Fhome%2Fmine%2F&previous_navigation_time=1780969114560) ⏎  ⏎ 文档汇总：[https://xiaopeng.feishu.cn/wiki/EsfdwOdbUi7vvekWdNKcUlBIn9d](https://xiaopeng.feishu.cn/wiki/EsfdwOdbUi7vvekWdNKcUlBIn9d)
+2026-06-09 03:26	周月	post	![Image](img_v3_0212g_0475c5d4-a983-4661-8546-ae94ac85cfeg) ⏎ 勾搭候选人的注册方法，咱努力6月底牵手成功
+2026-06-09 04:45	邓爽	text	@周月 guiming已经离职了
+2026-06-09 04:56	周月	text	简历发给@许学禛 哈
+2026-06-09 08:06	徐林鵾	text	周月，我们公司简历库，我们可以有权限进去捞一下不？
+2026-06-10 03:35	周月	text	飞书的组织架构调整了哈，看下有没有什么问题，如有联系我修改哈
+2026-06-15 06:00	周月	text	下半年除了数据生产组（4人），有计划主动协解的同学吗？ ⏎ 主要用于预留离职补偿金的，有的话给我说下~
+2026-06-15 07:56	周月	text	@_all  ⏎ 这周只上四天班咯~请大家在6月18日（周四）中午10点前完成端午加班提报 ⏎ 6月19日-法定三倍；20日~21日是调休 ⏎ https://xiaopeng.feishu.cn/wiki/CAfuwnWW5ipZQDkKkuYcIrAmnfc?table=tbljLD05dRYVpj5N&view=vew4jlYm1p
+2026-06-17 01:56	周月	post	![Image](img_v3_0212o_2c0f023c-7667-4c80-9bb7-3a0b36af255g) ⏎ ENPS，大家还是帮忙催一下哈（这个截图不要转发同学） ⏎ 昨天我大群发了链接，大家可以转发小组群催下哈
+2026-06-17 02:05	吴益民	text	能方便给下没有填写名单的吗？
+2026-06-17 09:44	周月	text	有提报端午加班的么？今天下班前确认好哈。
+2026-06-17 10:06	周月	post	![Image](img_v3_0212o_ff020115-19d1-4d93-ac21-756233f7d9fg) ⏎ 收到一个面试投诉，最近面试比较多，面试的基本礼仪还是要有哈，比如自我介绍，打开摄像头，提供问答环节等等
+2026-06-17 10:12	邓爽	post	@周月 好，端午需要加3天班，我填一下 ⏎ 1. ultra主线，新车型发布 ⏎ 2. infini & moe 模型的 测试
+2026-06-18 05:46	邓爽	text	@杨雪智 我估计端午3天，也需要你的支持哦，老铁
+2026-06-18 05:57	周月	text	<p>会涉及到19日当天吗？加班审批已经提报审批了</p>
+2026-06-18 05:58	邓爽	text	@周月 临时吧，按需找雪智[捂脸]
+2026-06-30 06:56	周月	text	请大家今天核对和填写好里面的内容信息哈，包含每一列。27届的校招开始咯，提前确认好，可以早点发布岗位信息，吸引同学投递 ⏎ https://xiaopeng.feishu.cn/wiki/QKUEwrEY7i6xl1kPgPlc7Y4lnwg
+2026-06-30 06:57	周月	text	有一些之前有的信息，我先填写进去了，你们核对下，空白的地方，你们补充下哈~
+2026-06-30 06:58	周月	text	如果能合并的岗位也可以合并一起。这样简历可以共享
+2026-07-05 01:02	周月	text	<p>今天绩效自评最后一天了，大家在各自小组里面催办下哈，我刚通过系统已经催过一次了，大群也发过了</p>
+2026-07-05 01:06	周月	text	飞书绩效填写入口： ⏎ https://xiaopeng.feishu.cn/perf/home/7650307418865290420?from=bot
+2026-07-06 01:28	周月	post	![Image](img_v3_0213b_838d48a5-0678-4d19-b18e-15ebd974fe0g) ⏎ 还有这几个同学的绩效自评没有写哈。请催促下哦，今天还可以再提交一次，但能提交一次后不能修改
+2026-07-06 08:25	周月	text	@_all 大家这会空吗？会议现在开吧
+2026-07-06 08:56	cli_a6ba	text	https://xiaopeng.feishu.cn/docx/CLaQdep2go2H5mxu6pncIOObnwc?from=vc_group_doc_link#doxcnIhPOTUtjDBvmJSYEqgyQxc
+2026-07-06 09:44	周月	post	<at user_id="all"></at> ⏎ 1. **【7月9日10点前】**完成26年H1各组绩效 ⏎   a.  [https://xiaopeng.feishu.cn/base/AtfybXJumaVKqYsVhsrcYLeOnMd?table=tblsBursqY3URYP2&view=vewdWnd6sK](https://xiaopeng.feishu.cn/base/AtfybXJumaVKqYsVhsrcYLeOnMd?table=tblsBursqY3URYP2&view=vewdWnd6sK) ⏎ ![Image](img_v3_0213b_0269c37a-5fcc-4b78-975d-46187ce2379g) ⏎   b. 绩效系统确定了也可以填写：[飞书绩效](https://xiaopeng.feishu.cn/perf/home/7650307418865290420?from=bot) ⏎   c. 文档内容汇总：[https://xiaopeng.feishu.cn/wiki/EsfdwOdbUi7vvekWdNKcUlBIn9d](https://xiaopeng.feishu.cn/wiki/EsfdwOdbUi7vvekWdNKcUlBIn9d) ⏎ 2. **【7月10日前】**全体干部：完成Q2 OKR复盘，作为年中战略复盘的输入 ⏎ 3. **【7月15日前】**其他同学：完成Q2 OKR复盘 ⏎  ⏎ @IRON2.0 新增以上三个任务给@张驰 @李坤 @邓爽 @吴益民 @徐林鵾 @夏志勋 @杨雪智 @赖西湖，并帮忙适时催促完成。
+2026-07-06 09:47	cli_a94f	post	搞定啦🥳 已经给张驰、李坤、邓爽、吴益民、徐林鵾、夏志勋、杨雪智、赖西湖8位同学创建了3个任务，统一设置了截止前1天的提醒： ⏎ 1. [26年H1各组绩效提交](https://applink.feishu.cn/client/todo/detail?guid=12d39b66-0aab-46fd-8c4a-0d71405839e3&suite_entity_num=t1593799)（截止：2026-07-09 10:00） ⏎ 2. [Q2 OKR复盘（干部）](https://applink.feishu.cn/client/todo/detail?guid=6ec8cd51-509e-4659-a79d-a722e6f71e10&suite_entity_num=t1593800)（截止：2026-07-10） ⏎ 3. [Q2 OKR复盘（其他同学）](https://applink.feishu.cn/client/todo/detail?guid=49320432-fecb-4c93-a7e8-e178c1986214)（截止：2026-07-15） ⏎  ⏎ 注：张驰、李坤存在同名人员，已优先选择近期联系、所属部门为通用智能中心/仿真部的账号分配，若有错误可以随时告诉我调整哦~
+2026-07-08 11:37	周月	post	[https://xiaopeng.feishu.cn/wiki/QKUEwrEY7i6xl1kPgPlc7Y4lnwg](https://xiaopeng.feishu.cn/wiki/QKUEwrEY7i6xl1kPgPlc7Y4lnwg) ⏎ ![Image](img_v3_0213d_2864503e-a8ad-4e2e-a067-d01d6b261c4g) ⏎ 7月10日需要把标黄色的地方再补一下哈，比如是否需要笔试、简历筛选人是谁等等，下周就可以收简历了 ⏎  ⏎ @IRON2.0  新增以上任务给@张驰 @李坤 @徐林鵾 @夏志勋 @杨雪智 @赖西湖，截止日期7月10日上午12点。
+2026-07-08 11:39	cli_a94f	post	搞定啦🥳 已经给张驰、李坤、徐林鵾、夏志勋、杨雪智、赖西湖创建了补全招聘文档的任务，设置了截止前1天提醒： ⏎ [补全招聘需求文档黄色标注内容](https://applink.feishu.cn/client/todo/detail?guid=1b9313b1-109d-40df-a805-dc66ee8cec77&suite_entity_num=t1599505)（截止：2026-07-10 12:00） ⏎  ⏎ 张驰、李坤还是沿用之前匹配的通用智能中心/仿真部的同名人员哦，有问题随时告诉我调整~
+2026-07-08 11:40	李坤	text	@周月 笔试要选的话，有默认的题库么？
+2026-07-08 11:43	周月	text	一般都不选择笔试，因为现在直接AI就有答案了，有默认的题库，但好多人都没咋采用
+2026-07-08 11:43	周月	text	所以应该要自己出题的
+2026-07-09 01:29	周月	post	![Image](img_v3_0213e_5a5d10dc-1dd5-4ac9-a412-bae75412184g) ⏎ 再提醒下哈，**绩效比例先按照这个打，**如果不太明白的可以1v1辅导:Lark_Emoji_EyesClosed_0:。 ⏎  ⏎ 晋升不用这么早确认具体名单，预计8月初才会确认。**先确认绩效**，晋升可以按照文档要求先**保住要晋升同学的绩效**，去年的晋升名额大致是22%（子等12%，大级10%），其中探索者满足绩效要求即可暂无名额限制

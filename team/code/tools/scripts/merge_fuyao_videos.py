@@ -10,8 +10,8 @@ def download_folder_from_oss(local_folder, target_oss_path, keywords=None):
     """
     Downloads a folder from OSS to a local directory, maintaining the file structure.
     """
-    access_key_id = os.environ.get("OSS_ACCESS_KEY_ID", "")
-    access_key_secret = os.environ.get("OSS_ACCESS_KEY_SECRET", "")
+    access_key_id = "OSS_ACCESS_KEY_ID_REDACTED"
+    access_key_secret = "OSS_ACCESS_KEY_SECRET_REDACTED"
     bucket_name = "cloudsim-ci-sh"
     endpoint = "http://oss-cn-wulanchabu.aliyuncs.com"  # Replace with your region
     # Initialize OSS authentication and bucket

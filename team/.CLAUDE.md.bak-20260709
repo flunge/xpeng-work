@@ -1,0 +1,463 @@
+# 仿真部 - 飞书工作空间交互
+
+> **核心定位**：本项目通过 `lark-cli` 与飞书工作空间进行交互，包括读文档、写文档、内容调整等。
+
+> 🔴🔴🔴 **工具调用前缀自查（2026-07-07 当天反复违反、用户连问"为什么一直断"）**：CLAUDE.md 早有"必须用 `antml:invoke`/`antml:parameter` 前缀"铁律，但今天连续漏写前缀导致 malformed 中断 6+ 次，连"写这条规则"的 Edit 本身都又漏了前缀。**根因不是不知道，是发调用那一刻没检查。** 强制动作：每次工具调用敲下标签前，先确认是 `antml:invoke` 和 `antml:parameter`；连续多个调用逐个查，不因前一个成功就松懈。判据：中断永远=前缀问题，与内容长短无关，断了先查前缀。
+
+> 🔴🔴🔴 **第一铁律 · 溯源先行（适用于所有报告 / 所有修改，2026-07-01 沉淀）**：**永远先溯源、收集足够内容，才能做任何修改 / 适配 / 精简**。禁止在"已有文字表面"上删改——那是缩写、越改越看不懂。正确动作：先 fetch 源文档 / 读 ledger / 翻 chat-log，把"这词、这步在解决什么问题、因果链是什么"吃透，**收集到丰富上下文之后**再动笔，用简单语句讲清痛点→思路→做法。判据：改任何一句前问自己"我读过它的出处吗、我知道它在解决什么问题吗？"——没有就先去溯源，别凭字面改。（用户原话："永远都要溯源内容，收集足够的内容，你才能做各种修改和适配"。缩写 vs 重构的区别见 `.claude/skills/weekly-report/SKILL.md` 四铁律第②条。）
+> - 🔴🔴🔴 **溯源 = 吃透全貌以判断重点，不是「点状核对我要写的句子」（2026-07-01 用户点破："你溯源的内容不足、没获得足够信息、所以无法判断汇报的重点"）**：我的致命闭环陷阱——先预设要写哪几句、再逐句去确认出处（如"1:7.2 这个数字对不对"），核对完就以为溯源够了。**但这样只能在自己划定的小池子里挑重点、必然挑不准**，因为"判断什么是重点"必须先看到全部候选。反证：李坤能加"下一步 PTQ/QAT + tinyVAE/LiteVAE"、能补"6 类 metric 结果符合预期"，是因为他掌握**这条线的完整脉络**（在解决什么→演进到哪→卡点→下一步）和**汇报对象关注点**；我只溯到单个数字的出处，判断不出这才是重点。讽刺的是这些信息 ledger/chat-log 里大多有，我却当"核对素材"用、没组织成全貌。
+>   - **正确动作**：写每个 Topic/项目前先做**全貌摸底**——读**完整 ledger**（不是 grep 关键词）+ 最近数次日报里这条线的**连续进展** + 上下游/业务方诉求 + 汇报对象在这块的关注点，先产出一条"在解决什么→演进到哪→当前卡点→下一步"的脉络，**再从脉络里选重点**，而不是先定句子再找证据。
+>   - **充分性判据（写之前必须能答）**：领导若追问"这条线整体走到哪了？下一步是什么？最大风险？这个数字为什么重要？"——答得上才动笔；答不上 = 信息不足、重点没把握，回去补，别写。这一步 preflight/闸都查不出（它们只查字面），只能靠写之前自己做够。
+> - 🔴 **规则拦不住 → 把规则变成能跑的闸（2026-07-01 用户点破"你的规则体系啥也拦不住"）**：反复被抓的不是"不知道规则"，是"知道却没执行、拿跑通冒充做对"。对策不是再写一条规则，是**把它变成机械脚本闸**：报告发布前必跑 `check_report.py`（溯源闸：抓内部代号/口头话/排除项）+ `gen_svg_infographic.py` 自带的**渲染闸**（几何自检文字溢出、越界 exit 3 拒绝出图）。两闸详见 weekly-report skill 顶部「🚦 发布前强制闸」。**新踩的坑先问"能不能加进这两个闸的正则/断言"，能就加脚本，不能才写文字规则。**
+> - 🔴🔴🔴 **交付前必须全量自审，禁止"逐点反应式交付"（2026-07-01 用户："改了 10 轮才 80%，反思如何一步到位"）**：一份报告改 10 轮的真根因**不是**某类内容错，是**我每轮只检查用户刚指出的那一处、改完就宣布"完成"，从不在交付前把所有维度自查一遍**——于是用户被迫扮演我的校验器，一次抓一个。对策：报告类交付**宣布"完成"之前，必须跑 `python3 scripts/preflight.py <doc_token> --audience xianming|boss`**（一条命令跑完 溯源闸+渲染闸+配图齐全+名字泄漏，并列出脚本兜不住的判断类逐条人工过）。**preflight 非 0 或人工项没逐条确认，就不许对用户说"完成/好了/搞定"。** 判据：我准备说"完成"时，问自己"我是只验了刚被指出的那点，还是 preflight 全绿 + 判断项都回源了？"
+
+> 🔴🔴 **画图铁律：永远能画图，禁止说"没法画图/图像 API 不可用"（2026-06-30 打通）**。任何飞书文档要配图/信息图/架构图/进度图，一律走 **原生 SVG → `<whiteboard type="svg">`** 全自动路径，**不依赖任何图像生成 key**：
+> - 工具：`scripts/gen_svg_infographic.py`（深色科技风信息图生成器：标题条 + 卡片 + KPI 数字块 + 分色 bullet + 层级/连线；已含 4 个双周报 Topic + `team_org` 组织架构图函数，新图照葫芦加函数即可）。
+> - 流程：写 SVG 函数 → `python3 scripts/gen_svg_infographic.py <name>` 落 `memory/daily-sync/images/<name>.svg` → chromium 无头截图 Read 验收排版 → 包成 `<whiteboard type="svg">…</whiteboard>` 写 `.xml` 用 `@file` 喂 `--content` → `block_insert_after` 插入 → `block_delete` 清占位。
+> - 硬约束：**每个函数结尾必须 `return wrap(s)`**（漏了会"junk after document element"、图裂成 broken icon）；生成后先 `xml.dom.minidom.parse` 验合法；自包含、无 foreignObject、无 `<br/>`、禁全角 `≤≥`（用"以内/不超过"）。
+> - GPT-Image-2/DALL-E/flux 等图像模型在本环境 key 全部不支持（实测），**别再试、别再烧钱、别再走"占位符+手动 /image"半自动老路**。详见 `.claude/skills/lark-workflow-gic-report/SKILL.md` 配图节。
+
+---
+
+## 命令：【更新记忆】（用户触发的全量增量记忆同步，2026-07-07 定）
+
+> 用户发 **【更新记忆】** 时执行。核心原则：**日报进展必须系统同步进 memory 的项目/人员/团队 ledger**——不能只靠会议纪要、不能"用时现读日报"（2026-07-07 用户指出场景编辑 ledger 没有日报进展、只到 6/8）。
+
+### 🔴 更新原则：理解 → 协调 → 修订（不是粗暴增量，2026-07-09 定）
+
+【更新记忆】不是把新内容一股脑追加到文末。每条新信息都要先**读懂现有记忆**，再决定动作：
+- **新增**：记忆里没有的，按日期/分类加到对应位置。
+- **修订**：新信息推翻或细化了旧记忆 → 直接改旧条目（如某指标从 92% 升到 95%、某方案从 A 改 B）。
+- **解除/收敛**：记忆里的**风险/阻塞/待办**若已解决，要**标记解除或删除**，不能让过期风险一直挂着（如"5080 与 A100 不兼容"若已绕过、"某链路 OOM"若已修 → 更新为已解决 + 日期）。
+- **关联**：新进展要和已有的项目 ledger / 人物画像 / 洞察交叉呼应，保持一致（同一事实不在多处矛盾）。
+- 目标是记忆**始终反映当前真实状态**，而非一份只增不改的流水账。
+
+### 时间窗口（增量，自维护）
+- **① 取起点**：读 `memory/.last-memory-update`（上次处理点；为空则回退到 `memory/daily-sync/.last-processed`，再无则用更早安全值）。
+- **② 取终点**：当前系统时间。
+- **③ 算区间**：起点→终点即本次处理窗口；先报出窗口再干活。
+- **收尾必做**：把当前时间点写回 `memory/.last-memory-update`（区别于 `.last-processed`，后者是旧【团队工作更新】用的）
+
+### 数据源（全部要读，不只会议纪要）
+1. **两份日报**（重点，过去漏的就是这个）：
+   - 仿真核心日会日报 `Wu6ywIOM6iEucDkmx3hcEgLHnmg`
+   - Q3 作战表 `SBUYwm8Lri9aJ6kmexFcBAuGnlh`（每周 W## 表的逐日「核心进展」列 + 周目标 + 风险行）——**每个项目子模块的逐日进展都要提取**
+2. 作战表/日报里的**全部嵌套文档**（doc-id/wiki 链接逐个 fetch，见溯源索引 SsWCdQbV 的项目维度表）
+3. 时间窗内全部会议纪要 + 逐字稿（核心日会/组内日会/每日例会/专项会）
+4. IM：组员群/老板 p2p/@我/HR 群（待入职）
+5. **chat-log 各核心群第一手消息**（组员群 / 算法组+高炳涛群 / 核心日会群 / 班委群SMG / 李坤-高炳涛私聊 / HRBP群 / 全员群，chat-id 见 chat-log「一、核心群清单」）——`im +chat-messages-list` 拉时间窗内消息，提炼核心（人员变动 / 关键决策 / 技术突破 / 老板指令 / 跨组需求依赖风险 / 组织文化）；**日程碎片、寒暄、+1、纯提醒、job 告警一律丢弃**；群内共享的飞书文档进嵌套文档目录 `memory/team-mgmt/chat-shared-docs.md`。
+
+### 写入（三线 + 逐日同步）
+- **项目 ledger**：把日报里该项目的逐日进展，按日期追加进对应飞书项目文档（token 查 `memory/_feishu_map.json`）。**这是本命令的核心补强**。
+- 人员 profile：从进展里提取谁做了什么、表现
+- 团队/洞察：架构变化、关键决策
+- **chat-log 各群洞察**：把窗口内群消息核心提炼，按 chat 更新到 chat-log「二、各群洞察」对应群节（遵循上「理解→协调→修订」原则，如老板方向变化要改而非堆叠）
+- 每条标来源；编辑飞书文档遵循 lark-doc-safe-edit
+- 收尾：更新 `.last-memory-update` + 溯源索引里已读文档标 ✅
+
+### 索引维护（两份核心索引必须随每次【更新记忆】同步，2026-07-08 定）
+
+两份索引是记忆系统的核心资产，每次更新记忆都要顺手维护，别让它们和实际脱节：
+
+**① 内部索引 `UwiEdTJJ2oRGokxtkE2cJXjwnyb`（我记什么）**
+- 凡新迁飞书的内容型文档（项目 ledger / 人物 / 团队 / 洞察 / 周报），必须同步登记到对应分区，并更新表头「共 N 篇」总数。
+- 记忆边界＝飞书这 N 篇 + 本地 `team/memory/` 规则与索引（MEMORY.md、doc-rules、quality-rules、meeting-rules、各 `_index.md`、refs/），后者不迁飞书、仅本地读。
+- 每分区标注「本区最后回填日期」，别只留全局一个时间。
+
+**② 溯源索引 `SsWCdQbVZohGHFxhE3RcCmJ2nSb`（我从哪读的 + 读到什么程度）**
+- **会议纪要增量一律并入「二、」同一清单**：按 `W##（起~止）— N 篇 状态` 的既有标题格式，在时间线末尾续加新一周；**同一周多次触发就更新同一张表/同一标题**，严禁每次新增碎标题或另起「增量更新」小节（否则文档被切碎）。
+- **读取状态 + 读取时间**：季度基线文档、项目维度的嵌套文档，读完一篇就把状态从 ⬜ 置 🔵/✅ 并记完成日期。归档（Archived）文档原则上一次性全量精读入库置 ✅。状态图例：✅已全文精读入库 / 🔵部分或持续跟进 / ⬜未逐篇入库。
+- **项目维度节结构固定**：以「链路 → 子项目 → 嵌套文档」组织，子项目命名对齐 14 条 ledger 线；每行＝一个子项目（含 状态 + ledger 链接 + 嵌套文档带读取状态 bullet）。嵌套文档清单的**权威源＝周报模板 `C7qUdeACso0SSpxVCdgct6winDg`** 的各项目 cite 清单，随其更新增补；用 `docs +fetch --detail full` 抽 `<cite doc-id title>` 即可拿到全量嵌套文档。
+- Q2 会议纪要清单：单篇 token 保留备查，以周级状态为准（W13–W27 已于 Q2 时间线批量精读回填画像）。
+
+---
+
+## 命令：【团队工作更新】（用户触发的增量记忆更新）
+
+> 当用户发送 **【团队工作更新】** 时，执行一次「从上次拉取时间点到现在」的增量采集，并按下方「零」的流程更新记忆。
+
+### 时间窗口（增量）
+- **起点**：读取 `memory/daily-sync/.last-processed`（上次处理到的时间点；无则取更早的安全默认值）
+- **终点**：当前时间
+- **收尾**：本次全部处理完成后，把"当前时间点"写回 `memory/daily-sync/.last-processed`
+
+### 🔴 时间窗口：由任务类型决定，不写死（2026-06-30 沉淀）
+
+采集/汇报的时间窗口**跟着任务走**，不是固定的自然日：
+
+| 任务 | 时间窗口 |
+|------|---------|
+| 【更新今日工作】/ 增量同步 | 上次处理时间点（`.last-processed`）→ 当前；本质是滚动窗口，避免跨天切断 |
+| 周报 | 上周五 00:00 → 本周五 12:00（2026-07-09 改：原周三，现随算法组周会周五出） |
+| 双周报 | 上次双周会当天 → 今天 |
+| 月度 OKR | 整月（含上月末规划期） |
+| 季度 OKR | 整季度（拉到更长维度，覆盖季初规划+季末现状） |
+
+`daily-sync.sh` 支持 `daily-sync.sh <终点日> <起点日>` 做滚动/多天回填（起点不传=单日）。手工采集时按任务自己定 `--start/--end`。
+
+### 🔴 IM 必抓对象（2026-06-30 沉淀，过去漏过老板 p2p）
+
+时间窗内，下列 IM 一个都不能漏：
+1. **组员相关**：组员名单**从组员群 `oc_bb2cf097e2d3efc34a4bc37ebd9225d9` 动态拉**（含新入职实习生，不手维护静态名单——曾漏掉樊世洲/李祉浚/谷佳萱/赵浩南），逐个 `im +messages-search --query <名字>`。
+   - 📌 **群人员/群消息/核心群清单 维护在** insights/chat-log（EJ5TdKIJPoD2MyxAwutcxIqAn3f）顶部「核心群清单与群人员」章节：含组员群/HR群/会议纪要机器人群的 chat-id+用途+拉取方式 + 组员群第一手名单（在岗/待入职/产假/实习/协作分类）。群消息与群人员是**第一手信息来源**，早于日报/纪要，写团队情况/报告/更新记忆前按需实时拉、并回写该章节。
+2. **老板高炳涛（必抓，曾整体遗漏）**：① 其全部发言 `im +messages-search --sender ou_8bcf2bb3c23a679a7c19bfcc80b4cdda`；② 与李坤的 p2p `--sender <boss> --chat-type p2p`。老板私聊/在其他群对你说的话都要覆盖。
+3. **@我**：`--is-at-me`。
+4. **关键群聊全量**：仿真算法组 + Simworld MR + 通用智能中心 等。
+5. **p2p 单聊**：关键人物（老板、PM、上下游 owner）的 p2p 用 `--chat-type p2p` 兜底，不只靠群。
+6. **HR/招聘群**：与 HR 周秀丽的群 `oc_a19cd7f6afaf38d949a036b88779136d` 必抓——**待入职/新人 offer/入职时间只在这里**（组员群拉不到尚未入职的人）。
+7. **🔴 会议纪要机器人群 `oc_56b10049700694038662e72aa78e35d3`：当天所有会议纪要的实时来源，写日更/周报/双周报前必读。** 飞书会议结束后纪要 docx 链接会自动推到这个群——当天下午/晚上刚开的会（核心日会、组内日会、专项会、每日例会等），其 daily-sync 还没生成，但这个群里已经有链接。用 `im +chat-messages-list --chat-id oc_56b10049... --start <当天> --end <当天>` 拉，逐条提取 docx token 读全。反例（2026-06-30）：写报告时漏了当天 11:42 的「组内日会」（车型泛化 camera/红绿灯结论、HIL 19 事项、慢速合主线问题全在里面），就因为没读这个群。
+
+### 🔴 待入职人员追踪（2026-06-30 沉淀，组员群只有已入职的）
+
+「已入职组员」从组员群动态拉；「**待入职**」人员只能从 HR 群对话提取。截至 2026-06-30：赵浩南 **6/30 已入职**（diffusion/world model 预研，双周报组织图里标 NEW）；待入职 3 人——韩阿东（7/1 校招）、王哲成（7/9）、**张友健（HR 6/26 列 7/7，但本人 6/10 曾在 HR 群明说放弃 offer ⚠️ 矛盾未消，以李坤最新确认为准）**。写团队情况/双周报"团队构成"时，已入职 + 待入职都要覆盖，张友健状态存疑要标注。（来源：HR 群 `oc_a19cd7f6…` 6/10/6/26 消息）
+
+### 🔴 lark-cli 分页陷阱（2026-06-30 踩坑）
+
+- `im +messages-search` **支持** `--page-all`；`im +chat-messages-list` **不支持** `--page-all`（只有 `--page-size`/`--page-token`）。
+- 曾因给 `chat-messages-list` 误传 `--page-all` → 群聊采集**全部静默报错失败**（错误被 except 吞成"0 条"），长期漏数据而不自知。
+- 正确：群聊用 `--page-size 50` + 手动循环 `--page-token` 翻页（见 daily-sync.sh `list_chat_messages`）。消息字段在 `data.messages`，content 是直接字符串。
+
+### 采集范围（三类，缺一不可）
+0. **先读两份"日报"作当日进展基准**（再用会议纪要/逐字稿补细节，两份都要读）：① 早上**仿真核心日会** → `Wu6ywIOM6iEucDkmx3hcEgLHnmg`（仿真组日报：开环/闭环交付数、场景毕业大盘、双周会同步、能力建设）；② 下午**每日例会** → `SBUYwm8Lri9aJ6kmexFcBAuGnlh`（Q2 作战表：读当周 `W##` 表的「核心进展-MMDD」列，按链路 场景&生产/SIL/HIL/Agents 分块、每日更新且最详——尤其 Agents 细节常只在此列）。
+1. **所有会议纪要 + 文字记录（逐字稿）**：每篇智能纪要，以及其中「相关链接 → 文字记录」的逐字稿，全部用 `docs +fetch --doc-format markdown` 读源文。
+2. **各类日报/周报文档的进展记录 + 其内嵌/关联文档**：上面两份日报/作战表，连同文中内嵌的 doc / sheet / base / 链接一并下钻读取。
+3. **所有单聊(p2p)与群聊消息**：时间窗内全部 p2p + 群聊；对搜到的消息按需用 `im +chat-messages-list --start/--end` 读前后上下文，读 `reply_to` 父消息及消息内链接。
+
+### 写入记忆
+- 严格按本文件「零、处理流程 Phase 1–6」与「三不写」执行：先读源文档再写，三线（人物/团队/项目）+ 洞察，每条事实标注出处。
+- **daily-sync JSON 只是索引/指针，不是事实源**——可用 `bash scripts/daily-sync.sh` 先把日历/会议/Wiki/IM 采集成 JSON 作为清单，再据此逐篇读源文写记忆。
+
+---
+
+## 零、启动时自动同步（数字分身每日更新）
+
+### 核心原则
+
+> **daily-sync JSON 只是索引/指针，不是事实源。严禁从 JSON 摘要直接写 memory。**
+
+### 启动检查
+
+```bash
+ls /Users/xpeng/Documents/team/memory/daily-sync/*.json 2>/dev/null | while read f; do
+  date=$(basename "$f" .json)
+  last=$(cat /Users/xpeng/Documents/team/memory/daily-sync/.last-processed 2>/dev/null || echo "2026-01-01")
+  if [[ "$date" > "$last" ]]; then
+    echo "New sync data: $date"
+  fi
+done
+```
+
+### 处理流程（有序，不可跳过）
+
+有新的 daily-sync 文件时，**必须严格按以下步骤执行**：
+
+#### 步骤清单
+
+```
+□ Phase 1: 盘点 — 从 JSON 列出所有待读取的源文档 URL
+□ Phase 2: 源文档读取 — 逐篇读取，不可跳过
+□ Phase 3: 聊天上下文 — 补读父消息和链接文档
+□ Phase 4: 人物画像更新 — 从源文档提取行为/性格观察
+□ Phase 5: 记忆写入 — 每条事实标注出处
+□ Phase 6: 自检 — 逐条核查"三不写"
+```
+
+#### Phase 1: 盘点源文档
+
+从 JSON 中提取所有待读取的 URL 清单：
+- `meeting_docs` 中的每个会议纪要（智能纪要）
+- **每个智能纪要中「相关链接 → 文字记录」的链接**（逐字稿，[[meeting-reading-rules]]）
+- `wiki_doc` 中的 Wiki 文档
+- IM `@me` 消息中包含的飞书文档/Wiki URL
+- IM 成员搜索结果中可能包含的链接
+
+#### Phase 2: 源文档读取（强制）
+
+| 必须读 | 读取方式 | 原因 |
+|--------|---------|------|
+| **会议文字记录（逐字稿）** 🔴 | `docs +fetch --doc-format markdown` | 看到每个人实际说了什么、语气、真实关注点。AI摘要丢失个体声音 |
+| 会议智能纪要 | `docs +fetch --doc-format markdown` | 理解会议主题和结论框架 |
+| Wiki 文档 | `docs +fetch --doc-format markdown` | 了解最新业务文档内容 |
+| 聊天中的文档链接 | `docs +fetch --doc-format markdown` | 理解消息引用的实际内容 |
+
+- **智能纪要中必有「相关链接 → 文字记录」**，必须同时读取
+- **跨文档搜索项目/人名时，用 `--scope keyword`**，不下载全文
+- 每个文档读取后用 3 句话总结：①主题 ②谁说了什么关键话 ③与我组的关系
+
+#### Phase 3: 聊天上下文
+
+- 有 `reply_to` 的消息 → **必须读取父消息**（`lark-cli im +messages-mget --message-ids "<parent_id>"`）
+- 消息中包含飞书 URL → **必须读取该 URL 指向的文档**
+- 成员搜索结果中有技术讨论 → 评估是否需要扩展读取上下文
+- **🔴 关键词搜索到消息后，必须读取对应 p2p/群聊的上下文**：`im search` 只能搜到含关键词的消息，搜不到不含关键词的回复。搜到一条消息后，用 `im +chat-messages-list --chat-id "<id>" --start/--end` 读前后的完整对话，确认是否有老板/关键人物的回复被遗漏
+
+#### Phase 4: 人物画像更新
+
+从源文档中提取并更新每个人的人物画像（[[people/_index]]）：
+
+| 来源 | 提取什么 | 更新目标 |
+|------|---------|---------|
+| 逐字稿 | 发言内容、语气、追问模式、主动/被动、被谁cue | `people/<name>.md` |
+| 智能纪要 | 被分配到什么待办、承担什么角色 | people + projects |
+| IM 消息 | 谁@了谁、回复速度、表达风格、群内参与度 | `people/<name>.md` |
+| 文档 | 谁写了什么文档、什么风格 | people |
+
+**每个在岗组员 + 高炳涛，每次同步至少检查是否有新观察可写入 `people/<name>.md`。**
+
+#### Phase 5: 记忆写入
+
+**写入前必读**：OKR文档 `LpbTdfU95oDnnTx5LmAc7Q1WnVg` 是项目边界的基准——创建/更新任何项目文件前，先确认其OKR归属、执行Owner、验收标准。
+
+> 🔴 **写入目标已改为飞书文档（2026-07-06 迁移）**：项目 ledger、人物画像、chat-log、周报等**内容型记忆现以飞书云文档为准**，不再写本地 md。
+> - **定位方式**：读 `memory/_feishu_map.json` 拿到「本地路径/项目名/人名 → 飞书文档 token」的映射，用 `docs +update`（append / str_replace / block_*）写入对应飞书文档。
+> - **飞书总索引**：https://xiaopeng.feishu.cn/docx/UwiEdTJJ2oRGokxtkE2cJXjwnyb ；根文件夹 `W7rqfwqnnlzSfUdEcIGcjcTNnqe`（projects/people/insights/weekly-reports 四层）。
+> - **本地仅保留规则与索引**：`insights/{doc-rules,quality-rules,meeting-rules}.md`、`gic-*`、`MEMORY.md`、各 `_index`、`_feishu_map.json`——这些仍读写本地。
+> - **多 agent 协作**：本地定时 agent 也按 `_feishu_map.json` 写同一批飞书文档；编辑飞书文档遵循 `lark-doc-safe-edit`（每改一节复查、勿跨写操作复用 block id、大改先备份）。
+> - 新增项目/新人 → 先在对应飞书子文件夹 `docs +create` 建文档，再把 token 追加进 `_feishu_map.json` 和飞书总索引。
+
+**记忆更新体系**（内容型写飞书，下表「文件位置」为飞书文档，经 `_feishu_map.json` 定位）：
+
+| 类型 | 位置（飞书文档） | 更新内容 |
+|------|---------|---------|
+| **线1：人物** | people/ 下 `<name>` 文档 | 性格观察、工作进展、项目变动 |
+| **线2：团队** | teams/ 下团队文档（algo-team/collaboration/org-structure） | 架构变化、协作关系 |
+| **线3：事情** | projects/ 下 `<project>` 活文档 | 里程碑、状态变化、风险 |
+| **洞察** | insights/ 下 chat-log 文档 | 群聊关键决策、新事件 |
+
+**关联更新规则**（在飞书文档间执行，token 查 `_feishu_map.json`）：
+- 项目换了owner → 旧owner的项目列表删该项目，新owner加
+- 人离职 → 移入 `people/_departed/`，遍历其所有项目更新owner
+- 项目完成 → 移入 `projects/<track>/_archive/`，从相关人员projects列表移除
+
+**每条关键事实必须能在源文档中找到原文支撑。**
+
+#### Phase 6: 自检（逐条核查）
+
+写入 memory 前，对每条声明自问：
+
+```
+□ 这句话是从哪里来的？能指到具体文档/消息吗？
+□ 涉及哪个 project？对应 projects/<track>/<name>.md 更新了吗？
+□ 涉及哪个人物？对应 people/<name>.md 更新了吗？
+□ 双向索引：people/_index.md 的交叉矩阵是否同步了？
+□ 我是读了源文档，还是从 JSON 摘要脑补的？
+□ 有没有我没读但应该读的链接？
+□ 核对标准："高炳涛/老板在这个会上具体说了哪几句话？" — 答不上来说明没读逐字稿
+```
+
+#### 「三不写」规则
+
+1. **没有读源文档的声明 → 不写**（标记为 `[待验证]` 可以写）
+2. **从消息摘要脑补的推断 → 不写**
+3. **无法用原文引证的关键决策 → 不写**
+4. **他组主导的会 / 事 → 不计入本组工作记忆（2026-07-02 沉淀）**：李坤/本组只是参会或被 @ 的会议（如「WM 落地闭环仿真」徐林鵾主导、「仿真先行整体盘」邓爽部门），**要读全**（判断相关性、拿背景），但**只有本组负责 / 交付 / owner 是本组人的事**才写进本组项目/进展记忆。他组的进展至多在 chat-log 留一句"参考、非本组"的指针，不展开、不进 ledger、不进周报双周报正文。判据：这件事的 owner 是不是本组人？不是 → 只参考。**「读过」≠「该写进本组记忆」**，跟"茶水间是参考不是进展"同类边界。（踩坑：7/2 把 WM 会的随机性 bug/链路效率当本组进展写进了 chat-log，被用户纠正。）
+
+---
+
+### 自动采集机制
+
+macOS LaunchAgent 每天22:07运行脚本，采集数据存为 `daily-sync/YYYY-MM-DD.json`。
+- 脚本位置：`scripts/daily-sync.sh`（项目根目录下）
+- Plist 位置：`~/Library/LaunchAgents/com.xpeng.claude-daily-sync.plist`
+- 检查 LaunchAgent 状态：`launchctl list | grep claude-daily`
+
+---
+
+## 一、身份与认证
+
+### 默认身份
+
+- **所有操作默认使用 `--as user`**（用户身份），除非用户明确说"以应用/bot 身份"
+- 原因：bot 看不到用户的文档、日历、云空间等个人资源
+
+### 认证处理
+
+- 遇到权限错误时，按 `lark-shared` skill 的 split-flow 流程处理
+- 发起授权：`lark-cli auth login --scope "<scope>" --no-wait --json`
+- 从输出提取 `verification_url` 和 `device_code`，生成二维码给用户
+- 用户确认后：`lark-cli auth login --device-code <device_code>`
+- **禁止缓存 verification_url/device_code**，每次需要授权时必须重新生成
+
+### 安全规则
+
+- 禁止输出密钥（appSecret、accessToken）
+- 写入/删除操作前必须确认用户意图
+- 高风险操作先用 `--dry-run` 预览
+- 遇到 exit code 10（`confirmation_required`）→ 向用户确认后再加 `--yes` 重试
+
+---
+
+## 二、读文档（核心工作流）
+
+### 飞书文档 / Wiki 文档
+
+**直接用 `docs +fetch` 读取，不要每次都去读 skill 文件：**
+
+```bash
+# 读取文档全文（XML格式，默认）
+lark-cli docs +fetch --api-version v2 --doc "<URL或token>" --format json
+
+# 读取文档（Markdown格式）
+lark-cli docs +fetch --api-version v2 --doc "<URL或token>" --doc-format markdown --format json
+
+# 先看目录（结构未知时优先用）
+lark-cli docs +fetch --api-version v2 --doc "<URL或token>" --scope outline --max-depth 3 --format json
+
+# 按关键词定位（大文档/多文档搜索优先用，不下载全文）
+lark-cli docs +fetch --api-version v2 --doc "<URL或token>" --scope keyword --keyword "关键词1|关键词2" --format json
+
+# 按章节读取（需要 block_id）
+lark-cli docs +fetch --api-version v2 --doc "<URL或token>" --scope section --start-block-id <标题id> --format json
+
+# 带 block ID（用于后续编辑定位）
+lark-cli docs +fetch --api-version v2 --doc "<URL或token>" --detail with-ids --format json
+```
+
+- **`--api-version v2` 必须显式传入，不可省略**
+- 支持 `/docx/` 和 `/wiki/` 两种 URL
+- `--scope` 参数：`outline` | `section` | `range` | `keyword`（省略=读整篇）
+- `--detail` 参数：`simple`（默认，只读）| `with-ids`（定位）| `full`（编辑）
+
+### 飞书电子表格
+
+- 文档中嵌入的 `<sheet token="..." sheet-id="...">` → 切到 `lark-sheets` skill
+- 用 `lark-cli sheets +fetch --sheet "<token>" --sheet-id "<sheet-id>" --format json` 读取
+
+### 飞书多维表格（Base）
+
+- 文档中嵌入的 `<bitable token="..." table-id="...">` → 切到 `lark-base` skill
+
+### 文档内嵌资源
+
+- `<img>` / `<source>` 带 `url` → 直接用 HTTP GET 下载
+- 无 `url` 或预览 → `lark-cli docs +media-preview --token <token>`
+- 下载或画板 → `lark-cli docs +media-download --token <token>`
+
+---
+
+## 三、写文档
+
+### 创建文档
+
+```bash
+lark-cli docs +create --api-version v2 --content '<title>标题</title><p>内容</p>' --format json
+```
+
+### 编辑已有文档
+
+```bash
+# 追加内容
+lark-cli docs +update --api-version v2 --doc "<URL或token>" --command append --content '<p>新内容</p>'
+
+# 字符串替换
+lark-cli docs +update --api-version v2 --doc "<URL或token>" --command str_replace --find "旧文本" --replace "新文本"
+
+# Block 级操作（需要先 fetch 拿到 block_id）
+lark-cli docs +update --api-version v2 --doc "<URL或token>" --command block_insert_after --block-id <id> --content '...'
+lark-cli docs +update --api-version v2 --doc "<URL或token>" --command block_replace --block-id <id> --content '...'
+lark-cli docs +update --api-version v2 --doc "<URL或token>" --command block_delete --block-id <id>
+```
+
+- 格式选择：创建/整段写入可用 XML 或 Markdown；精准编辑（str_replace/block_*）优先用 XML
+- 写文档前如需了解 XML 语法细节，读 `.claude/skills/lark-doc/references/lark-doc-xml.md`
+
+---
+
+## 四、Wiki 知识库操作
+
+### 知识空间管理
+
+```bash
+# 列出知识空间
+lark-cli wiki +space-list --format json
+
+# 获取节点信息（从 URL 解析 space_id）
+lark-cli wiki spaces get_node --params '{"token":"<wiki_token>"}' --format json
+```
+
+### 节点操作
+
+```bash
+# 创建节点
+lark-cli wiki +node-create --space-id <space_id> --parent-id <parent_node_id> --title "标题" --format json
+
+# 列出子节点
+lark-cli wiki +node-list --space-id <space_id> --parent-id <node_id> --format json
+
+# 移动节点
+lark-cli wiki +move --node-token <token> --target-space-id <space_id> --target-parent-id <node_id>
+```
+
+---
+
+## 五、操作原则
+
+1. **读文档前不要反复确认**：看到飞书 URL 直接用 `docs +fetch --api-version v2` 读取
+2. **先读目录再精读**：大文档先用 `--scope outline` 看结构，再按需精读
+3. **局部优于全量**：能用 `--scope section/keyword/range` 就不要读整篇
+4. **文档中有嵌入表格**：主动提取 token 下钻，不要只呈现标签
+5. **写操作前确认**：创建、编辑、删除等写操作先向用户确认
+6. **优先用 shortcut**：`lark-cli <service> +<verb>` 形式优于直接调 API
+7. **不确定时查 skill 参考文档**：`.claude/skills/<service>/references/` 下有详细参数说明
+8. **🔴 不懂就问，严禁脑补**：遇到以下情况立即向用户确认，不跳过、不猜测、不瞎写：
+   - 不认识的缩写/术语（如 UCP、CPFS、Seal、Hail）→ 问
+   - 不确定项目边界（如"数据精简是独立项目还是HIL子任务"）→ 问
+   - 不知道某个人是谁（如参会名单里的陌生名字）→ 问
+   - 不确定数字/百分比是否准确 → 核实源文档，核实不了就问
+   - 发现两个源文档信息矛盾 → 指出矛盾，问哪个为准
+9. **🔴 周报/双周报铁律：强制输出检查清单**：每次写周报或双周报前，必须先输出以下清单，逐项打勾，未全部打勾禁止动笔：
+
+```
+□ Step 0: 两份"日报"逐日进展读完？ [ ]  共__天
+    ① 仿真核心日会日报 `Wu6ywIOM6iEucDkmx3hcEgLHnmg`（覆盖周期内每天的「进展」段 + 周进展段）
+    ② 下午每日例会作战表 `SBUYwm8Lri9aJ6kmexFcBAuGnlh`（覆盖周期内当周 `W##` 表的「核心进展-MMDD」逐日列；Agents 等细节常只在此列）
+□ Step 1: Q2 Wiki W<n>+W<n+1>两个block全文读完？ [ ]
+□ Step 2: 两个block内所有嵌套文档逐个读完？ [ ]  共__个
+□ Step 3: 本周全部核心日会+组内日会的纪要读完？ [ ]  共__篇
+□ Step 4: 本周全部核心日会+组内日会的文字记录读完？ [ ]  共__篇
+□ Step 5: 本周全部@我消息+组内群聊+p2p读完？ [ ]  共__条
+□ Step 6: 写的每条进展能从源文档追溯到原文？ [ ]
+□ Step 7: 逐条过quality-rules.md全部规则？ [ ]
+```
+
+清单输出后，逐项执行并勾选。全部✅后才能写第一行字。
+   - **Step 1**：读 Q2 Wiki 本周更新 + 所有关联嵌套文档
+   - **Step 2**：读本周全部核心日会+组内日会+其他会议的智能纪要和文字记录
+   - **Step 3**：读本周全部聊天记录（@我 + 组内群聊 + p2p）
+   - 优先级逐个递减。遍历完才能动笔。违例：跳过任一步骤直接写
+10. **🔴 写前必读规则，不靠记忆**：以下场景在动笔前，必须先用 Read 工具打开对应的规则文件读一遍，再写。禁止靠记忆写：
+   - 飞书文档 → 先读 `insights/doc-rules.md` + `insights/quality-rules.md`
+   - project 文件 → 先读 `insights/quality-rules.md`
+   - person 文件 → 先读 `insights/quality-rules.md`
+   - 违例：不读规则直接写。记不住规则不是问题，不读规则才是问题
+
+---
+
+## Ledger 标准模板（Golden Sample，2026-07-08 定，全量重构依据）
+
+> 样例：**项目** = 场景编辑 `NAqbdVbuxoDn7jxjrEzcyHmynDe`；**人物** = 裴健宏 `IjvVdFZ9moV1pJxSvkTcfnkrnuc`。所有项目/人物 ledger 一律按此重构。
+
+### 项目 ledger —— 4 部分
+1. **背景目标**（就地更新）：项目定位、最终目标、任务缘起；可图文；目标带来源。
+2. **当前状态**（就地更新）：各目标达成情况 + 现有链路 + 风险（🟢已达/🟡关注/🔴阻塞）。
+3. **持续进展**（按时间追加）：多来源分列表 `时间 | 作战表(日报) | 会议纪要/日会 | 其他来源`；同一天多源并入一行、时间单 cell；空格=该源当天无记录；综合多源、修表述。
+4. **后续规划**（就地更新）：基于现状识别达标所需事项，每条标来源。
+- 文档属性头保留；**相关/嵌套文档不在 ledger 内列表**，统一去溯源索引「三、项目维度」对应行溯源。
+
+### 人物 ledger —— 3 部分（title = 中文名）
+1. **角色总览**（就地更新）：基本信息(职级/届别/部门)、历史绩效(带来源；缺则如实标注不脑补)、角色定位(OKR 分工)、性格特点、潜力/短板/成长建议。
+2. **核心项目**（就地更新）：表 `项目(超链接) | 负责内容 | 项目 ledger`（不重复项目细节）+ **代码提交记录**（源 `NGx0ddAB` simworld 提交汇总，标统计口径+时间窗）。
+3. **日常表现**（按时间追加）：表 `时间 | 来源 | 内容&分析`，周粒度综合信号，逐日细节留项目 ledger。
+
+### 通用铁律（两类共用）
+- **活文档**：背景/状态/规划、角色总览/核心项目 → **就地更新**（改目标、增/解除风险）；持续进展/日常表现 → 按时间**追加行**。禁止只往后堆。
+- **只重述不脑补**；缺数据如实标注来源缺口。
+- **全文文档引用一律超链接**（缩写 token 纯文本不合格）。
+- **三源配对**：日报(作战表 Q2=`PDJ2wKHn`/Q3=`SBUYwm8L`) + 日会(智能纪要) + 逐字稿，同日多源分列/综合理解。
+- 周日期用**真实工作周**（周一~周五，节假日调整）。
+
+### 全量重构 + 更新的高效顺序（时间轴单遍扫描，避免重复读源）
+1. **先结构后内容**：先把每个 ledger 套成模板骨架（就地重排现有内容），再深读补全。
+2. **深读按「周」组织、不按「对象」**：每周把 ①作战表当周表 ②该周每篇纪要+逐字稿 各读一遍，**一次性扇出**到「所有涉及项目的持续进展」+「所有涉及人物的日常表现」——同一源只读一遍、多对象共享，避免 O(对象×周) 的重复读。
+3. **项目嵌套文档**（溯源索引三）逐篇读 → 更新对应项目的背景/状态/规划，并在溯源索引把该文档标 ✅ + 读取日期。
+4. 每完成一批（一个链路的项目 / 一周的人物扇出）→ 校验 + 回执。

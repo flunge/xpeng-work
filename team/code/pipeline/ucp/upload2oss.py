@@ -45,8 +45,8 @@ def should_upload(local_file_path, oss_object_key, upload_state):
 
 def upload(src, dst, bucket_name='xmotors-fuyao-sync', oss_directory='yangxh7/ips/'):
     # 阿里云 OSS 访问信息
-    access_key_id = os.environ.get("OSS_ACCESS_KEY_ID", "")
-    access_key_secret = os.environ.get("OSS_ACCESS_KEY_SECRET", "")
+    access_key_id = 'OSS_ACCESS_KEY_ID_REDACTED'
+    access_key_secret = 'OSS_ACCESS_KEY_SECRET_REDACTED'
     endpoint = 'http://oss-cn-wulanchabu-internal.aliyuncs.com'  
     # bucket_name = 'cloudsim-ci-sh'
     # oss_directory = 'sim_engine/ips_configs/'
@@ -76,7 +76,7 @@ def upload_directory_to_oss(local_directory, bucket, oss_directory='sim_engine')
 
 def upload_train_model_to_oss(save_dir, upload_train_directory):
     # oss config
-    auth = oss2.Auth(os.environ.get("OSS_ACCESS_KEY_ID", ""), os.environ.get("OSS_ACCESS_KEY_SECRET", ""))
+    auth = oss2.Auth('OSS_ACCESS_KEY_ID_REDACTED', 'OSS_ACCESS_KEY_SECRET_REDACTED')
     bucket = oss2.Bucket(auth, 'http://oss-cn-wulanchabu-internal.aliyuncs.com', 'cloudsim-ci-sh')
 
     record_dir = save_dir.replace("/output/", "/output/record/")
@@ -90,7 +90,7 @@ def upload_train_model_to_oss(save_dir, upload_train_directory):
 
 def compress_and_upload(folder_path, upload_train_directory, tar_name='images_origin.tgz'):
     # oss config
-    auth = oss2.Auth(os.environ.get("OSS_ACCESS_KEY_ID", ""), os.environ.get("OSS_ACCESS_KEY_SECRET", ""))
+    auth = oss2.Auth('OSS_ACCESS_KEY_ID_REDACTED', 'OSS_ACCESS_KEY_SECRET_REDACTED')
     bucket = oss2.Bucket(auth, 'http://oss-cn-wulanchabu-internal.aliyuncs.com', 'cloudsim-ci-sh')
 
     temp_output_path = '/root/repo/models/street_gaussians/output/temp_data/'
@@ -109,8 +109,8 @@ def upload_local_dir_to_oss(
     oss_directory,
     bucket_name="cloudsim-ci-sh",
     endpoint="http://oss-cn-wulanchabu-internal.aliyuncs.com",
-    access_key=os.environ.get("OSS_ACCESS_KEY_ID", ""),
-    secret_key=os.environ.get("OSS_ACCESS_KEY_SECRET", ""),
+    access_key="OSS_ACCESS_KEY_ID_REDACTED",
+    secret_key="OSS_ACCESS_KEY_SECRET_REDACTED",
     job_num=10,
 ):
     """Upload all files under local_directory to oss://{bucket_name}/{oss_directory}/."""
@@ -166,8 +166,8 @@ def upload_train_model_to_oss_fast(save_dir, upload_train_directory, suffix='', 
     if upload_record:
         transfer_and_compress_fast(record_dir, output_path=os.path.join(temp_output_path, 'tensorboards.tgz'), move=move)
     
-    access_key = os.environ.get("OSS_ACCESS_KEY_ID", "")
-    secret_key = os.environ.get("OSS_ACCESS_KEY_SECRET", "")
+    access_key = 'OSS_ACCESS_KEY_ID_REDACTED'
+    secret_key = 'OSS_ACCESS_KEY_SECRET_REDACTED'
     job_num =10
     endpoint = 'http://oss-cn-wulanchabu-internal.aliyuncs.com'
     bucket_name = 'cloudsim-ci-sh'
@@ -192,8 +192,8 @@ def compress_and_upload_fast(
     print(f"compress_and_upload_fast transfer_and_compress_fast cost {end - start:.6f}")
     start = time.time()
     
-    access_key = os.environ.get("OSS_ACCESS_KEY_ID", "")
-    secret_key = os.environ.get("OSS_ACCESS_KEY_SECRET", "")
+    access_key = 'OSS_ACCESS_KEY_ID_REDACTED'
+    secret_key = 'OSS_ACCESS_KEY_SECRET_REDACTED'
     job_num =10
     endpoint = 'http://oss-cn-wulanchabu-internal.aliyuncs.com'
     bucket_name = 'cloudsim-ci-sh'

@@ -1,0 +1,458 @@
+2026-04-08 02:19	李坤	post	<at user_id="all"></at> DIC目前可以给GIC同学提供Claude AK协助研发提效，统计下AI研发同学token的使用量，大家看下属于哪类，分别在我下面的类别上点+1~ ⏎ 1. **Moderate/Professional User:** <u>~50,000–300,000 tokens per day </u>(frequent chat, document analysis, light coding). ⏎ 2. **Heavy Developer/Power User:** <u>~300,000–2,000,000+ tokens per day </u>(intensive pair programming, large codebases). ⏎ 3. **Agentic/Automated Workflows:** <u>~2,000,000–20,000,000+ tokens per day </u>(autonomous AI agents, complex research).
+2026-04-08 02:19	李坤	text	Moderate/Professional User
+2026-04-08 02:19	李坤	text	Heavy Developer/Power User
+2026-04-08 02:19	李坤	text	Agentic/Automated Workflows
+2026-04-08 03:24	朱啸峰	text	[Invalid text JSON]
+2026-04-08 03:25	朱啸峰	text	有人知道我们这边cloudsim接口接入需要的团队账号密码吗，我这边需要来开发下载scenario数据的脚本
+2026-04-08 03:29	裴健宏	text	@朱啸峰 可以问问@何庆
+2026-04-09 07:32	瞿鑫宇	text	之前的A100镜像可能有点问题，大家还是先用之前的镜像infra-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/data-infra/fuyao:yangxh7-251209-0220 ⏎  ⏎ 如果notebook 中需要用到batch渲染，可以： ⏎ git checkout dev ⏎ pip uninstall -y xpeng-raster ⏎ cd   ** /simworld/xpeng_raster ⏎ rm -r **/simworld/xpeng_raster/build ⏎ python setup.py install
+2026-04-09 09:58	郑丽娜	text	@_all https://xiaopeng.feishu.cn/wiki/McfrwKO62izp7MknPJIc94Q5nnc 大家还是填下本周目标，一会日会快速同步下状态和阻塞项
+2026-04-09 09:59	郑丽娜	text	今天的会晚十分钟拉，大家可以先填一下
+2026-04-10 05:39	瞿鑫宇	post	[infra-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/data-infra/fuyao:quxy33-260409-0628](http://infra-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/data-infra/fuyao:quxy33-260409-0628)  之前的A100 新镜像有问题（两个三方库版本冲突了），重新编了一个A100镜像，试验了一下预处理、训练、渲染都能正常运行。 ⏎ ![Image](img_v3_0210k_998e05d4-be1d-4865-aad5-e30d917a375g)
+2026-04-10 07:24	郑丽娜	text	https://xiaopeng.feishu.cn/wiki/Oq96wT2qziv8VFkXLRCco0cpnCc 周会页面哈各位更新下
+2026-04-10 07:25	李坤	text	@_all 今天仅更新周报，周会我过下OKR，就不过进展了~
+2026-04-13 01:34	李坤	text	@郑丽娜 Q2的任务比较重，我们日会本周起日程周一到周四daily开； ⏎ 今天的日会两个议题： ⏎ 1）HIL链路的进展情况，@朱啸峰 准备下； ⏎ 2）长里程的质量问题排查和后续action@杜思聪 @杨星昊 准备下~
+2026-04-13 01:40	郑丽娜	text	@李坤 好的 10点半会拉起计划会议，明确本周任务，验收标准及时间 确保大家理解一致
+2026-04-13 02:10	郑丽娜	text	@杜思聪 咱们和@云荟 那边每周的交付计划及高优支持问题是不是也有个单独的会议，帮忙也拉下我把
+2026-04-13 02:11	ou_39167	text	@郑丽娜 佰民拉了个每周一的会，我拉你吧
+2026-04-13 03:34	杨星昊	post	![Image](img_v3_0210n_f0e13db5-0354-4864-b3a9-f73ea165b5cg) ⏎ ![Image](img_v3_0210n_d2b8a98e-bb14-4213-8f45-caf76815009g) ⏎ @杜思聪 sicong，这个是正常clip每个cam时间的差值，之前我们30秒数据有输出，看看在subrun里面这个检查能work吗？不确定是曝光时间还是采集时间
+2026-04-13 03:38	杨星昊	text	@杜思聪 有仿真问题记录表格吗？我们把这个问题或者后续遇到的可能得问题都一起汇总下
+2026-04-13 03:38	ou_39167	text	@杨星昊 目前我这里有个生产问题的记录表，是放在一起么？还是咱们新开一个
+2026-04-13 08:55	李坤	text	@_all 组内有人在参与海外的相关业务么，有的话+1~
+2026-04-14 02:55	李坤	text	@_all 大家按照文档拆解OKR，并录入对齐 https://xiaopeng.feishu.cn/docx/LpbTdfU95oDnnTx5LmAc7Q1WnVg；owner带着讨论一下各个OKR的一些细致的目标节点，可以先在文档中【TBD】Key Milestones上补齐~
+2026-04-14 03:33	李坤	text	我抽样了30个左右case，问题还是不少的，这些问题做一下根因分析和归类，本周周会上讨论下下一步的解决方案@杨星昊 @杜思聪 https://xiaopeng.feishu.cn/docx/RVqndaMkso4pEKxMFOlcHNiqnRh
+2026-04-14 07:34	杨星昊	text	@李坤 这一批大概看了下，感觉都是dds里面的时间戳/图像和我们训练从dataloader拿到的时间戳和图像对不上。基本上这些有问题的case都有个表现，就是在trigger time - 2 秒往前播放dds里面图片的时候都是正常的，但是在trigger time - 2 秒切换到渲染图瞬间都会有跳变，所以感觉是dds和重建的世界没对上。我也下一个subrun的数据来看一下，看看有没有什么方便的方法过滤 cc @杜思聪
+2026-04-14 07:37	杨星昊	post	比如第一个问题case，trigger 在15.16秒，在第13秒的时候播放dds视频的时候都是正常的： ⏎ ![Image](img_v3_0210o_fac70cc8-182e-44ba-93f6-f8b2256fb50g) ⏎ 在切到3dgs以后自车往后跳变了一下： ⏎ ![Image](img_v3_0210o_02239098-918a-4afe-84d6-a285ca72c30g) ⏎  ⏎ 因为dxnet那些的时间戳可能是和dds里面的对上的，所以一些动态学不好可能和这个dds、训练时间戳对不上也有关系
+2026-04-14 08:04	李坤	text	时序和时间戳对车端模型和GS渲染的影响都很大，这块的逻辑一定要搞对
+2026-04-14 09:59	郑丽娜	text	一个高优问题调查会议还在进行中，晚十分钟拉起日会
+2026-04-14 11:14	ou_39167	text	@_all hi all，这是今天组会上提到的，请大家帮忙筛查数据问题的操作指南：https://xiaopeng.feishu.cn/wiki/WIMcw5Vjmi9MtEkcsb8cEqsBnkd，这个是大家对应的数据id列表，https://xiaopeng.feishu.cn/sheets/MG3jsA54ShaFfdtmyFEceQMjnRh。按照指南上的操作完成后，请在excel最后一列打上正常/异常的标签。预计操作时长15-20min，感谢大家~
+2026-04-14 12:03	李坤	text	@杜思聪 @_all 大家在过程中只要看到的问题都可以附在表格后面，比如动态障碍物模糊重建质量差之类的，相当于大家一直帮忙review case
+2026-04-14 12:28	杨星昊	post	发现一个问题  ⏎ ![Image](img_v3_0210o_1078ff1d-c8e5-4e7f-a635-2a5748f4aa4g) ⏎ 这种全程都是人开的场景也会进入仿真集？ ⏎ ![Image](img_v3_0210o_16cd742c-b9b1-4d02-9c3f-55d249ed877g) ⏎ 司机在仿真开始直接pullover了 [https://webviz.xiaopeng.link/#/es_play/?bagPath=/oss_data_pipeline/&prefix=cloudsim_scenario/driving/55/2026-04-14/57926124/unknown-L1NNSGMA4SB117027-f01xccpxlidc-279676649517019512_2026-01-23-16-08-14__74032537&seq_num=0&task_id=74032537&scenario_id=52020442&job_id=122944&indexName=dds-clip-cloudsim-master&referrer=stage1&cityName=unknown&compareScenario=1&customCompareNames=Base](https://webviz.xiaopeng.link/#/es_play/?bagPath=/oss_data_pipeline/&prefix=cloudsim_scenario/driving/55/2026-04-14/57926124/unknown-L1NNSGMA4SB117027-f01xccpxlidc-279676649517019512_2026-01-23-16-08-14__74032537&seq_num=0&task_id=74032537&scenario_id=52020442&job_id=122944&indexName=dds-clip-cloudsim-master&referrer=stage1&cityName=unknown&compareScenario=1&customCompareNames=Base)
+2026-04-14 12:30	ou_39167	text	@杨星昊 最开始生产的case，是会有人工开的，后来zhuoming加了一个标签把这类数据过滤掉了
+2026-04-14 12:39	李坤	text	@_all Q1 OKR复盘 & Q2 OKR填写（全员）DDL:4月15日（明天）
+2026-04-14 13:15	杨星昊	post	总结一下目前发现的两个问题： ⏎ - 一个是训练图片中各相机之间的**实际曝光时间对不上**，可能差了很多秒（详细情况下午的oncall已经讨论了） ⏎   - 大数据链接（看得出对不齐）：[xdata](https://xdata.xiaopeng.link/esQuery?conditions=%5B%7B%22id%22%3A1775816685255%2C%22clause%22%3A%22id%3Dc-a25da7d5-d02b-3b5d-9644-3721b2ff63a8%22%7D%5D&esConfig=%7B%22esUrl%22%3A%22%2Fproxy_v2%2Fes_url%2F%22%2C%22indexName%22%3A%22master-subrun-portal-latest%22%7D&pageNo=0) ⏎   - 仿真链接（仿真中dds原图能对齐）[cloudsim](https://webviz.xiaopeng.link/#/player_page/?bagPath=/oss_gw/simulation/dds_stores/&task_id=1982704986&job_id=10344816&policy_release_id=10674&referrer=job_detail&binary_id=1669654&enableSmartAgent=true&raw_scenario_id=52378008&compareScenario=1&customCompareNames=Base) ⏎   - 解决方案： ⏎     - SIL仿真validation链路中用h265原图来gating ⏎     - 用大数据提供的曝光时间接口：frame_record.get_metadata()["coarse_integ_time"]，来判断差值【待验证】 ⏎ - 还有一种是各相机之间的曝光时间也许能对齐(?)，但是训练图片时间轴和dds的时间轴出现微小偏移，典型现象就是**动静态渲染很差**（动态更明显，因为我们使用的是dxnet动态框来确定动态的位置，背后也就是dds的时间轴）和仿真时dds原图切换到渲染图时**出现位置上的跳变** ⏎   - 大数据链接（看不出问题）：[xdata](https://xdata.xiaopeng.link/subrun/master-subrun-portal-latest/c-143f2430-dc86-39a5-a5a9-315c13c92da1) ⏎   - 3dgs渲染（动态很明显的差）：[3dgs](https://cloudsim.xiaopeng.link/#/3d_gs_score_detail/51616143?scenario_ids=%5B%2251616143%22%5D) ⏎   - 仿真链接（dds原图切换到渲染图时出现位置上的跳变）[cloudsim](https://webviz.xiaopeng.link/#/es_play/?bagPath=/oss_data_pipeline/&prefix=cloudsim_scenario/driving/55/2026-04-14/57929847/unknown-L1NSPGHB1SB000061-e29xlidc-286661540042016330_2026-02-11-11-53-10__74033140&seq_num=0&task_id=74033140&scenario_id=51616143&job_id=122944&indexName=dds-clip-cloudsim-master&referrer=stage1&cityName=unknown&compareScenario=1&customCompareNames=Base) ⏎   - 解决方案： ⏎     - SIL仿真validation链路中用h265原图来gating
+2026-04-14 13:17	杨星昊	text	建议大家把动态渲染差的也排除掉，背后很可能是第二类问题
+2026-04-14 13:17	李坤	text	第二类问题影响面怎么样 我目前看到不少动态问题 如果仅做gating可能很多都被滤掉了
+2026-04-14 13:17	ou_39167	text	@杨星昊 训练图片时间轴和dds的时间轴出现微小偏移，这个在生产的时候可以获取吗，可以的话就跳过了
+2026-04-14 13:18	杨星昊	text	比较麻烦的是一个subrun里面可能有部分是出现时间轴偏移的
+2026-04-14 13:20	杨星昊	text	@杜思聪 我感觉有可能可以，结合曝光时间看看？如果曝光时间接口准的话，那图片时间戳和曝光时间也不应该差太远
+2026-04-14 13:20	杨星昊	text	相当于第一类第二类也许都能用frame_record.get_metadata()["coarse_integ_time"] 接口来筛，如果它有效的话
+2026-04-14 13:23	杨星昊	text	@李坤 有可能是dds切分的时候，正好漏了一组图，然后本来第二组图就变成第一组图了？[笑哭]去年我们处理subrun的时候遇到过，原来一个30秒场景=10秒+20秒的拼接，当时也是算法的同学提需求让大数据那边就不要切分[捂脸]
+2026-04-14 13:25	杨星昊	text	所以后面改成一个30秒场景=一个clip，那个问题确实就没了
+2026-04-14 13:25	杨星昊	text	明天我看一下第二类问题吧
+2026-04-14 13:25	杨星昊	text	有一种似曾相识的宿命感
+2026-04-14 13:26	李坤	text	如果是踩过的坑 那要抽鞭子了[看][看]
+2026-04-14 13:26	杨星昊	text	当时就没解决[笑哭]
+2026-04-14 13:27	李坤	text	听着也不是啥技术难题
+2026-04-14 13:28	杨星昊	text	确实不是，只是这个坑不容易发现
+2026-04-14 13:28	杨星昊	text	当时处理了一半大数据就回退到不切了，估计也是抱怨的人比较多吧
+2026-04-14 13:30	李坤	text	如果影响面这么大，那就是闭环仿真关键路径上的关键问题，这类问题需要最高优解决
+2026-04-14 13:35	郑丽娜	text	那已经生成好的数据估计会折损不少了
+2026-04-14 13:40	李坤	text	不能在渲染的时候对齐么 如果是切图那也不会把时间戳改了吧
+2026-04-15 01:25	郑丽娜	text	今天先把标记为通过的数据先跑着，还是等多相机一致性偏移的问题实锤下再开跑？
+2026-04-15 01:34	杨星昊	text	<p>@李坤 重建效果差，模型学坏了</p>
+2026-04-15 01:45	李坤	text	@郑丽娜 先挑几个问题最小的subrun跑吧 今天争取能跑两次
+2026-04-15 01:58	杨星昊	text	@郑丽娜 娜姐，你那边筛一批重建效果没问题的case发一下？然后咱们在SIL和HIL上一起跑一批MVP对比下吧
+2026-04-15 02:19	郑丽娜	text	@朱啸峰 @瞿鑫宇 禹丁那份结果我来确认，上午高优把这事先弄了好跑起来哈
+2026-04-15 02:20	瞿鑫宇	text	那思聪和星昊那部分我看一下吧
+2026-04-15 02:32	李坤	merge_forward	<forwarded_messages> ⏎ [2026-04-15T02:02:07Z] Zihan Yi: ⏎     @扶摇小帮手  ⏎     @云荟 3DGS多个任务上黑榜，其中一个利用率只有1.74%，跑了1260卡时[点击] ⏎ [2026-04-15T02:05:37Z] cli_c08abc1da138d00f: ⏎     Ray 诊断告警 - 所有项目汇总（仅 HIGH 级别） ⏎      ⏎     项目数：1 个 ⏎     任务数：3 个 ⏎     诊断时间：2026-04-15T02:05:35.617162+00:00 ⏎      ⏎     ⚠️  HIGH 告警统计：共 6 个 ⏎      ⏎     平均 GPU 利用率：32.8% ⏎     OOM 事件：4 次 ⏎     ERROR 事件：4 次 ⏎      ⏎     ━━━━━━ 按项目分组 ━━━━━━ ⏎      ⏎     3dgsv2test: 6 个 HIGH 告警 (3 个任务) ⏎      ⏎     ━━━━━━ 告警详情（前10种） ━━━━━━ ⏎      ⏎     [1] ❌ RAY_OOM_EVENT (共 4 次) ⏎         涉及项目：3dgsv2test... ⏎         涉及任务：inference-20260414191636089-yunh1, inference-20260415010140089-yunh1... ⏎         节点 inference-20260414191636089-yunh1-raycluster-982xl-worker-f2p6c 发生 OOM 事件（共 1... ⏎      ⏎     [2] ❌ GPU_LOW_UTILIZATION (共 2 次) ⏎         涉及项目：3dgsv2test... ⏎         涉及任务：inference-20260414191636089-yunh1, inference-20260413202543089-yunh1 ⏎         Job GPU 平均利用率仅 29.5%，资源浪费... ⏎      ⏎     ━━━━━━ 受影响任务（前20个） ━━━━━━ ⏎      ⏎     1. [3dgsv2test] [32卡] [gpu_job]: inference-20260415010140089-yunh1, url: https://fuyao-v3.xiaopeng.link#/batch-inference/ipsv2/job-detail?id=23663 (3 HIGH 告警，GPU 68.94%) @云荟 ⏎     2. [3dgsv2test] [64卡] [gpu_job]: inference-20260414191636089-yunh1, url: https://fuyao-v3.xiaopeng.link#/batch-inference/ipsv2/job-detail?id=23652 (2 HIGH 告警，GPU 0.0%) @云荟 ⏎     3. [3dgsv2test] [64卡] [gpu_job]: inference-20260413202543089-yunh1, url: https://fuyao-v3.xiaopeng.link#/batch-inference/ipsv2/job-detail?id=23590 (1 HIGH 告警，GPU 29.5%) @云荟 ⏎      ⏎     完整报告已保存至诊断服务器 ⏎     建议 Oncall 优先处理告警数最多的项目 ⏎      ⏎     --- ⏎     ⚠️  注：仅显示 HIGH 级别告警，MEDIUM 级别已过滤（查看完整报告获取所有告警） ⏎ </forwarded_messages>
+2026-04-15 02:39	朱啸峰	post	![Image](img_v3_0210p_23f2ed7f-6473-427e-84d3-06e747bbfa0g) ⏎ @郑丽娜 @瞿鑫宇 看上面网址就可以拿scenario id
+2026-04-15 03:31	郑丽娜	text	@王禹丁 https://xiaopeng.feishu.cn/sheets/MG3jsA54ShaFfdtmyFEceQMjnRh 这个表格里面标记的可用scenario id可以跑了，100+多条，可以优先跑单个subrun_id里面通过数据比较多 cc @杨星昊
+2026-04-15 03:53	李坤	text	再讨论下生产链路的目标，现在看下来极速一小时仅能针对一些快速交付的场景，对于常规生产的时间还是离现状太远，再加上现在质量还有不少问题，下午讨论的时候可以看下当前生产耗时的现状@杜思聪
+2026-04-15 08:02	李坤	text	@郑丽娜 产线的各项监控/看板需要逐步细化，目前很多指标都是口诉或者不具备统计意义~
+2026-04-15 08:04	李坤	text	当前最重要的就是质量和效率的看板，我们需要以此作为迭代的benchmark
+2026-04-15 09:38	杨星昊	post	![Image](img_v3_0210p_5aaf5986-339d-4dcc-b2c5-53d5855bfa9g) ⏎ 我们组的仿真高优配额
+2026-04-15 11:05	杨星昊	text	https://xiaopeng.feishu.cn/wiki/Qj4hwVUZZild5wkhAI4cquRznXc
+2026-04-15 12:15	李坤	text	@杨星昊现在讨论下？
+2026-04-15 12:16	杨星昊	merge_forward	<forwarded_messages> ⏎ [2026-04-15T12:13:35Z] 资凌云: ⏎     XP5的么？ 这个就是曝光时间吧， 这个可能要问ICC的同学。 ORIN上 定义是这样的 ⏎     [https://xiaopeng.feishu.cn/docx/VwTIdMIoOogRhdxur0ScCp0tnS4](https://xiaopeng.feishu.cn/docx/VwTIdMIoOogRhdxur0ScCp0tnS4) ⏎     ![Image](img_v3_0210p_970199ab-a52f-4cb9-b5fc-27b5918b3cbg) ⏎ [2026-04-15T12:14:19Z] 资凌云: ⏎     [Image: img_v3_0210p_a6713f5d-26ec-45ef-b367-d969b44b8e5g] ⏎ </forwarded_messages>
+2026-04-15 12:44	杨星昊	merge_forward	<forwarded_messages> ⏎ [2026-04-15T12:01:06Z] 杨星昊: ⏎     <forwarded_messages> ⏎     [2026-04-15T11:44:27Z] 杨星昊: ⏎         <forwarded_messages> ⏎         [2026-04-15T08:25:51Z] 刘宇: ⏎             ```PYTHON ⏎             # 以 cam2 为例 ⏎             slices = clip_record.get_all_slices() ⏎             for _slice in slices: ⏎                 cam2 = _slice.get("cam2") ⏎                 if not cam2: ⏎                     continue ⏎                 res = cam2.get_metadata()["coarse_integ_time"] ⏎              ⏎             ``` ⏎         </forwarded_messages> ⏎     [2026-04-15T11:44:40Z] 杨星昊: ⏎         [Image: img_v3_0210p_cfa99501-f65f-4512-9bb1-2f3ff5fe581g] ⏎     [2026-04-15T11:44:54Z] 杨星昊: ⏎         你知道这个信息396怎么理解吗[双手合十][双手合十][双手合十] ⏎     [2026-04-15T11:49:02Z] 谢镇新: ⏎         摄像头传感器领域的积分时间，可以理解为曝光时间（s），只是单位不同，需要换算 ⏎     [2026-04-15T11:49:16Z] 谢镇新: ⏎         这个你看这个这个文档也没用的 ⏎     [2026-04-15T11:55:38Z] 杨星昊: ⏎         那这个396怎么理解[泪奔] ⏎     [2026-04-15T11:56:02Z] 杨星昊: ⏎         和那个frame origin time差了多少啊 ⏎     [2026-04-15T12:00:18Z] 谢镇新: ⏎         问下@资凌云 ⏎     </forwarded_messages> ⏎ [2026-04-15T12:01:14Z] 杨星昊: ⏎     hello啊 ⏎ [2026-04-15T12:01:22Z] 杨星昊: ⏎     请教一下这个👆🏻问题[双手合十][双手合十] ⏎ [2026-04-15T12:13:35Z] 资凌云: ⏎     XP5的么？ 这个就是曝光时间吧， 这个可能要问ICC的同学。 ORIN上 定义是这样的 ⏎     [https://xiaopeng.feishu.cn/docx/VwTIdMIoOogRhdxur0ScCp0tnS4](https://xiaopeng.feishu.cn/docx/VwTIdMIoOogRhdxur0ScCp0tnS4) ⏎     ![Image](img_v3_0210p_6d5e664e-6833-4c94-9837-ede9fab0ea2g) ⏎ [2026-04-15T12:14:19Z] 资凌云: ⏎     [Image: img_v3_0210p_798d5a9c-e983-41d5-8ef2-765d2cc6de8g] ⏎ [2026-04-15T12:25:20Z] 资凌云: ⏎     <forwarded_messages> ⏎     [2025-10-10T09:35:06Z] 叶炳旭: ⏎         hello 景正，能否帮忙确认下xp5里这个coarse_integ_time 的单位？ 是Trow吗？ ⏎         ![Image](img_v3_0210p_2199a680-6eb2-4b60-a985-691cee13cb9g) ⏎     [2025-10-10T09:41:52Z] 王景正: ⏎         @叶炳旭 这个是你们的结构体，你们要看赋值的时候cipl_decoded_metadata_t用的是哪一个变量？ ⏎     [2025-10-10T09:42:20Z] 王景正: ⏎         cipl_decoded_metadata_t中有us单位的就是时间，没有us单位就是trow为单位的曝光行 ⏎     </forwarded_messages> ⏎ [2026-04-15T12:25:38Z] 资凌云: ⏎     @杨星昊 看上去定义的是trow ⏎ [2026-04-15T12:26:54Z] 资凌云: ⏎     可以找@王景正 确认一下。 orin 上面的是trow ⏎ </forwarded_messages>
+2026-04-15 12:45	cli_a6ba	text	https://xiaopeng.feishu.cn/docx/UkxZd7tlDom6Gax64vycCuy7nnr?from=vc_group_doc_link#doxcn0zqiuz0dOWUewItXcDwwlh
+2026-04-15 12:45	杨星昊	text	坤总了解这个情况吗？没时间细看了[笑哭]我先看下h265原图的事
+2026-04-15 12:47	李坤	text	嗯，先搞h265的事情把
+2026-04-15 12:51	杨星昊	post	OK 可以联系 我这边之前计算中心曝光的公式 ⏎ ![Image](img_v3_0210p_ed758d80-2905-4e13-b986-14c52e13bb0g)
+2026-04-15 12:55	李坤	text	这个还是和传感器相关的，不同的rolling shutter不一样
+2026-04-15 13:07	杨星昊	post	看了下同一个时间戳1770782816049035047下的图片确实不一样： ⏎ 这是h265的： ⏎ ![Image](img_v3_0210p_6da7b714-9ca3-4221-addf-04a24949d46g) ⏎ 这是大数据dataloader给的： ⏎ ![Image](img_v3_0210p_3c492933-8295-4b08-a0ad-1fef13ddf02g)
+2026-04-15 13:19	杨星昊	post	又看了一组，同一个时间戳1770782820632250807： ⏎ h265: ⏎ ![Image](img_v3_0210p_6e960a6d-85fe-48ee-9c66-653c3c37b72g) ⏎ 大数据: ⏎ ![Image](img_v3_0210p_2d8d58fe-214b-45d0-90ba-9e066573ee6g) ⏎  ⏎  ⏎ 大数据在1770782821215567207的图片和上面的h265图片接近，**时间差0.58秒左右**： ⏎ ![Image](img_v3_0210p_f9875d0a-91ff-4efe-8e0e-8094455b71fg)
+2026-04-15 13:23	李坤	text	这种动态能重建好就见鬼了[看]
+2026-04-16 06:27	李坤	text	@郑丽娜 6点的飞机，今天日会提前到5点半开始吧
+2026-04-16 06:43	杨星昊	post	![Image](img_v3_0210q_94020dad-022e-4131-952a-ba570482191g) ⏎ ![Image](img_v3_0210q_b29aa06b-6b26-4322-9ad5-e60b93455feg) ⏎ 目前看来还是用dds 的 h265重新搭一套图片pipeline可能比较靠谱，但是现有数据是不是也可以继续捞一捞？ ⏎ 如果按照这个思路的话，那现在咱们两路进行： ⏎ - 原生产链路继续，同时jianhong那边开发数据筛选工具 ⏎ - 新生产链路方案设计，下午拉上平台同学讨论 ⏎ 方案和新增工作量我汇总到这个文档了：[https://xiaopeng.feishu.cn/wiki/Qj4hwVUZZild5wkhAI4cquRznXc](https://xiaopeng.feishu.cn/wiki/Qj4hwVUZZild5wkhAI4cquRznXc) ⏎  ⏎ @李坤 看下ok吗？我拉上平台的同学下午赶快把方案定下来
+2026-04-16 08:01	李坤	text	1. Xianming (刘先明) ⏎ Xianming 是本次会议中发言最多、对仿真体系提出最多系统性要求的核心决策者（代表模型研发及使用方）。 ⏎ 核心观点： ⏎ - “测试左移”是模型时代的必然： 过去规则时代的测试改动是确定性的（多用于后期 gating），但模型时代的改动是概率性的。仿真最大的作用是向左移，替模型提前做降险（derisking）和统计结果输出。 ⏎ - 仿真的三大底层逻辑： 加快仿真链路的效率、提升 Metrics 的准确度、增大测试里程。 ⏎ - 开闭环的选择取决于“场景类型”： 开闭环的分工不应按测试阶段划分，而是按 case 属性划分。长时序导航和交互强相关的必须用闭环，而加速安全等简单场景用开环即可。 ⏎ - 安全与舒适的“跷跷板效应”： 明确指出安全指标提升通常会导致舒适性下降（如产生更多急刹车），这属于客观规律，指标体系需要能合理反映并处理这种主次关系。 ⏎ - 平台化是唯一出路： 业务量激增不能靠堆人力（加班）解决，极度考验体系化能力。必须在“630”节点前优先解决平台化和工具链打通的问题，避免大量重复的人力劳动。 ⏎ 对仿真的要求： ⏎ - Q2 必须赢得 MLE（模型研发工程师）的信任： 这是最核心的痛点。仿真的场景覆盖度、Metrics 必须与实车测试（DT）结果对齐。实车上明显的体感（如帧间不一致导致的顿挫、抖动）仿真必须能反映出来，最终目标是让 MLE 敢于直接用仿真结果做决定。 ⏎ - 精细化、模板化管理测试集 (Testing Suite)： 放弃全量乱炖的评测方式。要求提供清晰的 filter 模板（如专门针对“不避让横穿 VRU”），让模型同学在不同版本对比时，输入条件保持绝对一致。 ⏎ - 基线/红线需多方对齐： 仿真的准入基线和一票否决的“红线”不能单方面决定，必须与模型、部署、应用等上下游团队充分对齐，达成共识。 ⏎ - 不能忽视回归测试 (Regression Testing)： 明确指出实车回归问题无法完全通过区间段切片测试发现，仿真必须配备长路线测试来防止新模型能力回退。 ⏎  ⏎ 2. Honggou (杨红苟) ⏎ Honggou 在会议中主要针对测试 Case 的筛选效率和准确性提出了具体建议。 ⏎ 核心观点： ⏎ - 认同测试需要专项测试，但也明确强调回归测试同样必不可少，两者必须结合。 ⏎ - 目前完全依靠人工筛选 Case 放入 gating 区间太耗时且存在干扰项，流程亟需优化。 ⏎ 对仿真的要求： ⏎ - 引入 AI Agent 替代人工筛票： 强烈建议引入大模型或现有的 AI Agent（提及了成玉团队的“AI看票 agent”）来自动刷一遍 Case 或截图。用以替代人工寻找问题点，进行互相校验，从而明确 Case 的指向性并提升准确率。 ⏎ - 固定并优化 Gating 区间： 要求想办法把问题固定在特定的打点区间内，自动排除不相关的干扰项，减少耗时。 ⏎  ⏎ 3. Hang (Zhang Hang / 航哥) ⏎ 提取结果： 在本次提供的会议文字记录中，Zhang Hang 全程未发言。 ⏎ - 补充说明： 记录中高炳涛提到他“好像在另外一个会”，后续多位参会者（高炳涛、邓爽、Xianming）多次点名提到他，将他与“狗哥”并列视为仿真的核心使用方，并在会议结尾明确希望他会后看文档并提供 Comment（意见）。但在该截取时段内，他没有输出任何观点或要求。
+2026-04-16 08:01	李坤	text	FYI，先明和业务方后续对仿真的诉求
+2026-04-16 08:37	王禹丁	text	https://xiaopeng.feishu.cn/wiki/G1DYwUMm0iMdBhkWA7CcKSannYj#share-O4n0dtrlnoAcL3xfczicWYnxnxg ⏎ 昨日118条长里程数据CCES评测结果已出，共跑了rl15、rl38的两个FM模型以及有无difix 共4个实验。118条数据无fail情况，测评结果见https://xiaopeng.feishu.cn/wiki/RMDWwQOHoiIsgjksew3cnJU6npf这个表格。 cc @杨星昊 @郑丽娜 @李坤
+2026-04-16 08:42	李坤	text	@王禹丁 指标结论上和实车/开环相符么
+2026-04-16 08:44	杨星昊	text	看了几个渲染视频，感觉还是有一些时间戳对不齐、导致的跳变的问题存在[笑哭]
+2026-04-16 08:53	杨星昊	merge_forward	<forwarded_messages> ⏎ [2026-04-16T03:02:23Z] 杨星昊: ⏎     <p>爽姐，现在开环结论能和实车结论保持一致吗？</p> ⏎ [2026-04-16T05:41:52Z] 邓爽: ⏎     趋势：改善或者回退，这个维度的结论，能对齐70-80% ⏎ [2026-04-16T05:42:08Z] 邓爽: ⏎     细分某个类别的话，有些能对上，有些对不上 ⏎ [2026-04-16T06:14:16Z] 杨星昊: ⏎     这种是说安全、舒适、合规、导航等这种大类能对齐70%-80%吗 ⏎ [2026-04-16T07:56:24Z] 邓爽: ⏎     是的 ⏎ </forwarded_messages>
+2026-04-16 10:03	周冯	text	补充下刚刚印象出错了，5080的compute和A100还是有差距的，5080 blackwell compute 12.0 VS A100 Ampere compute 8.0，所以trt没法在显存更充足的A100上生成再在5080上调用[捂脸] @李坤 @杨星昊
+2026-04-16 10:27	王禹丁	post	@李坤 我统计了一下每个测评纬度中RL15模型优于RL38的指标数量占维度总指标数量的比例(表格中差值为红色字体的），除了优于以外还有为持平和低于。cc@郑丽娜 @杨星昊  ⏎ ![Image](img_v3_0210q_195d8147-3e04-443c-92e2-88a0d6b8c26g)
+2026-04-17 06:19	郑丽娜	text	@_all https://xiaopeng.feishu.cn/wiki/Oy6XwbD5Vi8QMGkmLOTc9yF2nVg 大家记得提前更新下周会页面哈
+2026-04-17 12:49	李坤	text	https://xiaopeng.feishu.cn/wiki/RGk1wm2gUicQ76khHqXcn3ManXb
+2026-04-17 12:51	李坤	text	和AI随便聊的，大家也可以想想
+2026-04-20 05:58	郑丽娜	text	本周计划已经更新到日会页面https://xiaopeng.feishu.cn/wiki/McfrwKO62izp7MknPJIc94Q5nnc，大家看看还有没遗漏的，部分任务还没有给出具体交付时间，负责的同学帮忙更新下哈
+2026-04-20 07:44	杨星昊	text	https://xiaopeng.feishu.cn/wiki/Qj4hwVUZZild5wkhAI4cquRznXc ⏎ 本地试验了一下使用h265训练模型，仿真结果能对上了，但是这个case的本身3dgs效果不太行，如果不加difix的话效果有点差
+2026-04-20 07:44	杨星昊	post	这是原版3dgs+difix的仿真结果： ⏎ [Media: file_v3_0010u_4592b585-7653-4839-85b4-ebe81bae117g]
+2026-04-20 07:45	杨星昊	post	这是修复后3dgs+difix的仿真结果： ⏎ [Media: file_v3_0010u_bdc29932-84bd-4c77-98f3-e8588fcea21g]
+2026-04-20 07:45	杨星昊	post	这是修复后原位3dgs渲染结果： ⏎ [Media: file_v3_0010u_ac19addd-538d-4c7c-afef-58264ec2b80g]
+2026-04-20 07:48	杨星昊	text	@杜思聪 sicong有空看看？大批量实验以后原版3dgs的效果。目前jianhong在ips上串起来测试了
+2026-04-20 09:25	郑丽娜	text	修复前后看侧面摄像头很明显了
+2026-04-20 12:56	李坤	text	https://xiaopeng.feishu.cn/wiki/SBUYwm8Lri9aJ6kmexFcBAuGnlh
+2026-04-21 01:37	郑丽娜	text	@杜思聪 咱们现在长里程的切分subrun有什么硬规则么？比如是固定时长还是固定里程这样的？想估算下subrun大概会有多少dds，让框架那边帮忙评估下并发下载和磁盘I/o的并发压力
+2026-04-21 01:39	ou_39167	text	@郑丽娜 切分是卓明用开环的方法切的，里程和时长都不是固定的，但是最长时长不超过1min
+2026-04-21 09:24	王禹丁	text	https://xiaopeng.feishu.cn/wiki/HV16wwt71iFNNEkmwPHcoUDWn6g ⏎ https://xiaopeng.feishu.cn/wiki/CsCfw229bixjB8kqeLRc8spWnwf ⏎ 我找了一些实车分流/合流走错路、路口选错道 的一些bad case，跑了一下仿真CCES测评，目前我们要评估一下CCES指标是否可靠，我找了80个case，有导航Metric失败（仿真车走错道），也有导航Metric成功（仿真车未走错道），每人各10个case（5个Metric失败 5个Metric成功），具体需求写在 导航信息教程的文档中，麻烦大家抽空看看。cc@郑丽娜 @杨星昊 @李坤
+2026-04-21 14:18	裴健宏	post	@李坤 @郑丽娜 @杜思聪 @杨星昊  ⏎ 1. h265转码png功能联**调测试可正常运行**，预计明天合入代码正式上线。 ⏎ 2. 提交的70+切片数据正在陆续跑出结果，明早可以全部生产完毕。后续可搜索sim3dgs_v415_decode_h265查看
+2026-04-22 01:33	李坤	text	@裴健宏 @杜思聪 结果正常吗
+2026-04-22 01:35	ou_39167	text	<p>@李坤 昨天晚上跟健宏看了两个case，没啥问题。等下再多看一些</p>
+2026-04-22 01:51	杨星昊	post	[Invalid rich text JSON]
+2026-04-22 03:16	杨星昊	text	@瞿鑫宇 @周冯 @杜思聪 @郑丽娜 麻烦上午完成下这个导航metric的review [双手合十]
+2026-04-22 03:40	郑丽娜	post	![Image](img_v3_02110_a64e1cdd-f8e5-483f-8ecc-f3058a07845g) ⏎ @杨星昊 这种其实有变道意图的，但是被旁车憋回来了，算没复现么？
+2026-04-22 03:41	杨星昊	text	[Invalid text JSON]
+2026-04-22 03:41	郑丽娜	text	@杨星昊 metric判定是失败，只看metric是ok的
+2026-04-22 03:41	杨星昊	text	@郑丽娜 嗯我也看了下，这个应该是合理的
+2026-04-22 03:42	杨星昊	text	之前FM就有被前车误导的趋势
+2026-04-22 03:47	郑丽娜	text	跨实线变道也算走错道么？
+2026-04-22 03:51	郑丽娜	post	@杨星昊  ⏎ ![Image](img_v3_02110_29774893-198b-47ff-9ecf-2d658b85b8bg) ⏎ ![Image](img_v3_02110_80298aec-8aa5-45dc-bd7b-47abfd8383ag)
+2026-04-22 03:55	杨星昊	post	<at user_id="all"></at> metric未报错那一part 新加了一个标签： ⏎ ![Image](img_v3_02110_1be350ed-7466-4536-9848-f376d73d83eg) ⏎ 大家看看之前标注其他的属不属于metric漏报
+2026-04-22 07:03	杨星昊	post	把之前其他的选项又review了一下，现在**导航-路口选道异常次数**metric报错的case中有1个case的metric不准，大部分情况是准的 ⏎ ![Image](img_v3_02110_924257e9-9fd0-4d68-847b-807dc798f26g) ⏎ 在这个metric没有报错的case中，基本都没有走错到，没有误报 ⏎ ![Image](img_v3_02110_15512767-b3d5-4481-a268-bb3af3eab05g) ⏎ @李坤
+2026-04-22 07:04	杨星昊	text	这一批都是不带difix的
+2026-04-22 08:28	郑丽娜	merge_forward	<forwarded_messages> ⏎ [2026-04-22T06:41:11Z] 郑丽娜: ⏎     <p>@包俊强 俊强想确认下这个metric （cces_wrong_lane_selection_metric）如果最后变道成功但是是跨实线变过去的，也是会判断为failed么？</p> ⏎ [2026-04-22T06:43:05Z] 夏志勋: ⏎     @罗军 ⏎ [2026-04-22T06:45:01Z] 吕文杰: ⏎     https://xiaopeng.feishu.cn/wiki/ZdaAwYizciBkwykZlC0ceeuYnTh ⏎ [2026-04-22T06:46:50Z] 罗军: ⏎     <p>@郑丽娜 不会，当前只关注了车辆最终是否走错车道，至于他有没有违章变道，就没有管，所以只要最后出路口是正确的车道，就不会报错</p> ⏎ [2026-04-22T06:57:15Z] 郑丽娜: ⏎     ![Image](img_v3_02110_99a49bcb-704e-4adc-a4b3-e12a545c0e7g) ⏎     ![Image](img_v3_02110_027b4d44-3019-406c-ae66-095e4964af2g) ⏎      ⏎     @罗军 那这个case应该就不算报错了？ ⏎ [2026-04-22T06:57:51Z] 郑丽娜: ⏎     https://webviz.xiaopeng.link/#/player_page/?bagPath=/oss_gw/simulation/dds_stores/&task_id=2006173880&job_id=11847349&policy_release_id=null&referrer=job_compare ⏎ [2026-04-22T08:24:30Z] 罗军: ⏎     ![Image](img_v3_02110_9113cbf8-a167-4dfb-acba-f16ce13f3f2g) ⏎     @郑丽娜 刚才那个case 最终是走对了， 这里给的是passed ⏎ [2026-04-22T08:26:07Z] 郑丽娜: ⏎     @罗军 也就是说，最后还有一个重新统计判断的过程，需要以最终的为准是吧 ⏎ [2026-04-22T08:28:01Z] 罗军: ⏎     是的，我会在停止线路口前10米去计算一个得分，统计这个范围内走错帧的 权重和， 权重就是距离停止线越近，权重越高。如果总权重大于0.5， 我就认为这个case走错了 ⏎ </forwarded_messages>
+2026-04-22 08:29	郑丽娜	text	@_all cces那边关于这个metric判断逻辑的一些说明
+2026-04-22 12:47	李坤	text	【 引入 AI Agent 替代人工筛票： 强烈建议引入大模型或现有的 AI Agent（提及了成玉团队的“AI看票 agent”）来自动刷一遍 Case 或截图。用以替代人工寻找问题点，进行互相校验，从而明确 Case 的指向性并提升准确率。】这个谁用过？
+2026-04-23 02:44	李坤	text	HIL的闭环问题排查的怎么样了，是链路问题还是gs的场景问题？
+2026-04-23 02:48	瞿鑫宇	text	@李坤 坤总，刚刚找到宝平对了一下闭环输出image的脚本，当前还在调查中。这个问题上午应该可以给个结论
+2026-04-23 04:14	瞿鑫宇	text	<p>@李坤 </p><p>hil一致性问题排查结果：从hil渲染结果来看，出现了比较明显的位置偏移，怀疑是板端输出的定位异常。下午我们继续拉宝平调查一下板端异常  cc@朱啸峰 </p>
+2026-04-23 08:29	王禹丁	text	https://xiaopeng.feishu.cn/wiki/CsCfw229bixjB8kqeLRc8spWnwf?sheet=cMxRA9 ⏎ https://xiaopeng.feishu.cn/wiki/HV16wwt71iFNNEkmwPHcoUDWn6g ⏎ 关于导航-总不跟导航走错路次数（difix）的cces的指标评测辛苦大家看一看了  cc@杨星昊 @郑丽娜 @李坤
+2026-04-23 08:43	郑丽娜	text	本次有外援同学了，我和@瞿鑫宇 来跟着扬州同学来看这波哈[大笑]
+2026-04-23 10:28	郑丽娜	text	https://xiaopeng.feishu.cn/wiki/SBUYwm8Lri9aJ6kmexFcBAuGnlh
+2026-04-24 03:00	王禹丁	text	https://xiaopeng.feishu.cn/wiki/SDLQwuAbSirfZHk7J0fc4ktnnlf?sheet=wmc406 ⏎ 表格 长路线_0424 是跑的昨天生产的长里程case 的cces结果，均为带了difix的，大家可以先review一下 cc@李坤 @郑丽娜 @杨星昊
+2026-04-24 03:54	郑丽娜	text	<p> @王禹丁 @杨星昊 有啥过滤条件可以捞出来有安全类报错的Scenario么？</p>
+2026-04-24 03:56	杨星昊	post	@郑丽娜  ⏎ ![Image](img_v3_02112_38569b98-033b-45af-99b8-268a63594afg) ⏎ ![Image](img_v3_02112_e313ac0d-b31f-4dba-9bfa-071f2a76815g) ⏎ ![Image](img_v3_02112_5623134d-49ed-4cd7-b389-b93c0885d78g)
+2026-04-24 07:56	郑丽娜	text	https://xiaopeng.feishu.cn/wiki/CsCfw229bixjB8kqeLRc8spWnwf?sheet=cMxRA9 @杨星昊 刚才已经把结果和扬州同学一起Review过一次了，可以帮忙再看看给的误报和漏报结论有没啥需要更正的吧 cc @李坤
+2026-04-24 07:58	杨星昊	text	https://xiaopeng.feishu.cn/wiki/Td6xwEcweiWsoTklYapcMVHkngc
+2026-04-27 01:42	郑丽娜	text	<p>@杨星昊 上周五说的可以通过工具直接抓jira里面信息生成细分标签一会来先对一下吧，看看需不需要人工辅助下标记，@李坤 坤总，现在细分标签定义的文档在哪里可以找到不？</p>
+2026-04-27 01:45	李坤	post	![Image](img_v3_02115_a6c51984-9229-4043-8acf-a276c3de238g) ⏎  ⏎ <at user_id="all"></at> 大家关注下本周的目标，有些delay的要加快了~
+2026-04-27 01:45	李坤	text	@郑丽娜 https://xiaopeng.feishu.cn/wiki/PLWTw4agRiI8NUkEdFMcornFnOb
+2026-04-27 01:57	杨星昊	text	infra-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/data-infra/fuyao:yangxh7-251209-0220 ⏎ @瞿鑫宇 xinyu你之前打的A100镜像和上面这个是啥区别呢？
+2026-04-27 02:06	郑丽娜	post	@瞿鑫宇 @朱啸峰  ⏎ ![Image](img_v3_02115_659ed584-4ad1-4cf3-a96f-dc52d24212dg) ⏎ 到了广州后拉我快速对齐下，把这个方案按照上周五说的方式验证下
+2026-04-27 02:56	瞿鑫宇	text	@杨星昊 应该是只有xpengRaster 更新了。不过直接打镜像会出现wandb/protobuf版本冲突问题，以及cupy版本。可以参考infra-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/data-infra/fuyao:quxy33-260419-0825的dockerfile
+2026-04-27 05:41	朱啸峰	text	@郑丽娜 娜姐，现在对齐下目标不
+2026-04-27 05:57	李坤	text	@杨星昊 现在ref-image在渲染的时候是用对应时间戳和对应视角的原图么？
+2026-04-27 05:59	李坤	text	@杨星昊 这有可能是引入视角变化之后效果差的原因，按照最近的pose选择试过么？
+2026-04-27 06:05	李坤	text	或者参考图模式本身对新视角泛化可能存在跷跷板效应，考虑后面把difix在生产的时候做更充分地蒸馏
+2026-04-27 06:10	cli_a6ba	text	https://xiaopeng.feishu.cn/docx/C6p3d55IvoRt75xQHgIc3oc1nNe?from=vc_group_doc_link#doxcnOAWBWdSxif3jpH4xlBoSBc
+2026-04-27 06:55	杨星昊	text	<p>@李坤 我们训练的时候用的ref图和原图有随机2秒或者1秒的gap来防止过拟合</p>
+2026-04-27 07:00	李坤	text	@杨星昊 @杜思聪 先看看那类case是不是difix带入的
+2026-04-27 08:43	郑丽娜	text	@朱啸峰 @瞿鑫宇 虽然现在cp那边通过counter跳过了丢帧，但是后面chief消费正常么？这个能怎么实锤？
+2026-04-27 08:44	瞿鑫宇	post	@郑丽娜 问了一下鸿飞，FM 记忆是1s。cheif相关 还得找cheif 组同学确认一下 ⏎ ![Image](img_v3_02115_9bde6585-366b-4d06-94f6-d7b791c2d0cg)
+2026-04-27 08:45	朱啸峰	text	@郑丽娜 目前是从功能链路上看是否正常运行，看xviz的规划线有没有正常出来，以及车的轨迹是否沿着规划线行进，做更细致的实锤我理解需要分析轨迹?
+2026-04-27 08:50	郑丽娜	text	@朱啸峰 把可视化搞出来看看
+2026-04-27 09:38	杨星昊	post	![Image](img_v3_02115_cf8ce17b-5246-4577-811b-fa617d95996g) ⏎ 0320_turingv6_d4ct1rl_max_can1_normal_5000_33380 这个模型不带后面的33380能搜到3个 @王禹丁
+2026-04-27 09:39	杨星昊	text	我看3个都是@张振宇 适配的
+2026-04-27 17:13	朱啸峰	post	![Image](img_v3_02116_0d96a154-1e8c-46e3-a8b8-dddbd952790g) ⏎ PC链路打通，正常输出+录包，耗时目前是76秒单个case，明天会再优化一下耗时并接入cces，本地可视化评测可以基于第一版持续推进了，cc@瞿鑫宇
+2026-04-28 01:00	郑丽娜	text	farplane给的多少？记得好像改过应该不会出现远端完全空洞了吧
+2026-04-28 01:06	瞿鑫宇	text	窄摄像头我记得好像是改成了500，这个空洞确实比较奇怪
+2026-04-28 01:16	杨星昊	text	@瞿鑫宇 去掉动态障碍物了？
+2026-04-28 03:21	朱啸峰	text	@郑丽娜 代码给的200，正式测试的时候这块改一下cc@瞿鑫宇
+2026-04-28 03:26	瞿鑫宇	text	500 感觉还是比较合适的。farplane 过小还容易导致背景天空闪烁。
+2026-04-28 10:12	王禹丁	text	<p>https://xiaopeng.feishu.cn/wiki/SDLQwuAbSirfZHk7J0fc4ktnnlf?sheet=PpTCio</p><p>昨日跑的400km里程见sheet长路线_0428，结果已汇总在表格中，可以review了 cc@李坤 @郑丽娜 @杨星昊 @杜思聪</p>
+2026-04-28 12:26	杨星昊	text	https://github.com/IceClear/CLIP-IQA
+2026-04-28 12:26	杨星昊	post	3DGS 结合 Diffusion 做新视角生成（Novel View Synthesis），确实很容易在偏离原始视角的区域出现点云拉扯产生的“Floaters（漂浮物）”，或者 Diffusion 幻觉导致的严重结构扭曲。这些 Artifacts 会导致画面语义崩溃，变成“人都看不懂”的状态。 ⏎ 要替代人工审核新视角的图片质量，你需要的核心技术是 **无参考图像质量评估（NR-IQA, No-Reference Image Quality Assessment）** 以及 **语义完整性检测**。 ⏎ 针对自动驾驶仿真场景，这里有几种业界主流且落地的模型和方案： ⏎ 1. 基于多模态大模型 (VLM/LMM) 的语义级裁判模型（推荐） ⏎ 既然“人都看不懂”，说明图像的语义和物理结构已经崩溃了。传统的图像质量模型（算模糊、噪点）可能无法识别这种“清晰的怪物”。 ⏎ - **Q-Align / Q-Instruct:** 这是目前在生成式图像质量评估领域非常领先的开源方案。它专门针对大模型生成的图像进行过微调，能够像人类一样理解图像的“真实度”、“是否有明显的 AI 生成痕迹”以及“结构是否崩塌”。 ⏎ - **开源 VLM (如 Qwen-VL, LLaVA):** 你可以自己部署一个量化版的开源视觉大模型，设计一个特定的 Prompt（例如：“*这是一张自动驾驶场景的图片，请从0到10打分评估其结构的真实性和合理性。画面中是否存在严重扭曲、无法辨认的物体或不符合物理规律的现象？*”）。如果得分低于阈值，或者模型输出了“存在扭曲”的判断，直接丢弃该帧。 ⏎ 2. 专门的生成图像 NR-IQA 模型 ⏎ 如果你需要高吞吐、低延迟地跑批处理流水线，大模型可能太慢了。可以考虑专门的轻量化无参考质量评估模型： ⏎ - **CLIPIQA / CLIPIQA+:** 利用 CLIP 强大的 zero-shot 特征提取能力，可以有效区分高质量真实图像和带有伪影的生成图像。 ⏎ - **LIQE (Language-Image Quality Evaluator):** 能够评估多维度的图像质量，并且对 AI 生成的局部 Artifacts 有较好的敏感度。 ⏎ - **TOPIQ / MUSIQ:** 这类模型可以直接输出图像的客观质量评分，非常适合作为过滤流水线的第一道关卡，先把那些因为 3DGS 渲染导致的严重模糊和重影过滤掉。 ⏎ 3. 利用“下游感知模型”做反向过滤（最贴合业务的 Trick） ⏎ 既然这些图像最终是用于闭环仿真或感知训练的，那么**最好的质检员其实就是你们现有的感知模型本身**。 ⏎ - **置信度过滤 (Confidence Filtering):** 把生成的新视角图片喂给一个预训练好的、成熟的 2D 目标检测或语义分割模型（比如现成的 YOLO 系列或 Mask2Former）。如果在一张开阔视角的图里，感知模型什么都检测不出来，或者输出的置信度极低、分割 mask 呈现出极其碎裂的噪点状，这说明图像的语义已经不具备泛化价值，直接判定为烂图。 ⏎ - **这种方法的优势：** 不需要额外训练 IQA 模型，且评判标准与自动驾驶感知栈强对齐。如果感知模型能看懂并给出高置信度，哪怕带点噪点，可能也是有价值的 hard case。 ⏎ **落地建议流水线：** ⏎ 先用 **CLIPIQA 或感知模型置信度** 做粗筛，剔除掉 80% 明显模糊或毫无语义的废片（速度快、算力成本低）；遇到处于边缘分数的图片，再调用 **VLM (如 Q-Align)** 做精细化的语义审核。 ⏎ 你们目前这些“看不懂”的 bad case，更多是因为 3DGS 视角变换导致的拉扯模糊，还是因为 Diffusion 生成过程中的幻觉导致的结构崩塌（比如车被切成两半、长出奇怪的形状）？
+2026-04-28 12:54	李坤	text	https://arxiv.org/abs/2602.13549v1
+2026-04-28 13:58	瞿鑫宇	text	<p>手搓链路撞花坛的case，现在PC上看起来是正常的了@朱啸峰</p>
+2026-04-28 14:05	李坤	text	多次跑同一个case轨迹一致吗
+2026-04-28 14:06	瞿鑫宇	text	@李坤 这个我们还在继续跑多次验证
+2026-04-29 01:23	郑丽娜	text	@杨星昊 gating数据集只是需要看复现还是有别的质检要求？@李坤 昨晚我和@戚芸 对了一下当前不对本周交付场景集做渲染质量检查，可以评估转而投入gating这边数据检查
+2026-04-29 01:39	杨星昊	text	@郑丽娜 这里不对本周交付场景集做渲染质量检查是指不看cloudsim上3dgs实际输出的效果嘛？但是仿真中的渲染图会查看吗
+2026-04-29 01:40	郑丽娜	text	@杨星昊 昨天看生产给的演示也不看，只通过感知结果和轨迹确定有没复现
+2026-04-29 02:10	王禹丁	text	昨日跑的400km里程见sheet长路线_0428，结果已汇总在表格中，可以review了
+2026-04-29 08:29	郑丽娜	post	结合你给的两张 bad case，我会先做一个判断： ⏎ 这两张图的问题已经不只是“清晰度差”，而是典型的 **3DGS novel view 外推/遮挡/动态物体处理失败导致的几何-语义共同崩坏**。 ⏎ 所以质量检查不能只用传统 IQA，也不能只用 VLM，需要按工业落地成本分层。 ⏎  ⏎ **一、两张图的实际问题归类** ⏎ **第一张图的问题** ⏎ 第一张图里最突出的异常是： ⏎  ⏎ ```PLAIN_TEXT ⏎ CAMERA_FRONT_LEFT：近处车辆大面积水彩化、半透明、边界拉扯 ⏎ CAMERA_REAR_LEFT：近处车辆几乎变成一团漂浮 blob ⏎ CAMERA_REAR_RIGHT：红车严重拖影、车体结构崩坏 ⏎ CAMERA_FRONT_FISHEYE：左侧车辆有明显 smear / floater ⏎  ⏎ ``` ⏎  ⏎ 这类问题更像： ⏎  ⏎ ```PLAIN_TEXT ⏎ 近场动态物体 + 遮挡边界 + 3DGS 几何支撑不足 ⏎  ⏎ ``` ⏎  ⏎ 它的关键特征是： ⏎ - 车辆边缘不再是物体边界，而像被抹开； ⏎ - 车辆和道路/建筑混在一起； ⏎ - 局部有半透明残影； ⏎ - 近处大物体尤其严重； ⏎ - 多相机中同一类区域反复坏，说明不是单纯噪声，而是模型结构性问题。 ⏎  ⏎ **第二张图的问题** ⏎ 第二张图的问题更复杂，除了车辆，还出现了更大范围的场景级崩坏： ⏎  ⏎ ```PLAIN_TEXT ⏎ FRONT_NARROW：近车严重糊化，前方道路和车辆边界混乱 ⏎ FRONT_LEFT：路面、车道线、建筑边缘出现大面积涂抹/水彩纹理 ⏎ FRONT_FISHEYE：整体路面和远处结构有明显 shimmer / smear ⏎ FRONT_RIGHT：建筑与道路边界不稳定，车辆和路面有拉扯 ⏎ REAR_LEFT：路面低频大块糊斑，近场区域不可解释 ⏎ REAR_MAIN：中间车辆还可辨，但背景/路面有明显不稳定纹理 ⏎ REAR_RIGHT：白车相对可辨，但车身尾部和路面边界有拖影 ⏎  ⏎ ``` ⏎  ⏎ 第二张比第一张更像： ⏎  ⏎ ```PLAIN_TEXT ⏎ 全局 novel view 质量下降 ⏎ + 路面/车道线/建筑结构变形 ⏎ + 近场动态物体局部崩坏 ⏎  ⏎ ``` ⏎  ⏎ 也就是说，第一张偏“车辆局部严重坏”，第二张偏“整张图都有几何/纹理不稳定”。 ⏎ **二、工业落地质量检查方案：从低难度到高难度排序** ⏎ 下面按**工程落地难度由低到高**排序。 ⏎ **方案 1：基于渲染元信息的硬规则过滤** ⏎ **落地难度：最低** ⏎ **推荐优先级：最高，应该最先做** ⏎ 如果你们 3DGS render 时能输出： ⏎  ⏎ ```PLAIN_TEXT ⏎ RGB ⏎ depth ⏎ alpha / accumulation ⏎ contribution_count ⏎ projected_radius ⏎ visibility_count ⏎ nearest_train_view_distance ⏎  ⏎ ``` ⏎  ⏎ 那么第一道过滤不需要任何外部模型。 ⏎ 可以直接做规则： ⏎  ⏎ ```PLAIN_TEXT ⏎ 如果 novel view 距离最近训练相机过远：降权或拒绝 ⏎ 如果某区域 alpha 低但 RGB 纹理很强：可疑 ⏎ 如果某区域 contribution_count 很低但面积很大：可疑 ⏎ 如果 projected_radius 过大：可疑 ⏎ 如果可见 Gaussian 大量只被 1 个训练相机观察过：可疑 ⏎  ⏎ ``` ⏎  ⏎ 对你这两张图尤其有效的是： ⏎  ⏎ ```PLAIN_TEXT ⏎ 近场车辆区域大面积糊斑 ⏎ 大概率对应 alpha / contribution / projected_radius 异常 ⏎  ⏎ ``` ⏎  ⏎ 这一步可以抓住第一张里的： ⏎  ⏎ ```PLAIN_TEXT ⏎ FRONT_LEFT 大车水彩化 ⏎ REAR_LEFT 大车 blob ⏎ REAR_RIGHT 红车拖影 ⏎  ⏎ ``` ⏎  ⏎ 也能抓住第二张里的： ⏎  ⏎ ```PLAIN_TEXT ⏎ FRONT_NARROW 近车糊化 ⏎ REAR_LEFT 近场大面积糊斑 ⏎ FRONT_LEFT 路面局部异常涂抹 ⏎  ⏎ ``` ⏎  ⏎ **建议输出指标** ⏎  ⏎ ```PLAIN_TEXT ⏎ render_confidence_score ⏎ alpha_low_area_ratio ⏎ low_contribution_area_ratio ⏎ large_projected_radius_ratio ⏎ view_extrapolation_score ⏎  ⏎ ``` ⏎  ⏎ **优点** ⏎ 便宜、快、稳定、可解释。 ⏎ **缺点** ⏎ 只能抓 3DGS 几何支撑不足，抓不住“看起来有几何但语义已经不像车”的情况。 ⏎ **方案 2：RGB edge + 3DGS depth edge + alpha edge 对齐检查** ⏎ **落地难度：低** ⏎ **推荐优先级：很高** ⏎ 这就是你前面问的方案。这里不需要重新预测 depth，优先用 3DGS 自己渲染出来的 depth。 ⏎ 检查： ⏎  ⏎ ```PLAIN_TEXT ⏎ RGB edge ⏎ Depth edge ⏎ Alpha edge ⏎ Semantic edge，可选 ⏎  ⏎ ``` ⏎  ⏎ 核心规则： ⏎  ⏎ ```PLAIN_TEXT ⏎ RGB 有强边缘，但 depth 没有对应边界：可能是纹理漂浮/幻觉 ⏎ Depth 有强边缘，但 RGB 没有对应物体边界：可能是几何 floater ⏎ Alpha 有断裂，但 RGB 仍然连续：可能是半透明贴片 ⏎ 车辆边界和 depth 边界错位：车辆结构异常 ⏎  ⏎ ``` ⏎  ⏎ 对两张图的实际效果： ⏎ 问题区域 ⏎ 这个方案能否抓住 ⏎ 原因 ⏎ 第一张 FRONT_LEFT 近车糊斑 ⏎ 高 ⏎ 车体 RGB 边界和 depth/alpha 很可能错位 ⏎ 第一张 REAR_LEFT 大车 blob ⏎ 高 ⏎ 典型 floater / 拉扯区域 ⏎ 第一张 REAR_RIGHT 红车拖影 ⏎ 中高 ⏎ 如果 RGB 拖影超出 depth 支撑区域，可以抓住 ⏎ 第二张 FRONT_NARROW 近车糊化 ⏎ 高 ⏎ 车边界严重不稳定 ⏎ 第二张 FRONT_LEFT 路面涂抹 ⏎ 中 ⏎ 如果 depth 平滑但 RGB 边缘混乱，可以抓住 ⏎ 第二张 REAR_LEFT 近场黑糊块 ⏎ 高 ⏎ alpha/depth/RGB 大概率不一致 ⏎ **推荐不要只做 edge overlap** ⏎ 不要只计算： ⏎  ⏎ ```PLAIN_TEXT ⏎ overlap(E_rgb, E_depth) ⏎  ⏎ ``` ⏎  ⏎ 因为有些坏图 RGB 本身已经糊到没有强边缘了。 ⏎ 更稳的是同时看： ⏎  ⏎ ```PLAIN_TEXT ⏎ edge_mismatch ⏎ edge_absence_on_expected_object ⏎ depth_fragmentation ⏎ alpha_fragmentation ⏎ local_gradient_inconsistency ⏎  ⏎ ``` ⏎  ⏎ 例如近车区域本来应该有强边界，但现在 RGB edge 也没了，单纯 edge overlap 可能误判为“没有冲突”。所以要结合 vehicle mask 或近场 object prior。 ⏎ **方案 3：低级图像退化规则：blur / smear / block / water-color 检测** ⏎ **落地难度：低** ⏎ **推荐优先级：高** ⏎ 这两张图里有大量肉眼可见的： ⏎  ⏎ ```PLAIN_TEXT ⏎ 水彩化 ⏎ 涂抹 ⏎ 拖影 ⏎ 局部模糊 ⏎ 纹理消失 ⏎ 边缘断裂 ⏎  ⏎ ``` ⏎  ⏎ 这些可以先用传统图像统计快速筛掉。 ⏎ 可做指标： ⏎  ⏎ ```PLAIN_TEXT ⏎ Laplacian variance：局部清晰度 ⏎ gradient energy：边缘强度 ⏎ local entropy：纹理复杂度 ⏎ frequency energy ratio：高频是否缺失 ⏎ directional blur score：是否有单方向拖影 ⏎ patch-level sharpness map：局部糊斑检测 ⏎  ⏎ ``` ⏎  ⏎ 对第二张尤其有效，因为它不是只有车辆坏，很多路面、建筑、车道线都水彩化。 ⏎ **适合抓的区域** ⏎  ⏎ ```PLAIN_TEXT ⏎ 第二张 FRONT_LEFT 的路面涂抹 ⏎ 第二张 REAR_LEFT 的近场黑糊块 ⏎ 第二张 FRONT_NARROW 的近车模糊 ⏎ 第一张 REAR_RIGHT 红车拖影 ⏎  ⏎ ``` ⏎  ⏎ **优点** ⏎ 非常便宜，CPU 都能跑，适合做第一道粗筛。 ⏎ **缺点** ⏎ 会误伤真实运动模糊、雨雾、夜晚低照度、低纹理道路。 ⏎ 所以不要作为最终 reject，只作为： ⏎  ⏎ ```PLAIN_TEXT ⏎ low_level_degradation_score ⏎  ⏎ ``` ⏎  ⏎ **方案 4：基于区域的规则，不做整图平均** ⏎ **落地难度：低到中** ⏎ **推荐优先级：非常高** ⏎ 这两张图说明一个关键问题： ⏎ 整图平均质量分没有意义，必须按自动驾驶关键区域加权。 ⏎ 因为图像里天空、楼体、远处树木坏一点不一定致命，但车辆、车道线、可行驶区域坏了就很危险。 ⏎ 建议分区： ⏎  ⏎ ```PLAIN_TEXT ⏎ 高权重区域： ⏎ - 近场车辆 ⏎ - 行人/骑行者 ⏎ - 车道线 ⏎ - 道路边界 ⏎ - 可行驶区域 ⏎ - 路口区域 ⏎ - 交通灯/交通标志 ⏎  ⏎ 低权重区域： ⏎ - 天空 ⏎ - 远处建筑 ⏎ - 树木 ⏎ - 非道路背景 ⏎  ⏎ ``` ⏎  ⏎ 这两张图最该重点检查的是： ⏎  ⏎ ```PLAIN_TEXT ⏎ vehicle region ⏎ near-field region ⏎ road/lane region ⏎ occlusion boundary region ⏎  ⏎ ``` ⏎  ⏎ **一个简单权重例子** ⏎  ⏎ ```PLAIN_TEXT ⏎ final_bad_score = ⏎   0.35 * near_vehicle_bad_score ⏎ + 0.25 * road_lane_bad_score ⏎ + 0.15 * depth_rgb_mismatch_score ⏎ + 0.15 * low_level_degradation_score ⏎ + 0.10 * global_iqa_score ⏎  ⏎ ``` ⏎  ⏎ 对于第一张： ⏎  ⏎ ```PLAIN_TEXT ⏎ near_vehicle_bad_score 会很高 ⏎  ⏎ ``` ⏎  ⏎ 对于第二张： ⏎  ⏎ ```PLAIN_TEXT ⏎ road_lane_bad_score + global_degradation_score 会很高 ⏎  ⏎ ``` ⏎  ⏎ **方案 5：下游感知模型反向过滤** ⏎ **落地难度：中** ⏎ **推荐优先级：高** ⏎ 用已有 detection / segmentation / lane 模型做反向质检，非常适合自动驾驶。 ⏎ 但注意，不要只看 confidence。 ⏎ 要看结构化异常。 ⏎ **Detection 检查** ⏎ 针对车辆： ⏎  ⏎ ```PLAIN_TEXT ⏎ 车辆框是否异常拉长 ⏎ 车辆框是否碎裂成多个框 ⏎ 近场车辆是否漏检 ⏎ 车辆框是否突然出现在不合理位置 ⏎ 同一车辆跨相机/跨帧尺寸是否跳变 ⏎  ⏎ ``` ⏎  ⏎ 第一张的 REAR_RIGHT 红车、REAR_LEFT 大车，可能会出现： ⏎  ⏎ ```PLAIN_TEXT ⏎ 漏检 ⏎ 低置信度 ⏎ 多个碎框 ⏎ box 过宽 ⏎ box 与可见车辆区域不匹配 ⏎  ⏎ ``` ⏎  ⏎ 第二张 FRONT_NARROW 的近车也大概率会触发。 ⏎ **Segmentation 检查** ⏎ 看： ⏎  ⏎ ```PLAIN_TEXT ⏎ road mask 是否碎裂 ⏎ lane mask 是否断裂 ⏎ vehicle mask 是否和背景粘连 ⏎ building/road/vehicle 是否互相污染 ⏎ 可行驶区域是否出现洞 ⏎  ⏎ ``` ⏎  ⏎ 第二张 FRONT_LEFT / FRONT_FISHEYE 特别适合用 segmentation 检查，因为路面和车道线已经变得不稳定。 ⏎ **Lane 检查** ⏎ 这两张图中路面和车道线都可能坏，建议单独加 lane quality： ⏎  ⏎ ```PLAIN_TEXT ⏎ lane continuity ⏎ lane width consistency ⏎ lane curvature consistency ⏎ lane-road boundary consistency ⏎  ⏎ ``` ⏎  ⏎ 尤其第二张 FRONT_LEFT 里车道线被水彩化，传统 IQA 未必能准确判，但 lane detector 的输出会非常不稳定。 ⏎ **方案 6：多相机一致性检查** ⏎ **落地难度：中到高** ⏎ **推荐优先级：高，尤其适合你们这种多 camera 系统** ⏎ 你给的是多相机拼图，这本身提供了一个很强的质检信号： ⏎ 同一时刻、相邻相机看到的世界结构应该在重叠区域内一致。 ⏎ 可以检查： ⏎  ⏎ ```PLAIN_TEXT ⏎ FRONT_LEFT 与 FRONT_FISHEYE 的重叠区域 ⏎ FRONT_RIGHT 与 FRONT_FISHEYE 的重叠区域 ⏎ REAR_LEFT / REAR_MAIN / REAR_RIGHT 的边界区域 ⏎  ⏎ ``` ⏎  ⏎ 看： ⏎  ⏎ ```PLAIN_TEXT ⏎ 车辆是否在相邻相机中形状一致 ⏎ 道路边界是否连续 ⏎ 建筑边缘是否方向一致 ⏎ 车道线是否接得上 ⏎ 同一动态物体是否只在一个相机里崩坏 ⏎  ⏎ ``` ⏎  ⏎ 第一张里： ⏎  ⏎ ```PLAIN_TEXT ⏎ FRONT_LEFT 近车极坏，但 FRONT_FISHEYE 左侧也有对应异常 ⏎ REAR_LEFT 和 REAR_RIGHT 都有近场车辆坏 ⏎  ⏎ ``` ⏎  ⏎ 这说明问题可能不是单相机噪声，而是 3DGS 对近场动态物体处理整体失败。 ⏎ 第二张里： ⏎  ⏎ ```PLAIN_TEXT ⏎ FRONT_LEFT / FRONT_FISHEYE / FRONT_RIGHT 都有道路和建筑结构不稳定 ⏎  ⏎ ``` ⏎  ⏎ 这更像全局 novel view 渲染质量下降。 ⏎ **优点** ⏎ 比单帧 IQA 更贴近 3D 世界一致性。 ⏎ **缺点** ⏎ 需要相机外参、相机重叠区域、可能还需要 depth 或 BEV 投影。 ⏎ **方案 7：时序一致性检查** ⏎ **落地难度：中到高** ⏎ **推荐优先级：非常高，但需要视频序列** ⏎ 如果你们是连续 novel view 轨迹，而不是单张图，时序检查会非常有价值。 ⏎ 因为这类 artifact 在视频里通常表现为： ⏎  ⏎ ```PLAIN_TEXT ⏎ 车辆边缘闪烁 ⏎ 糊斑在空间中漂浮 ⏎ 道路纹理像液体一样流动 ⏎ 车道线突然断开又出现 ⏎ 近场车辆形状剧烈变化 ⏎  ⏎ ``` ⏎  ⏎ 可做指标： ⏎  ⏎ ```PLAIN_TEXT ⏎ optical flow consistency ⏎ semantic mask temporal IoU ⏎ detection track stability ⏎ depth temporal smoothness ⏎ lane temporal stability ⏎  ⏎ ``` ⏎  ⏎ 对第一张这种车辆 floater，时序上会非常明显： ⏎  ⏎ ```PLAIN_TEXT ⏎ 车体不是稳定移动，而是局部 blob 闪烁/漂移 ⏎  ⏎ ``` ⏎  ⏎ 对第二张这种全局水彩化，也会表现为： ⏎  ⏎ ```PLAIN_TEXT ⏎ 路面纹理不随几何稳定运动，而是像贴图流动 ⏎  ⏎ ``` ⏎  ⏎ **优点** ⏎ 很适合抓单帧看不一定能确定的 artifact。 ⏎ **缺点** ⏎ 需要连续帧，计算复杂度更高。 ⏎ **方案 8：重投影一致性检查** ⏎ **落地难度：高** ⏎ **推荐优先级：高，但建议第二阶段做** ⏎ 这是比 RGB-depth edge 更强的几何检查。 ⏎ 流程： ⏎  ⏎ ```PLAIN_TEXT ⏎ novel view RGB + depth ⏎   ↓ ⏎ 反投影到 3D ⏎   ↓ ⏎ 投影到邻近真实视角或邻近 novel view ⏎   ↓ ⏎ 比较 RGB / depth / semantic / edge 一致性 ⏎  ⏎ ``` ⏎  ⏎ 可以输出： ⏎  ⏎ ```PLAIN_TEXT ⏎ photo_consistency_score ⏎ depth_consistency_score ⏎ semantic_consistency_score ⏎ edge_reprojection_score ⏎ occlusion_boundary_score ⏎  ⏎ ``` ⏎  ⏎ 这对 floater 很有效，因为 floater 的问题是： ⏎ 它在当前视角看起来像一块东西，但在 3D 里没有稳定位置。 ⏎ 第一张里那些近车 blob，如果重投影到相邻视角，很可能对不上真实车体边界。 ⏎ 第二张里的路面水彩纹理，如果是贴片/漂移，也会在重投影中暴露。 ⏎ **缺点** ⏎ 需要比较完整的几何链路： ⏎  ⏎ ```PLAIN_TEXT ⏎ camera pose ⏎ depth ⏎ 可见性处理 ⏎ occlusion mask ⏎ neighbor view selection ⏎  ⏎ ``` ⏎  ⏎ 否则容易误判遮挡区域。 ⏎ **方案 9：专用自动驾驶 artifact classifier** ⏎ **落地难度：高** ⏎ **推荐优先级：中长期最值得做** ⏎ 你们现在已经有明确 bad case 类型，可以自己训练一个质量判别模型，而不是依赖通用 IQA。 ⏎ 训练数据可以分成： ⏎  ⏎ ```PLAIN_TEXT ⏎ good_render ⏎ bad_near_vehicle_smear ⏎ bad_floater ⏎ bad_lane_distortion ⏎ bad_road_watercolor ⏎ bad_diffusion_hallucination ⏎ bad_global_blur ⏎ bad_occlusion_boundary ⏎  ⏎ ``` ⏎  ⏎ 输入可以是： ⏎  ⏎ ```PLAIN_TEXT ⏎ RGB ⏎ depth ⏎ alpha ⏎ edge maps ⏎ semantic logits ⏎ perception outputs ⏎  ⏎ ``` ⏎  ⏎ 输出： ⏎  ⏎ ```PLAIN_TEXT ⏎ overall_quality ⏎ vehicle_quality ⏎ road_quality ⏎ lane_quality ⏎ geometry_artifact_score ⏎ semantic_collapse_score ⏎ usable_for_training_score ⏎  ⏎ ``` ⏎  ⏎ 这对两张图都很合适，因为问题类型非常稳定： ⏎  ⏎ ```PLAIN_TEXT ⏎ 第一张：near vehicle smear / floater ⏎ 第二张：global watercolor + lane/road degradation + local vehicle smear ⏎  ⏎ ``` ⏎  ⏎ **优点** ⏎ 最贴近你们业务标准。 ⏎ **缺点** ⏎ 需要标注、数据闭环、持续维护。 ⏎ **方案 10：VLM / Q-Align / 多模态裁判** ⏎ **落地难度：中到高** ⏎ **推荐优先级：适合边界 case，不适合全量首筛** ⏎ VLM 能理解： ⏎  ⏎ ```PLAIN_TEXT ⏎ 这辆车不像车 ⏎ 路面结构不合理 ⏎ 车道线不连续 ⏎ 图像有明显 AI artifact ⏎  ⏎ ``` ⏎  ⏎ 但它的问题是： ⏎  ⏎ ```PLAIN_TEXT ⏎ 吞吐低 ⏎ 成本高 ⏎ 稳定性不如规则 ⏎ 难以给出像素级定位 ⏎ 对自动驾驶几何一致性不一定敏感 ⏎  ⏎ ``` ⏎  ⏎ 所以我不建议把 VLM 放第一层，而是放最后： ⏎  ⏎ ```PLAIN_TEXT ⏎ 规则/模型分数处于灰区 ⏎ 重要场景 ⏎ 异常类型不确定 ⏎ 需要解释性 reject reason ⏎  ⏎ ``` ⏎  ⏎ 比如第一张 REAR_RIGHT 红车，VLM 很容易判断“车体严重变形”。 ⏎ 第二张 FRONT_LEFT / FRONT_NARROW，VLM 也能判断道路和车辆不可用。 ⏎ **三、按工业落地推荐排序** ⏎ 如果按“从现在最容易上线”到“长期最强”排序，我建议是： ⏎  ⏎ ```PLAIN_TEXT ⏎ 1. 渲染元信息硬规则 ⏎ 2. RGB-depth-alpha edge 对齐检查 ⏎ 3. 低级图像退化检测：blur / smear / water-color ⏎ 4. 关键区域加权：vehicle / road / lane / near-field ⏎ 5. 下游感知模型反向过滤 ⏎ 6. 多相机一致性检查 ⏎ 7. 时序一致性检查 ⏎ 8. 重投影一致性检查 ⏎ 9. 专用自动驾驶 artifact classifier ⏎ 10. VLM / Q-Align 边界仲裁 ⏎  ⏎ ``` ⏎  ⏎ 但如果按“对你这两张图最有效”排序，我会调整为： ⏎  ⏎ ```PLAIN_TEXT ⏎ 1. 近场 vehicle region 检查 ⏎ 2. alpha / contribution / projected_radius 异常检查 ⏎ 3. RGB-depth edge 对齐 ⏎ 4. segmentation / detection 结构化异常 ⏎ 5. road/lane 区域质量检查 ⏎ 6. 多相机/时序一致性 ⏎ 7. VLM 边界仲裁 ⏎  ⏎ ``` ⏎  ⏎ **四、针对这两张图，我会定义的具体 reject 规则** ⏎ **规则 1：近场车辆强 reject** ⏎  ⏎ ```PLAIN_TEXT ⏎ 如果 vehicle 区域位于近场， ⏎ 且满足以下任意两个条件： ⏎ - vehicle RGB sharpness 低 ⏎ - vehicle mask 碎裂 ⏎ - RGB-depth edge mismatch 高 ⏎ - alpha / contribution 异常 ⏎ - projected_radius 异常 ⏎ - vehicle box ratio 异常 ⏎ 则 reject 当前 camera image ⏎  ⏎ ``` ⏎  ⏎ 这会抓住： ⏎  ⏎ ```PLAIN_TEXT ⏎ 第一张 FRONT_LEFT / REAR_LEFT / REAR_RIGHT ⏎ 第二张 FRONT_NARROW / REAR_MAIN / REAR_RIGHT 的部分问题 ⏎  ⏎ ``` ⏎  ⏎ **规则 2：大面积路面水彩化 reject** ⏎  ⏎ ```PLAIN_TEXT ⏎ 如果 road/drivable area 内： ⏎ - 高频纹理异常缺失 ⏎ - lane edge 断裂 ⏎ - depth 平滑但 RGB 出现不合理涂抹 ⏎ - segmentation road mask 碎裂 ⏎ 则 reject 或降权 ⏎  ⏎ ``` ⏎  ⏎ 这会抓住： ⏎  ⏎ ```PLAIN_TEXT ⏎ 第二张 FRONT_LEFT ⏎ 第二张 FRONT_FISHEYE ⏎ 第二张 REAR_LEFT ⏎  ⏎ ``` ⏎  ⏎ **规则 3：遮挡边界异常 reject** ⏎  ⏎ ```PLAIN_TEXT ⏎ 在车辆-道路、车辆-建筑、路沿-道路边界附近： ⏎ 如果 RGB edge、depth edge、semantic edge 三者明显错位， ⏎ 则判定 occlusion boundary artifact ⏎  ⏎ ``` ⏎  ⏎ 这会抓住： ⏎  ⏎ ```PLAIN_TEXT ⏎ 第一张近车大面积 smear ⏎ 第二张 FRONT_NARROW 近车边界混乱 ⏎  ⏎ ``` ⏎  ⏎ **规则 4：多相机局部一致性异常** ⏎  ⏎ ```PLAIN_TEXT ⏎ 如果某个区域在 FRONT_FISHEYE 可见， ⏎ 同时也在 FRONT_LEFT / FRONT_RIGHT 可见， ⏎ 但： ⏎ - 车辆形状不一致 ⏎ - 道路边界不连续 ⏎ - 车道线接不上 ⏎ - 物体只在一个相机中变成 blob ⏎ 则标记为 multi-camera inconsistent ⏎  ⏎ ``` ⏎  ⏎ 这个适合你们多 camera 拼图直接做质量分析。 ⏎ **五、我建议的第一版落地方案** ⏎ 第一版不要太复杂，先做 5 个 score： ⏎  ⏎ ```PLAIN_TEXT ⏎ 1. render_geometry_score ⏎    来自 alpha / contribution / projected_radius / view distance ⏎  ⏎ 2. edge_consistency_score ⏎    来自 RGB edge / depth edge / alpha edge 对齐 ⏎  ⏎ 3. degradation_score ⏎    来自 blur / smear / high-frequency loss ⏎  ⏎ 4. perception_structure_score ⏎    来自 detection / segmentation / lane 输出稳定性 ⏎  ⏎ 5. critical_region_score ⏎    只在 vehicle / road / lane / near-field 区域聚合 ⏎  ⏎ ``` ⏎  ⏎ 最终： ⏎  ⏎ ```PLAIN_TEXT ⏎ final_quality = ⏎   0.25 * render_geometry_score ⏎ + 0.20 * edge_consistency_score ⏎ + 0.15 * degradation_score ⏎ + 0.25 * perception_structure_score ⏎ + 0.15 * critical_region_score ⏎  ⏎ ``` ⏎  ⏎ reject 逻辑不要只看 final score，建议加硬规则： ⏎  ⏎ ```PLAIN_TEXT ⏎ near_field_vehicle_bad == true  => reject ⏎ lane_area_destroyed == true     => reject ⏎ large_alpha_hole == true        => reject ⏎ global_watercolor_high == true  => reject ⏎  ⏎ ``` ⏎  ⏎ **六、对 depth edge / RGB edge 方案的最终判断** ⏎ 针对这两张图： ⏎ **可以用，而且应该用，但不能单独用。** ⏎ 它最适合抓： ⏎  ⏎ ```PLAIN_TEXT ⏎ floater ⏎ 遮挡边界拉扯 ⏎ 半透明贴片 ⏎ RGB 有物体但 depth 没支撑 ⏎ depth 有断层但 RGB 无合理边界 ⏎  ⏎ ``` ⏎  ⏎ 但它不擅长抓： ⏎  ⏎ ```PLAIN_TEXT ⏎ 整图水彩化 ⏎ 车辆虽然有 depth 但语义不像车 ⏎ 车道线被 hallucinate 成错误形状 ⏎ 真实运动模糊和生成式拖影的区分 ⏎  ⏎ ``` ⏎  ⏎ 所以最合理的工业组合是： ⏎  ⏎ ```PLAIN_TEXT ⏎ 3DGS render metadata ⏎ + RGB/depth/alpha edge consistency ⏎ + critical region detection ⏎ + perception model structural sanity check ⏎  ⏎ ``` ⏎  ⏎ 这套比单纯 NR-IQA 或单纯 VLM 更适合你们现在的 3DGS + Diffusion novel view 质量审核场景。我把之前有问题的截图扔给GPT给的建议方案，昨天刚充值了用5.5模型问的
+2026-04-29 11:08	朱啸峰	text	[Invalid text JSON]
+2026-04-29 14:40	朱啸峰	post	![Image](img_v3_02117_b6d67091-374b-43ca-98d2-781350a93dbg) ⏎ @郑丽娜 cc@李坤 看下來XPU不重启的历史帧对PC基本无影响，上图是重启vs不重启硬切换的pose对比
+2026-04-29 14:42	李坤	text	这个diff是如何产生的
+2026-04-29 15:02	朱啸峰	post	@李坤 x和y的diff主要来自索引错位，系统每次触发录包的帧数每次会有几帧误差（会有前置的提前录制黑帧保障渲染录完整），所以按索引排第n帧的x和y会有一定的错位，我把xy坐标打上1m网格重新可视化后看，轨迹是重合的 ⏎ ![Image](img_v3_02117_8812e81c-e796-4060-b260-33dcf1bf3d3g)
+2026-04-29 15:26	郑丽娜	text	@朱啸峰 现在是丢弃开始多少秒的？
+2026-04-29 15:27	朱啸峰	text	<p>@郑丽娜 pc有个5s的保护，pose接收5s后开始跑闭环，这个阈值是可调的</p>
+2026-04-29 15:29	瞿鑫宇	text	这个时间子汉那边可以做成可配置项
+2026-04-29 15:31	郑丽娜	text	@朱啸峰 顺序也确认是乱序的？图是其中一个case的？
+2026-04-29 15:33	朱啸峰	text	<p>为了保证定位差异，是拿之前ts跑的subrun先跑了一个，再跑目标case</p>
+2026-04-30 06:16	郑丽娜	text	https://xiaopeng.feishu.cn/wiki/CdyDwdoEQijOi6km7pAcLNJmnjb
+2026-04-30 06:43	郑丽娜	text	https://xiaopeng.feishu.cn/wiki/SBUYwm8Lri9aJ6kmexFcBAuGnlh 大家有在周会上进行同步的文档贴一下链接哈
+2026-04-30 10:37	杨星昊	post	![Image](img_v3_02118_42aa8f92-35e0-482d-a78e-5c268cb8348g) ⏎ gating数据集都跑上了
+2026-04-30 10:38	杨星昊	text	目前看来51期间还有空闲的资源跑其他仿真
+2026-04-30 11:02	李坤	text	@杨星昊 还是四个模型版本吗
+2026-04-30 11:38	杨星昊	text	@李坤 对，都跑上了，不然卡要空闲了
+2026-04-30 11:38	杨星昊	text	<p>后面固定到两个model</p>
+2026-04-30 11:39	杨星昊	text	<p>长里程的数据有吗？我五一也把他跑上 @王禹丁 </p>
+2026-05-06 01:39	李坤	post	![Image](img_v3_0211e_0fc95163-72a8-4b1e-b368-bdef9e2e57bg) ⏎ <at user_id="all"></at> 大家关注本周的目标，本周有不少的交付工作~
+2026-05-06 02:12	杨星昊	text	@杜思聪 sicong你那边长里程数据ready了吗？adc-sim-dev可以继续用起来
+2026-05-06 02:13	郑丽娜	text	扣下来不还了，正好可以暴力跑个高步数的长里程试试
+2026-05-06 02:13	ou_39167	post	@杨星昊 没呢 刚刚还在问云荟有没有其它资源 ⏎ adc-sim-dev我看是A100池子？ ⏎ ![Image](img_v3_0211e_265cd23d-88e6-4290-9b81-93fd8d5ed58g)
+2026-05-06 02:14	杨星昊	text	<p>@杜思聪 嗯，我现在跑的低优仿真任务，等你那边好了可以直接接力</p>
+2026-05-06 03:17	郑丽娜	post	![Image](img_v3_0211e_8d7fd887-c2b6-4e4c-92a4-89ae34e74c5g) ⏎ ![Image](img_v3_0211e_be6aa47a-2091-45fd-bbd8-7cf52c31ea1g) ⏎ 感觉走错路需要的信息比较少，只给了局部图+提示词说明，快速模式判断出来了偏航
+2026-05-06 03:36	杨星昊	post	[https://xiaopeng.feishu.cn/wiki/AfHawLfYvi3ZNOk2tnzcE47sn1d?table=tblRcXjW9oHRwkwn&view=vewwKcOWf3](https://xiaopeng.feishu.cn/wiki/AfHawLfYvi3ZNOk2tnzcE47sn1d?table=tblRcXjW9oHRwkwn&view=vewwKcOWf3) ⏎ [https://xiaopeng.feishu.cn/wiki/G1DYwUMm0iMdBhkWA7CcKSannYj](https://xiaopeng.feishu.cn/wiki/G1DYwUMm0iMdBhkWA7CcKSannYj) ⏎ ![Image](img_v3_0211e_4d7249fe-b943-491d-8ca6-5b2aaae9214g) ⏎ @李坤 目前整理了273个case，目前200-273号的case在麻烦yunhui那边看，剩余200个看看我们组内同学要参与review吗？
+2026-05-06 03:37	杨星昊	text	上面那个会是和扬州同学review培训的会，看看是不是大家都可以参加一下？
+2026-05-06 03:39	郑丽娜	text	大家可以了解下，后面一些市场问题分析比如没复现啥的就可以组内互相支援下了
+2026-05-06 07:17	杨星昊	post	[https://xiaopeng.feishu.cn/wiki/G1DYwUMm0iMdBhkWA7CcKSannYj](https://xiaopeng.feishu.cn/wiki/G1DYwUMm0iMdBhkWA7CcKSannYj) ⏎ ![Image](img_v3_0211e_891fc253-9dc5-4299-910c-ca1c5817edeg) ⏎ 从标黄的两组仿真中，根据scenario id找对应的case，分配一下id，5个/人/天，看3天:MediumThanks::MediumThanks:： ⏎ - @杨星昊 ：1-15 ⏎ - @王禹丁 ：16-30 ⏎ - @周冯 ：31-45 ⏎ - @杜思聪 ：46-60 ⏎ - @郑丽娜 ：61-75 ⏎ - @裴健宏 ：76-90 ⏎ - @瞿鑫宇 ：91-105 ⏎ - @戚芸 ：106-200 ⏎ - @云荟 ：200-273
+2026-05-06 07:30	杨星昊	post	![Image](img_v3_0211e_6730ef66-2018-4671-8865-839f96aa4f2g) ⏎ idx指这个文档的idx
+2026-05-06 07:43	郑丽娜	post	![Image](img_v3_0211e_03a75900-b934-47f3-be5c-661c68f9fc7g) ⏎ @杨星昊 顿挫的case是看acc么？
+2026-05-06 07:43	杨星昊	text	@郑丽娜 好问题，issue reason是啥
+2026-05-06 07:43	郑丽娜	text	@杨星昊 23s#自车直行等等右侧车辆倒车#导致车辆顿挫
+2026-05-06 07:44	杨星昊	text	@郑丽娜 那应该是吧，看看Sim那里的acc是否出现正负交替？
+2026-05-06 08:40	李坤	text	@裴健宏 现在跑渲染一个clip要跑1h，大概比例是1：120，比闭环仿真都慢么
+2026-05-06 08:49	裴健宏	post	@李坤 我看了下a100的耗时，大概是30+min，会上的数据是我本地主机跑的。主要慢在几个方面 ⏎ 1. 对png进行h265编码，一共2800+张图片，使用ffmpeg的编码速度相对比较慢 ⏎ 2. sql更新dds。涉及到较多较大的sql查询与更新，
+2026-05-06 08:53	李坤	text	@裴健宏 30mins也是1：60，这模式也不需要跑fm，这两部分分别占比多少呢？编码比解码慢很多么，这块有没有一些优化手段
+2026-05-06 08:58	裴健宏	text	@李坤 编码解码都比较慢，因为用的ffmpeg串行软解，后续可以考虑并发批量处理，以及gpu加速等
+2026-05-07 02:26	杨星昊	post	看了下现在复现率的统计情况（后续先pending）： ⏎ MC: ⏎ ![Image](img_v3_0211f_e1712438-5ed6-446d-8696-4d1c3733fedg) ⏎ PC: ⏎ ![Image](img_v3_0211f_d508d2e3-da7b-4121-8b97-d1962085f52g)
+2026-05-07 07:27	李坤	text	@郑丽娜 gpt是唯一给出不同方案的
+2026-05-07 07:33	郑丽娜	text	<p>@李坤 gpt最开始也给了我这个方案，后面继续问了下如果是做最后行为结果的检测是否可以绕过对齐模块，答复也可行，正在拿着方案去问Gemini</p>
+2026-05-07 07:36	李坤	text	他给的是一套规则解法，vlm只做归因
+2026-05-07 08:00	郑丽娜	post	**第三步：多模态闭环判定** ⏎ Agent 结合视觉图像（理解环境复杂度）**和**文本事实（几何精确性）给出最终分析： ⏎ - **判定示例：** “虽然几何计算显示有 0.05m 的侵入，但结合 BEV 图像可见此时处于极窄车道汇合点，且周边感知线存在 10cm 级别的抖动。结论：由于感知噪声导致的伪触发，行为逻辑通过。” Gemini的回答是我觉得的一个优势，不能完全信矢量化结果，但也不是完全不用
+2026-05-07 11:06	朱啸峰	post	@李坤 @郑丽娜 修复后闭环耗时结论和之前一致 ⏎ - 渲染进程0（3456）proc_0：mean 37.114ms，P50 35.518ms，P90 38.962ms，P95 40.316ms，P99 43.829ms ⏎ - 渲染进程1（027）proc_1：mean 42.947ms，P50 41.852ms，P90 46.209ms，P95 49.727ms，P99 57.741ms
+2026-05-07 12:36	周蔚旭	file	<file key="file_v3_0011f_a612e919-ea91-4105-aefe-dba43662feeg" name="S57758059-J11860758-T2019395257.zip"/>
+2026-05-07 12:36	周蔚旭	file	<file key="file_v3_0011f_9604e53d-2245-4fd1-bc8f-b5002402f26g" name="S57761052-J11860758-T2019395256.zip"/>
+2026-05-07 12:37	周蔚旭	text	@李坤 @郑丽娜   坤总，娜姐，已经出来2个case的数据，请帮忙瞧瞧能不能用
+2026-05-08 01:43	郑丽娜	text	@周蔚旭 一会先确认下手工验证的数据集呢，得正向反向都各自选一部分
+2026-05-08 02:29	ou_39167	post	difix出了一篇后续工作，但是还没开源[https://arxiv.org/pdf/2603.00492](https://arxiv.org/pdf/2603.00492) ⏎ ![Image](img_v3_0211g_c35a725c-e6d4-413c-8d7a-e301cae0e84g)
+2026-05-08 03:36	郑丽娜	text	@杜思聪 咱们已经生成好的subrun在哪里可以查到？准备给HIL那边再选点数据 cc @朱啸峰 @瞿鑫宇
+2026-05-08 03:37	ou_39167	post	@郑丽娜 在cloudsim上这样筛选就行 ⏎ ![Image](img_v3_0211g_ef8c8ab8-4f90-4938-97f1-db2961eb0afg)
+2026-05-08 04:56	周蔚旭	file	<file key="file_v3_0011g_08a38088-93a2-4e2f-b237-fcaa8586c4eg" name="S57764596-J11860760-T2019395361.zip"/>
+2026-05-09 07:04	杨星昊	text	<p>https://xiaopeng.feishu.cn/wiki/Hek0wsQ9fix3zckYRbvcNUMJn2c @周冯 在这里汇总吧</p>
+2026-05-09 07:07	周冯	text	@杨星昊 baseline的模型权重在？
+2026-05-09 07:09	杨星昊	text	@周冯 还在转trt，我先用的torch模型统计了下图片质量的baseline情况，耗时baseline今晚跑起来，你把你的feature带上今晚也可以跑起来
+2026-05-11 03:01	朱啸峰	text	上海有两台不接XPU的5080机器，现在@周冯 用一台做difix实验，还有一台有其他同学在用不~
+2026-05-11 03:02	朱啸峰	merge_forward	<forwarded_messages> ⏎ [2026-05-11T02:41:04Z] 张驰: ⏎     现在上海那2台没有接xpu的5080都在做什么啊？ ⏎ [2026-05-11T02:41:31Z] 杨星昊: ⏎     <p>一台zhoufeng在跑difix渲染优化，另外一台xinyu应该在做3dgs渲染实验吧？</p> ⏎ [2026-05-11T02:41:56Z] 张驰: ⏎     都是满负荷吗 ⏎ [2026-05-11T02:42:09Z] 杨星昊: ⏎     不清楚了 ⏎ [2026-05-11T02:42:27Z] 张驰: ⏎     整个可以找谁评估一下吗 ⏎ [2026-05-11T02:43:37Z] 张驰: ⏎     比如能不能把上海的3台减少到2台，因为广州机房也搭建了一台给你们用。这个我可以找谁去协商？ ⏎ </forwarded_messages>
+2026-05-11 03:02	朱啸峰	text	<p>张弛那边TC需要一台，如果不需要单独留一台的话就给他寄回去了</p>
+2026-05-12 05:52	周蔚旭	text	@李坤  ⏎ 我加的是这句话 ⏎  ⏎ 最后但是最重要的： ⏎ 请在完成任务之后，通过#tool:askQuestion 询问用户是否还有其他需求需要完成
+2026-05-12 06:00	李坤	post	<at user_id="all"></at> [https://socheap.ai/register?code=6350639ca5c887a19c4be39089762ad5](https://socheap.ai/register?code=6350639ca5c887a19c4be39089762ad5) 我有个朋友在做这个token的平台，可以拿到价格比较低的token，最低的codex可以到8%，而且有稳定性保障，大家可以试试，我试了codex+chatgpt5.4/5.5都是稳定的。 ⏎ ![Image](img_v3_0211k_0d25e808-da04-4db8-a983-8e2773539dfg) ⏎ ![Image](img_v3_0211k_e170d6ba-c914-4123-af0d-a7aaf0a806cg)
+2026-05-12 06:46	李坤	post	<at user_id="all"></at> 我们日会前在这里[https://xiaopeng.feishu.cn/wiki/SBUYwm8Lri9aJ6kmexFcBAuGnlh](https://xiaopeng.feishu.cn/wiki/SBUYwm8Lri9aJ6kmexFcBAuGnlh)放一些相关进展信息，我at了相关的人每天都填一下有进展的地方，提升会议效率~ ⏎ ![Image](img_v3_0211k_1d4b9c02-98d1-400e-9c5c-5adbe22f713g)
+2026-05-12 06:49	李坤	text	这里写了，日报汇报就先取消吧
+2026-05-12 07:05	李坤	text	@_all 收不到验证码的加我微信 18268821400
+2026-05-12 07:19	周冯	text	https://socheap.ai/docs ⏎ socheap的教程
+2026-05-13 01:24	郑丽娜	text	[呲牙]充值上了，怎么能确定是gpt5.5呢？我问它模型版本号，只回答：我的具体系统版本号没有暴露给我；我能确认的是：我是 Codex，基于 GPT-5 系列的编码模型
+2026-05-13 01:47	郑丽娜	text	https://mp.weixin.qq.com/s/gDVjHLjCB8WbgVLii2QjDg
+2026-05-13 02:23	李坤	post	![Image](img_v3_0211l_d8f7b819-e49b-4ff8-badc-8ef6fd8e3a3g) ⏎ copilot是会给个这个
+2026-05-13 08:52	杨星昊	text	写了一个SKILL，用来自动获取cces报告并AI分析，输入只需要job ids，就可以分析cces报告
+2026-05-13 08:54	杨星昊	post	比如我给了张图 ⏎ ![Image](img_v3_0211l_6ad897cd-8b65-4c10-9b03-a8581ebb3c1g) ⏎ 加上prompt：我是自动驾驶仿真算法工程师，目前在进行多车型泛化，并把泛化后的视频用于开环验证，我的开环仿真结果出来了，你帮我分析一下cces报告。job id已经在图中红圈标识出来了，他们所属的模型id、车型（h93/f01/e29）、原生or泛化而来，都在表格中展示出来了。注意如果是H93泛化的场景集，则它们都是从F01原生和E29原生泛化而来。帮我给基于安全指标的趋势，验证下这种车型泛化是否靠谱。验证方式为，RL3和RL4模型在如H93原生场景集上的趋势，需要基本等同于两模型在H93泛化场景上的趋势。但同时要考虑对比的场景完全不相同，两模型在H93泛化场景的趋势可能和在F01/E29原生场景的趋势有一定相关性。 ⏎  ⏎ 得到的AI在安全场景集的分析报告： ⏎ ![Image](img_v3_0211l_02b247da-626f-4138-8ae7-5e49f615f80g)
+2026-05-14 03:12	裴健宏	file	<file key="file_v3_0011m_4f582eac-feac-4a25-9f23-a1b8dd1c5d3g" name="cloudsim_request.py"/>
+2026-05-14 03:12	裴健宏	text	如果有调用cloudsim的需求，可以直接使用这个脚本
+2026-05-14 09:24	郑丽娜	post	<at user_id="all"></at> 大家更新进展注意下写到对应的天上哈 ⏎ ![Image](img_v3_0211m_38658265-ee14-485b-bcb5-1ebe2f79a49g)
+2026-05-14 15:54	朱啸峰	post	![Image](img_v3_0211m_774c664d-0d19-48eb-b1e1-d42cab4450bg) ⏎ @李坤 @郑丽娜 xtest联调链路已打通，跑通3个case，成功跑出来2个，失败1个：因为目前ceph传输速度异常挂了，传输问题已经找SRE提了工单帮忙看
+2026-05-15 01:24	李坤	file	<file key="file_v3_0011n_412c3117-e875-4b82-b7b0-e049eeb6640g" name="difix_latency_optimization_report.md"/>
+2026-05-15 01:24	李坤	text	<p>昨晚跑了一晚上的报告，@杨星昊 @周冯 看看是不是对的~</p>
+2026-05-15 01:51	李坤	text	分支：codex/remote-dev-work，报告在docs里面，验证细节也汇总在报告里了
+2026-05-15 02:37	王禹丁	post	```MARKDOWN ⏎ --- ⏎ applyTo: "**" ⏎ --- ⏎  ⏎ After completing every task or answering every request, always use the `vscode_askQuestions` tool to ask the user if they have any other requirements or follow-up needs. Do this as the final step of every response. ⏎  ⏎ ```
+2026-05-15 03:30	王禹丁	text	https://xiaopeng.feishu.cn/wiki/XFwfwaAXxic8V1k3kK1cUazfn5g ⏎ clip_iqa数据集及评分辛苦大家人工review一下，主要是看一下仿真车图像质量问题+仿真车与实车轨迹能否复现问题，每人3个，辛苦大家看一看了[同学蟹蟹你] cc@郑丽娜 @杨星昊
+2026-05-15 10:47	王禹丁	text	辛苦大家这周六日可以review一下[冲！]，每人只有3个，数量还好
+2026-05-15 12:22	李坤	text	会上忘记问了，本周difix在HIL上跑过了么？
+2026-05-15 15:02	朱啸峰	post	![Image](img_v3_0211n_a57ff6c8-ffb9-4663-b634-5d60c5eccc8g) ⏎ 目前34个caseHIL耗时不刷包1：3,刷包1：4
+2026-05-15 15:09	郑丽娜	text	@朱啸峰 中间没有任何一次异常中断？可以可以
+2026-05-18 01:32	郑丽娜	text	@吕文杰 广州RC的数据找到个发给@王禹丁 帮忙直接跑起来吧
+2026-05-18 02:13	李坤	text	@_all 关注一下本周目标，周五要给xianming汇报车型泛化的事情，@杨星昊 单独整理一个截止目前的各数据集的指标情况，以及本周待生产/待验证的排期，下午我们对下
+2026-05-18 07:20	李坤	text	等下有另外一个会，日会改到7点
+2026-05-18 10:47	郑丽娜	text	https://xiaopeng.feishu.cn/wiki/SBUYwm8Lri9aJ6kmexFcBAuGnlh @_all 大家提前更新下进度哈
+2026-05-18 10:49	周蔚旭	text	最后但是最重要的： ⏎ 请在完成任务之后，通过#tool:askQuestion 询问用户是否还有其他需求需要完成 ⏎ @瞿鑫宇
+2026-05-18 11:00	李坤	text	推迟15分钟，上一个会还没结束
+2026-05-19 09:26	郑丽娜	text	@_all 大家更新下进展吧0519已添加
+2026-05-19 09:31	王禹丁	text	<p>我把这次跑的200km广州结论同步到文档了，同时更新了实车和仿真车对齐率结论，大家可以一起review一下 ⏎ </p><p>https://xiaopeng.feishu.cn/wiki/G1DYwUMm0iMdBhkWA7CcKSannYj#share-D0mtdrKMho6XuWxIKuyc1fOSnwd</p>
+2026-05-20 02:18	杨星昊	post	[https://xiaopeng.feishu.cn/docx/B65jdV4fCow2DJxO64ncnepEnVe](https://xiaopeng.feishu.cn/docx/B65jdV4fCow2DJxO64ncnepEnVe) 这个是算法agent昨晚优化的总结： ⏎ ![Image](img_v3_0211s_203017c6-59aa-440f-bd1d-4f1e9372eafg) ⏎ 还不确定这一套跑在IPS上会不会有问题，目前validation的skill只包含了fuyao的接口，还没有ips的接口
+2026-05-20 02:44	郑丽娜	text	@王禹丁 补充一个细节广州RC路线里面有10%已经被我们自己的质检工具判断为图像质量有问题的，可以通过表格里面的渲染质量来剔除，后面跑和实车结论对齐最好把这部分剔除掉 cc @杨星昊
+2026-05-20 07:36	杨星昊	text	[infra-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/data-infra/fuyao:FM-SIMULATION-MERGE-0.0.6](http://infra-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/data-infra/fuyao:FM-SIMULATION-MERGE-0.0.6) 仿真镜像 @周冯 @王禹丁
+2026-05-21 08:36	杨星昊	merge_forward	<forwarded_messages> ⏎ [2026-04-10T03:38:33Z] 吴冠秋: ⏎     用conda的python来跑试试？ ⏎      ⏎      ⏎     ```PYTHON ⏎     conda_python = "/root/anaconda3/envs/closeloop-3dgs/bin/python3.12" ⏎      python_exe = conda_python if os.path.exists(conda_python) else "python3.12" ⏎      cmd = f"{python_exe} {threedgs_bin_file} --config_path {server_config_file} --cam_mode {cam_mode}" ⏎      ⏎     ``` ⏎ </forwarded_messages>
+2026-05-21 08:37	杨星昊	text	@周冯 @王禹丁 sorry，忘记这个背景了[笑哭]
+2026-05-21 10:37	杨星昊	text	https://xiaopeng.feishu.cn/wiki/MKhAwxLK3id7FLkVT6McyHx1neg?sheet=b901dc
+2026-05-25 01:48	郑丽娜	text	@裴健宏 健宏上周讨论的在长里程生产流程里面我们想自己做下精简需要找哪位同学讨论来着？cc @朱啸峰 今天先去拉个会讨论下，精简和合并都放在我们内部做了闭环，外部只做调度的修改好了
+2026-05-25 01:49	郑丽娜	text	把目前你们播发的Topic都拉个表单出来对着核查下
+2026-05-25 02:10	裴健宏	text	@郑丽娜 就是把不用的topic删掉吗，应该还是得问问cloudsim平台这边，在写ceph的时候能不能做一些处理，重写dat
+2026-05-25 02:11	朱啸峰	text	<p>@裴健宏 DDS裁剪合并处理这块调度也是找平台吗</p>
+2026-05-25 02:11	裴健宏	text	@朱啸峰 你们是直接从ceph那个地址读的dds吧？我觉得可以先问问他们
+2026-05-25 02:57	杨星昊	text	@瞿鑫宇 xinyu，加载模型你profile以后我们再讨论下怎么改吧
+2026-05-25 05:58	瞿鑫宇	file	<file key="file_v3_00121_7dd735e6-d218-4f91-8dd8-aa3e6208081g" name="3dgs_init_profile_analysis.md"/>
+2026-05-25 06:00	瞿鑫宇	text	<p>跑了几个case的模型加载耗时分析，从耗时上看加载yaml耗时占最大头。AI分析表明omegaconf加载YAML中的位姿矩阵数组(自车，相机，动态物体) 是主要性能损耗原因 @郑丽娜 @杨星昊 @朱啸峰</p>
+2026-05-25 06:02	瞿鑫宇	file	<file key="file_v3_00121_08f87eaf-5bb2-4694-8007-fa9800d6fceg" name="init_profile.log"/>
+2026-05-25 07:05	杨星昊	text	是的，之前就发现yaml加载比较慢，yaml里面的矩阵数组不是都需要的，可以优化下
+2026-05-25 07:09	杨星昊	text	或者先把yaml拆分下，分成两部分，矩阵部分单独拆出来
+2026-05-25 07:14	瞿鑫宇	text	用AI给的方法，将YAML 中位姿矩阵列表提取成.npz 文件，跑了三个case，3dgs模型加载速度均有大幅度下降 : ⏎ 18.926s  => 5.271s    减少 72.1% ⏎ 15.466s  => 3.943s    减少 74.5% ⏎ 39.250s  => 5.436s    减少 86.15% ⏎  ⏎ 从渲染结果和dds 输出上看，并未发现明显异常。
+2026-05-25 07:15	杨星昊	text	@瞿鑫宇 改一下推上来吧，SIL那边也可以用
+2026-05-25 07:18	郑丽娜	text	这个先推上去，耗时优化的优先级重新看一下
+2026-05-25 07:38	瞿鑫宇	text	上述的耗时统计未计算提取的耗时（大矩阵全部提取，与原始耗时接近），咱们是否要考虑一下流程上的改动？（提取过程放到生产之后/或者生产时相关矩阵直接存为.npz 文件）@郑丽娜 @杨星昊
+2026-05-25 07:39	杨星昊	text	<p>@瞿鑫宇 可以改，但需要兼容原来生产的模型</p>
+2026-05-25 08:02	朱啸峰	text	@杨星昊 能不能新增一个npz出来给HIL用
+2026-05-25 08:19	郑丽娜	text	后面找个时间SIL那边也改下支持2种格式兼容比较好，不然要重刷太麻烦了
+2026-05-25 08:27	郑丽娜	text	需要编译车端代码，以上repo都先申请下权限
+2026-05-25 08:29	郑丽娜	text	感觉得搞个公共的编译环境，不能每个人都搞一套
+2026-05-25 08:40	杨星昊	text	@郑丽娜 已经有了，周冯背后那台5080就是搭好的编译环境
+2026-05-25 08:41	杨星昊	text	@朱啸峰 你们改一下？需要兼容之前生产的case的读取，加个判断逻辑，比如有你们新加的配置npz就读取npz，没有的话回退到读取yaml
+2026-05-25 08:44	郑丽娜	text	@杨星昊 可以的@瞿鑫宇 来一起改吧，SIL改成兼容模式，但是长里程的1000km写个脚本来重刷提取npz
+2026-05-25 08:45	郑丽娜	text	@瞿鑫宇 @朱啸峰 你们都要重刷长里程数据，弄一起处理一次好了
+2026-05-25 08:55	周蔚旭	text	<p>@裴健宏 </p><p>健宏，麻烦对下面这些case 调整下trigger time， 把时间调前15s。使得结果尽可能不复现。 cc @吕文杰 @杨星昊 @郑丽娜 </p><p></p><p>红绿灯：</p><p>62389342 </p><p>62337646 </p><p>62336248</p><p></p><p>压线：</p><p>54014633 </p><p>54009339 </p><p>54009144</p><p></p><p>不加速/加速慢：</p><p>52393215</p><p>52392885</p><p>52391082</p><p>52388990</p><p>52388203</p><p>52387834</p><p>52387319</p><p></p><p>不减速/制动不足：</p><p>53315370</p><p>53307877</p><p>53351172</p><p>53320060</p><p>53317990</p><p></p><p>不居中/贴边</p><p>59676811</p><p></p><p>加减速顿挫：</p><p>54016206</p><p>52682987</p><p>52691564</p><p>52693305</p><p></p><p>危险变道/绕行</p><p>53329807</p><p>53299227</p><p>53283956</p><p>53279634</p><p></p><p>压线</p><p>54014633</p><p>54009339</p><p>54009144</p><p>60652286</p><p>60651698</p><p></p><p>异常减速：</p><p>63548189</p><p></p><p>撞路沿/障碍物：</p><p>53267752</p>
+2026-05-25 09:17	裴健宏	text	@周蔚旭 已重刷，issue time大于15秒的，退15秒，小于15秒的，退10秒，小于10秒的不变
+2026-05-26 09:28	郑丽娜	text	@_all 机器人忘了加at all了，今天手动圈下大家更新下进展哈
+2026-05-26 09:59	周冯	text	https://webviz.xiaopeng.link/#/es_play/?bagPath=/oss_data_pipeline/&prefix=cloudsim_scenario/driving/55/2026-05-26/72742222/unknown-L1NNSGHC0SB088993-h93aesxlidc-303022745760960950999_2026-03-27-14-03-00__106870834&seq_num=0&task_id=106870834&scenario_id=51894561&job_id=145023&indexName=dds-clip-cloudsim-master&referrer=stage1&cityName=unknown&compareScenario=1&customCompareNames=Base
+2026-05-26 10:36	裴健宏	text	https://cloudsim.xiaopeng.link/#/agent_workspace
+2026-05-26 10:36	裴健宏	text	cloudsim搞了个这个
+2026-05-28 01:43	郑丽娜	text	 @裴健宏 准备再搞一套编译环境避免资源冲突，这个有操作系统版本要求不，@瞿鑫宇 找IT先把机器重装了
+2026-05-28 01:43	裴健宏	text	@郑丽娜 没有版本要求的
+2026-05-28 06:44	周冯	text	<p>5080台架编译环境拉base镜像</p><p>docker login --username=sim_engine_aliram@xmotors-ai [bigdata-sre-registry.cn-wulanchabu.cr.aliyuncs.com](http://bigdata-sre-registry.cn-wulanchabu.cr.aliyuncs.com/)</p><p>密码：sim_engine_123</p><p>@瞿鑫宇</p>
+2026-05-28 07:36	瞿鑫宇	text	新ubuntu编包机器远程： xpeng@10.99.72.59   123456
+2026-05-28 07:39	郑丽娜	text	@瞿鑫宇 代码也拉好了？
+2026-05-28 07:40	瞿鑫宇	text	@郑丽娜 代码现在正在拉，用的建宏的账号cc:@裴健宏
+2026-05-29 03:18	瞿鑫宇	post	新编包环境已经好了，感谢@裴健宏  ⏎ ![Image](img_v3_02125_ddb5ecab-86d0-4223-9c6d-8d1dd9cb1a0g)
+2026-05-29 07:56	郑丽娜	text	@_all 大家先更新下页面哈，一会周会
+2026-05-29 14:03	杨星昊	merge_forward	<forwarded_messages> ⏎ [2026-05-29T12:31:48Z] 高文翰: ⏎     @_all 目前cloudsim通过ucp batch模式自动化提交3DGS生产的功能已经上线，不仅解决了优先级的问题，还有效提高了集群的gpu利用率，在这里非常感谢ucp同学@Jun Wu @边翔宇 @刘坤的大力支持，为你们点赞[赞]cc@徐林鵾 ⏎ [2026-05-29T12:33:46Z] 徐林鵾: ⏎     <p>@Jun Wu @边翔宇 @刘坤 感谢 UCP 同学的大力支持[赞][赞]</p><p>@云荟 可以说说现在的使用感受[呲牙]</p> ⏎ [2026-05-29T12:45:10Z] 云荟: ⏎     @徐林鵾 昨天上线后监控了一下完成量的状态，24小时的完成量达到了历史天级生产完成量的3-4倍！！极大的缓解了目前闭环生产压力！！[100分] ⏎     @Jun Wu @边翔宇@刘坤  非常感谢大家的支持！！！[送你小红花][送你小红花][抱拳][抱拳] cc:@高文翰 @裴健宏  ⏎ [2026-05-29T12:47:12Z] 云荟: ⏎     五星好评！！[赞][赞] ⏎ </forwarded_messages>
+2026-05-29 15:14	杨星昊	post	[Invalid rich text JSON]
+2026-06-01 10:30	郑丽娜	text	@杨星昊如果原图复现了但3dgs + pc/mc都没复现的，就需要我们自己看看图像是否有问题了，这个逻辑对么？ cc @吕文杰
+2026-06-01 10:36	杨星昊	file	<file key="file_v3_00128_93e013c4-36fb-4695-a22f-44df0393a8eg" name="filtered_jira.csv"/>
+2026-06-01 10:36	杨星昊	text	@郑丽娜 @吕文杰 新的100多个，应该没有重复的，double check下？
+2026-06-01 12:04	郑丽娜	text	@裴健宏 咱们自己本地编译出来的包和ci上的包有啥差异么？
+2026-06-01 12:06	裴健宏	text	@郑丽娜 ci云端编译的吗
+2026-06-01 12:30	杨星昊	text	[Invalid text JSON]
+2026-06-01 12:36	杨星昊	merge_forward	<forwarded_messages> ⏎ [2026-06-01T10:22:16Z] 王禹丁: ⏎     [151141](https://cloudsim.xiaopeng.link/#/e2e_job/fuyao/job/151141) [151147](https://cloudsim.xiaopeng.link/#/e2e_job/fuyao/job/151147) ⏎ [2026-06-01T12:34:49Z] 杨星昊: ⏎     [Image: img_v3_02128_a64846cb-eb85-41d6-9ca6-8b08dbcfd25g] ⏎ [2026-06-01T12:34:59Z] 杨星昊: ⏎     有两个成功两个失败了 ⏎ [2026-06-01T12:35:34Z] 杨星昊: ⏎     失败的原因是 ⏎     ![Image](img_v3_02128_6c94294d-744c-4732-86f0-0ebd0cc66f7g) ⏎ </forwarded_messages>
+2026-06-01 12:36	杨星昊	text	<p>yuding跑的IQA测试有两个失败两个成功的，仿真应该是运行完了的，但是失败的报没有FmOutputTopic消息，是啥原因来着？jianhong你清楚吗 @裴健宏</p>
+2026-06-01 13:00	裴健宏	text	@杨星昊 这个得翻翻日志看看
+2026-06-01 13:04	裴健宏	post	![Image](img_v3_02128_617a5191-440a-4ef3-b2a3-0acc83d9dafg) ⏎ @杨星昊 @王禹丁 模型报错了，看着像是模型适配有问题，按理说不该出现backfill的topic
+2026-06-01 13:04	裴健宏	text	具体的得问问@张振宇 @杨雪智
+2026-06-02 09:25	朱啸峰	text	@郑丽娜 @杨星昊  ⏎ 长里程 2248个3dgs_model.tgz大小统计 ⏎ 平均值: 2469958492.82 bytes (2.3003 GB) ⏎ P95:   4105907419.95 bytes (3.8239 GB) ⏎ P99:   5698917501.50 bytes (5.3075 GB) ⏎ >5GB 数量: 38
+2026-06-03 07:58	杨星昊	merge_forward	<forwarded_messages> ⏎ [2026-06-03T07:28:11Z] 杨星昊: ⏎     @刘家森 hello，qoder好像不支持python函数跳转？ctrl+左键点击函数无法跳转到定义？ ⏎ [2026-06-03T07:36:38Z] 柳上月: ⏎     @杨星昊 在远程环境安装BasedPyright插件，我这边window ssh远程开发是可以的 ⏎ </forwarded_messages>
+2026-06-03 10:07	裴健宏	post	后续新的binary跑原位仿真时，可以勾选这两个选项，它就会严格按实车运行，并输出实车和仿真车的轨迹json ⏎ ![Image](img_v3_0212a_97affe7b-ce5c-4ab0-a206-f72d95808b0g)
+2026-06-04 07:29	郑丽娜	text	@吕文杰 带下@周冯 @王禹丁 @靳希睿 吧
+2026-06-04 07:29	郑丽娜	text	@朱啸峰 带下@裴健宏 @杨星昊
+2026-06-04 07:30	郑丽娜	text	@瞿鑫宇 带@郑丽娜 @周蔚旭
+2026-06-04 07:31	朱啸峰	text	我和@瞿鑫宇 车在叮咚买菜这边
+2026-06-04 12:35	李坤	text	@_alltoken api key: { ⏎   "OPENAI_API_KEY": "sk-ea91599b0aabc66c12f100946649465265a89cba8f624ca9e20ec8ca445aa3dc" ⏎ }
+2026-06-05 02:38	杨星昊	text	@周冯 @裴健宏 https://gitlab-adc.xiaopeng.link/simworld/simworld/-/tree/dev_v2?ref_type=heads 帮忙加一下自动化脚本和回归测试？[双手合十]
+2026-06-05 04:10	郑丽娜	text	@_all 今天思聪last day，定了个奶茶下午2点左右到[呲牙]
+2026-06-08 07:46	杨星昊	text	今天了解到 WAN 有一个比较好的训练框架：https://github.com/modelscope/diffsynth-studio @靳希睿 @周冯
+2026-06-08 12:31	杨星昊	text	[Invalid text JSON]
+2026-06-08 12:39	王禹丁	text	[Invalid text JSON]
+2026-06-08 12:41	杨星昊	post	![Image](img_v3_0212f_2db675df-82a1-4cee-9181-a991a349f55g) ⏎ 老乡鸡暴雷了，这种中央厨房做的感觉会连带啊，大家小心些
+2026-06-09 10:36	杨星昊	post	![Image](img_v3_0212g_5d8527e1-e753-4069-9fe0-7d0c197e1a7g) ⏎ inspatio-world 看起来也是用的self attention来利用ref图 @周冯
+2026-06-09 11:21	周蔚旭	text	@裴健宏 @杨星昊 @周冯 @王禹丁    ⏎ 10.99.75.210 这台机器必须要重装系统才行，目前网络通了，麻烦大家看看哪些文件夹需要备份下来的，今晚上麻烦给我下，今晚会开始拷贝，明早上重装系统
+2026-06-09 11:33	瞿鑫宇	merge_forward	<forwarded_messages> ⏎ [2026-06-09T11:30:45Z] 瞿鑫宇: ⏎     [Image: img_v3_0212g_697b78f6-9bf4-4433-bd95-eec953eb53fg] ⏎ [2026-06-09T11:31:11Z] 瞿鑫宇: ⏎     [Image: img_v3_0212g_33dc5d9c-20d8-4bab-8514-e89a78354ebg] ⏎ </forwarded_messages>
+2026-06-09 11:33	瞿鑫宇	text	<p>@李坤 @郑丽娜 坤总，当前慢速链路已经跑通，和12Hz模式的对比如下面两张图片，里程差异0.3m左右，横向差异<0.1m</p>
+2026-06-09 11:47	李坤	text	https://open.feishu.cn/document/mcp_open_tools/feishu-cli-let-ai-actually-do-your-work-in-feishu
+2026-06-09 11:47	李坤	text	<p>agent可以直接调用飞书client操作文档，写文档</p>
+2026-06-10 10:10	郑丽娜	text	https://xiaopeng.feishu.cn/docx/J0W3dX4gQoc07lxBMdYcWXW9nkc?from=navigation
+2026-06-10 10:15	瞿鑫宇	post	![Image](img_v3_0212h_e4aefa6a-d1e8-4395-81d2-145817cc3efg) ⏎ 提mr 的时候让AI 扫了一下，AI 报警dev上 这个可能会出问题（这个文件应该已经被删了）:Lark_Emoji_Facepalm_0:
+2026-06-10 10:17	瞿鑫宇	text	<p>@裴健宏 建宏麻烦帮忙评估一下呢，确实有问题的话要不我顺带一起改了</p>
+2026-06-10 10:30	郑丽娜	text	@吕文杰 文杰也看眼呢，这个本周切成ucp后，这个文件还要么？
+2026-06-10 10:32	杨星昊	text	@瞿鑫宇 这个文件已经废弃了，要看ucp_xpeng_vision
+2026-06-10 10:34	裴健宏	text	@瞿鑫宇 这个文件重命名成ucp_xpeng_vision了[捂脸]
+2026-06-10 10:35	裴健宏	text	@瞿鑫宇 你是哪个分支呢
+2026-06-10 10:44	瞿鑫宇	text	@裴健宏 我看dev上好像也是
+2026-06-10 10:44	裴健宏	text	@瞿鑫宇 dev应该是有这个问题，dev_v2就改了
+2026-06-11 01:50	郑丽娜	text	@严潇竹 上午找@吕文杰 了解下把代码先能跑通哈
+2026-06-11 08:45	杨星昊	text	https://xiaopeng.feishu.cn/wiki/ZMkmwHnJeilXCNk6ttScedBKnEf 新的copilot额度申请入口
+2026-06-11 10:10	郑丽娜	text	https://xiaopeng.feishu.cn/wiki/O917wTFJJi4eHHkfOXtcjtesn1d @李坤
+2026-06-11 10:12	李坤	text	可以，这个风格看着像是GPT给的方案
+2026-06-11 10:14	郑丽娜	text	@李坤 gemini和gpt合作的方案，2边达成一致了
+2026-06-12 08:00	郑丽娜	text	@_all 大家来会议室了
+2026-06-12 09:32	周冯	text	写了个初版训练仿真评测闭环Agent开发方案 ⏎ https://xiaopeng.feishu.cn/wiki/ZUGCwVB3fiDcRDkwqYbcCDyInxf ⏎ @樊世洲 可以参考下
+2026-06-15 05:49	郑丽娜	post	![Image](img_v3_0212m_44d08931-a0ab-4a3d-91c3-639fcce7fb1g) ⏎ @杨星昊 提示词里面的速度偶尔会看到差异比较大，其它的都是对齐的，这种应该是规控在前面就出现了差异导致的，不是提示词本身的问题吧？
+2026-06-15 05:50	杨星昊	text	@郑丽娜 看一下具体当时的车辆状态
+2026-06-15 06:14	郑丽娜	text	@杨星昊 https://webviz.xiaopeng.link/#/player_page/?bagPath=/oss_gw/simulation/dds_stores/&task_id=2062432323&job_id=11905436&referrer=job_detail&binary_id=1692170&compareScenario=1&customCompareNames=Base 这个，仿真车先起步了
+2026-06-15 06:54	杨星昊	text	@郑丽娜 看起来确实实车没动仿真车开走了，所以有这个速度差异
+2026-06-16 06:26	裴健宏	text	https://xiaopeng.feishu.cn/wiki/CDv7wbMFmiYW1EkYRNRcnnBinah ⏎ 目前研发自测任务主要是基于ucp和fuyao进行，在操作流程上会比较繁琐，后续准备把研发自测任务也完全由cloudsim进行管控，完全把ucp当作一个被封装的中间层，麻烦大家看看文档中的内容还有想补充的或者不便的地方
+2026-06-17 02:22	李坤	text	<p>没填的同学填一下这个</p>
+2026-06-17 06:19	周冯	post	![Image](img_v3_0212o_8fdd1e25-371b-44dd-b840-b87c82f23bag) ⏎ ![Image](img_v3_0212o_afd5562f-0346-45b4-87f5-2ae3852e8cag) ⏎ ![Image](img_v3_0212o_13f1e437-8fb2-4fd7-b5e4-00457fd4b4bg) ⏎ 昨天说的目前difix ref在仿真车和实车偏离（新视角）的情况下受ref影响有幻觉的问题case，我本地通过pose delay模拟复现了这个效果 ⏎ 并且用最新版nvfixer ref跑了一遍，目前看幻觉基本缓解 ⏎ @李坤 @杨星昊
+2026-06-17 12:49	郑丽娜	text	https://adp.xindoo.xyz/
+2026-06-18 03:15	王禹丁	text	[infra-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/data-infra/fuyao:FM-SIMULATION-MERGE-0.0.9](http://infra-registry-vpc.cn-wulanchabu.cr.aliyuncs.com/data-infra/fuyao:FM-SIMULATION-MERGE-0.0.9)  ⏎ 新的仿真镜像，合入了clip-iqa和nvfixer所需要的环境 ⏎ 需要使用的同学可以自行更新对应model的Docker Image
+2026-06-18 03:34	瞿鑫宇	text	慢速模式的commit： ⏎ xos：https://gitlab-adc.xiaopeng.link/xpilot/xos/-/commit/bacf750485fa7aaa5954a29a2f6b19999dde8c86 ⏎ perception_xp5：https://gitlab-adc.xiaopeng.link/xpilot/perception_xp5/-/commit/b2b433d397093df7fea41a6729ea9ad3aa57069d ⏎ planning：https://gitlab-adc.xiaopeng.link/xpilot/planning/-/commit/6ea6f0c412b86867c09845dc3c67b9146661ea91 ⏎ simulation：https://gitlab-adc.xiaopeng.link/xpilot/simulation/-/commit/1ef78af2c4b620f26082734315a764d84b09abd9
+2026-06-18 10:58	郑丽娜	post	![Image](img_v3_0212p_664fa1f6-795e-46a6-949e-a729c1d4df1g) ⏎ @李坤 坤总，刚刚汇总到的城区场景集的情况 生产是指已经通过复现的
+2026-06-22 03:00	郑丽娜	text	@严潇竹 Prompt对齐等结果的时候问下@吕文杰 独立一个新调用入口集成到飞书机器人方便给交付组试用
+2026-06-22 10:39	郑丽娜	text	https://xiaopeng.feishu.cn/wiki/SBUYwm8Lri9aJ6kmexFcBAuGnlh 日报链接
+2026-06-22 14:04	裴健宏	text	@李坤 @杨星昊 跟cloudsim再确认了下，目前车型泛化功能cloudsim已上线，今晚他们会再在生产跑一遍全流程的回归测试，因为部分环节在开发环境回归不了，所以在生产还会再测一轮。
+2026-06-23 06:00	李坤	text	@郑丽娜 今天日会推迟到晚上7点～
+2026-06-24 03:58	郑丽娜	post	![Image](img_v3_0212v_e5f6c484-259e-4f5c-b817-ee8b218b23fg) ⏎ 公司出口被封了么
+2026-06-24 06:18	裴健宏	post	@李坤 @杨星昊 目前经过测试，场景编辑功能从生成到fm闭环仿真的链路能跑通，通过fm闭环仿真的结果发现以下问题： ⏎ - 现有渲染链路对编辑车的加载有问题，加载编辑车后，会导致真实的动态车消失 ⏎ - 编辑车的位姿等存在明显偏移 ⏎ - 轨迹生成相对粗糙，存在生成到错误车道等问题 ⏎ - Trigger time前沿用实车图像，导致切换到3dgs渲染时，加载的动态车表现为突然出现 ⏎ 后续行动项： ⏎ 1. 优先解决当前3dgs渲染链路对动态车的加载问题，保证编辑车与真实动态车共存 ⏎ 2. 优化轨迹生成规则 ⏎ 详细结果已补充在文档中 ⏎ [https://xiaopeng.feishu.cn/wiki/EeemwpVwdiJ1l0kEs9bc3ryZnUe](https://xiaopeng.feishu.cn/wiki/EeemwpVwdiJ1l0kEs9bc3ryZnUe)
+2026-06-25 02:24	杨星昊	text	改了个bug，看起来这个模型是可以从render latent学几何，ref学风格的 @靳希睿 @李坤
+2026-06-25 02:29	杨星昊	text	@靳希睿 可以直接用全量权重训练，这模型挺小的
+2026-06-25 02:31	李坤	text	@杨星昊 学风格这个之前就提过，考虑在一个时间段内复用一种风格latent，短时间不会变化特别大～
+2026-06-25 02:33	杨星昊	post	@李坤  ⏎ ![Image](img_v3_02130_9333151b-b294-48c6-a83f-bb62d7f3018g) ⏎ 感觉我们应该上14B的wan
+2026-06-25 02:33	李坤	text	@杨星昊 A100上可以跑wan2.2-A14B
+2026-06-25 02:34	李坤	text	我前几天跑过，不过刚刚跑下，比较勉强
+2026-06-25 02:34	杨星昊	text	@李坤 如果考虑训练的话，可能还是需要小一点？[思考]
+2026-06-25 02:36	李坤	text	训练没试过，可以试一下
+2026-06-25 02:37	杨星昊	post	chatgpt推荐 ⏎ ![Image](img_v3_02130_3ffbcb91-52f1-4024-b661-defeb7d689dg)
+2026-06-25 09:23	李坤	text	@郑丽娜 在另外一个会上，晚十五分钟开始
+2026-06-25 12:45	周冯	text	@杨星昊 Nvfixer ppu环境已适配完成：需要把所有牵扯到cuda的库替换成平头哥源的ppu相应库，并且部分库ppu sdk2.0提供的版本过高只能改相应库的源文件，之后会写死到dockerfile中。cc. @李坤
+2026-06-26 08:42	郑丽娜	text	@_all 开周会了
+2026-06-29 04:21	朱啸峰	text	@李坤 @郑丽娜 @瞿鑫宇 @周冯 整理了下目前HIL 3DGS欠的账，大佬们检阅一下https://xiaopeng.feishu.cn/wiki/A94TwINDAir7GSkOL5lcUgqJnpe?table=tblf0XskaWYCQQgk&view=vewdhM1XMQ
+2026-06-29 07:04	李坤	text	<p>@_all 应高老师要求，后续我们的日会降频，每日的进展通过周报的方式跟踪（https://xiaopeng.feishu.cn/wiki/SBUYwm8Lri9aJ6kmexFcBAuGnlh，今天大家先把本周姆目标和当天进展写一下，有些微调的我后续再调），格式类似，大家按照要求更新进展，相关协作的同学在日报文档上comment，高效获取相应的内容；【核心风险&上下游交互】这里大家把一些当前的协作问题放进来，即时同步进来（麻烦@刘开拓 尤其关注一下这里）；日报每天7点之前全部更新完～</p><p>@郑丽娜 日会降频到周二/周四5:30开，周二过业务相关的，包括场景数据生产/SIL/HIL/Agents等业务交付相关的内容；周四过算法研发的内容；都限定半小时以内，周五照旧；如果有需要额外开小会我找大家～</p>
+2026-06-29 09:15	瞿鑫宇	text	另一台编译机器的ip： xpeng@10.99.67.150    密码123456
+2026-06-29 09:16	杨星昊	text	@瞿鑫宇 你在用吗？没用的话我用一下[送心]
+2026-06-29 09:16	瞿鑫宇	post	对应的编包方式可以参考[https://xiaopeng.feishu.cn/wiki/L41IwsWGTi24f4kYScYcQ4OZnQc](https://xiaopeng.feishu.cn/wiki/L41IwsWGTi24f4kYScYcQ4OZnQc) ⏎ ![Image](img_v3_02134_caaf10b4-be86-4d2a-ac63-40a996597c1g)
+2026-06-30 08:32	李坤	text	@郑丽娜 今天日会推迟到7点
+2026-06-30 10:29	郑丽娜	text	[Invalid text JSON]
+2026-07-01 02:30	郑丽娜	text	@_all https://xiaopeng.feishu.cn/wiki/ZfJyw7stvihOqqkI7Awcz7TKnWL 大家把各自手里涉及到外部团队的需求都帮忙填到这个表格上哈
+2026-07-01 02:31	周蔚旭	text	<p>@郑丽娜 是新的加里面？，已经排期的加不？</p>
+2026-07-01 02:32	郑丽娜	text	@周蔚旭 全部，只要目前还没交付的
+2026-07-01 04:51	郑丽娜	text	<p>https://xiaopeng.feishu.cn/wiki/XXvewamYMiJJQekhP8FcJPU9n4d @朱啸峰 这是新数据的sunrunid，下午一起找下平台看看怎么把去重后Scenario搞出来（主要广州重跑了好几次），然后你再选一部分老数据凑够1000km 也记录在表格上 cc @王禹丁 @杨星昊</p>
+2026-07-01 05:06	郑丽娜	text	<p>@朱啸峰 新老数据分开记录哈，@周蔚旭 到时候也取这些新Scenario抽下对应的pose来画kml，顺便给补偿到oss上</p>
+2026-07-01 08:49	朱啸峰	post	![Image](img_v3_02136_c20f3d01-88f3-4601-b75b-1902cb5f914g) ⏎ @王禹丁
+2026-07-01 10:56	朱啸峰	file	<file key="file_v3_00136_e8327a3a-c189-4491-a1c9-d0d326d3b8eg" name="old_scenario_ids_500.txt"/>
+2026-07-01 10:56	朱啸峰	text	@王禹丁 旧的500scenario数据
+2026-07-01 10:59	郑丽娜	text	@朱啸峰 归档到下午的表格里面
+2026-07-01 11:12	朱啸峰	post	![Image](img_v3_02136_3618ff6c-d9cc-4ec6-87c7-b2ab31b0061g) ⏎ 有人知道RC版本怎么找对应的模型吗，例如[A.2.1-e29-xos630-xp5-ultra-rc5](https://cicdops.xiaopeng.link/data/xpilot/images/RC/E29/A.2.1-e29-xos630-xp5-ultra-rc5/#)
+2026-07-01 12:37	郑丽娜	text	https://bytedance.larkoffice.com/wiki/KMcuwlfQfiDJWlkciS3cfW1Enlb
+2026-07-01 13:08	朱啸峰	post	@王禹丁  ⏎ - pat_navigation_lane_change_late_metric ⏎ - pat_navi_lc_no_space_metric ⏎ - pat_not_follow_navigation_metric ⏎ - pat_split_ignore_navigation_metric ⏎ - snake_driving_detection_metric ⏎ - below_speed_limit_metric ⏎ stage2 binary 1768900
+2026-07-01 13:15	王禹丁	text	dev_e29_xos630_int_A.2.1-e29-xos630-xp5-ultra-rc5 分支
+2026-07-02 03:22	郑丽娜	text	https://cloudsim.xiaopeng.link/#/3d_gs_production_detail/2856 @周冯
+2026-07-02 03:23	周冯	text	[2873](https://cloudsim.xiaopeng.link/#/3d_gs_production_detail/2873)
+2026-07-02 03:26	周冯	merge_forward	<forwarded_messages> ⏎ [2026-06-30T12:25:45Z] 周冯: ⏎     ![Image](img_v3_02137_574b252d-c269-41a8-80a8-df8863da429g) ⏎     这个subrun任务需要cancel了重新提交下，我下午那会儿更改了配置 ⏎ </forwarded_messages>
+2026-07-02 03:32	杨星昊	text	大概拟定了一下车型泛化7月高优事宜，时间有点紧，需要最近开始做起来了 [双手合十] ⏎ https://xiaopeng.feishu.cn/wiki/SlC6wQUZjiz8vnkDcMVc9MjAnuc ⏎ @周冯 @裴健宏 @王禹丁 @韩阿东 cc @李坤
+2026-07-02 03:50	李坤	text	@杨星昊 刚刚和@徐林鵾 也聊了一下，这个事情的工程难度比想象中要高一些，如果要得到准确的结论，需要在数据集维度要均衡（比如把现在业务组在用的细颗粒度的标签数据集作为数据集的最小单元，而不是单个case，目前的小标签应该有上百个）；横向则是所有的车型变化（现有车型）/（calibration变化，比如针对某个车进行calibration的扰动泛化）/车衣泛化，这样看下来横向至少也有几十列；还有模型的维度；我们最后要对这张很大的表格进行数据分析~这周你们讨论下具体的方案，近期先把相关需求提出去，比如前后端/平台需要支持的
+2026-07-02 07:02	李坤	text	@郑丽娜 5点半有双周汇报，我们日会改到7点
+2026-07-02 08:12	李坤	text	汇报改到下周二了，那我们还是5点半吧~@郑丽娜
+2026-07-02 09:05	cli_aacf	post	<at user_id="all"></at> ⏎   ⏎ 请大家更新今日日报 👇 ⏎ [Q3-7月目标【未对齐】& 进展](https://xiaopeng.feishu.cn/wiki/SBUYwm8Lri9aJ6kmexFcBAuGnlh)
+2026-07-03 01:54	郑丽娜	text	<p>@杨星昊 @周冯 SIL那边带上nvfixer-ref batch模式下gpu占用咋样呢？仔细看了下HIL报告小批量显存已经比较临界了，可能有风险</p>
+2026-07-03 02:04	杨星昊	text	@郑丽娜 建议看看有没有报OOM的情况，GPU它会动态调节显存reserve和allocate，峰值高不一定会爆，可能是利用率打满的情况
+2026-07-03 02:28	瞿鑫宇	post	@杨星昊  ⏎ ![Image](img_v3_02138_5ca6883e-12f9-4b70-bb7c-26331ceff90g) ⏎ 确实存在OOM 的情况，分配显存失败 cc：@郑丽娜 @周冯
+2026-07-03 02:30	郑丽娜	text	@瞿鑫宇 看下非batch模式吧
+2026-07-03 02:30	杨星昊	text	@郑丽娜 周冯确认了下是调用的nvfixer错了，文件路径问题
+2026-07-03 02:31	周冯	text	<p>@郑丽娜 刚刚发现目前HIL合入主分支里面还保留有旧版本Nvfixer，没有调用新dev分支的外层nvfixer</p>
+2026-07-03 02:31	杨星昊	text	@瞿鑫宇 看看代码啥时候加入git管理呗，避免类似问题
+2026-07-03 02:31	郑丽娜	text	@周冯 能直接删了么 如果老版本不用了
+2026-07-03 02:32	郑丽娜	text	@杨星昊 嗯 这个月必须让hil强行回主线了 @朱啸峰
+2026-07-03 02:34	朱啸峰	text	@周冯 这个之前说过的，等外层适配好了就可以把hil里面的干掉
+2026-07-03 08:16	郑丽娜	text	<p>@_all 大家先写下日报哈</p>
+2026-07-03 08:32	郑丽娜	text	@赵浩南 投屏可以停了[坏笑]
+2026-07-03 09:50	郑丽娜	post	![Image](img_v3_02138_897fcbce-d670-4fba-82d8-43529745e2cg) ⏎ @李坤 backfill异常数据那边刚才有进展同步回来了 cc @刘开拓
+2026-07-03 09:56	赵浩南	file	<file key="file_v3_00138_462904e0-e3d4-4467-ac94-f981291a40cg" name="flux+Wan示例（单视角生成 视角之间无联系）.zip"/>
+2026-07-03 11:35	赵浩南	text	https://github.com/multica-ai/andrej-karpathy-skills 可能有用的规范ai行为的md文件
+2026-07-06 02:02	周蔚旭	text	https://cloudsim.xiaopeng.link/#/e2e_job/fuyao/job/174936   @周冯 cc @郑丽娜 周会上说的那个起步的case，在起步前是人在驾驶
+2026-07-06 02:38	郑丽娜	post	![Image](img_v3_0213b_6d09aeb6-22e4-4771-a9ea-a59bb0d484cg) ⏎  cc  @瞿鑫宇 @周冯 @杨星昊 下周再搞一套给上海研发用
+2026-07-06 02:50	郑丽娜	merge_forward	<forwarded_messages> ⏎ [2026-07-06T02:44:20Z] 郑丽娜: ⏎     卓明，想了解个细节，之前应该是有沟通过长里程的生产质检是需要把人工驾驶部分的数据丢弃的吧，想知道这个规则是怎么样的，是全部都是人工驾驶或者超过一定比例的才会丢弃么？ ⏎ [2026-07-06T02:47:32Z] 刘卓明: ⏎     这个比例可以调的，目前是人驾时间大于70%才会过滤 ⏎     ![Image](img_v3_0213b_ba1ad3e5-89c4-405b-bdab-07760d95448g) ⏎ [2026-07-06T02:48:03Z] 刘卓明: ⏎     想的是有些case会安全接管，然后重新开功能，所以放的比较松 ⏎ </forwarded_messages>
+2026-07-06 02:50	郑丽娜	text	<p>@杨星昊 现在的过滤规则，后面排个计划改下试试</p>
+2026-07-06 02:56	李坤	post	@高炳涛(Bingtao) 早会提到的使用反馈 ⏎ 1. 把当前我们在建设的工具和链路以及ai agent 汇总了一下，后面只要会用到的同学，把反馈集中起来写出来 ⏎ 2. 其次用户问卷，会包含内部和外部用户，Q2结束，这一周我们收集整体反馈。 ⏎ [https://xiaopeng.feishu.cn/wiki/Q9BVwAnu0iq2UTkj2neckfvOnhb](https://xiaopeng.feishu.cn/wiki/Q9BVwAnu0iq2UTkj2neckfvOnhb) ⏎ cc @所有人
+2026-07-06 02:57	李坤	text	@_all FYI，本月的目标要紧盯各项目的业务落地情况～所有没闭环的停留在POC阶段的事项往业务落地的方向靠
+2026-07-06 05:27	周冯	text	总结了当前产线feedforward方案和Q3的计划，Q3打算分两步骤来走：1. 探索：目前打算先找出一个符合当前落地需求（基于benchmark评测基准）的feedforward基准模型，@靳希睿 这周开始优先尝试VGGT-Ω和Pi3推理效果优化，我这边来准备数据和benchmark；2. Scube点云到高斯链路的持续优化，这一块我先来看看具体优化项，后续直接补充到文档中。 ⏎ 大家有什么建议也可以提出来~ ⏎ https://xiaopeng.feishu.cn/wiki/GSeJwH9lsirCvmkYkCycoTXzn2e ⏎ @李坤 @杨星昊 @郑丽娜
+2026-07-06 05:32	杨星昊	text	<p>@周冯 DVGT出2了，可以看一下 https://wzzheng.net/DVGT-2/</p>
+2026-07-06 07:23	杨星昊	post	[https://xiaopeng.feishu.cn/wiki/SlC6wQUZjiz8vnkDcMVc9MjAnuc](https://xiaopeng.feishu.cn/wiki/SlC6wQUZjiz8vnkDcMVc9MjAnuc) ⏎ ![Image](img_v3_0213b_bc2a4c3f-3502-46bd-afa1-bce32b26d67g) ⏎ ![Image](img_v3_0213b_09956aae-48d8-43f6-a0d7-56d2e68e663g) ⏎ 麻烦大家高优支持下车型泛化:FINGERHEART:
+2026-07-06 07:54	裴健宏	merge_forward	<forwarded_messages> ⏎ [2026-07-06T07:47:50Z] 高文翰: ⏎     @杨星昊 @裴健宏 测试模式已上线，测试模式下可以不受 quota 管控，但单次只支持 10 个以内的任务提交（超过只提交前 10 个，对于 subrun 只提交前 10 个切片），adc-infer-ucp如果提高优的话还是需要@吕文杰 审批 ⏎     ![Image](img_v3_0213b_01c45daf-9d46-4f5c-b7af-74b3e4e6ca1g) ⏎ [2026-07-06T07:52:55Z] 杨星昊: ⏎     <p>权限现在转移到我这边了，我可以approve</p> ⏎ </forwarded_messages>
+2026-07-06 07:54	裴健宏	text	现在在cloudsim可以直接提交测试任务了
+2026-07-06 08:45	郑丽娜	post	![Image](img_v3_0213b_0b4b8474-86c3-4322-b44d-447ea0884a1g) ⏎ @裴健宏 是对应的这个需求么？我就改成已交付了？
+2026-07-06 09:04	cli_aacf	post	<at user_id="all"></at> ⏎   ⏎ 请大家更新今日日报 👇 ⏎ [Q3-7月目标【未对齐】& 进展](https://xiaopeng.feishu.cn/wiki/SBUYwm8Lri9aJ6kmexFcBAuGnlh)
+2026-07-07 03:40	郑丽娜	text	https://xiaopeng.feishu.cn/wiki/TGrAwdMz1igqOsklBqDc4Wr0n6e 7月每周的计划提前拆解，大家关注下哈
+2026-07-07 05:52	杨星昊	text	https://xiaopeng.feishu.cn/wiki/SlC6wQUZjiz8vnkDcMVc9MjAnuc
+2026-07-07 06:18	郑丽娜	text	@_all 5080那套编译环境暂时下线了，组内大家有编译需求先用另外一套
+2026-07-07 06:28	郑丽娜	text	@杨星昊 上周说咱们有一些新的高优需求需要提么？https://xiaopeng.feishu.cn/wiki/ZfJyw7stvihOqqkI7Awcz7TKnWL要不先加表里，这周约个时间拉下@黄佰民 先提
+2026-07-07 06:31	杨星昊	post	@郑丽娜  ⏎ ![Image](img_v3_0213c_664cc4e7-53c1-4c13-aaae-497fb519063g) ⏎ @裴健宏 jianhong看看这个需求一起提么？尽量早点？
+2026-07-07 06:32	裴健宏	text	@杨星昊 我一会整理个需求文档发给他们吧
+2026-07-07 06:34	裴健宏	text	@杨星昊 我提需求的话，再加上让cloudsim支持选多个车型吧，这个我这边侧完就可以上
+2026-07-07 09:08	cli_aacf	post	<at user_id="all"></at> ⏎   ⏎ 请大家更新今日日报 👇 ⏎ [Q3-7月目标【未对齐】& 进展](https://xiaopeng.feishu.cn/wiki/SBUYwm8Lri9aJ6kmexFcBAuGnlh)
+2026-07-07 09:08	严潇竹	text	[Invalid text JSON]
+2026-07-07 09:32	杨星昊	post	![Image](img_v3_0213c_1689485e-25c9-4e02-850e-c8327b42d23g) ⏎ @周蔚旭 旭哥，你这个MR加上以后脚本默认跑不了啊
+2026-07-07 09:35	杨星昊	post	@周蔚旭 文件层级不同啊 ⏎ ![Image](img_v3_0213c_43da546a-5613-4cc6-822d-5d2a79e642bg) ⏎ :Lark_Emoji_Lol_0:
+2026-07-07 09:46	cli_a6ba	text	https://xiaopeng.feishu.cn/docx/Tu9rdASMeozNRXxE7aicG9GSnuf?from=vc_group_doc_link#doxcn507eUw0AqoeRhVzI2dJ0Sd
+2026-07-07 09:46	杨星昊	merge_forward	<forwarded_messages/>
+2026-07-07 09:47	杨星昊	post	![Image](img_v3_0213c_eccf0e69-6515-487d-91d5-3d68fa418a6g) ⏎ @周蔚旭 这个MR有点危险，脚本和车型泛化的ucp都跑不起来，我还去fuyao提了个单查这个报错是啥问题:Lark_Emoji_Facepalm_0:我先把这个MR从dev revert掉 cc @郑丽娜
+2026-07-07 09:50	郑丽娜	text	@周蔚旭 高优查下吧，这个不是咱们的回归测试链路么？
+2026-07-07 09:55	郑丽娜	text	车型泛化那边是不是有特殊的链路要测试的？如果是的话可以固定下，后面MR也带这个的运行结果报告
+2026-07-07 09:56	杨星昊	post	@郑丽娜 因为这个改动到文件import那些，还需要测试下： ⏎ - 仿真链路 ⏎ - fuyao a100 上的预处理、训练、渲染 ⏎ 车型泛化这一块我们在看
+2026-07-07 09:58	周蔚旭	post	@郑丽娜   cc @杨星昊  ⏎ 1. 这次新加改动的代码需要路径是该仓库根目录，一般都会带上这个路径。多车型这个工具看起来Python路径没有带上根目录的，所以报错。同时不排除有其他工具没有带上该目录 ⏎ 2. clip, subrun,仿真都跑过，在fuyao/cloudsim两个平台上面。但确实没有跑其他工具 ⏎ 3. 下午的验证，确认了使用最新的image不存在日志耗时大的问题，所以本身这里也打算今明两天提个mr处理。
+2026-07-07 09:58	杨星昊	text	@郑丽娜 这个有可能是内网崩了导致的，本地跑不起来可能是本地的问题，我再看看
+2026-07-07 10:01	杨星昊	text	@周蔚旭 fuyao a100 上的预处理、训练、渲染是用脚本提的a100任务，也测试下吧
+2026-07-07 10:05	周蔚旭	text	@杨星昊 根据下午的验证，可以用平台送过来的logging，这些地方的代码也就不需要了。只保留日志上传那部分的功能。无需大面积替换logging
+2026-07-07 10:06	杨星昊	text	@周蔚旭 那你基于主线改一下？感觉从第一性原理出发这事确实可以简化下
+2026-07-08 01:34	李坤	text	<p>拆解的周目标放在这里，大家关注本月的落地目标，@杨星昊 @郑丽娜 后续在这里校正～ ⏎ </p><p>https://xiaopeng.feishu.cn/wiki/SBUYwm8Lri9aJ6kmexFcBAuGnlh#share-MNi9dp6MQolIMrx5KdQcYqzSnRb</p>
+2026-07-08 01:41	郑丽娜	text	@裴健宏 约了今早的需求同步，如果有文档了可以先放页面哈
+2026-07-08 01:42	裴健宏	text	@郑丽娜 已经放了的
+2026-07-08 09:10	cli_aacf	post	<at user_id="all"></at> ⏎   ⏎ 请大家更新今日日报 👇 ⏎ [Q3-7月目标【未对齐】& 进展](https://xiaopeng.feishu.cn/wiki/SBUYwm8Lri9aJ6kmexFcBAuGnlh)

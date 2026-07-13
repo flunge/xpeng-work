@@ -1,0 +1,14 @@
+车型泛化
+RC路线
+HIL链路部署
+慢速模式
+极速模式
+复现率Agent
+TopDiff-Agent
+Prompt-Agent
+CLIP-IQA
+Fixer优化
+RC路线SIL验证
+闭环场景集推进
+场景泛化
+WM-内部探索

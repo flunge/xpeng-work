@@ -1,5 +1,4 @@
 import oss2
-import os
 import sys
 import argparse
 
@@ -11,10 +10,11 @@ def download_file_from_oss2(
         show_progress = True
     ):
     if not bucket:
-        access_key_id = os.getenv("OSS_ACCESS_KEY_ID")
-        access_key_secret = os.getenv("OSS_ACCESS_KEY_SECRET")
+        # Replace these with your actual values
+        access_key_id = "OSS_ACCESS_KEY_ID_REDACTED"
+        access_key_secret = "OSS_ACCESS_KEY_SECRET_REDACTED"
         bucket_name = "cloudsim-ci-sh"
-        endpoint = "http://oss-cn-wulanchabu.aliyuncs.com"
+        endpoint = "http://oss-cn-wulanchabu.aliyuncs.com"  # Replace with your region
 
         # Initialize the OSS Auth and Bucket
         auth = oss2.Auth(access_key_id, access_key_secret)
@@ -46,10 +46,11 @@ def download_file_from_oss2(
 
 
 def get_bucket():
-    access_key_id = os.getenv("OSS_ACCESS_KEY_ID")
-    access_key_secret = os.getenv("OSS_ACCESS_KEY_SECRET")
+    # Replace these with your actual values
+    access_key_id = "OSS_ACCESS_KEY_ID_REDACTED"
+    access_key_secret = "OSS_ACCESS_KEY_SECRET_REDACTED"
     bucket_name = "cloudsim-ci-sh"
-    endpoint = "http://oss-cn-wulanchabu.aliyuncs.com"
+    endpoint = "http://oss-cn-wulanchabu.aliyuncs.com"  # Replace with your region
     # Initialize the OSS Auth and Bucket
     auth = oss2.Auth(access_key_id, access_key_secret)
     bucket = oss2.Bucket(auth, endpoint, bucket_name)
@@ -57,10 +58,11 @@ def get_bucket():
 
 
 def get_bucket_vision():
-    access_key_id = os.getenv("OSS_VISION_ACCESS_KEY_ID")
-    access_key_secret = os.getenv("OSS_VISION_ACCESS_KEY_SECRET")
+    # Replace these with your actual values
+    access_key_id = "OSS_VISION_ACCESS_KEY_ID_REDACTED"
+    access_key_secret = "OSS_VISION_ACCESS_KEY_SECRET_REDACTED"
     bucket_name = "ips-prediction"
-    endpoint = "http://oss-cn-wulanchabu.aliyuncs.com"
+    endpoint = "http://oss-cn-wulanchabu.aliyuncs.com"  # Replace with your region
     # Initialize the OSS Auth and Bucket
     auth = oss2.Auth(access_key_id, access_key_secret)
     bucket = oss2.Bucket(auth, endpoint, bucket_name)

@@ -252,8 +252,8 @@ def upload_to_oss(source_path: str, vehicle_type: str, event_id: str, oss_subpat
                 local_directory=source_path,
                 oss_directory=oss_target_path,
                 var_endpoint='http://oss-cn-wulanchabu-internal.aliyuncs.com',
-                var_access_key=os.environ.get("OSS_ACCESS_KEY_ID", ""),
-                var_secret_key=os.environ.get("OSS_ACCESS_KEY_SECRET", ""),
+                var_access_key='OSS_ACCESS_KEY_ID_REDACTED',
+                var_secret_key='OSS_ACCESS_KEY_SECRET_REDACTED',
                 var_job_num=10,
                 var_bucket_name=bucket_name
             )

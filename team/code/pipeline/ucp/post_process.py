@@ -1159,8 +1159,8 @@ def upload_results_to_oss(results_dir: str, clip_id: str, model_version: str, ti
     oss_base_path = f"sim_engine/evaluation_results/{clip_id}/{model_version}/{timestamp}"
 
     var_endpoint = 'http://oss-cn-wulanchabu-internal.aliyuncs.com'
-    var_access_key = os.environ.get("OSS_ACCESS_KEY_ID", "")
-    var_secret_key = os.environ.get("OSS_ACCESS_KEY_SECRET", "")
+    var_access_key = 'OSS_ACCESS_KEY_ID_REDACTED'
+    var_secret_key = 'OSS_ACCESS_KEY_SECRET_REDACTED'
     var_bucket_name = 'cloudsim-ci-sh'
 
     import oss2

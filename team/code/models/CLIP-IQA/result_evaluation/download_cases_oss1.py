@@ -12,8 +12,8 @@ import requests
 import oss2
 import lz4.frame as lz4frame
 
-OSS_ACCESS_KEY_ID = os.environ.get("OSS_ACCESS_KEY_ID", "")
-OSS_ACCESS_KEY_SECRET = os.environ.get("OSS_ACCESS_KEY_SECRET", "")
+OSS_ACCESS_KEY_ID = 'OSS_ACCESS_KEY_ID_REDACTED'
+OSS_ACCESS_KEY_SECRET = 'OSS_ACCESS_KEY_SECRET_REDACTED'
 SIM_BUCKET = 'cloudsim-ci-sh'
 
 CLOUDSIM_API_URL = 'https://cloudsim.xiaopeng.link/simulation/pytorch_test/query_e2e_job_by_id/'

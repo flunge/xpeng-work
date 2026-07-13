@@ -106,8 +106,8 @@ def create_tgz_archive(source_dir, output_file):
 
 def upload_to_oss(local_file, oss_path):
     # 阿里云 OSS 访问信息
-    access_key_id = os.environ.get("OSS_ACCESS_KEY_ID", "")
-    access_key_secret = os.environ.get("OSS_ACCESS_KEY_SECRET", "")
+    access_key_id = 'OSS_ACCESS_KEY_ID_REDACTED'
+    access_key_secret = 'OSS_ACCESS_KEY_SECRET_REDACTED'
     endpoint = 'http://oss-cn-wulanchabu-internal.aliyuncs.com'
     bucket_name = 'cloudsim-ci-sh'
     

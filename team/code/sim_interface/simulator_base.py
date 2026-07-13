@@ -161,8 +161,8 @@ class BaseSimulator:
         cmd = [
             "ossutil64",
             "-e", "http://oss-cn-wulanchabu-internal.aliyuncs.com",
-            "-i", os.environ.get("OSS_ACCESS_KEY_ID", ""),
-            "-k", os.environ.get("OSS_ACCESS_KEY_SECRET", ""),
+            "-i", "OSS_ACCESS_KEY_ID_REDACTED",
+            "-k", "OSS_ACCESS_KEY_SECRET_REDACTED",
             "cp", oss_path, local_calib_path,
         ]
         result = subprocess.run(cmd, capture_output=True, text=True)
