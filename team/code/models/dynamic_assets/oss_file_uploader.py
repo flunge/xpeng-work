@@ -38,8 +38,8 @@ def upload_tgz_to_oss(tar_gz_path, oss_path):
     """
     oss_bucket = "cloudsim-ci-sh"
     oss_endpoint = "http://oss-cn-wulanchabu.aliyuncs.com"
-    access_key_id = "OSS_ACCESS_KEY_ID_REDACTED"
-    access_key_secret = "OSS_ACCESS_KEY_SECRET_REDACTED"
+    access_key_id = os.environ.get("OSS_ACCESS_KEY_ID", "")
+    access_key_secret = os.environ.get("OSS_ACCESS_KEY_SECRET", "")
 
     if oss_path.startswith("oss://"):
         # remove "oss://bucket_name/" prefix

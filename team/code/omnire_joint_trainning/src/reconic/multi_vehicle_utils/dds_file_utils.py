@@ -125,9 +125,9 @@ def download_file_from_oss(oss_path: str, local_path: str, need_decompress: bool
     filename = os.path.basename(oss_path)
     
     if is_dir:
-        cmd = f"ossutil64 -e http://oss-cn-wulanchabu-internal.aliyuncs.com -i OSS_ACCESS_KEY_ID_REDACTED -k OSS_ACCESS_KEY_SECRET_REDACTED cp -r 'oss://{bucket_name}/{object_key}' '{local_path}'"
+        cmd = f'ossutil64 -e http://oss-cn-wulanchabu-internal.aliyuncs.com -i {os.environ.get("OSS_ACCESS_KEY_ID", "")} -k {os.environ.get("OSS_ACCESS_KEY_SECRET", "")} cp -r \'oss://{bucket_name}/{object_key}\' \'{local_path}\''
     else:
-        cmd = f"ossutil64 -e http://oss-cn-wulanchabu-internal.aliyuncs.com -i OSS_ACCESS_KEY_ID_REDACTED -k OSS_ACCESS_KEY_SECRET_REDACTED cp 'oss://{bucket_name}/{object_key}' '{local_path}'"
+        cmd = f'ossutil64 -e http://oss-cn-wulanchabu-internal.aliyuncs.com -i {os.environ.get("OSS_ACCESS_KEY_ID", "")} -k {os.environ.get("OSS_ACCESS_KEY_SECRET", "")} cp \'oss://{bucket_name}/{object_key}\' \'{local_path}\''
     print(f"  下载: {oss_path} -> {local_path}")
     
     result = subprocess.run(cmd, shell=True, capture_output=True, text=True)

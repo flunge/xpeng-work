@@ -14,8 +14,8 @@ def download_and_extract_tgz_from_oss(
     local_extract_path, 
     bucket_name='cloudsim-ci-sh', 
     endpoint='http://oss-cn-wulanchabu-internal.aliyuncs.com',
-    access_key_id='OSS_ACCESS_KEY_ID_REDACTED',
-    access_key_secret='OSS_ACCESS_KEY_SECRET_REDACTED'
+    access_key_id=os.environ.get("OSS_ACCESS_KEY_ID", ""),
+    access_key_secret=os.environ.get("OSS_ACCESS_KEY_SECRET", "")
 ):
     try:
         auth = oss2.Auth(access_key_id, access_key_secret)

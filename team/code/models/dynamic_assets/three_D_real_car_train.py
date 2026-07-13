@@ -340,8 +340,8 @@ def upload_file_to_oss(file_path, oss_path):
     """
     oss_bucket = "cloudsim-ci-sh"
     oss_endpoint = "http://oss-cn-wulanchabu-internal.aliyuncs.com"
-    access_key_id = "OSS_ACCESS_KEY_ID_REDACTED"
-    access_key_secret = "OSS_ACCESS_KEY_SECRET_REDACTED"
+    access_key_id = os.environ.get("OSS_ACCESS_KEY_ID", "")
+    access_key_secret = os.environ.get("OSS_ACCESS_KEY_SECRET", "")
 
     cmd = f"ossutil -e {oss_endpoint} -i {access_key_id} -k {access_key_secret} -r --parallel 8 cp -f {file_path} oss://{oss_bucket}/{oss_path}"
     logging.info(f"[upload_file_to_oss] Uploading {file_path} to OSS at {oss_path}...")

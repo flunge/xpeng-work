@@ -11,8 +11,8 @@ def download_file_from_oss2(
     ):
     if not bucket:
         # Replace these with your actual values
-        access_key_id = "OSS_ACCESS_KEY_ID_REDACTED"
-        access_key_secret = "OSS_ACCESS_KEY_SECRET_REDACTED"
+        access_key_id = os.environ.get("OSS_ACCESS_KEY_ID", "")
+        access_key_secret = os.environ.get("OSS_ACCESS_KEY_SECRET", "")
         bucket_name = "cloudsim-ci-sh"
         endpoint = "http://oss-cn-wulanchabu.aliyuncs.com"  # Replace with your region
 
@@ -47,8 +47,8 @@ def download_file_from_oss2(
 
 def get_bucket():
     # Replace these with your actual values
-    access_key_id = "OSS_ACCESS_KEY_ID_REDACTED"
-    access_key_secret = "OSS_ACCESS_KEY_SECRET_REDACTED"
+    access_key_id = os.environ.get("OSS_ACCESS_KEY_ID", "")
+    access_key_secret = os.environ.get("OSS_ACCESS_KEY_SECRET", "")
     bucket_name = "cloudsim-ci-sh"
     endpoint = "http://oss-cn-wulanchabu.aliyuncs.com"  # Replace with your region
     # Initialize the OSS Auth and Bucket
@@ -59,8 +59,8 @@ def get_bucket():
 
 def get_bucket_vision():
     # Replace these with your actual values
-    access_key_id = "OSS_VISION_ACCESS_KEY_ID_REDACTED"
-    access_key_secret = "OSS_VISION_ACCESS_KEY_SECRET_REDACTED"
+    access_key_id = "os.environ.get("OSS_VISION_ACCESS_KEY_ID", "")"
+    access_key_secret = "os.environ.get("OSS_VISION_ACCESS_KEY_SECRET", "")"
     bucket_name = "ips-prediction"
     endpoint = "http://oss-cn-wulanchabu.aliyuncs.com"  # Replace with your region
     # Initialize the OSS Auth and Bucket
