@@ -1,3 +1,7 @@
 [submodule "team/simworld"]
 	path = team/simworld
 	url = git@gitlab-adc.xiaopeng.link:simworld/simworld.git
+[submodule "personal/resume"]
+	path = personal/resume
+	url = git@github.com:flunge/resume.git
+	branch = master
