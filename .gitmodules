@@ -1,0 +1,3 @@
+[submodule "team/simworld"]
+	path = team/simworld
+	url = git@gitlab-adc.xiaopeng.link:simworld/simworld.git
