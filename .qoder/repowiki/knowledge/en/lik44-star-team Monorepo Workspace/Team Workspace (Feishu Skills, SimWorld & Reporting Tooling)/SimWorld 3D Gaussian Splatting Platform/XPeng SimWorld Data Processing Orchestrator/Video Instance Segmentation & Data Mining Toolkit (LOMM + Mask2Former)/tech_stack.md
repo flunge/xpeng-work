@@ -1,0 +1,1 @@
+PyTorch + Detectron2; custom CUDA deformable attention (`mask2former/pixel_decoder/ops/src/{cpu,cuda}/ms_deform_attn*`); SAM/ViT backbones via `samAdapter`/`vitAdapter`; configs driven by Detectron2 `CfgNode` YAML files.

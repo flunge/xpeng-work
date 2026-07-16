@@ -1,6 +1,0 @@
-- Runtime module swap controlled by the `GS_MODE` env var: when `GS_MODE=render` the package rebinds `BasicTrainer` / `GSModelType` to the `_render` variants so downstream code stays unchanged.
-- Gaussian model classes are discovered and instantiated dynamically via `import_str(model_cfg.type)` keyed by entries in `model_config`, keeping the trainer decoupled from concrete Gaussian types.
-- Per-class optimisation parameters are merged hierarchically: per-class `optim`/`ctrl` dicts override `gaussian_optim_general_cfg` / `gaussian_ctrl_general_cfg` through `update_gaussian_cfg` before being passed to the constructor.
-- Each Gaussian class is tagged with a `GSModelType` enum value stored in `self.gaussian_classes`, and point-wise class membership is tracked as `self.pts_labels` so masks can be derived uniformly across losses and per-class renders.
-- Optional auxiliary components (Sky, Affine, CamPose, CamPosePerturb) live under the fixed `misc_classes_keys` list and are constructed separately from Gaussian models, allowing them to be omitted without breaking the init flow.
-- Checkpoint I/O is centralized in `state_dict` / `load_state_dict` / `resume_from_checkpoint`, storing `step`, nested `models` state dict, and optionally optimizer/GradScaler state, with special handling for `RigidNodesLight` mirroring.

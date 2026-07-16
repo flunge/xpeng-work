@@ -1,1 +1,0 @@
-Training is launched by calling `python -m nail_evolsplat.train.trainer --config_path <yaml>`; the trainer auto-downloads a pretrained checkpoint from OSS via `download_file_from_oss2` if missing and downloads per-scene data through `down_training_data`. Inference uses `python infer_evolsplat.py` with hard-coded paths for `ckpt_path`, `root_data_folder`, and `output_folder`.

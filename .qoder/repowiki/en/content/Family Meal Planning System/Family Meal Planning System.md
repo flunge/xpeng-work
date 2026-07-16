@@ -2,23 +2,25 @@
 
 <cite>
 **Referenced Files in This Document**
-- [meal/README.md](file://meal/README.md)
-- [meal/config/family.yaml](file://meal/config/family.yaml)
-- [meal/config/holidays-2026.yaml](file://meal/config/holidays-2026.yaml)
-- [meal/config/vacations-2026.yaml](file://meal/config/vacations-2026.yaml)
-- [meal/config/webhook.yaml](file://meal/config/webhook.yaml)
-- [meal/scripts/generate_month.py](file://meal/scripts/generate_month.py)
-- [meal/scripts/notify_daily.py](file://meal/scripts/notify_daily.py)
-- [meal/scripts/run_daily.sh](file://meal/scripts/run_daily.sh)
-- [meal/scripts/generate_next_month.sh](file://meal/scripts/generate_next_month.sh)
-- [meal/scripts/check_feedback.py](file://meal/scripts/check_feedback.py)
-- [meal/scripts/weekly_shop.py](file://meal/scripts/weekly_shop.py)
-- [meal/setup.sh](file://meal/setup.sh)
-- [meal/recipes/breakfast/01-奶香玉米汁-西葫芦鸡蛋饼.yaml](file://meal/recipes/breakfast/01-奶香玉米汁-西葫芦鸡蛋饼.yaml)
-- [meal/recipes/dinner/01-香菇滑鸡-上汤娃娃菜.yaml](file://meal/recipes/dinner/01-香菇滑鸡-上汤娃娃菜.yaml)
-- [meal/plans/daily/2026-07-01.md](file://meal/plans/daily/2026-07-01.md)
-- [meal/plans/2026-06.md](file://meal/plans/2026-06.md)
+- [personal/meal/scripts/generate_month.py](file://personal/meal/scripts/generate_month.py)
+- [personal/meal/scripts/notify_daily.py](file://personal/meal/scripts/notify_daily.py)
+- [personal/meal/scripts/run_daily.sh](file://personal/meal/scripts/run_daily.sh)
+- [personal/meal/scripts/generate_next_month.sh](file://personal/meal/scripts/generate_next_month.sh)
+- [personal/meal/scripts/check_feedback.py](file://personal/meal/scripts/check_feedback.py)
+- [personal/meal/scripts/weekly_shop.py](file://personal/meal/scripts/weekly_shop.py)
+- [personal/meal/setup.sh](file://personal/meal/setup.sh)
+- [personal/meal/config/webhook.yaml](file://personal/meal/config/webhook.yaml)
+- [personal/meal/config/feishu.yaml](file://personal/meal/config/feishu.yaml)
+- [cron/scripts/meal-notify.sh](file://cron/scripts/meal-notify.sh)
+- [cron/scripts/meal-generate-month.sh](file://cron/scripts/meal-generate-month.sh)
 </cite>
+
+## Update Summary
+**Changes Made**
+- Updated all file path references from `meal/` to `personal/meal/` throughout the documentation
+- Updated cron script paths to reflect the new directory structure
+- Updated setup script references and deployment instructions
+- Maintained all existing functionality descriptions while correcting path references
 
 ## Table of Contents
 1. Introduction
@@ -43,7 +45,7 @@ Key outcomes:
 - Practical guidance for adding recipes, customizing settings, and troubleshooting
 
 ## Project Structure
-The project is organized into configuration, recipe data, generated plans, automation scripts, and deployment helpers.
+The project is organized into configuration, recipe data, generated plans, automation scripts, and deployment helpers. The system has been reorganized under the `personal/meal/` directory structure.
 
 ```mermaid
 graph TB
@@ -91,19 +93,14 @@ WS --> PD
 ```
 
 **Diagram sources**
-- [meal/scripts/generate_month.py:1-654](file://meal/scripts/generate_month.py#L1-L654)
-- [meal/scripts/notify_daily.py:1-279](file://meal/scripts/notify_daily.py#L1-L279)
-- [meal/scripts/run_daily.sh:1-9](file://meal/scripts/run_daily.sh#L1-L9)
-- [meal/scripts/generate_next_month.sh:1-19](file://meal/scripts/generate_next_month.sh#L1-L19)
-- [meal/scripts/check_feedback.py:1-137](file://meal/scripts/check_feedback.py#L1-L137)
-- [meal/scripts/weekly_shop.py:1-328](file://meal/scripts/weekly_shop.py#L1-L328)
-- [meal/config/family.yaml:1-74](file://meal/config/family.yaml#L1-L74)
-- [meal/config/holidays-2026.yaml:1-39](file://meal/config/holidays-2026.yaml#L1-L39)
-- [meal/config/vacations-2026.yaml:1-13](file://meal/config/vacations-2026.yaml#L1-L13)
-- [meal/config/webhook.yaml:1-6](file://meal/config/webhook.yaml#L1-L6)
-
-**Section sources**
-- [meal/README.md:1-108](file://meal/README.md#L1-L108)
+- [personal/meal/scripts/generate_month.py:1-685](file://personal/meal/scripts/generate_month.py#L1-L685)
+- [personal/meal/scripts/notify_daily.py:1-279](file://personal/meal/scripts/notify_daily.py#L1-L279)
+- [personal/meal/scripts/run_daily.sh:1-9](file://personal/meal/scripts/run_daily.sh#L1-L9)
+- [personal/meal/scripts/generate_next_month.sh:1-19](file://personal/meal/scripts/generate_next_month.sh#L1-L19)
+- [personal/meal/scripts/check_feedback.py:1-137](file://personal/meal/scripts/check_feedback.py#L1-L137)
+- [personal/meal/scripts/weekly_shop.py:1-328](file://personal/meal/scripts/weekly_shop.py#L1-L328)
+- [personal/meal/config/webhook.yaml:1-6](file://personal/meal/config/webhook.yaml#L1-L6)
+- [personal/meal/config/feishu.yaml:1-19](file://personal/meal/config/feishu.yaml#L1-L19)
 
 ## Core Components
 - Configuration layer
@@ -111,6 +108,7 @@ WS --> PD
   - Holidays and workday compensations
   - School vacations for weekday quick lunch mode
   - Webhook URL and send time (for documentation; current notification uses app bot)
+  - Feishu integration configuration for data source mapping
 - Recipe database
   - Structured YAML per category: breakfast, lunch, dinner, side, lunch_quick
   - Fields include title, type, difficulty, total_time, servings, tools, tags, ingredient_tags, ingredients, night_prep, morning_steps, noon_steps, steps, notes
@@ -126,18 +124,14 @@ WS --> PD
   - Feedback polling and weekly shopping planner
 
 **Section sources**
-- [meal/config/family.yaml:1-74](file://meal/config/family.yaml#L1-L74)
-- [meal/config/holidays-2026.yaml:1-39](file://meal/config/holidays-2026.yaml#L1-L39)
-- [meal/config/vacations-2026.yaml:1-13](file://meal/config/vacations-2026.yaml#L1-L13)
-- [meal/config/webhook.yaml:1-6](file://meal/config/webhook.yaml#L1-L6)
-- [meal/recipes/breakfast/01-奶香玉米汁-西葫芦鸡蛋饼.yaml:1-48](file://meal/recipes/breakfast/01-奶香玉米汁-西葫芦鸡蛋饼.yaml#L1-L48)
-- [meal/recipes/dinner/01-香菇滑鸡-上汤娃娃菜.yaml:1-71](file://meal/recipes/dinner/01-香菇滑鸡-上汤娃娃菜.yaml#L1-L71)
-- [meal/scripts/generate_month.py:1-654](file://meal/scripts/generate_month.py#L1-L654)
-- [meal/scripts/notify_daily.py:1-279](file://meal/scripts/notify_daily.py#L1-L279)
-- [meal/scripts/run_daily.sh:1-9](file://meal/scripts/run_daily.sh#L1-L9)
-- [meal/scripts/generate_next_month.sh:1-19](file://meal/scripts/generate_next_month.sh#L1-L19)
-- [meal/scripts/check_feedback.py:1-137](file://meal/scripts/check_feedback.py#L1-L137)
-- [meal/scripts/weekly_shop.py:1-328](file://meal/scripts/weekly_shop.py#L1-L328)
+- [personal/meal/config/webhook.yaml:1-6](file://personal/meal/config/webhook.yaml#L1-L6)
+- [personal/meal/config/feishu.yaml:1-19](file://personal/meal/config/feishu.yaml#L1-L19)
+- [personal/meal/scripts/generate_month.py:1-685](file://personal/meal/scripts/generate_month.py#L1-L685)
+- [personal/meal/scripts/notify_daily.py:1-279](file://personal/meal/scripts/notify_daily.py#L1-L279)
+- [personal/meal/scripts/run_daily.sh:1-9](file://personal/meal/scripts/run_daily.sh#L1-L9)
+- [personal/meal/scripts/generate_next_month.sh:1-19](file://personal/meal/scripts/generate_next_month.sh#L1-L19)
+- [personal/meal/scripts/check_feedback.py:1-137](file://personal/meal/scripts/check_feedback.py#L1-L137)
+- [personal/meal/scripts/weekly_shop.py:1-328](file://personal/meal/scripts/weekly_shop.py#L1-L328)
 
 ## Architecture Overview
 End-to-end flow from configuration and recipes to outputs and notifications.
@@ -165,10 +159,10 @@ Notif-->>FS : Log to notifications/send.log
 ```
 
 **Diagram sources**
-- [meal/scripts/generate_month.py:1-654](file://meal/scripts/generate_month.py#L1-L654)
-- [meal/scripts/notify_daily.py:1-279](file://meal/scripts/notify_daily.py#L1-L279)
-- [meal/scripts/run_daily.sh:1-9](file://meal/scripts/run_daily.sh#L1-L9)
-- [meal/scripts/generate_next_month.sh:1-19](file://meal/scripts/generate_next_month.sh#L1-L19)
+- [personal/meal/scripts/generate_month.py:1-685](file://personal/meal/scripts/generate_month.py#L1-L685)
+- [personal/meal/scripts/notify_daily.py:1-279](file://personal/meal/scripts/notify_daily.py#L1-L279)
+- [personal/meal/scripts/run_daily.sh:1-9](file://personal/meal/scripts/run_daily.sh#L1-L9)
+- [personal/meal/scripts/generate_next_month.sh:1-19](file://personal/meal/scripts/generate_next_month.sh#L1-L19)
 
 ## Detailed Component Analysis
 
@@ -221,10 +215,10 @@ WriteOut --> End(["End"])
 ```
 
 **Diagram sources**
-- [meal/scripts/generate_month.py:1-654](file://meal/scripts/generate_month.py#L1-L654)
+- [personal/meal/scripts/generate_month.py:1-685](file://personal/meal/scripts/generate_month.py#L1-L685)
 
 **Section sources**
-- [meal/scripts/generate_month.py:1-654](file://meal/scripts/generate_month.py#L1-L654)
+- [personal/meal/scripts/generate_month.py:1-685](file://personal/meal/scripts/generate_month.py#L1-L685)
 
 ### Notification Flow (notify_daily.py)
 Responsibilities:
@@ -257,12 +251,12 @@ end
 ```
 
 **Diagram sources**
-- [meal/scripts/notify_daily.py:1-279](file://meal/scripts/notify_daily.py#L1-L279)
-- [meal/scripts/run_daily.sh:1-9](file://meal/scripts/run_daily.sh#L1-L9)
+- [personal/meal/scripts/notify_daily.py:1-279](file://personal/meal/scripts/notify_daily.py#L1-L279)
+- [personal/meal/scripts/run_daily.sh:1-9](file://personal/meal/scripts/run_daily.sh#L1-L9)
 
 **Section sources**
-- [meal/scripts/notify_daily.py:1-279](file://meal/scripts/notify_daily.py#L1-L279)
-- [meal/scripts/run_daily.sh:1-9](file://meal/scripts/run_daily.sh#L1-L9)
+- [personal/meal/scripts/notify_daily.py:1-279](file://personal/meal/scripts/notify_daily.py#L1-L279)
+- [personal/meal/scripts/run_daily.sh:1-9](file://personal/meal/scripts/run_daily.sh#L1-L9)
 
 ### Weekly Shopping Planner (weekly_shop.py)
 Responsibilities:
@@ -283,10 +277,10 @@ G --> H["Print categorized shopping list"]
 ```
 
 **Diagram sources**
-- [meal/scripts/weekly_shop.py:1-328](file://meal/scripts/weekly_shop.py#L1-L328)
+- [personal/meal/scripts/weekly_shop.py:1-328](file://personal/meal/scripts/weekly_shop.py#L1-L328)
 
 **Section sources**
-- [meal/scripts/weekly_shop.py:1-328](file://meal/scripts/weekly_shop.py#L1-L328)
+- [personal/meal/scripts/weekly_shop.py:1-328](file://personal/meal/scripts/weekly_shop.py#L1-L328)
 
 ### Feedback Poller (check_feedback.py)
 Responsibilities:
@@ -295,17 +289,21 @@ Responsibilities:
 - Persist findings to notifications/feedback.md
 
 **Section sources**
-- [meal/scripts/check_feedback.py:1-137](file://meal/scripts/check_feedback.py#L1-L137)
+- [personal/meal/scripts/check_feedback.py:1-137](file://personal/meal/scripts/check_feedback.py#L1-L137)
 
 ### Deployment and Scheduling
 - setup.sh installs PyYAML if missing, verifies lark-cli presence, installs crontab entries, and starts cron daemon when available
 - run_daily.sh ensures dependencies and invokes notify_daily.py
-- generate_next_month.sh runs on the last day of the month to generate next month’s plan
+- generate_next_month.sh runs on the last day of the month to generate next month's plan
+
+**Updated** Path references updated to reflect the new `personal/meal/` directory structure
 
 **Section sources**
-- [meal/setup.sh:1-84](file://meal/setup.sh#L1-L84)
-- [meal/scripts/run_daily.sh:1-9](file://meal/scripts/run_daily.sh#L1-L9)
-- [meal/scripts/generate_next_month.sh:1-19](file://meal/scripts/generate_next_month.sh#L1-L19)
+- [personal/meal/setup.sh:1-84](file://personal/meal/setup.sh#L1-L84)
+- [personal/meal/scripts/run_daily.sh:1-9](file://personal/meal/scripts/run_daily.sh#L1-L9)
+- [personal/meal/scripts/generate_next_month.sh:1-19](file://personal/meal/scripts/generate_next_month.sh#L1-L19)
+- [cron/scripts/meal-notify.sh:1-5](file://cron/scripts/meal-notify.sh#L1-L5)
+- [cron/scripts/meal-generate-month.sh:1-5](file://cron/scripts/meal-generate-month.sh#L1-L5)
 
 ## Dependency Analysis
 High-level dependency relationships among components.
@@ -324,16 +322,16 @@ SHOP["weekly_shop.py"] --> OUTD
 ```
 
 **Diagram sources**
-- [meal/scripts/generate_month.py:1-654](file://meal/scripts/generate_month.py#L1-L654)
-- [meal/scripts/notify_daily.py:1-279](file://meal/scripts/notify_daily.py#L1-L279)
-- [meal/scripts/run_daily.sh:1-9](file://meal/scripts/run_daily.sh#L1-L9)
-- [meal/scripts/generate_next_month.sh:1-19](file://meal/scripts/generate_next_month.sh#L1-L19)
-- [meal/scripts/check_feedback.py:1-137](file://meal/scripts/check_feedback.py#L1-L137)
-- [meal/scripts/weekly_shop.py:1-328](file://meal/scripts/weekly_shop.py#L1-L328)
+- [personal/meal/scripts/generate_month.py:1-685](file://personal/meal/scripts/generate_month.py#L1-L685)
+- [personal/meal/scripts/notify_daily.py:1-279](file://personal/meal/scripts/notify_daily.py#L1-L279)
+- [personal/meal/scripts/run_daily.sh:1-9](file://personal/meal/scripts/run_daily.sh#L1-L9)
+- [personal/meal/scripts/generate_next_month.sh:1-19](file://personal/meal/scripts/generate_next_month.sh#L1-L19)
+- [personal/meal/scripts/check_feedback.py:1-137](file://personal/meal/scripts/check_feedback.py#L1-L137)
+- [personal/meal/scripts/weekly_shop.py:1-328](file://personal/meal/scripts/weekly_shop.py#L1-L328)
 
 **Section sources**
-- [meal/scripts/generate_month.py:1-654](file://meal/scripts/generate_month.py#L1-L654)
-- [meal/scripts/notify_daily.py:1-279](file://meal/scripts/notify_daily.py#L1-L279)
+- [personal/meal/scripts/generate_month.py:1-685](file://personal/meal/scripts/generate_month.py#L1-L685)
+- [personal/meal/scripts/notify_daily.py:1-279](file://personal/meal/scripts/notify_daily.py#L1-L279)
 
 ## Performance Considerations
 - Deterministic selection with index cycling prevents starvation and avoids expensive recomputation
@@ -341,8 +339,6 @@ SHOP["weekly_shop.py"] --> OUTD
 - Month rotation ensures varied sequences without additional computation
 - File I/O dominates runtime; batch write of daily cards is efficient
 - Avoid excessive logging in hot paths; keep cron logs concise
-
-[No sources needed since this section provides general guidance]
 
 ## Troubleshooting Guide
 Common issues and resolutions:
@@ -358,18 +354,20 @@ Common issues and resolutions:
   - Use ingredient_economy.cross_day_reuse; leverage weekly_shop.py to identify single-use fresh items and consolidate purchases
 - Vacation mode not triggering
   - Verify vacations-2026.yaml ranges and that generate_month.py loads them; ensure lunch_quick recipes exist
+- **Updated** Cron job path errors
+  - Ensure cron scripts reference the correct `personal/meal/` directory paths instead of the old `meal/` paths
+  - Check that `cron/scripts/meal-notify.sh` and `cron/scripts/meal-generate-month.sh` have been updated with new paths
 
 **Section sources**
-- [meal/setup.sh:1-84](file://meal/setup.sh#L1-L84)
-- [meal/scripts/notify_daily.py:1-279](file://meal/scripts/notify_daily.py#L1-L279)
-- [meal/scripts/generate_month.py:1-654](file://meal/scripts/generate_month.py#L1-L654)
-- [meal/scripts/weekly_shop.py:1-328](file://meal/scripts/weekly_shop.py#L1-L328)
-- [meal/config/vacations-2026.yaml:1-13](file://meal/config/vacations-2026.yaml#L1-L13)
+- [personal/meal/setup.sh:1-84](file://personal/meal/setup.sh#L1-L84)
+- [personal/meal/scripts/notify_daily.py:1-279](file://personal/meal/scripts/notify_daily.py#L1-L279)
+- [personal/meal/scripts/generate_month.py:1-685](file://personal/meal/scripts/generate_month.py#L1-L685)
+- [personal/meal/scripts/weekly_shop.py:1-328](file://personal/meal/scripts/weekly_shop.py#L1-L328)
+- [cron/scripts/meal-notify.sh:1-5](file://cron/scripts/meal-notify.sh#L1-L5)
+- [cron/scripts/meal-generate-month.sh:1-5](file://cron/scripts/meal-generate-month.sh#L1-L5)
 
 ## Conclusion
-The Family Meal Planning System combines structured YAML configurations, a robust constraint-based planner, and automated Feishu notifications to deliver practical, nutritious, and varied meal plans for a family of four. Its design emphasizes ingredient efficiency, holiday awareness, and ease of customization, while providing operational resilience through setup and cron automation.
-
-[No sources needed since this section summarizes without analyzing specific files]
+The Family Meal Planning System combines structured YAML configurations, a robust constraint-based planner, and automated Feishu notifications to deliver practical, nutritious, and varied meal plans for a family of four. Its design emphasizes ingredient efficiency, holiday awareness, and ease of customization, while providing operational resilience through setup and cron automation. The system has been successfully reorganized under the `personal/meal/` directory structure while maintaining all existing functionality.
 
 ## Appendices
 
@@ -397,28 +395,12 @@ Core fields used across categories:
   - tool: string (optional)
 - notes: string (optional)
 
-Example references:
-- Breakfast example: [meal/recipes/breakfast/01-奶香玉米汁-西葫芦鸡蛋饼.yaml:1-48](file://meal/recipes/breakfast/01-奶香玉米汁-西葫芦鸡蛋饼.yaml#L1-L48)
-- Dinner example: [meal/recipes/dinner/01-香菇滑鸡-上汤娃娃菜.yaml:1-71](file://meal/recipes/dinner/01-香菇滑鸡-上汤娃娃菜.yaml#L1-L71)
-
-**Section sources**
-- [meal/recipes/breakfast/01-奶香玉米汁-西葫芦鸡蛋饼.yaml:1-48](file://meal/recipes/breakfast/01-奶香玉米汁-西葫芦鸡蛋饼.yaml#L1-L48)
-- [meal/recipes/dinner/01-香菇滑鸡-上汤娃娃菜.yaml:1-71](file://meal/recipes/dinner/01-香菇滑鸡-上汤娃娃菜.yaml#L1-L71)
-
 ### Configuration Options Reference
-- family.yaml
-  - members, count, preferences (no_spicy, light_oil_salt, kid_friendly, kid_favorite_flavors, taste_priority, no_deep_fry, air_fryer_ok, no_microwave, appliances)
-  - servings_basis (adults, kids)
-  - breakfast constraints (max_morning_time, night_prep_ok, components_required, month_no_repeat, nutrition_for_kids)
-  - holiday_meal constraints (min/max dishes, has_staple, soup_optional, meat_veg_balance, coarse_fine_grain)
-  - vacation_quick_lunch (enabled, trigger, servings, max_noon_time, night_prep_ok, recipes_dir, note)
-  - ingredient_economy (min_pack_note, cross_day_reuse)
-- holidays-2026.yaml
-  - year, holidays[] (name, start, end, workdays[])
-- vacations-2026.yaml
-  - year, vacations[] (name, start, end)
 - webhook.yaml
   - url, send_time (documented; current implementation uses lark-cli DM)
+- feishu.yaml
+  - root_folder, recipe_base configuration for Feishu Base integration
+  - folders mapping for different data categories
 
 Practical examples:
 - Add a new breakfast recipe: create a YAML under recipes/breakfast following the schema; ensure ingredient_tags and tools are set
@@ -426,20 +408,24 @@ Practical examples:
 - Customize meal generation rules: adjust breakfast components_required, holiday_meal dish counts, or enable/disable vacation_quick_lunch
 
 **Section sources**
-- [meal/config/family.yaml:1-74](file://meal/config/family.yaml#L1-L74)
-- [meal/config/holidays-2026.yaml:1-39](file://meal/config/holidays-2026.yaml#L1-L39)
-- [meal/config/vacations-2026.yaml:1-13](file://meal/config/vacations-2026.yaml#L1-L13)
-- [meal/config/webhook.yaml:1-6](file://meal/config/webhook.yaml#L1-L6)
+- [personal/meal/config/webhook.yaml:1-6](file://personal/meal/config/webhook.yaml#L1-L6)
+- [personal/meal/config/feishu.yaml:1-19](file://personal/meal/config/feishu.yaml#L1-L19)
 
 ### Output Artifacts
 - Monthly overview: plans/YYYY-MM.md
 - Daily cards: plans/daily/YYYY-MM-DD.md (includes prep steps, ingredients, and shopping list)
 - Logs: notifications/send.log, notifications/cron.log, notifications/feedback.md
 
-Examples:
-- Sample daily card: [meal/plans/daily/2026-07-01.md:1-106](file://meal/plans/daily/2026-07-01.md#L1-L106)
-- Sample monthly overview: [meal/plans/2026-06.md:1-200](file://meal/plans/2026-06.md#L1-L200)
+### Directory Structure Reference
+The system is now organized under `personal/meal/` with the following key directories:
+- `config/`: YAML configuration files for webhooks and Feishu integration
+- `scripts/`: Python and shell scripts for meal planning and notifications
+- `recipes/`: Recipe YAML files organized by meal type
+- `plans/`: Generated monthly and daily meal plans
+- `notifications/`: Log files and feedback data
 
 **Section sources**
-- [meal/plans/daily/2026-07-01.md:1-106](file://meal/plans/daily/2026-07-01.md#L1-L106)
-- [meal/plans/2026-06.md:1-200](file://meal/plans/2026-06.md#L1-L200)
+- [personal/meal/config/webhook.yaml:1-6](file://personal/meal/config/webhook.yaml#L1-L6)
+- [personal/meal/config/feishu.yaml:1-19](file://personal/meal/config/feishu.yaml#L1-L19)
+- [cron/scripts/meal-notify.sh:1-5](file://cron/scripts/meal-notify.sh#L1-L5)
+- [cron/scripts/meal-generate-month.sh:1-5](file://cron/scripts/meal-generate-month.sh#L1-L5)

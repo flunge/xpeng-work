@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: team_workspace/simworld
+title: SimWorld 3D Gaussian Splatting Platform
+scope:
+    - team/simworld/
+source_files: []
+depends_on: []
+related_to: []

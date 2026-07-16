@@ -1,0 +1,1 @@
+PyTorch + torchvision; OpenCV (`cv2`) for I/O; custom C++/CUDA synchronized batch-norm layer under `model/syncbn/modules/functional/csrc/` (compiled via its own setup); TensorBoard via a thin `SummaryWriterAvg` wrapper.

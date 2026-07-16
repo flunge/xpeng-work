@@ -1,0 +1,5 @@
+- Experiment configuration is expressed as nested YAML files loaded into `Options`/`DataOptions` dataclasses, then merged with CLI flags via `OptionsHandler.parse_and_merge_options` in a fixed precedence (base → data → val data → CLI).
+- New datasets extend `GenericMVSDataset` and override only the minimal file-path helpers (`get_sub_folder_dir`, `get_frame_id_string`, `get_valid_frame_path`, `load_pose`, etc.) rather than reimplementing `__getitem__`.
+- Model selection is decoupled from construction: `utils/model_utils.get_model_class(opts)` returns the class based on string names in opts, and `train.py`/`test.py` instantiate it separately, allowing multiple model variants to share the same runner.
+- Results are organized under `opts.output_base_path/opts.name/<dataset>/<tuple_type>/` with subfolders `meshes/`, `depths/`, `viz/quick_viz/`, `scores/` created lazily when corresponding flags are set.
+- Long-running loops are wrapped with `tqdm` and each major phase prints a bordered banner (`"#" * 80`) around its status message for log readability.

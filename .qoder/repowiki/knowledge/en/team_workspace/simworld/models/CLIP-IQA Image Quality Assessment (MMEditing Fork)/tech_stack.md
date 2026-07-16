@@ -1,1 +1,0 @@
-PyTorch + MMCV 1.5.0 (installed via `openmim`) + MMEditing 0.16.1; CLIP weights loaded from OpenAI's ViT-B/32/RN50 JIT archives (prefetched from a shared NFS path); KonIQ annotations read via pandas, Live-iWT via scipy.io mat files.

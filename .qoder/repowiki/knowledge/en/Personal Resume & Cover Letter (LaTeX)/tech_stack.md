@@ -1,1 +1,0 @@
-LaTeX with the `moderncv` class (classic style, orange palette); CJK typesetting via `CJKutf8`; icons from `fontawesome`; PDF output produced by pdflatex/xelatex/lualatex.

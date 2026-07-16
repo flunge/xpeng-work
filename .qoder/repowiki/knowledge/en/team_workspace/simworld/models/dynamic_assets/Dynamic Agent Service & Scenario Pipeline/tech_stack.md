@@ -1,1 +1,0 @@
-Pure Python orchestration over a C++ core (`AgentDataField`, `DynamicAgentVehicle`, `Agent`) exposed through a Python shim; uses `oss2` for object storage, `pandas` for CSV manifests, `yaml`/`json` for configs, and `tarfile`/`shutil` for local packaging before upload.

@@ -1,8 +1,0 @@
-schema_version: 1
-module_path: team_workspace/simworld/xpeng_data_process/scube
-title: scube
-scope:
-    - team/simworld/xpeng_data_process/scube/
-source_files: []
-depends_on: []
-related_to: []

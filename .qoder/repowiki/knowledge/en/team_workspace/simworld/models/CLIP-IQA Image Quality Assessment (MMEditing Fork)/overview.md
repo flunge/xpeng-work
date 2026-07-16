@@ -1,1 +1,0 @@
-Fork of MMEditing hosting the CLIP-IQA AAAI 2023 image quality assessment model, its CoOp prompt-learning backbone, KonIQ/Live-iWT datasets, and training/demo entry points.

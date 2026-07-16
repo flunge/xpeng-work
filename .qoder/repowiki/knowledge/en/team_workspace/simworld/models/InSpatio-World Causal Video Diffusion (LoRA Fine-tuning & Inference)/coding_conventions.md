@@ -1,6 +1,0 @@
-- Configuration is always loaded via OmegaConf from a YAML file and merged with `OmegaConf.from_dotlist(overrides)` so every hyperparameter can be overridden at runtime with dotted keys like `train.learning_rate=2e-4`.
-- Checkpoint files follow the naming `<mode>_step<N>.safetensors` / `<mode>_final.safetensors` and are saved under an auto-generated `output/<mode>_<timestamp>/` run directory whose effective config is persisted as `config_used.yaml`.
-- Video tensors are kept in `[B, T, C, H, W]` float layout in `[-1, 1]` throughout the dataset and training loop, with `einops.rearrange(..., 'b t c h w -> b c t h w')` used only at VAE encode/decode boundaries.
-- KV-cache context is built by concatenating channel-padded blocks (`pad_to_36ch`: 16 latent + 4 zeros + 16 zeros) so the DiT sees a uniform 36-channel input regardless of whether the context contains ref views, previous GT blocks, or both.
-- Optional heavy components (text encoder, VAE) are lazily constructed behind `skip_text_encoder` / `skip_vae` flags and freed via `del` + `gc.collect()` + `torch.cuda.empty_cache()` once their outputs are cached.
-- Per-sample robustness: dataset `__getitem__` retries up to 10 times on read errors and resamples a random index before raising, preventing a single corrupt file from killing a dataloader worker.

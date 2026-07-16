@@ -1,0 +1,1 @@
+PyTorch 2.7 + CUDA 12.6; custom CUDA kernels compiled via `setup.py` (altcorr, fastba, lietorch, diff-surfel-rasterization); pybind11+CMake for DPRetrieval/DPViewer; Ceres Solver linked as a prebuilt `libceres_ba.so`; SAM2 segmentation models under `camopt/sam2/`; SuperPoint+SuperGlue features via vendored `Python-VO` submodule.

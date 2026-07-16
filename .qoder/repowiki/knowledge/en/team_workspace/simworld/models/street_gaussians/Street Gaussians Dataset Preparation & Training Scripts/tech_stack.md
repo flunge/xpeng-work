@@ -1,1 +1,0 @@
-External COLMAP CLI invoked via `os.system`; MiDaS DPT_Hybrid loaded through `torch.hub.load('intel-isl/MiDaS', ...)` for monocular depth; OpenCV for mask/depth I/O; SciPy `Rotation` for quaternion conversions to COLMAP scalar-last format.

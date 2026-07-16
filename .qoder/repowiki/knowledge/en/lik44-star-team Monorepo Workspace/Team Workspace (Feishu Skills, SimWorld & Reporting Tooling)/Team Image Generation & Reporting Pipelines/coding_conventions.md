@@ -1,0 +1,5 @@
+- Secrets are never hard-coded: read `media_key.txt` from the parent `team/pipelines/` directory and parse out a `Bearer sk-...` token, falling back to the first non-empty line if no Bearer prefix is found.
+- Each image-generation script exposes a single `main()` entry point driven by `argparse`, writes progress/status to stderr, and emits machine-parseable JSON on stdout for callers to consume.
+- Report workflows declare their shape via an exported `meta = { name, description, phases: [{title, detail}] }` object so the surrounding agent harness can enumerate and schedule phases.
+- Long-running async work follows a create-then-poll loop: POST a job, sleep a fixed interval (5–6s), GET status, branch on `completed`/`failed`/`cancelled`/`timeout`, and return a structured result dict rather than raising exceptions.
+- Feishu content is fetched exclusively through `lark-cli` subprocess calls with explicit `--api-version v2 --format json` flags; raw doc IDs/tokens live in `_feishu_map.json` and are never embedded inline.

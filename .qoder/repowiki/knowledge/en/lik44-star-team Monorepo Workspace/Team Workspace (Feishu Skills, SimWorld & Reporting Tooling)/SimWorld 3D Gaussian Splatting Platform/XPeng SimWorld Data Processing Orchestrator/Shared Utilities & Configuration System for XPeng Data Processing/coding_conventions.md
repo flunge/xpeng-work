@@ -1,0 +1,5 @@
+- Configuration defaults are built as a nested `CfgNode` tree in `settings/config.py` using `CN()` constructors, then merged against user YAML via `deepcopy(default_cfg)` plus `merge_from_other_cfg`.
+- Per-step processing stages are exposed as boolean flags under `cfg.steps_controller.<stage>_processor` (e.g. `colmap_processor`, `mvsnet_processor`, `sam3d_processor`, `gs_m_processor`), letting callers gate work by checking a single attribute.
+- Sensor identifiers are treated as string literals drawn from fixed lists (`cam_list`, `lidar_list`) rather than enums, and derived paths like `clip_path` are computed from `clip_id`/`subrun_list` inside `make_case_specific_settings`.
+- Semantic labels are encoded as bit-packed masks over `SemanticType` values (1,2,4,8,16,32) and decoded via `get_semantics_from_path` / `get_mask_from_semantics`, keeping mask logic centralized around `globals.SEMANTIC_CLASSES`.
+- Utility modules are flat and stateless: each file exports pure functions (no class/state), imported explicitly by consumers instead of being re-exported through a package-level `__init__.py`.

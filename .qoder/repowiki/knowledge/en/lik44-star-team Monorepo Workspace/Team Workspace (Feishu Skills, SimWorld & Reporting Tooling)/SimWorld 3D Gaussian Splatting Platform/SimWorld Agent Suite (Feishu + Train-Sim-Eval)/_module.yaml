@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: team_workspace/simworld/agents
+title: SimWorld Agent Suite (Feishu + Train-Sim-Eval)
+scope:
+    - team/simworld/agents/
+source_files: []
+depends_on: []
+related_to: []

@@ -1,0 +1,1 @@
+CLI and workflow scripts that call SoCheap's media API to generate images (GPT-Image-2 / Grok) and assemble Feishu-based weekly/GIC reports for the simulation algorithm team.

@@ -1,0 +1,5 @@
+- Each script exposes a `main()` guarded by `if __name__ == "__main__": main()` so it can be both imported and run directly.
+- External commands are always launched via `subprocess.run([...], capture_output=True, text=True)` rather than `os.system`, and callers inspect `returncode` to decide pass/fail/warn.
+- Policy rules are declared as top-level dicts/lists of `(label, [regex])` pairs (e.g. EXCLUDE, AUDIENCE_BAD, SOURCE_LEAK, ASR_PATTERNS) and iterated in a uniform scan loop instead of ad-hoc inline checks.
+- Hook scripts read JSON payloads from stdin when available and fall back to argv, matching `tool_input.command` strings to decide whether to act.
+- Exit codes carry semantic meaning: 0 = green/pass, 1 = usage error, 2 = hard failure or warning surfaced to the caller/model.

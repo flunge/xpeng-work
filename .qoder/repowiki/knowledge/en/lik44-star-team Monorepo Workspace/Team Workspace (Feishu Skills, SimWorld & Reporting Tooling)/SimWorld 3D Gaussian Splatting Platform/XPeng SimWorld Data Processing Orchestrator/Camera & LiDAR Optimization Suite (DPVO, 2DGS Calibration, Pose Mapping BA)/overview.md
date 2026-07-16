@@ -1,0 +1,1 @@
+End-to-end optimization toolkit that fuses camera and LiDAR streams via DPVO visual odometry, 2D Gaussian Splatting-based extrinsic calibration, and Ceres-backed bundle adjustment.

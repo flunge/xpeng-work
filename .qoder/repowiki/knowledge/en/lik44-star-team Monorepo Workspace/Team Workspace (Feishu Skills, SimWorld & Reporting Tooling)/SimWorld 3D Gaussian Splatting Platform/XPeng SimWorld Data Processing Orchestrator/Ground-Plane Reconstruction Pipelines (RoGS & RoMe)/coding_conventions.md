@@ -1,0 +1,6 @@
+- Training entry points accept a single YAML config path via `--config`, load it with `yaml.safe_load`, wrap it as an `addict.Dict` (RoGS) or pass through a dedicated parser (RoMe), and create the output directory before anything else.
+- Models expose paired `capture()` / `restore()` (or `state_dict` save/load) methods so that checkpoints can be reloaded without reconstructing the object graph.
+- Per-parameter learning-rate groups are registered by naming each parameter group (e.g. `"z"`, `"label"`, `"scaling"`, `"f_dc"`) and updating them by name inside `update_learning_rate` rather than rebuilding the optimizer.
+- Optional components (exposure correction, affine color transform, z-supervision, smooth loss) are gated by boolean flags derived from config weights (`opt.seg_loss_weight > 0`, etc.) instead of separate code paths.
+- Visualization writes are guarded by `if train_cfg.save` / `if epoch == opt.epochs - 1` and always branch on `render_mask` to zero out background pixels before saving images.
+- Distributed training is handled by checking `torch.distributed.is_initialized()` and gating rank-0-only side effects (logging, checkpointing, mesh export) behind a `current_rank() == 0` check.

@@ -1,1 +1,0 @@
-PyTorch + `gsplat` differentiable 3D Gaussian rasterizer, with an optional `xpeng_raster` CUDA backend; learning-rate scheduling uses a custom cosine/linear warmup scheduler (`lr_scheduler_fn`); metrics use `torchmetrics` (PSNR) and `pytorch_msssim` (SSIM/LPIPS); configs are `OmegaConf`; visualization integrates `nerfview` + `viser`.

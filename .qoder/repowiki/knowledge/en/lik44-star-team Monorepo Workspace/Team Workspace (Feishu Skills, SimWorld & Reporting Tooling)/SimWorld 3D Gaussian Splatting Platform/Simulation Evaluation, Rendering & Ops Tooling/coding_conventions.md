@@ -1,0 +1,5 @@
+- Each script exposes a top-level `main(...)` function plus an `if __name__ == "__main__":` block with hardcoded paths/constants, making every file runnable standalone without CLI parsing.
+- User-facing configuration lives as module-level constants near the top of the file (e.g. `BASELINE_MODELS`, `CACHE_VERSION`, `USER_ROOT`, `RENDER_IDS`) rather than being passed through arguments or config files.
+- Numeric metrics are accumulated in per-point lists and reduced via a shared `_rmse` helper, with missing entries silently skipped inside try/except blocks around key/index access.
+- Output directories are created lazily with `Path.parent.mkdir(parents=True, exist_ok=True)` before writing CSV/PNG artifacts.
+- Cache keys combine relative path, file mtime_ns, size, and compute parameters into a JSON payload written under `<root>/.fm_clip_metrics_cache.json` keyed by a `version` field.

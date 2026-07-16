@@ -1,0 +1,1 @@
+Bash + `fuyao deploy` CLI for cluster job submission; Python UCP processor framework (pre/gpu/post hooks) for scene-level orchestration; YAML-driven Sim3DGS v4.10–v4.16 experiment configs; Alibaba Cloud OSS for model/data I/O; Kafka for success/error notifications; reconic library for 3DGS training and multi-vehicle rendering.

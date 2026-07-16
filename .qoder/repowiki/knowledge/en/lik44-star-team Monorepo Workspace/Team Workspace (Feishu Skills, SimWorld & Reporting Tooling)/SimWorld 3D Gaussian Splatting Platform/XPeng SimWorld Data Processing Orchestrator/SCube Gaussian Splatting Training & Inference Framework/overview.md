@@ -1,0 +1,1 @@
+PyTorch Lightning-based framework for training and inferring SCube's 3D Gaussian Splatting model on Waymo/WDS data, with configurable encoders, backbones, renderers, and skybox modules.

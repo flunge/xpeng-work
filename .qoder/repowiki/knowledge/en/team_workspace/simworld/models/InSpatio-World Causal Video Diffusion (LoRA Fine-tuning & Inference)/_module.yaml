@@ -1,8 +1,0 @@
-schema_version: 1
-module_path: team_workspace/simworld/models/inspatio_world
-title: InSpatio-World Causal Video Diffusion (LoRA Fine-tuning & Inference)
-scope:
-    - team/simworld/models/inspatio-world/
-source_files: []
-depends_on: []
-related_to: []

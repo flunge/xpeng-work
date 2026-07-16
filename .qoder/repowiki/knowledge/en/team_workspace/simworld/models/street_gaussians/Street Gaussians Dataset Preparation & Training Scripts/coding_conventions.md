@@ -1,5 +1,0 @@
-- Each dataset entry point exposes a `run_colmap_<dataset>(result=None)` function that can be called programmatically or as a CLI; when `result is None` it calls the dataset-specific `lib.utils.<dataset>_utils.generate_dataparser_outputs` to build the frame/camera list.
-- COLMAP model files are written manually as plain text (`images.txt`, `cameras.txt`, `points3D.txt`) under `<model_path>/colmap/created/sparse/model`, with extrinsics converted from 4x4 matrices to COLMAP's `[q_w q_x q_y q_z tx ty tz]` order using `scipy.spatial.transform.Rotation`.
-- Per-frame masks are inverted before being fed to COLMAP (`flip_mask = (255 - mask).astype(np.uint8)`) so that foreground objects are masked out during feature extraction.
-- All external commands (`colmap`, `magick mogrify`, `rm -rf`) are launched through `os.system(...)` and failures are logged via `logging.error` followed by `exit(code)`.
-- Scripts append the repository root to `sys.path` (`sys.path.append(os.getcwd())`) to import the sibling `lib.*` utilities instead of relying on package installation.

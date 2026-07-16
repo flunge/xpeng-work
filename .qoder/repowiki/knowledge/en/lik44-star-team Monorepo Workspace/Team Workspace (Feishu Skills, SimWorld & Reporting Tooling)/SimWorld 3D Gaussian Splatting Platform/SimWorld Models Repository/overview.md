@@ -1,0 +1,1 @@
+Aggregates SimWorld's vision and 3D reconstruction models — Gaussian splatting, diffusion fixers, video generation, and asset pipelines — as independently runnable sub-projects sharing a common training/inference layout.

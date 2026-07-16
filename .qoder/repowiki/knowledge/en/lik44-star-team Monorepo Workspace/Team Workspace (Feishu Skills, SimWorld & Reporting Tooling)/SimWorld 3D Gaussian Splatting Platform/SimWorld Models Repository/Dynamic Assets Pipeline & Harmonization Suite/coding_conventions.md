@@ -1,0 +1,2 @@
+- Each child package is a standalone entrypoint with its own `requirements.txt`/`environment.yml` and is invoked from the root via subprocess calls or direct Python imports rather than shared libraries.
+- Cross-child data exchange uses flat CSV/YAML files on disk (e.g. `dynamic_dataset_config.csv`, `clips_config*.csv`, `agent_service_configs/*.json`) instead of in-memory objects or IPC.

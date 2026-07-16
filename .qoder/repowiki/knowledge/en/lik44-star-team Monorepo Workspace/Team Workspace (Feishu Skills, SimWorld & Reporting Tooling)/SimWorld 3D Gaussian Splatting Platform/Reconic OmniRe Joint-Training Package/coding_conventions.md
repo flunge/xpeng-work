@@ -1,0 +1,4 @@
+- Runtime-configurable components (generative engine type/scheduler, render strategy, dataset source) are selected at import time via `utils.misc.import_str(cfg.<section>.type)` rather than static imports.
+- Cross-layer data exchange uses the `datasets.base.data_proto` `CameraInfo` / `ImageInfo` named-tensor protocol instead of raw dicts or NumPy arrays.
+- Each sub-package exposes a thin `__init__.py` that only re-exports sibling modules, keeping the public surface flat under `reconic.<subpkg>`.
+- Per-run artifacts (checkpoints, novel-view cache, vis logs, metadata JSON) are written under a single `cfg.project_dir` root managed by `TrainingLoopHelper`.

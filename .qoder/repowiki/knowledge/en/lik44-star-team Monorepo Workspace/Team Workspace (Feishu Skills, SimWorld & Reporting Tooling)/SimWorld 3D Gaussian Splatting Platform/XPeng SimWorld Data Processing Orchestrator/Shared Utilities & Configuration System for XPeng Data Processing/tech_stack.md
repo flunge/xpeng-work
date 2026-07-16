@@ -1,0 +1,1 @@
+YAML-driven configuration via an in-tree vendored copy of Facebook Research's YACS (`CfgNode`); Open3D for PCD read/write, plyfile for PLY, oss2 for Alibaba Cloud OSS, PyTorch/CV2/PIL for image/geometry ops.

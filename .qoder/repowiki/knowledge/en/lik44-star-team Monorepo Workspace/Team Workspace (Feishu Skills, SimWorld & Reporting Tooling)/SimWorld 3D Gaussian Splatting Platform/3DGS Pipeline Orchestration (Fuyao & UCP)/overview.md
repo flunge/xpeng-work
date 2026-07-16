@@ -1,0 +1,1 @@
+Production and training pipeline entry points that orchestrate Sim3DGS preprocessing, Reconic training, multi-vehicle rendering, and DDS/video upload via Fuyao batch jobs and the IPS/UCP processor framework.

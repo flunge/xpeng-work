@@ -1,1 +1,0 @@
-PyTorch with `gsplat.rasterization` for differentiable 3DGS rendering, `torchsparse` (spconv backend) for sparse 3D convolutions, `einops` for tensor reshaping, `omegaconf` + `easydict` for configuration, `plyfile` for PLY export, `pytorch_msssim` and `torchmetrics` for evaluation, and Open3D/scikit-learn for voxelization and k-nearest neighbors.

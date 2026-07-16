@@ -1,0 +1,1 @@
+Top-level driver that loads per-clip YACS configs and dispatches a fixed sequence of CPU/GPU sub-pipelines (vision or lidar) which invoke the child data-mining, ground, MVSNet, optimization, SAM3D, SCube, and shared-utils modules.

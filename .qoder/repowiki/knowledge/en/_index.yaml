@@ -3,11 +3,27 @@ schema_version: 1
 locale: en-US
 branch: main
 nodes_managed: true
-exported_at: "2026-07-16T09:36:13Z"
+exported_at: "2026-07-16T09:53:30Z"
 modules:
+    "":
+        dir_name: lik44-star-team Monorepo Workspace
+        title: lik44-star-team Monorepo Workspace
+        scope:
+            - README.md
+            - .gitignore
+            - .gitmodules
+            - approval_auth_qr.png
+        source_files: []
+        children:
+            - cron_jobs
+            - meal_planner
+            - personal_docs
+            - team_workspace
+        depends_on: []
+        related_to: []
     cron_jobs:
-        dir_name: Cron Job Orchestration & Scheduled Tasks
-        title: Cron Job Orchestration & Scheduled Tasks
+        dir_name: Crontab Installer & Daily Report Jobs
+        title: Crontab Installer & Daily Report Jobs
         scope:
             - cron/
         source_files: []
@@ -24,8 +40,8 @@ modules:
         depends_on: []
         related_to: []
     personal_docs:
-        dir_name: Personal Resume & Cover Letter (LaTeX)
-        title: Personal Resume & Cover Letter (LaTeX)
+        dir_name: Personal Documents Resume & Family Meal Planner
+        title: 'Personal Documents: Resume & Family Meal Planner'
         scope:
             - personal/
         source_files: []
@@ -33,8 +49,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace:
-        dir_name: team_workspace
-        title: team_workspace
+        dir_name: Team Workspace (Feishu Skills, SimWorld & Reporting Tooling)
+        title: Team Workspace (Feishu Skills, SimWorld & Reporting Tooling)
         scope:
             - team/
         source_files: []
@@ -46,8 +62,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/image_gen_pipelines:
-        dir_name: image_gen_pipelines
-        title: image_gen_pipelines
+        dir_name: Team Image Generation & Reporting Pipelines
+        title: Team Image Generation & Reporting Pipelines
         scope:
             - team/pipelines/
         source_files: []
@@ -64,8 +80,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/shared_scripts:
-        dir_name: shared_scripts
-        title: shared_scripts
+        dir_name: Weekly_Biweekly Report Publishing Gate & SVG Infographic Generator
+        title: Weekly/Biweekly Report Publishing Gate & SVG Infographic Generator
         scope:
             - team/scripts/
         source_files: []
@@ -73,8 +89,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/simworld:
-        dir_name: simworld
-        title: simworld
+        dir_name: SimWorld 3D Gaussian Splatting Platform
+        title: SimWorld 3D Gaussian Splatting Platform
         scope:
             - team/simworld/
         source_files: []
@@ -91,8 +107,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/simworld/agents:
-        dir_name: agents
-        title: agents
+        dir_name: SimWorld Agent Suite (Feishu + Train-Sim-Eval)
+        title: SimWorld Agent Suite (Feishu + Train-Sim-Eval)
         scope:
             - team/simworld/agents/
         source_files: []
@@ -120,8 +136,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/simworld/models:
-        dir_name: models
-        title: models
+        dir_name: SimWorld Models Repository
+        title: SimWorld Models Repository
         scope:
             - team/simworld/models/
         source_files: []
@@ -155,8 +171,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/simworld/models/dynamic_assets:
-        dir_name: dynamic_assets
-        title: dynamic_assets
+        dir_name: Dynamic Assets Pipeline & Harmonization Suite
+        title: Dynamic Assets Pipeline & Harmonization Suite
         scope:
             - team/simworld/models/dynamic_assets/
         source_files: []
@@ -179,8 +195,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/simworld/models/dynamic_assets/dccf_harmonization:
-        dir_name: dccf_harmonization
-        title: dccf_harmonization
+        dir_name: DCCF Camera Harmonization Suite
+        title: DCCF Camera Harmonization Suite
         scope:
             - team/simworld/models/dynamic_assets/DCCF/
         source_files: []
@@ -294,8 +310,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/simworld/models/street_gaussians:
-        dir_name: street_gaussians
-        title: street_gaussians
+        dir_name: Street Gaussians Street-View Gaussian Splatting Suite
+        title: 'Street Gaussians: Street-View Gaussian Splatting Suite'
         scope:
             - team/simworld/models/street_gaussians/
         source_files: []
@@ -317,8 +333,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/simworld/models/street_gaussians/core_training_rendering:
-        dir_name: core_training_rendering
-        title: core_training_rendering
+        dir_name: Street Gaussians Training & Rendering Orchestration
+        title: Street Gaussians Training & Rendering Orchestration
         scope:
             - team/simworld/models/street_gaussians/lib/
             - team/simworld/models/street_gaussians/train.py
@@ -405,8 +421,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/simworld/omnire_joint_training:
-        dir_name: omnire_joint_training
-        title: omnire_joint_training
+        dir_name: Reconic OmniRe Joint-Training Package
+        title: Reconic OmniRe Joint-Training Package
         scope:
             - team/simworld/omnire_joint_trainning/
         source_files: []
@@ -453,8 +469,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/simworld/omnire_joint_training/models:
-        dir_name: models
-        title: models
+        dir_name: Reconic Scene Representation Model Zoo
+        title: Reconic Scene Representation Model Zoo
         scope:
             - team/simworld/omnire_joint_trainning/src/reconic/models/
         source_files: []
@@ -564,8 +580,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/simworld/skills:
-        dir_name: skills
-        title: skills
+        dir_name: Team Skills Catalog (Lark CLI & 3DGS Workflows)
+        title: Team Skills Catalog (Lark CLI & 3DGS Workflows)
         scope:
             - team/simworld/skills/
         source_files: []
@@ -573,8 +589,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/simworld/tools:
-        dir_name: tools
-        title: tools
+        dir_name: Simulation Evaluation, Rendering & Ops Tooling
+        title: Simulation Evaluation, Rendering & Ops Tooling
         scope:
             - team/simworld/tools/
         source_files: []
@@ -582,8 +598,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/simworld/xpeng_data_process:
-        dir_name: xpeng_data_process
-        title: xpeng_data_process
+        dir_name: XPeng SimWorld Data Processing Orchestrator
+        title: XPeng SimWorld Data Processing Orchestrator
         scope:
             - team/simworld/xpeng_data_process/
         source_files: []
@@ -598,8 +614,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/simworld/xpeng_data_process/data_mining:
-        dir_name: data_mining
-        title: data_mining
+        dir_name: Video Instance Segmentation & Data Mining Toolkit (LOMM + Mask2Former)
+        title: Video Instance Segmentation & Data Mining Toolkit (LOMM + Mask2Former)
         scope:
             - team/simworld/xpeng_data_process/data_mining/
         source_files: []
@@ -607,8 +623,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/simworld/xpeng_data_process/ground_processing:
-        dir_name: ground_processing
-        title: ground_processing
+        dir_name: Ground-Plane Reconstruction Pipelines (RoGS & RoMe)
+        title: Ground-Plane Reconstruction Pipelines (RoGS & RoMe)
         scope:
             - team/simworld/xpeng_data_process/ground_processing/
         source_files: []
@@ -616,8 +632,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/simworld/xpeng_data_process/mvsnet:
-        dir_name: mvsnet
-        title: mvsnet
+        dir_name: MVSNet _ MVSAnywhere Multi-View Stereo Pipeline for XPeng
+        title: MVSNet / MVSAnywhere Multi-View Stereo Pipeline for XPeng
         scope:
             - team/simworld/xpeng_data_process/mvsnet/
         source_files: []
@@ -625,8 +641,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/simworld/xpeng_data_process/optimization:
-        dir_name: optimization
-        title: optimization
+        dir_name: Camera & LiDAR Optimization Suite (DPVO, 2DGS Calibration, Pose Mapping BA)
+        title: Camera & LiDAR Optimization Suite (DPVO, 2DGS Calibration, Pose Mapping BA)
         scope:
             - team/simworld/xpeng_data_process/optimization/
         source_files: []
@@ -634,8 +650,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/simworld/xpeng_data_process/sam3d:
-        dir_name: sam3d
-        title: sam3d
+        dir_name: SAM 3D Objects — Single_Multi-View 3D Reconstruction Pipeline
+        title: SAM 3D Objects — Single/Multi-View 3D Reconstruction Pipeline
         scope:
             - team/simworld/xpeng_data_process/sam3d/
         source_files: []
@@ -643,8 +659,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/simworld/xpeng_data_process/scube:
-        dir_name: scube
-        title: scube
+        dir_name: SCube Gaussian Splatting Training & Inference Framework
+        title: SCube Gaussian Splatting Training & Inference Framework
         scope:
             - team/simworld/xpeng_data_process/scube/
         source_files: []
@@ -652,8 +668,8 @@ modules:
         depends_on: []
         related_to: []
     team_workspace/simworld/xpeng_data_process/shared_utils_settings:
-        dir_name: shared_utils_settings
-        title: shared_utils_settings
+        dir_name: Shared Utilities & Configuration System for XPeng Data Processing
+        title: Shared Utilities & Configuration System for XPeng Data Processing
         scope:
             - team/simworld/xpeng_data_process/utils/
             - team/simworld/xpeng_data_process/settings/

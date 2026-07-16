@@ -1,0 +1,7 @@
+The module is an orchestrator rather than a library: each subdirectory is an independent package (three_D_real_car_preprocess → gaussians_splatting → dccf_harmonization → agent_service → scenario_edit) and the root Python scripts glue them together by file-system contracts.
+
+- Data flow: `three_D_real_car_train.py` / `batch_scenario_generate.py` invoke the preprocessing toolkit to produce COLMAP/segmentation outputs, then call `gaussians_splatting/train.py` to render PLY assets; `new_scenario_generate.py` and `batch_scenario_generate.py` import `agent_service.agent_service_main.generate_new_config` to rewrite `config_sim.yaml` and emit per-scenario YAMLs under `scenarios/<id>/model1/dynamic_assets_ply/`.
+- Cross-package wiring is done via direct imports (`sys.path.insert(0, ...)`) and shared CSV/YAML contracts (`dynamic_dataset_config.csv`, `clips_config*.csv`, `agent_service_configs/*.json`) — there is no RPC or message bus between children.
+- The DCCF IHARM submodule is self-contained (its own `train.py`, `mconfigs/`, `engine/`, `inference/`) and is invoked from the root only through shell scripts in `dccf/runs/`; it does not import sibling packages.
+- `scenario_edit/` consumes the output of the other pipelines (DDS recordings + CloudSim configs) and re-uploads patched assets to OSS via `oss_file_uploader.py`.
+- A single `Dockerfile` at this level containers the whole stack, so the parent's role is purely composition of independently runnable child pipelines.

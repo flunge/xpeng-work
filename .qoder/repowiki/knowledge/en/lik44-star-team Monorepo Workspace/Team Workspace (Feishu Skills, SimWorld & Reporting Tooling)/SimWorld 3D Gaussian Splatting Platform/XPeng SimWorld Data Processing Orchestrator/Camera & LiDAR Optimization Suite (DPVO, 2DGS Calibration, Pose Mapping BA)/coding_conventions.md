@@ -1,0 +1,4 @@
+- Heavy numerical work is split into Python orchestration layers calling separately compiled CUDA/C++ extensions (each extension ships its own `setup.py` + `CMakeLists.txt` + vendored `pybind11/`).
+- Configuration is YAML-driven and loaded through `easydict.EasyDict` so callers access options as attributes rather than dict keys.
+- Optimization loops use `torch.optim.Adam` paired with `torch.optim.lr_scheduler.ExponentialLR` and log progress via `tqdm.trange` / TensorBoard `SummaryWriter`.
+- Shell entry points validate every prerequisite directory/file before invoking Python steps and abort on non-zero return codes, propagating errors up the chain.

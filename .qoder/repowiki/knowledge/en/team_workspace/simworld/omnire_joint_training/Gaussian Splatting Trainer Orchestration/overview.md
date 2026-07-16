@@ -1,1 +1,0 @@
-PyTorch training orchestration for multi-class Gaussian splatting scenes, providing single-scene and multi-component trainers with configurable loss, optimizer scheduling, and rasterization backends.

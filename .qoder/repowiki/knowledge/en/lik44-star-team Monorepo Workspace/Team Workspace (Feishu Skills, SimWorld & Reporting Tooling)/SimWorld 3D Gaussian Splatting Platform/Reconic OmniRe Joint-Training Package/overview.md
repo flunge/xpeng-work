@@ -1,0 +1,1 @@
+Python package that jointly trains a 3D Gaussian reconstruction model with an external generative engine to synthesize novel-view images for omnidirectional driving scenes.

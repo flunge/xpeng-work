@@ -1,9 +1,0 @@
-schema_version: 1
-module_path: team_workspace/simworld/omnire_joint_training/scripts_and_deploy
-title: Rendering, Evaluation & Deployment Scripts
-scope:
-    - team/simworld/omnire_joint_trainning/src/scripts/
-    - team/simworld/omnire_joint_trainning/deploy_cmd/
-source_files: []
-depends_on: []
-related_to: []

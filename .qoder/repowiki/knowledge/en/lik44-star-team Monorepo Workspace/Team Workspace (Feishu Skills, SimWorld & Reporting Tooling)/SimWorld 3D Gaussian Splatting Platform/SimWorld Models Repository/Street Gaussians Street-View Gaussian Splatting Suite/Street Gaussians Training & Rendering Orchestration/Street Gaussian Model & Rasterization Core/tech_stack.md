@@ -1,0 +1,1 @@
+PyTorch + `simple_knn._C` for kNN initialization, `plyfile` for PLY I/O, `diff_gaussian_rasterization` as the default CUDA rasterizer, with an alternative `gsplat.rasterization` path toggled by `cfg.train.use_gsplat`; appearance decoupling follows the Gaussian Opacity Fields design.

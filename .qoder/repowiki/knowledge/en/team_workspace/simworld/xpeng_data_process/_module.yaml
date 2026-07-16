@@ -1,8 +1,0 @@
-schema_version: 1
-module_path: team_workspace/simworld/xpeng_data_process
-title: xpeng_data_process
-scope:
-    - team/simworld/xpeng_data_process/
-source_files: []
-depends_on: []
-related_to: []

@@ -1,8 +1,0 @@
-This module is a self-contained fork of OpenMMLab's MMEditing (v0.16.1) with CLIP-IQA added on top. The package root installs as `mmedit` (`setup.py`), so all code lives under `mmedit/` and follows MMEditing's registry-driven layout:
-- `mmedit/models/backbones/sr_backbones/coopclipiqa.py` defines the CLIP-IQA backbone: `CLIPIQAPredictor` (CoOp-style PromptLearner + frozen CLIP visual/text encoders via `components.clip`) and `CLIPIQAFixed` (frozen RN50/ViT-B/32 used for teacher/self-training). A shared helper `load_clip_to_cpu` first checks `/workspace/group_share/adc-sim/users/cloudsim/clip` before falling back to OpenAI's cache.
-- `mmedit/models/restorers/clipiqa.py` registers `CLIPIQA` and `CLIPIQASelfTrain` as `BasicRestorer` subclasses; they wrap the generator backbone, compute pixel loss against GT or against the frozen CLIP teacher, and expose `forward_train`/`forward_test`/`evaluate` expected by the MMEditing trainer.
-- `mmedit/datasets/iqa_koniq_dataset.py` adds `IQAKoniqDataset`, `IQALIVEITWDataset`, `IQAAVADataset` extending `BaseSRDataset` to load KonIQ-10k CSVs and Live-iWT MAT files into `(lq_path, gt)` pairs.
-- `configs/clipiqa/*.py` are MMEditing-style config dicts (model, pipeline, data, optimizers, lr_config) that drive `tools/train.py` / `tools/test.py`.
-- `demo/*.py` are thin CLI scripts invoking the registered models through `mmedit.apis`.
-- `mmedit/components/clip/` embeds the original OpenAI CLIP implementation (tokenizer, model, vocab) rather than importing it from an external package.
-Dependency direction: configs → restorers → backbones → components.clip; datasets and demos depend only on the public `mmedit.*` APIs, never on each other.

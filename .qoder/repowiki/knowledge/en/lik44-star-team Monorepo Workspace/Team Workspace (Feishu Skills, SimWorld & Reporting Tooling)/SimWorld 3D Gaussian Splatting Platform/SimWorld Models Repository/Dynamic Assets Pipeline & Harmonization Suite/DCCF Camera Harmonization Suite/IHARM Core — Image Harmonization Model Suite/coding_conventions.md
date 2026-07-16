@@ -1,0 +1,5 @@
+- Models are selected by name through a registry dict in `mconfigs/*.py` whose entries map a string key to `(model_class, kwargs_dict)`, rather than via argparse flags.
+- Trainers subclass a base loop and compose losses by iterating a `loss_cfg` dict keyed by `<name>`/`<name>_weight`, calling each loss criterion's `pred_outputs`/`gt_outputs` attribute to bind inputs.
+- Dataset subclasses override `get_sample(index)` returning a dict with canonical keys (`image`, `object_mask`, `target_image`, `image_id`) consumed uniformly by trainers and evaluators.
+- Multi-GPU training uses a thin `_CustomDP(torch.nn.DataParallel)` wrapper that forwards unknown attributes to `self.module`, keeping downstream code unchanged when switching from single- to multi-GPU.
+- Checkpointing and weight loading go through shared `utils.misc.save_checkpoint` / `load_weights` rather than ad-hoc `torch.save`/`load_state_dict` calls scattered across trainers.

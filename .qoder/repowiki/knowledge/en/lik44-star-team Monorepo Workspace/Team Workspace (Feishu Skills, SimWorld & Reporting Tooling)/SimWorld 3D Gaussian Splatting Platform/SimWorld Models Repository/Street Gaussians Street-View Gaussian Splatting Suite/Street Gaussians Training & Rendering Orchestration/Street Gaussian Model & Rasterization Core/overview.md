@@ -1,0 +1,1 @@
+Core 3D Gaussian Splatting models for street scenes — a base GaussianModel plus background/ground/sky/actor specializations, composited by StreetGaussianModel and rasterized via diff-gaussian-rasterization or gsplat.

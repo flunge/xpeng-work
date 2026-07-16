@@ -1,0 +1,6 @@
+- Models subclass `BaseModel` and implement only `get_dataset_spec`, `get_collate_fn`, `get_hparams_metrics`, and `train_val_step`; data loading, optimizer construction, and PL hooks are inherited.
+- Configurable components (backbone, renderer, skybox) are selected at init time via `eval(self.hparams.xxx.target)(**self.hparams.xxx.params)` so new modules can be plugged in purely through YAML.
+- Batch fields are accessed exclusively through the `DatasetSpec` enum (e.g. `DS.INPUT_PC`, `DS.IMAGES_INPUT`) rather than string keys, centralizing the contract between datasets and models.
+- Deterministic sampling across workers uses `RandomSafeDataset.get_rng(idx)` seeded from `(idx, read_count, seed)` instead of global `torch.manual_seed` inside `__getitem__`.
+- OOM during training/validation is caught around `train_val_step`, logged as `num_oom`, gradients zeroed, and the step skipped so one bad batch does not abort the run.
+- Dynamic model instantiation goes through `importlib.import_module('scube.models.' + name).Model` driven by the `model` key in the resolved YAML, keeping the trainer/model decoupled.

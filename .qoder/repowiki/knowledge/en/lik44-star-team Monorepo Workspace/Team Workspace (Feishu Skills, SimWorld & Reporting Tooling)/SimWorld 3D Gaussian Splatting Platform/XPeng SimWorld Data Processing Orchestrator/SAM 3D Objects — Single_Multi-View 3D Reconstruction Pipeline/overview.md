@@ -1,0 +1,1 @@
+End-to-end single- and multi-view 3D reconstruction from RGB+mask (optionally depth/pointmap) images, producing Gaussian Splatting PLY and textured GLB meshes via a Hydra-configured DiT backbone.

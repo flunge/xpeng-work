@@ -1,0 +1,1 @@
+Standalone Python/Docker utilities for evaluating FM trajectory error against real data, rendering Street-Gaussian models (including OSS-backed batch jobs), and analyzing render time logs.

@@ -1,1 +1,0 @@
-CLI entry point: `python agent_service_main.py --agent_config_path <json> --config_sim_path <yaml> --new_config_sim_path <out_dir> [--dynamic_dataset_config_path <csv>]`. Batch mode: `python pipeline.py` reads `CLIP_3DGS_CONFIGS` and spawns `THREAD_COUNT=5` workers that download, modify, and re-upload clips to OSS.

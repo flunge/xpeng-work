@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: team_workspace/simworld/xpeng_data_process/mvsnet
+title: MVSNet / MVSAnywhere Multi-View Stereo Pipeline for XPeng
+scope:
+    - team/simworld/xpeng_data_process/mvsnet/
+source_files: []
+depends_on: []
+related_to: []

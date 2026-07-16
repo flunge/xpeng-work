@@ -1,5 +1,0 @@
-- Each processing stage is implemented as a separate Python script invoked from `pipeline.sh`, with its own `--yaml` and `--dataset_dir` CLI args consumed via argparse.
-- Stage completion is signaled by touching a sentinel file (`.processed`, `.segmentation`, `.dataset`) at the output directory root, and subsequent runs check for these markers before executing work.
-- Concrete stage classes subclass `LiGSToolkit` from `utils/toolkit/core.py` and override only the `run()` method, inheriting Colmap loading, image/alpha linking, bbox writing and sparse-output plumbing.
-- All user-facing configuration is parameterized through per-experiment YAML files under `resources/configs/` (e.g. `demo.yaml`, `vehicle_config.yaml`) rather than hard-coded constants.
-- Shared functionality is organized into flat packages under `utils/{toolkit,io,logging,visual,utility,adaptor}` and imported with absolute paths relative to `data_preprocess/` via `sys.path.append('.')`.

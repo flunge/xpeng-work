@@ -1,5 +1,0 @@
-Two-layer layout:
-- `install.sh` is the single source of truth — a heredoc piped into `crontab -` that declares every entry with a fixed PATH and `${REPO_ROOT}`-resolved script path. It groups entries by domain (team sync, daily broadcast at 09:00, chat summaries, meal system) and time.
-- `scripts/*.sh` are one-line executors: they resolve `REPO_ROOT`, then `exec` the corresponding Python job under `/opt/homebrew/bin/python3`. Non-Python tasks (e.g. `daily-sync.sh`) simply `cd` into the target repo and run its own script, appending stdout/stderr to a log file.
-- `jobs/*.py` contain the actual business logic. Each job follows the same shape: constants at top (`PROFILE = "meal"`, `TARGET_USER_ID`), pure functions for data collection / summarization, a `build_post_content()` builder returning a Feishu `post` payload, a `push_message()` helper that shells out to `lark-cli --profile meal im +messages-send ...`, and a `main()` guarded by `if __name__ == "__main__"`.
-Dependency direction is strictly `cron → scripts → jobs`; the shell layer has no logic beyond env setup and process replacement.

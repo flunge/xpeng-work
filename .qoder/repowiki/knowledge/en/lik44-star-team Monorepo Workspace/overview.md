@@ -1,0 +1,1 @@
+Top-level monorepo that co-locates the personal meal-planner and team Feishu-workspace projects, sharing a single .claude rule hub and lark-cli identity while keeping all content in Feishu.

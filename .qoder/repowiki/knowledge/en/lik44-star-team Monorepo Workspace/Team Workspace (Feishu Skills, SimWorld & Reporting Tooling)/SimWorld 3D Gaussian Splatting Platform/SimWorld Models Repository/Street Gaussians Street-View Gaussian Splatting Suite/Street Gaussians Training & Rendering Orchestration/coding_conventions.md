@@ -1,0 +1,3 @@
+- All runtime knobs are read from the singleton `lib.config.cfg` rather than CLI args at call sites; only the top-level script parses flags into `cfg`.
+- The canonical bootstrap sequence is always `Dataset() → StreetGaussianModel(dataset.scene_info.metadata) → Scene(gaussians=..., dataset=...) → StreetGaussianRenderer()`.
+- Per-iteration metrics are accumulated into a `scalar_dict` / `tensor_dict` and logged via a shared `SummaryWriter` under `train/` and `test/` namespaces.

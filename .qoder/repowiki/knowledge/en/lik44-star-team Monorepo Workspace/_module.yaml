@@ -1,0 +1,11 @@
+schema_version: 1
+module_path: ""
+title: lik44-star-team Monorepo Workspace
+scope:
+    - README.md
+    - .gitignore
+    - .gitmodules
+    - approval_auth_qr.png
+source_files: []
+depends_on: []
+related_to: []

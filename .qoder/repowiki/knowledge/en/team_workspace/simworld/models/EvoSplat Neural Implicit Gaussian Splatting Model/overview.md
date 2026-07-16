@@ -1,1 +1,0 @@
-Neural implicit Gaussian splatting model that builds a learnable 3D feature volume from seed points and renders novel views via differentiable rasterization.

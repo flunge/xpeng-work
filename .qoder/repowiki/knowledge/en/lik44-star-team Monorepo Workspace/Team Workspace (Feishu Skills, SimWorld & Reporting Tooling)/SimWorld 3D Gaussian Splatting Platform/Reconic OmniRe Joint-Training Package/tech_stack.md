@@ -1,0 +1,1 @@
+PyTorch + einops for reconstruction; Diffusers-based Stable Diffusion (DiFix) for the generative engine; Open3D/Gaussian Splatting rasterizers in `models/gaussians`; CloudSim/DDS for multi-vehicle scenario orchestration; Python 3.11 pinned via setup.py.

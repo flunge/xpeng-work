@@ -1,0 +1,1 @@
+Two complementary ground-plane reconstruction pipelines — a 2D Gaussian Splatting variant (RoGS) and a differentiable mesh-based pipeline (RoMe) — that optimize per-pixel RGB, semantic labels, depth and pose from multi-view driving images.

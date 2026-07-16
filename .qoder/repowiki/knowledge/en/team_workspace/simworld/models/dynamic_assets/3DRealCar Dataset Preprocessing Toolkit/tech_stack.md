@@ -1,1 +1,0 @@
-Python 3 with NumPy/Open3D/Kornia for geometry, COLMAP binaries for SfM, Segment Anything Model (SAM `sam_vit_h_4b8939.pth`) plus GroundingDINO for foreground alpha extraction, and OpenCV/imageio for image/video I/O; external system dependency on `apt-get install colmap`.
