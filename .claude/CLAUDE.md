@@ -30,20 +30,20 @@
 - **耗时操作分步实时输出**：预计 >5s 的批处理每批 ≤20 条，处理一批→输出一批，禁止静默等待。
 - **不编造 API**：调后端前先搜项目已有 `api/`、`services/`、`request` 定义，复用而非新建。
 - **git 操作**：仅在用户明确要求时 commit/push；在 master 上先开分支。本环境 `guard.sh` 会拦截 `git clone/clean/commit`、`git rm -r`（多行）等——用单行、单参数形式规避。
+- 🔴 **临时文件统一放 `team/tmp/`**（2026-07-16 沉淀）：后续**所有任务**产生的临时/中间文件（脚本落盘、配图 PNG/SVG、备份、抓取的中间数据等）一律写到 `team/tmp/`（meal 类推用各自 tmp），**用完即弃、不入库**（`.gitignore` 已忽略 `tmp/*`）。禁止在项目根目录或 `memory/`、`scripts/` 等处散落 `_xxx.py`/`.tmp`/`.bak` 等临时产物。所有正式产出物只在飞书。
 - 非开发需求（闲聊、问答、解释）直接文字回复，不动工具。
 
 ## 三、工作区结构
 
-`/workspace` 是 monorepo，根下三个**互相独立**的项目 + 一层根触发脚本。详见 [README.md](../README.md)。
+`/workspace` 是 monorepo，根下两个**互相独立**的项目。详见 [README.md](../README.md)。
 
 | 路径 | 用途 | 技术栈 |
 |------|------|--------|
-| `meal/` | 家庭食谱自动化（每日推送 + 月计划） | Python3 + PyYAML + Shell + 飞书 Webhook |
-| `team/` | 仿真部飞书工作空间交互、记忆库、风险播报 | Python3 + Shell + Node.js + lark-cli |
-| `bootstrap.sh` / `lingxi-trigger.sh` | 根触发层：`food｜risk｜sync` | Shell |
+| `personal/meal/` | 家庭食谱自动化（每日推送 + 月计划；配方/计划全量在飞书） | Python3 + PyYAML + lark-cli |
+| `team/` | 仿真部飞书工作空间交互、记忆库 | Python3 + Node.js + lark-cli |
 
-> ⚠️ 根脚本与 crontab 硬编码了 `/workspace/meal`、`/workspace/team/scripts/...` 绝对路径，且已部署运行——**勿移动项目根目录或重命名顶层目录**。
-> ⚠️ `team/` 有自己的 `CLAUDE.md` 与 skills，处理 `team/` 下文件时优先遵循该目录规则。
+> ⚠️ **cron / 触发层 / 每日采集在用户本地维护**（本云端仓库不含 `bootstrap.sh`/`lingxi-trigger.sh`/crontab/daily-sync）。云端仓库只保留**规则**（`.claude/`、`personal/.claude/`）+ **可复用工具脚本**（`team/scripts/`、`personal/meal/scripts/`）+ **飞书关联**（`team/memory/_feishu_map.json`、`personal/meal/config/feishu.yaml`）；所有内容产出物只在飞书。
+> ⚠️ `team/` 有自己的 `CLAUDE.md` 与 skills，处理 `team/` 下文件时优先遵循该目录规则；`personal/` 有 `personal/.claude/CLAUDE.md`，处理 `personal/` 下文件时优先遵循。
 
 ## 四、内化的 agent 职责（原脚手架 agents）
 

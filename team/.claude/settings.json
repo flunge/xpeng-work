@@ -1,6 +1,6 @@
 {
   "additionalWorkingDirectories": [
-    "/Users/xpeng/Documents/team"
+    "/workspace/team"
   ],
   "hooks": {
     "PreToolUse": [

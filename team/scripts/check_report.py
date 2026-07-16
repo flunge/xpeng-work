@@ -111,6 +111,54 @@ def scan(c, audience):
     return issues
 
 
+
+def wartable_img_gate(wt_token, weeks, logfile="/workspace/team/tmp/.img-read-log"):
+    import os, re as _re
+    r=subprocess.run(["lark-cli","docs","+fetch","--api-version","v2","--doc",wt_token,"--detail","full","--format","json"],capture_output=True,text=True)
+    c=json.loads(r.stdout).get("data",{}).get("document",{}).get("content","")
+    toks=[]
+    for wk in weeks:
+        i=c.find(wk+"（")
+        if i<0: i=c.find(wk)
+        if i<0: continue
+        cur=int(_re.match(r"W(\d+)", wk).group(1))
+        nxt=None
+        for m in _re.finditer(r"W(\d+)（", c[i+3:]):
+            if int(m.group(1))>cur: nxt=m; break
+        seg=c[i:i+3+nxt.start()] if nxt else c[i:i+40000]
+        for m in _re.finditer(r'<img[^>]*src="([^"]+)"', seg):
+            if m.group(1) not in toks: toks.append(m.group(1))
+    read=set()
+    if os.path.exists(logfile):
+        read=set(l.strip() for l in open(logfile) if l.strip())
+    unread=[t for t in toks if t not in read]
+    return toks, [t for t in toks if t in read], unread
+
+
+
+def carryover_gate(cur, prev_token):
+    import re as _re
+    r=subprocess.run(["lark-cli","docs","+fetch","--api-version","v2","--doc",prev_token,"--doc-format","markdown","--format","json"],capture_output=True,text=True)
+    prev=json.loads(r.stdout).get("data",{}).get("document",{}).get("content","")
+    def frags(t):
+        t=_re.sub(r"<[^>]+>","",t)
+        return [s.strip() for s in _re.split(r"[；;。\n]", t) if len(s.strip())>=12]
+    pv=frags(prev)
+    def norm(s): return _re.sub(r"[\s\d%\.]+","",s)
+    pvn=[norm(x) for x in pv]
+    dup=[]
+    _skip=("Topic","目标","在岗","双周进展","四条主线","风险","计划","核心让","草稿","产品化","+ HIL","Agent")
+    for f in frags(cur):
+        if f.startswith("#") or f.startswith("**目标") or any(k in f[:14] for k in _skip): continue
+        fn2=norm(f)
+        if len(fn2)<10: continue
+        for pn in pvn:
+            # 8-gram 字符重叠判为照搬
+            if len(pn)>=8 and (fn2 in pn or pn in fn2 or (len(set(fn2)&set(pn))>=min(len(set(fn2)),len(set(pn)))*0.85 and abs(len(fn2)-len(pn))<6)):
+                dup.append(f[:40]); break
+    return dup
+
+
 def main():
     if len(sys.argv)<2:
         print("用法: check_report.py <doc_token> [--audience boss|xianming]"); sys.exit(1)
@@ -120,6 +168,19 @@ def main():
         aud=sys.argv[sys.argv.index("--audience")+1]
     c=fetch(doc)
     issues=scan(c,aud)
+    if "--wartable" in sys.argv:
+        wt=sys.argv[sys.argv.index("--wartable")+1]
+        weeks=sys.argv[sys.argv.index("--weeks")+1].split(",") if "--weeks" in sys.argv else ["W28"]
+        toks,readt,unread=wartable_img_gate(wt,weeks)
+        print(f"作战表贴图({','.join(weeks)}): 已读 {len(readt)}/{len(toks)}")
+        for t in unread:
+            issues.append(("作战表图未读", f"{','.join(weeks)}窗口贴图未逐张读", t))
+    if "--prev" in sys.argv:
+        pv=sys.argv[sys.argv.index("--prev")+1]
+        dup=carryover_gate(c,pv)
+        if dup:
+            print(f"⚠️ 疑似照搬上期报告(可能是窗口外旧进展) {len(dup)} 处：")
+            for d in dup: issues.append(("疑似旧内容照搬", "与上期报告高度重合、核实是否本窗口", d))
     if not issues:
         print(f"✅ 校验通过（受众={aud}），无排除项/受众违规/流水账/脑补/废话")
         sys.exit(0)

@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """生成 GIC 双周报 4 张配图（GPT-Image-2 via SoCheap API）。
 key 从 pipelines/media_key.txt 读取（脚本运行时读，不经过对话上下文）。
-图存到 memory/daily-sync/images/ 下，文件名 biweekly_0630_<topic>.png
+图存到 scripts/.tmp/ 下（临时产物，贴飞书后即弃），文件名 biweekly_0630_<topic>.png
 """
 
 import json
@@ -12,7 +12,7 @@ import time
 import urllib.request
 
 KEY_FILE = "/workspace/team/pipelines/media_key.txt"
-OUT_DIR = "/workspace/team/memory/daily-sync/images"
+OUT_DIR = "/workspace/team/tmp"
 API_URL = "https://socheap.ai/media/generations"
 
 # 每张图：高信息密度的项目仪表盘，中文，承载本组两周算法/技术进展细节

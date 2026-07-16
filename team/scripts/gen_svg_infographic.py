@@ -4,7 +4,7 @@
 每个 Topic 一个函数返回自包含 SVG 字符串。"""
 import html as _h
 
-W, H = 1024, 576
+W, H = 1024, 680
 BG1, BG2 = "#0a1428", "#0d1b30"
 CARD = "#1e3a66"
 ACCENT = "#4da3ff"
@@ -20,6 +20,15 @@ def esc(s):
 
 
 def _txt(x, y, s, size=15, color=TXT, weight="normal", anchor="start"):
+    # 登记文字包围盒到 _ALLBOXES（供画布溢出闸用；anchor 影响横向范围）
+    tw = _tw(str(s), size)
+    if anchor == "middle":
+        x0, x1 = x - tw / 2, x + tw / 2
+    elif anchor == "end":
+        x0, x1 = x - tw, x
+    else:
+        x0, x1 = x, x + tw
+    _ALLBOXES.append((x0, y - size, x1, y + size * 0.25, str(s)[:14]))
     return (f'<text x="{x}" y="{y}" font-size="{size}" fill="{color}" '
             f'font-weight="{weight}" text-anchor="{anchor}" '
             f'font-family="{FONT}">{esc(s)}</text>')
@@ -44,9 +53,10 @@ def _header(title, subtitle):
 # 🔴🔴 渲染闸（2026-07-01）：登记每张卡矩形 + 每块 bullet 文字包围盒，
 # 生成后几何自检"文字是否越出卡片右/下边界"。纯坐标计算、拦得住溢出，不靠肉眼看缩略图。
 _CARDS = []   # [(x,y,w,h,title)]
-_BOXES = []   # [(x0,y0,x1,y1,label)] 文字实际包围盒
+_BOXES = []   # [(x0,y0,x1,y1,label)] 卡内 bullet 文字包围盒
+_ALLBOXES = []  # [(x0,y0,x1,y1,label)] 所有文字包围盒（含 KPI/标题/bullet），供画布溢出闸
 def _reset_geom():
-    _CARDS.clear(); _BOXES.clear()
+    _CARDS.clear(); _BOXES.clear(); _ALLBOXES.clear()
 
 
 def _card(x, y, w, h, title):
@@ -87,9 +97,14 @@ def _kpi(x, y, w, num, label, h=68):
     while _tw(num, nsz) > avail and nsz > 15:
         nsz -= 1
     s += _txt(x + 16, y + 33, num, size=nsz, color=NUM, weight="bold")
-    # label 折行（最多 2 行）
-    for k, ln in enumerate(_wrap(label, avail, 12)[:2]):
-        s += _txt(x + 16, y + 52 + k * 15, ln, size=12, color=SUB)
+    # label 折行（最多 2 行）——一个 <text>、续行用相对 dy（勿用绝对 y，否则飞书拆框）
+    _lns = _wrap(label, avail, 12)[:2]
+    if _lns:
+        _sp = ""
+        for k, ln in enumerate(_lns):
+            _pos = f'y="{y+52}"' if k == 0 else 'dy="15"'
+            _sp += f'<tspan x="{x+16}" {_pos}>{esc(ln)}</tspan>'
+        s += f'<text font-size="12" fill="{SUB}" font-family="{FONT}">{_sp}</text>'
     return s
 
 
@@ -127,23 +142,32 @@ def _wrap(text, max_px, size):
 
 def _wbullets(x, y, max_px, items, size=14, lh=22, gap=8):
     """自动折行的 bullet：max_px=可用文字宽度。每条按宽折行，行距 lh，条间距 gap。
-    items=[(mark,color,text)]，mark 空则纯续行缩进。返回 (svg, 结束 y)。"""
-    s, yy = "", y
+    items=[(mark,color,text)]，mark 空则纯续行缩进。返回 (svg, 结束 y)。
+    🔴 整组 bullet = **一个 <text>**，换行用**相对 dy**（首行 absolute y 定位、其余 dy）——
+    飞书导入后是**一个可编辑大文本框、内部换行**。绝不给续行 tspan 写绝对 y（会被飞书拆成独立小框）。"""
+    yy = y
+    prev = None            # 上一行基线（用于算相对 dy）
+    parts = []
     for mark, color, text in items:
         col = WARN if color == WARN else (NUM if color == NUM else TXT)
-        # 首行文字缩进 = mark 实际宽 + 间隙（避免续行压到 mark）；无 mark 时小缩进
         indent = (_tw(mark, size) + 10) if mark else 12
-        lines = _wrap(text, max_px - indent, size)
+        lines = _wrap(text, max_px - indent, size) or [""]
         for k, ln in enumerate(lines):
+            base = y if prev is None else (prev + (lh + gap if k == 0 else lh))
+            dattr = f'y="{base}"' if prev is None else f'dy="{base - prev}"'
             if k == 0 and mark:
-                s += _txt(x, yy, mark, size=size, color=color, weight="bold")
-            s += _txt(x + indent, yy, ln, size=size, color=col)
-            # 登记这一行的文字包围盒（yy 是基线，字顶≈yy-size、字底≈yy+size*0.25）
-            _BOXES.append((x, yy - size, x + indent + _tw(ln, size), yy + size * 0.25,
-                           (mark + ln)[:14]))
-            yy += lh
-        yy += gap
-    return s, yy
+                # mark 与首行同基线：mark 带换行位移，首行文字 dy=0 接在同一行
+                parts.append(f'<tspan x="{x}" {dattr} fill="{color}" '
+                             f'font-weight="bold">{esc(mark)}</tspan>')
+                parts.append(f'<tspan x="{x+indent}" dy="0" fill="{col}">{esc(ln)}</tspan>')
+            else:
+                parts.append(f'<tspan x="{x+indent}" {dattr} fill="{col}">{esc(ln)}</tspan>')
+            _box = (x, base - size, x + indent + _tw(ln, size), base + size * 0.25,
+                    (mark + ln)[:14])
+            _BOXES.append(_box); _ALLBOXES.append(_box)
+            prev = base; yy = base
+    s = f'<text font-size="{size}" font-family="{FONT}">{"".join(parts)}</text>' if parts else ""
+    return s, yy + lh
 
 
 def _defs():
@@ -167,154 +191,146 @@ def wrap(inner):
 
 
 def topic1():
-    # 新优先级 #1：车型泛化（最重点，70% 精力）；fixer=提速手段、clip-iqa=图像质量卡口
-    s = _header("Topic 1｜车型泛化",
-                "Q3 最高优先：用仿真替代多车型实车采集、支撑 630 多车型发版")
-    s += _rect(820, 32, 168, 34, "#c8443a", rx=17)
-    s += _txt(904, 55, "7 月核心任务", size=15, color="#ffffff", weight="bold", anchor="middle")
-    y = 116
-    # ── 顶部 KPI 带：3 个关键指标（h=78 容 2 行 label）──
-    s += _kpi(36, y, 300, "≥30 款车型", "Q3 目标：仿真替代逐车型实车采集", h=78)
-    s += _kpi(352, y, 300, "参数 ↔ CCES", "建立定量关系、反哺车端算法", h=78)
-    s += _kpi(668, y, 320, "首个成果 · G02ES", "定位加速慢=side front left 标定偏差", h=78)
-    # ── 左卡：正向分析方法论（三步展开，自动折行）──
-    cy = y + 98
-    lx, lw = 36, 616
-    s += _card(lx, cy, lw, 340, "正向分析方法论：从「验证工具」→「算法诊断工具」")
-    _s, _ = _wbullets(lx + 24, cy + 74, lw - 60, [
-        ("① 找规律", ACCENT, "同一批场景在多款车型上跑、比 CCES 得分方差；自动分离「多车一起变差=可迁移共性」与「个别偶发」，只对共性投算力"),
-        ("② 找根因", ACCENT, "对问题场景逐一扫参（车衣 / 外参 pitch·roll / 车型），看指标随参数怎么变，定位是哪个参数导致算法失效"),
-        ("③ 给量化", ACCENT, "参数偏差 ↔ 安全 / 效率 / 加减速 / 居中 四大指标做定量回归，输出「角度偏差→起步时延」关系直接指导算法"),
-        ("✓ 已跑通", NUM, "G02ES 加速慢根因=侧前摄像头(side front left)标定，逐个换标定文件比对得出；CloudSim 已支持一套场景生成多车型、可自助改标定验证"),
-    ], size=14, lh=21, gap=9)
-    s += _s
-    # ── 右卡：生产提速 + 图像质检 ──
-    rx, rw = 668, 320
-    s += _card(rx, cy, rw, 190, "NVFixer 渲染提速")
-    _s2, _ = _wbullets(rx + 22, cy + 70, rw - 40, [
-        ("痛点", WARN, "渲染是泛化生产的效率瓶颈、回灌耗时长"),
-        ("思路", ACCENT, "ref 图编码存 latent 复用、免每帧实时 VAE 计算"),
-        ("成果", NUM, "带 ref 新版效率比 1:7.2、远优于 Difix 的 1:17"),
-    ], size=13, lh=19, gap=7)
-    s += _s2
-    s += _card(rx, cy + 206, rw, 134, "图像质检（质量卡口）")
-    _s3, _ = _wbullets(rx + 22, cy + 206 + 62, rw - 40, [
-        ("·", TXT, "CLIP-IQA 入库前自动质检"),
-        ("·", TXT, "过滤渲染差场景、保泛化结论可信"),
-        ("·", TXT, "红绿灯难例经 diffusion 修复改善"),
-    ], size=13.5, lh=20, gap=9)
-    s += _s3
+    global H; H=692
+    s=_header("Topic 1｜车型泛化","Q3 优先级第一：建立参数对车型的影响规律、支撑跨车型可比；效率提速支撑万级 case 产能")
+    s+=_rect(838,32,150,34,"#c8443a",rx=17)
+    s+=_txt(913,55,"7 月核心",size=15,color="#ffffff",weight="bold",anchor="middle")
+    y=116
+    s+=_kpi(36,y,320,"51 → 11.8 min/卡","开环生产效率(目标 <10min)，效率优先",h=78)
+    s+=_kpi(372,y,300,"10 款车型","规模化投产 + 非斑马车衣库",h=78)
+    s+=_kpi(688,y,300,"✓ 业务采纳","仿真结论与实车一致、常态化用",h=78)
+    cy=y+98; lx,lw=36,616
+    s+=_card(lx,cy,lw,430,"⭐ 效率优化（核心）：开环提速路径 + 硬件对比")
+    _s,_=_wbullets(lx+24,cy+74,lw-56,[
+        ("优化路径",ACCENT,"0701 base：51 min/卡 (1:102)\n0707 nvfixer 代 difix + 解 OOM(单卡双任务)：17 (1:34)\n0713 共用 h265 解码 / 3dgs 下载·加载 + 单卡 4 任务：11.8 (1:23)\n0714 encode→h265 优化中：目标 <10"),
+        ("硬件对比",NUM,"单 cam 单帧 latency：\ntrt：5080 54.8ms / A100-mig 86.7ms（同量级）\ntorch：A100 整卡 105.9ms / PPU 130.2ms（明显慢）\n→ 统一推 trt + 5080/A100"),
+        ("换车衣",TXT,"基于物理模型自动换车衣管线：仅替换纹理、保车身结构、批量生产非斑马车衣库"),
+        ("渲染",TXT,"NVFixer 0.4s/img；PPU 暂不支持 dit holmes engine"),
+        ("5080 产线",NUM,"车型泛化已适配 5080 并行生产、PPU profile 阶段里程碑；生产走 ceph 直取直传"),
+        ("意义",ACCENT,"开环提速直接支撑万级 case 生产 / 8 月 release 高峰产能，并决定复现率上限"),
+    ],size=14,lh=21,gap=13)
+    s+=_s
+    rx,rw=668,320
+    s+=_card(rx,cy,rw,205,"诊断依据（NNHA 12 组实验）")
+    _s2,_=_wbullets(rx+22,cy+62,rw-40,[
+        ("G02 不加速",NUM,"逐摄像头锁定 side front left 外参、换正常 calib 即加速"),
+        ("D03 偏右",NUM,"右前相机外参偏 2°；换外参居中提升 ~15cm"),
+        ("车衣色",NUM,"194 撞RB场景多色测试：越深对跑不到限速负面越大、黑色最甚；斑马→正常即加速"),
+    ],size=12,lh=16.5,gap=7)
+    s+=_s2
+    by=cy+217
+    s+=_card(rx,by,rw,258,"找规律 · 方法论 · 闭环")
+    _s3,_=_wbullets(rx+22,by+60,rw-40,[
+        ("找规律",ACCENT,"FM lost 热力图 bicluster 诊断短板车型(g01/h93aes)；筛 fm cost>300 比同 case 差值评估性能"),
+        ("根因",WARN,"FM 未学车辆通用语义、靠车衣轮廓/画布黑边等旁支信息匹配(数据集捷径)；C/D/E 对照实验隔离车衣色/轮廓/外参"),
+        ("闭环上线",NUM,"cloudsim+场景毕业平台已上线(前提已产 3DGS)、联调 calib 上传"),
+        ("反馈成效",ACCENT,"结论反馈车端：新模型 F30/H93/F01 安全改善"),
+    ],size=12,lh=16.5,gap=6)
+    s+=_s3
     return wrap(s)
 
 
 def topic2():
-    # 新优先级 #2：闭环仿真 + HIL（长里程生产 + HIL，核心让业务用起来）
-    s = _header("Topic 2｜闭环仿真 + HIL",
-                "核心让业务用起来：长里程生产 + HIL 台架作发版准出把关；630 模型已交付业务使用")
-    y = 116
-    s += _card(36, y, 952, 118, "RC 长里程生产")
-    s += _kpi(60, y + 46, 220, "561.5km", "新数据累计（截至 6/30）")
-    s += _kpi(300, y + 46, 300, "7/1 → 1000km", "新老混合先凑，供各链路仿真")
-    s += _kpi(620, y + 46, 344, "7/13", "长里程看板上线；生产卡死问题已修")
-    my = y + 140
-    s += _card(36, my, 952, 128, "HIL 台架：630 已交付业务、进入使用修复期")
-    s += _kpi(60, my + 50, 210, "5 节点", "已接入、630 链路已交付")
-    s += _kpi(290, my + 50, 210, "1:2.5", "实时 batch≥30（达月目标 1:3）")
-    s += _kpi(520, my + 50, 200, "95.9%", "CCES 可用数据（结论待确认）")
-    s += _kpi(742, my + 50, 222, "1300+", "scenario 无中断（3 节点）")
-    by = my + 152
-    s += _card(36, by, 466, 156, "慢速模式：拿时间换画质")
-    _a, _ = _wbullets(60, by + 70, 466 - 48, [
-        ("痛点", WARN, "实时链路只够 1:3、喂不饱高质量 Difix 渲染"),
-        ("思路", ACCENT, "让系统时钟按比例降速、给算法足够时间算好每帧"),
-        ("做法", NUM, "参考图先存成 latent 供链路直读、省掉 H265 实时解析"),
-    ], size=13, lh=18, gap=7)
-    s += _a
-    s += _card(522, by, 466, 156, "风险与计划")
-    _b, _ = _wbullets(546, by + 76, 466 - 48, [
-        ("△", WARN, "评测结论能否对外、待与交付同学确认"),
-        ("△", WARN, "新台架采购延至 7-8 月；RC 卡池抢占、采集折损 20-30%"),
-        ("→", ACCENT, "7 月底 5 台机标准化；核心让业务常态化用起来"),
-    ], size=13.5, lh=20, gap=9)
-    s += _b
+    global H; H=488
+    s=_header("Topic 2｜闭环仿真 + HIL","让业务常态化用起来：HIL 台架作发版准出、RC 长里程持续生产")
+    y=116
+    s+=_kpi(36,y,300,"metric 有效性验证","HIL 从『跑通』进到 metric 可用性验证",h=78)
+    s+=_kpi(352,y,300,"可用率 +2%→冲 95%","修 FM 偶发异常、链路问题收敛",h=78)
+    s+=_kpi(668,y,320,"~946km / 61%","RC 本月新数据累计 / 数据留存率",h=78)
+    cy=y+98; h=252
+    s+=_card(36,cy,300,h,"HIL 链路：本期修复")
+    _a,_=_wbullets(58,cy+64,264,[
+        ("SF 无输出",NUM,"全量 SF topic 缺失(VRU 缺失)已修复、通过交付验收"),
+        ("FM 异常",NUM,"修复 FM 偶发异常、可用率 +2%、适配下游 metric 输入"),
+        ("评测有效性",ACCENT,"人工核验 metric 运行有效 → 开启 500km 大批量压测"),
+        ("RTM 已修",NUM,"录包 RTM topic 缺失/格式变更问题本期已修复、符合交付标准、进入大批量压测"),
+    ],size=12,lh=16.5,gap=9)
+    s+=_a
+    s+=_card(360,cy,304,h,"HIL 资源 + RC 长里程")
+    _b,_=_wbullets(382,cy+64,268,[
+        ("台架资源",NUM,"获批 39 台 5080 + 现有 40 余台 + TC 150 套台架，支撑 XP5 TDT/RC"),
+        ("HIL 台架",ACCENT,"5 节点调通、可用率 92%→95% 目标、CCES 结论与交付确认可对外"),
+        ("长里程",NUM,"本月 946km→月底目标 5000km(4 城)、复刻 TC 3000-4000km 常规路线"),
+        ("数据损耗",WARN,"采集+闭环环节合计 ~50% 损耗(TC 侧 30% 无法上传)、已拉群定位"),
+    ],size=12,lh=16.5,gap=9)
+    s+=_b
+    s+=_card(688,cy,300,h,"闭环 metric + 风险计划")
+    _c,_=_wbullets(710,cy+64,264,[
+        ("闭环 metric",NUM,"Sim-实车 topic 互换适配、补全录制 topic 本期完成；七类验收、出带 PAT 阶段报告"),
+        ("链路修复",TXT,"clip-iqa 接入、localpose 切万兆网卡、bsp 大包刷写切 XTest"),
+        ("风险",WARN,"场景集2期或收尾：约50%Jira票实车版本太老跑不起复现、需重新出包；拦截结论与实车未成稳定闭环"),
+        ("计划",ACCENT,"可用率 95% 绑发版准出；仿真 1 天出结果 vs 实车 3 天"),
+    ],size=12,lh=16.5,gap=9)
+    s+=_c
     return wrap(s)
 
 
 def topic3():
-    # 新优先级 #3：极速模式（做成海外/质量可快速上手的产品，非技术 demo）
-    s = _header("Topic 3｜极速模式",
-                "做成海外 / 质量团队可快速上手的产品、而非技术 demo，承接客诉 case 快速验证")
-    y = 116
-    # ── 顶部 KPI 带 ──
-    s += _kpi(36, y, 300, "约 100 分钟", "UCP 全链路跑通（客诉 case 快速复现）", h=78)
-    s += _kpi(352, y, 300, "80 / 108", "复现 case、折损后约 50% 作可用基线", h=78)
-    s += _kpi(668, y, 320, "近两周", "目标：做成海外 / 质量团队自助工具", h=78)
-    cy = y + 98
-    # ── 左卡：定位与当前能力 ──
-    lx, lw = 36, 466
-    s += _card(lx, cy, lw, 340, "为什么快：跳过 3DGS 后训练")
-    _a, _ = _wbullets(lx + 24, cy + 74, lw - 46, [
-        ("痛点", WARN, "常规要跑完整 3DGS 后训练、单 case 3-4 小时才出场景"),
-        ("思路", ACCENT, "只跑预处理 + feedforward 直接前推出场景、跳过后训练、压到 2 小时内"),
-        ("用法", NUM, "漏斗式：客诉 case 先用极速快速过一遍、复现不好的再进常规生产"),
-        ("已交付", NUM, "6/26 交付文档完成、向质量 + 海外用户开放试用"),
-        ("△ 权衡", WARN, "省掉后训练、复现率约常规七成，换来的是几倍提速"),
-    ], size=14, lh=21, gap=11)
-    s += _a
-    # ── 右卡：产品化改造 + 计划 ──
-    rx, rw = 522, 466
-    s += _card(rx, cy, rw, 340, "从技术链路 → 好用的产品（本周推进）")
-    _b, _ = _wbullets(rx + 24, cy + 76, rw - 46, [
-        ("△", WARN, "业务反馈：界面难用、参数配置太多、上手门槛高"),
-        ("→", NUM, "仿真参数精简至 1 个，配套后端改造本周四交付"),
-        ("→", NUM, "下周改自适应模式（无需特殊设置）并上线"),
-        ("·", TXT, "优先向质量 / 海外团队开放，让其自助拿到验证结果"),
-        ("·", TXT, "Q3 重点优化 feedforward、把入库复现率冲到 50%"),
-    ], size=14, lh=21, gap=11)
-    s += _b
+    global H; H=488
+    s=_header("Topic 3｜极速模式 / 生产链路","极速做成质量/海外自助工具；Feedforward 从根本提复现率上限")
+    y=116
+    s+=_kpi(36,y,300,"2h vs 4h","极速 50% vs 非极速 70-80%(实测)",h=78)
+    s+=_kpi(352,y,300,"SIL 1:112→1:80","SIL 链路耗时优化(1:112.3→1:79.9)",h=78)
+    s+=_kpi(668,y,320,"选定 baseline","Feedforward 选型完成：VGGT-Ω + π3",h=78)
+    cy=y+98; h=252
+    s+=_card(36,cy,300,h,"Feedforward 提上限")
+    _a,_=_wbullets(58,cy+64,264,[
+        ("为何做",WARN,"极速/闭环复现率上限受 feedforward 重建质量制约、是核心瓶颈"),
+        ("benchmark",ACCENT,"三维度横评：几何精度对齐真值 / 多视·多 chunk 一致 / 显存 <40G"),
+        ("选型",NUM,"选定 VGGT-Ω + π3：点云直出、多视融合强、开源成熟"),
+        ("演进",ACCENT,"评审统一 3D latent voxel 中间表示、打通重建+视频生成"),
+    ],size=12,lh=16.5,gap=9)
+    s+=_a
+    s+=_card(360,cy,304,h,"生产链路提效")
+    _b,_=_wbullets(382,cy+64,268,[
+        ("RAID 优化",NUM,"H800 单卡 case 比 1:3→1:1.6(最高 1:1.1)、A100 1:6→1:3"),
+        ("再提效",ACCENT,"解码/编码/DDS 三环节改造、单环节 +60~80%，整体压向 10min 内；外挂 32CPU +20%"),
+        ("产能",NUM,"6/1-7/1 累计 202 个模型仿真、日均 ~6.5 个"),
+        ("CloudSim",TXT,"收 60 余份问卷做 UIUX 优化、面板可拖动、后续支持 CLI 提任务"),
+    ],size=12,lh=16.5,gap=9)
+    s+=_b
+    s+=_card(688,cy,300,h,"极速模式产品化")
+    _c,_=_wbullets(710,cy+64,264,[
+        ("极速实测",NUM,"极速 2h / 复现率 ~50%\nvs 非极速 4h / 70-80%\n漏斗：客诉 case 先极速过一遍"),
+        ("改造",ACCENT,"参数精简至 1 个、前端默认打开；全链路已在 A100 跑通、待接 DFIX 优化渲染"),
+        ("计划",ACCENT,"Feedforward Phase1 达/超点云→高斯 baseline；极速优先质量/海外、复现率 +30%"),
+    ],size=12,lh=16.5,gap=9)
+    s+=_c
     return wrap(s)
 
 
 def topic4():
-    # 新优先级 #4：Agent（快速业务上线 + 产品化）
-    s = _header("Topic 4｜AI Agent 产品化",
-                "7 月全部上线、以业务反馈缩小落地差距；已产出可量化收益")
-    s += _rect(858, 34, 130, 34, "#c8443a", rx=17)
-    s += _txt(923, 57, "首次汇报", size=16, color="#ffffff", weight="bold", anchor="middle")
-    y, h = 116, 424
-    x1, w1 = 36, 300
-    x2, w2 = 360, 300
-    x3, w3 = 684, 304
-    # col1 复现率 Agent
-    s += _card(x1, y, w1, h, "复现率 Agent")
-    s += _kpi(x1 + 20, y + 64, w1 - 40, "9 类 · 61%", "已交付问题类型 / 支持 case 占比", h=76)
-    _a, _ = _wbullets(x1 + 22, y + 168, w1 - 44, [
-        ("·", TXT, "替代人工逐 case 判断「仿真是否复现实车问题」"),
-        ("·", NUM, "生产验收复现准确率 89%、摆动 79%"),
-        ("·", TXT, "新增 2 类 metric 排期 7/10"),
-        ("·", NUM, "成本极低：单 case 约 1 分钱、每天可处理 430 个"),
-    ], size=13.5, lh=20, gap=10)
-    s += _a
-    # col2 Diff Agent
-    s += _card(x2, y, w2, h, "闭环 Diff Agent")
-    s += _kpi(x2 + 20, y + 64, w2 - 40, "6 类指标", "找出改版后是哪一版、哪个因子变差", h=76)
-    _b, _ = _wbullets(x2 + 22, y + 168, w2 - 44, [
-        ("解决", ACCENT, "改了模型不知哪版更差：自动比对 A/B 两版同场景指标差异"),
-        ("定位", TXT, "定向找出导致回退的关键因子、再交复现率 Agent 判是否复现"),
-        ("△", WARN, "「主辅路跟导航」一类上周未达验收、迭代中；本周再增 3 类"),
-        ("✓", NUM, "已产出 AB Review 可视化质检报告"),
-    ], size=13.5, lh=20, gap=9)
-    s += _b
-    # col3 代码审查 + 环境
-    s += _card(x3, y, w3, h, "代码审查 + 环境 Agent")
-    s += _kpi(x3 + 20, y + 64, w3 - 40, "19 MR · 省 10h/月", "代码审查 Agent 量化收益", h=76)
-    _c, _ = _wbullets(x3 + 22, y + 168, w3 - 44, [
-        ("✓", NUM, "每次 MR 合入主分支自动触发审查"),
-        ("·", TXT, "DeepSeek+开源框架、识别高危风险"),
-        ("✓", NUM, "环境构建 Agent：base image → 自动产 Dockerfile"),
-        ("·", TXT, "编包 Agent 自动排队、规避资源争抢"),
-    ], size=13.5, lh=20, gap=10)
-    s += _c
+    global H; H=488
+    s=_header("Topic 4｜AI Agent 产品化","7 月全部上线、以业务反馈缩小落地差距；同步搭通用基建")
+    y=116
+    s+=_kpi(36,y,300,"复现率 11 类","准确率 80~90%、07-24 接场景集自动化",h=78)
+    s+=_kpi(352,y,300,"Diff 14 项","metric·准确率 85%·回填 Cloudsim",h=78)
+    s+=_kpi(668,y,320,"OnCall 打通","生产链路日志改造、失败根因分析",h=78)
+    cy=y+98; h=252
+    s+=_card(36,cy,300,h,"复现率 Agent")
+    _a,_=_wbullets(58,cy+64,264,[
+        ("作用",ACCENT,"替代人工判断『仿真是否复现实车问题』、覆盖 ~61% 人工介入、提效 1 倍+"),
+        ("准召",NUM,"主辅路 86.2%→90.7%、路口未跟导航 68.2%→90.7%、优化后达标"),
+        ("成本",NUM,"单 case 约 1 分钱、成本极低"),
+        ("待优化",WARN,"部分类目生产环境泛化仍待打磨"),
+    ],size=12,lh=16.5,gap=9)
+    s+=_a
+    s+=_card(360,cy,304,h,"闭环 Diff Agent")
+    _b,_=_wbullets(382,cy+64,268,[
+        ("解决",ACCENT,"改版后自动比对 A/B 两版同场景指标差异、定位回退因子"),
+        ("进展",NUM,"已支持 14 项 metric(每工作日+1)、准确率 85%、提速 2/3、结果回填 Cloudsim"),
+        ("开环 Diff",NUM,"9 类 top diff 自动分析、单 case 2min 与人工持平、已上线对话助手"),
+        ("计划",TXT,"下周验收集成、集成每日 CCS 自动出报告、随业务需求逐步释放"),
+    ],size=12,lh=16.5,gap=9)
+    s+=_b
+    s+=_card(688,cy,300,h,"OnCall + 通用基建")
+    _c,_=_wbullets(710,cy+64,264,[
+        ("OnCall",NUM,"自动定位生产失败根因：数据<18s / 位移<8m 不满足 3DGS / OSS 日志缺失"),
+        ("迭代",WARN,"首答准确率 ~50%、待丰富知识库+优化追问逻辑；接 HIL 监控、推广组外"),
+        ("编包 Agent",NUM,"全自动 4 步(登陆宿主机→拉码→打包上传→写结果)产出 Binary Id、避争抢"),
+        ("方向",ACCENT,"千问 38B 微调替第三方 API 降本；搭通用基建挖真实需求、避逐类低价值调优"),
+    ],size=12,lh=16.5,gap=9)
+    s+=_c
     return wrap(s)
 
 
@@ -415,7 +431,7 @@ GENERATORS = {"topic1": topic1, "topic2": topic2, "topic3": topic3, "topic4": to
 
 if __name__ == "__main__":
     import sys, os
-    OUT = "/workspace/team/memory/daily-sync/images"
+    OUT = "/workspace/team/tmp"
     os.makedirs(OUT, exist_ok=True)
     which = sys.argv[1] if len(sys.argv) > 1 else "topic1"
     _reset_geom()                      # 清空上一张图的几何登记
@@ -427,7 +443,42 @@ if __name__ == "__main__":
         for b in bad:
             print("  -", b)
         sys.exit(3)
+    # 🔴🔴 对外去人名闸（2026-07-13）：给刘先明的图禁止出现组员姓名（溯源闸只扫正文、扫不到 SVG）
+    # team_org 是内部团队架构图、姓名是合理的，豁免
+    _NAMES = ["夏志勋","邓爽","杨星昊","杨潮","裴健宏","韩阿东","王禹丁","周蔚旭","吕文杰",
+              "莫春媚","解文康","云荟","卓明","周冯","周月","张海云","高炳涛","李坤","刘先明"]
+    _hit = [n for n in _NAMES if n in svg] if which != "team_org" else []
+    if _hit:
+        print(f"🚫 {which} 去人名闸拦截：图中出现组员/领导姓名 {_hit}——改为角色/团队/去署名后再生成")
+        sys.exit(4)
+    # 🔴🔴 画布溢出闸（2026-07-13）：任何文字包围盒都不得越出图像(画布 W×H)边界
+    PAD = 4
+    oob = [b for b in _ALLBOXES
+           if b[0] < PAD or b[1] < PAD or b[2] > W - PAD or b[3] > H - PAD]
+    if oob:
+        print(f"🚫 {which} 画布溢出闸拦截：{len(oob)} 处文字越出图像范围(画布 {W}x{H})：")
+        for b in oob[:8]:
+            print(f"  - 「{b[4]}」盒[{b[0]:.0f},{b[1]:.0f},{b[2]:.0f},{b[3]:.0f}]")
+        sys.exit(5)
+    # 🔴🔴 叠框回归闸（2026-07-13）：禁止把同一 bullet 的多行拆成多个独立 <text>
+    # （飞书导入后每个 <text> 是一个文本框、多行会叠成多个框）。多行必须用 <tspan> 分行。
+    # 检测信号：两个「无 tspan 的独立 <text>」左对齐(同 x)且纵向间距≈一个行高(10~26)。
+    import re as _re
+    _solo = []
+    for _m in _re.finditer(r'<text\b[^>]*?>([\s\S]*?)</text>', svg):
+        if '<tspan' in _m.group(1):
+            continue
+        _xm = _re.search(r'\bx="([\d.]+)"', _m.group(0))
+        _ym = _re.search(r'\by="([\d.]+)"', _m.group(0))
+        if _xm and _ym:
+            _solo.append((float(_xm.group(1)), float(_ym.group(1))))
+    _stack = [(a, b) for i, a in enumerate(_solo) for b in _solo[i+1:]
+              if abs(a[0]-b[0]) < 3 and 10 < abs(a[1]-b[1]) < 26]
+    if _stack:
+        print(f"🚫 {which} 叠框回归闸拦截：{len(_stack)} 处疑似把多行 bullet 拆成独立 <text>"
+              f"（应在一个 <text> 内用 <tspan> 分行）：{_stack[:3]}")
+        sys.exit(6)
     p = os.path.join(OUT, f"biweekly_{which}.svg")
     with open(p, "w") as f:
         f.write(svg)
-    print(f"OK -> {p} ({len(svg)} bytes)｜渲染闸✅ {len(_BOXES)} 块文字全在卡内")
+    print(f"OK -> {p} ({len(svg)} bytes)｜渲染闸✅ {len(_BOXES)} 块在卡内 / {len(_ALLBOXES)} 块在画布内、无人名、无叠框")

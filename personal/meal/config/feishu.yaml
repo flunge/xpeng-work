@@ -1,0 +1,18 @@
+# 飞书数据源映射（meal 全量迁飞书后，脚本据此从飞书读写）
+# 根文件夹：https://xiaopeng.feishu.cn/drive/folder/IVBgfymaolzx9Bdbpbsc1VPGnAc
+root_folder: IVBgfymaolzx9Bdbpbsc1VPGnAc
+
+# 配方库（多维表格 Base）
+recipe_base:
+  app_token: KZZabRArpa2hRasr4oDcpuRWn03
+  table_id: tblySaVfOXOoyCk8
+  # 结构化列供飞书筛选/多 agent 编辑；原始YAML 列供脚本无损还原
+  raw_field: 原始YAML
+  type_field: 类型
+  source_field: 来源文件
+
+# 各子文件夹 token
+folders:
+  月度计划: PeCkfAaTAlJpGbdUYkNc7ICPndg
+  每日菜谱: QiVWfg2BplEYBVdtUYEcpdDUnac
+  配置与规则: X5nHfR7xDlrn4hdHEYpcxOYgnmb

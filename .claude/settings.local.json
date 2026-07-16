@@ -2,7 +2,11 @@
   "permissions": {
     "allow": [
       "Skill(update-config)",
-      "Skill(update-config:*)"
+      "Skill(update-config:*)",
+      "Bash(cd /workspace/team/memory *)",
+      "Bash(mkdir -p personal/.claude)",
+      "Bash(git mv *)",
+      "Bash(sed -i 's#/workspace/meal#/workspace/personal/meal#g' personal/.claude/WORKFLOW.md && grep -c \"workspace/personal/meal\" personal/.claude/WORKFLOW.md && echo \"替换完成\"; grep -n \"workspace/meal[^/]\" personal/.claude/WORKFLOW.md | head)"
     ]
   }
 }

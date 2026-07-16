@@ -5,10 +5,9 @@ venv-cosyvoice/
 *.pyc
 __pycache__/
 
-# Daily sync data (large JSON files, personal data)
-memory/daily-sync/*.json
-memory/daily-sync/*.log
-memory/daily-sync/launchd-*
+# 统一临时目录：所有任务的临时文件都放这里（配图 PNG/SVG、已读图记录、中间产物），用完即弃、不入库
+tmp/*
+!tmp/.gitkeep
 
 # OS files
 .DS_Store

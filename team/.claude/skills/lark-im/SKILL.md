@@ -49,6 +49,18 @@ When using bot identity (`--as bot`) to fetch messages (e.g. `+chat-messages-lis
 
 **Solution**: Check the app's visibility settings in the Lark Developer Console — ensure the app's visible range covers the users whose names need to be resolved. Alternatively, use `--as user` to fetch messages with user identity, which typically has broader contact access.
 
+### `+chat-messages-list` 对 p2p 返回空时的回退（2026-07-16 沉淀）
+
+遇到过：`+chat-messages-list --chat-id oc_xxx`（含 `--as user`）对一个 p2p 单聊返回 `ok:true` 但 `items:[]`、`chat-list` 也返回 0，看似无权限/无消息。**实际有消息**——直接用原生 API 就能读到：
+
+```bash
+lark-cli api GET /open-apis/im/v1/messages \
+  --params '{"container_id_type":"chat","container_id":"oc_xxx","sort_type":"ByCreateTimeAsc","page_size":50}' \
+  --as user --format json
+```
+
+分页靠返回体的 `data.page_token` + `data.has_more`。排查顺序：确认身份（`lark-cli whoami` 看 `onBehalfOf`）→ 若身份对但 shortcut 空，**换原生 `im.v1.messages` 端点**，别急着判权限。
+
 ### Default message enrichment (reactions / update_time)
 
 The four message-pulling shortcuts (`+messages-mget`, `+chat-messages-list`, `+messages-search`, `+threads-messages-list`) automatically attach a `reactions` block and (for edited messages) `update_time` to each returned message — no separate `im.reactions.batch_query` call is needed. Pass `--no-reactions` to opt out. For the full contract (output shape, the `im:message.reactions:read` scope requirement, and the "missing field ≠ fetch failure" data rules), read [`references/lark-im-message-enrichment.md`](references/lark-im-message-enrichment.md).

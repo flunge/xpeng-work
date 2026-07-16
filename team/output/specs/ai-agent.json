@@ -1,6 +1,0 @@
-{"name":"ai-agent","title":"AI Agent 工作流改造（研发 / 环境构建）","subtitle":"目标：用 AI Agent 改造研发工作流(编包 / 任务提交 / 结果分析 / 环境构建)，提升研发与生产效率",
-"highlight":[["研发闭环","Agent"],["环境构建","Agent"],["Docker","已用"]],
-"cards":[
-{"t":"进展","type":"bullets","items":["研发闭环 Agent：编包-任务提交-结果分析","Simworld 仓库优化 / 回归测试方案","Docker Agent、dockerfile 管理、XPU 自动更新编包环境"]},
-{"t":"现状","type":"bullets","items":["各 Agent 逐步落地、组内使用","横向支撑各 KR 的研发效率"]},
-{"t":"计划","type":"bullets","items":["持续集成进研发 / 生产流程","扩展通用 Evaluator 能力"]}]}

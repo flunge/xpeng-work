@@ -1,5 +1,0 @@
-2026-07-07 01:18		system	张友健 joined {group_name}. New members can view all chat history.
-2026-07-07 01:18		system	黄悦童 joined {group_name}. New members can view all chat history.
-2026-07-07 02:21	陈松	text	@黄悦童 欢迎悦童加入仿真部这个大家庭，可以跟大家打个招呼哈。cc:@徐林鵾
-2026-07-07 02:22	黄悦童	text	大家好，我是26届校招生黄悦童，很高兴加入仿真部，希望大家多多指教！[调皮]
-2026-07-09 01:25		system	王哲成 joined {group_name}. New members can view all chat history.

@@ -1,7 +1,7 @@
 ---
 name: lark-workflow-gic-report
 version: 2.0.0
-description: "GIC双周会汇报板块生成。注意：参考风格必须读 memory/gic-report-style.md，不要用邓爽的部门报告风格。"
+description: "GIC双周会汇报板块生成。注意：参考风格必须读 /workspace/.claude/team/rules/gic-report-style.md，不要用邓爽的部门报告风格。"
 triggers:
   - 双周会
   - GIC双周会
@@ -12,7 +12,7 @@ triggers:
 
 # GIC双周报工作流
 
-**首先：读 memory/gic-report-style.md，理解李坤的GIC汇报风格**
+**首先：读 /workspace/.claude/team/rules/gic-report-style.md，理解李坤的GIC汇报风格**
 
 ## 🔴 存放文件夹：双周报固定放双周会文件夹（2026-06-30 沉淀，放错过一次）
 
@@ -117,7 +117,7 @@ Workflow({
 
 **完整流程**：
 1. **数据对齐**：图里的数字/结论必须与清洗后正文一致——先跑 `check_report.py` 让正文过关，再照正文写图，禁止图里出现正文已删的旧数据/排除项/脑补。
-2. **生成 SVG**：`python3 scripts/gen_svg_infographic.py topicN` → 落到 `memory/daily-sync/images/biweekly_topicN.svg`。
+2. **生成 SVG**：`python3 scripts/gen_svg_infographic.py topicN` → 落到 `team/tmp/biweekly_topicN.svg`。
 3. **本地肉眼验收**（可选但推荐）：`chromium --headless --no-sandbox --screenshot=<png> --window-size=1024,576 <一个 img 指向 svg 的 html>`，Read PNG 确认排版不溢出、中文正常。
 4. **插入文档**：把 SVG 包成 `<whiteboard type="svg">…</whiteboard>` 写进 `.xml` 文件（**用 `@file` 喂 `--content`，别内联大段**），`docs +update --command block_insert_after --block-id <占位块>` 插在对应 Topic 后。
 5. **清占位**：`block_delete` 删掉 `【此处贴图】` 占位块 + 文末配图清单段（批量传逗号分隔 id）。

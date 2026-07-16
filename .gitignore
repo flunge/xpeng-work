@@ -32,6 +32,10 @@ __MACOSX/
 *.key
 media_key.txt
 
+# ── meal 飞书数据层运行缓存 + 本地生成产物（源在飞书，勿入库）──
+**/.feishu_cache/
+personal/meal/plans/
+
 # ── 临时产物（图片切片/草稿/读图中间件，勿提交到根目录）──
 /okr_band_*.jpg
 /okr_kr3_check.jpg
