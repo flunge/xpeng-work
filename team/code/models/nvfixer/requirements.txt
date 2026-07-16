@@ -1,4 +1,0 @@
-lpips
-vision-aided-loss
-natsort
-git+https://github.com/openai/CLIP.git

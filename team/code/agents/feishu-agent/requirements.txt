@@ -1,7 +1,0 @@
-# agents 服务本体依赖（Bot / webhook）
-# 团队安装请用仓库根：pip install -r requirements-feishu.txt
-fastapi
-uvicorn[standard]
-pydantic>=2
-sqlalchemy>=2
-pyyaml>=6

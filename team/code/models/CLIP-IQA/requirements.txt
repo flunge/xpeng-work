@@ -1,8 +1,0 @@
--r requirements/runtime.txt
--r requirements/tests.txt
-tqdm
-ftfy
-pillow==6.1
-regex
-einops
-pandas

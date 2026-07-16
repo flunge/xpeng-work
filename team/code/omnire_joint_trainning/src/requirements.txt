@@ -1,4 +1,0 @@
-torchmetrics==1.4.0
-transformers
-torch-fidelity
-ultralytics

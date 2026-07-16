@@ -1,8 +1,0 @@
-clip_id,folder,new_object,agent_service_config,is_valid
-c-f760f5f3-78da-3743-a95e-c2a1fd9f28e2,trained_model_v231_ppu_v1.3_1347,SUV,cut_in_right,FALSE
-c-fa38e11c-d205-33f1-b8c0-b89fb9fe35bf,trained_model_v231_v231_1347,SUV,cut_in_left,FALSE
-c-fa26c07f-9fc8-39a7-a7d1-a860761f6561,trained_model_v231_v231_1347,SUV,cut_in_left,TRUE
-c-87e23b93-5cb1-358a-80da-94602a8b5aa6,trained_model_v231_ppu_v1.3_1347,SUV,cut_in_left,TRUE
-c-4c3b1a99-f06b-337b-b572-35c1be1abf32,trained_model_v231_ppu_v1.3_1347,SUV,cut_in_right,TRUE
-c-f94f342a-3d22-314f-ba45-2d0151a8cb58,trained_model_v231_v231_1347,SUV,cut_in_left,TRUE
-c-fa0edb84-7324-39b2-bbed-8a103023ac9d,trained_model_v231_v231_1347,SUV,cut_in_left,TRUE
