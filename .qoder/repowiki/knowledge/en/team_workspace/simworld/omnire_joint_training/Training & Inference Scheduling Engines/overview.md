@@ -1,0 +1,1 @@
+Schedules batched training and inference over a generative engine, buffering samples until batch thresholds are met and producing novel data for downstream consumers.

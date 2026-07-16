@@ -1,0 +1,12 @@
+The module is organized as a thin orchestration layer around a self-contained Wan/DiT backbone:
+
+- `wan/` — frozen base model: `modules/` defines the DiT (`model.py`, `attention.py`, `sage.py`) with RoPE + flash/SAGE attention, plus T5/XLM-RoBERTa text encoders, VAE, tokenizers; `distributed/` provides FSDP + xDiT context-parallel helpers; `configs/` selects between t2v/i2v 14B and 1.3B variants.
+- `utils/wan_wrapper.py` — `WanDiffusionWrapper` / `WanTextEncoder` / `WanVAEWrapper` adapt the Wan internals into a single callable generator interface consumed by both training and inference.
+- `pipeline/causal_inference.py` — `CausalInferencePipeline` wires the generator, scheduler, KV cache, and the shared `denoise_block(context_encode → multi-step denoise)` loop; this is the only place the block-wise causal loop lives.
+- `train.py` — entry point for LoRA/full/partial fine-tuning using `accelerate` + DDP; implements teacher-forced per-block flow-matching loss, optional `no_ref_prob` dropout of the reference view, per-block backward to cap activation memory, and saves `*_final.safetensors` / `*_step<N>.safetensors`.
+- `inference_causal_test.py` — standalone inference script that resolves a run directory, optionally injects LoRA adapters, supports TAE vs WanVAE decoding, `torch.compile` on DiT, and deterministic `--ref_time_shift`.
+- `custom_datasets/` — `TrainV2VDataset` loads triplets `(target_video, render_video, source_video)` from a metadata JSON, applies joint temporal crops with random ref shift, builds the 3-channel coverage mask, and yields tensors in `[-1,1]`; `CachedLatentV2VDataset` serves pre-encoded latents when `data.use_latent_cache=true`.
+- `scripts/` — data prep (`json_dataset.py`, `split_dataset.py`, `precompute_latents.py`), batch runners (`run.sh`, `deploy_ngpu.bash`, `deploy_infer.bash`).
+- `configs/*.yaml` — three training recipes (`lora_1.3b`, `full_1.3b`, `partial_1.3b`) controlling `train.mode`, LoRA rank/target_modules, optimizer, and data paths.
+
+Dependency direction: `train.py` / `inference_causal_test.py` → `pipeline` → `utils.wan_wrapper` → `wan.*`; datasets are independent leaf modules. The Wan backbone is never modified during training — only LoRA adapters or selected parameter subsets are unfrozen.

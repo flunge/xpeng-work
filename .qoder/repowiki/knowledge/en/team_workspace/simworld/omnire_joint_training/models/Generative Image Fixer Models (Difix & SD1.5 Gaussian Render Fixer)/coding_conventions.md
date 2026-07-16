@@ -1,0 +1,5 @@
+- Each model implements a uniform interface: `__init__` accepts shared hyperparameters (batch sizes, learning rate, guidance scales, mixed precision, dst_size), plus `training_forward`, `inference_forward`, `set_train`, `set_eval`, `save_checkpoint`, `resume_from_checkpoint`.
+- Heavyweight sub-pipelines (DifixPipeline, GaussianRenderFixerPipeline, GroundingDINO, SAM) are constructed lazily inside `_get_pipe` and gated by `if self.pipe is None`, so they are only materialized on first use.
+- Image resizing follows a fixed pattern: scale-and-pad into a square canvas with `_resize_image`, then center-crop-and-resize back with `_reverse_resize_image`, using bilinear interpolation and `torch.no_grad()`.
+- Optional sky-mask generation is invoked per-sample after denoising: run GroundingDINO with caption "sky", feed boxes to SAM, union results into a boolean mask, and append it alongside the original and novel images.
+- `set_eval` uses a short-lived `threading.Thread` running `log_worker` to emit periodic log messages while the pipeline compiles, then joins the thread before returning.

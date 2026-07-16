@@ -1,0 +1,1 @@
+Bash + crontab for scheduling; Python 3 with `duckduckgo_search` (DDGS) for news scraping; all external I/O goes through the `lark-cli` binary using the `meal` profile rather than direct HTTP calls.

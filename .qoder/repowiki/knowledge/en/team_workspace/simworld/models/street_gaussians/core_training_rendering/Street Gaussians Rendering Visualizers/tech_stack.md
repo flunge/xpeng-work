@@ -1,0 +1,1 @@
+PyTorch tensors + torchvision for PNG saves, OpenCV for colormap-based depth/diff visualization, imageio for MP4 encoding via `mimwrite`, PIL for auxiliary reads.

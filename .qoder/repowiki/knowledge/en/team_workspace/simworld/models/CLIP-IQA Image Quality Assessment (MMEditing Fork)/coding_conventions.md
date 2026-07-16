@@ -1,0 +1,5 @@
+- Every trainable class is exposed to the framework by decorating it with `@MODELS.register_module()` / `@BACKBONES.register_module()` / `@DATASETS.register_module()` and constructed via `build_*` helpers from `mmedit.models.builder`.
+- Config-driven construction: model, dataset, optimizer, and LR schedule are declared as plain Python dicts in `configs/clipiqa/*.py` and consumed by `tools/train.py` / `tools/test.py` without hard-coded paths.
+- Backbone classes implement `init_weights(pretrained=None, strict=True)` using `mmcv.runner.load_checkpoint` and log via `get_root_logger()`, mirroring MMEditing's base pattern.
+- Frozen pre-trained components (CLIP visual/text encoders, teacher network) are explicitly set to `.requires_grad_(False)` and forced into `.eval()` inside their forward passes.
+- Dataset subclasses extend `BaseSRDataset`, override `__getitem__` to return a dict with keys `lq_path` and `gt`, then delegate transforms to a pipeline list defined in the config.

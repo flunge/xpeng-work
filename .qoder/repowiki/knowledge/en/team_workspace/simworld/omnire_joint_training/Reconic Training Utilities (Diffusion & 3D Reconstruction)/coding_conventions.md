@@ -1,0 +1,5 @@
+- Dimension-generic layers are exposed as `*_nd(dims, ...)` factory functions (`conv_nd`, `avg_pool_nd`) that dispatch to 1D/2D/3D `nn` modules based on an integer `dims` argument.
+- External heavy-weight vision pipelines are wrapped in a `LazyPipeline` base class so model weights are downloaded and moved to device only on the first `__call__`, not at import time.
+- Trajectory generators are registered in a string-keyed dict and dispatched through a single entry point (`get_interp_novel_trajectories`) rather than via if/else chains at call sites.
+- Multi-camera layout functions follow a fixed `(imgs: List[np.array], cam_names: List[str]) -> np.array` signature and tile images onto a pre-sized canvas using a filled mask to crop tight bounds.
+- Training metrics are maintained as running EMAs (e.g. `0.4 * new + 0.6 * ema`) instead of simple averages, and logged under a `'train/'` prefix to TensorBoard.

@@ -1,0 +1,1 @@
+PyTorch + torch.nn.functional for all tensor ops; scipy `Rotation`/`Slerp` for smooth pose interpolation; `gsplat.rasterization` for Gaussian splatting renders; `open3d` for PLY export; `groundingdino` and `transformers.SamModel` loaded lazily via `huggingface_hub.hf_hub_download`; configs handled through `omegaconf.OmegaConf`.

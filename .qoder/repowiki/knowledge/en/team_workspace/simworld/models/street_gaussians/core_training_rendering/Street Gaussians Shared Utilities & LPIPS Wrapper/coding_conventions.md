@@ -1,0 +1,4 @@
+- Image tensors are kept in NCHW `(C,H,W)` layout throughout the module; per-pixel losses permute to HWC only inside the function body and accept an optional `(1,H,W)` boolean mask to zero out invalid pixels.
+- Rotation representations are converted between quaternion (real-part-first, shape `[...,4]`) and rotation matrix via explicit `quaternion_to_matrix` / `matrix_to_quaternion` pairs rather than relying on a single library.
+- Utility modules expose stateless pure functions (e.g. `l1_loss`, `ssim`, `PILtoTorch`, `get_expon_lr_func`) instead of classes, keeping the package importable without side effects.
+- External pretrained weights (LPIPS AlexNet) are loaded lazily inside the forward path and moved to the caller's device via `.to(device)` rather than at import time.

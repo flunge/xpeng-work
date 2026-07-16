@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: team_workspace/simworld/omnire_joint_training/training_loop
+title: Reconic Joint Training Loop Orchestrator
+scope:
+    - team/simworld/omnire_joint_trainning/src/reconic/training_loop/
+source_files: []
+depends_on: []
+related_to: []

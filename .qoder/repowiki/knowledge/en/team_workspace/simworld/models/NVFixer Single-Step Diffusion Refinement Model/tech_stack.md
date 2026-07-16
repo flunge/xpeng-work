@@ -1,0 +1,1 @@
+PyTorch + diffusers + Accelerate on top of NVIDIA Cosmos 0.6B text-to-image pipeline; single-step scheduling via DPMSolverMultistepScheduler set to 1 step; LPIPS/VGG perceptual loss, OpenAI CLIP ViT-B/32, xFormers attention, and HuggingFace Sana scheduler weights.

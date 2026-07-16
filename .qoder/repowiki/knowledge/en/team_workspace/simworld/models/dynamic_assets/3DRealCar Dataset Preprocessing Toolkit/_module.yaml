@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: team_workspace/simworld/models/dynamic_assets/three_d_real_car_preprocess
+title: 3DRealCar Dataset Preprocessing Toolkit
+scope:
+    - team/simworld/models/dynamic_assets/three_D_real_car_preprocess/
+source_files: []
+depends_on: []
+related_to: []

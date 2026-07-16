@@ -1,0 +1,1 @@
+PyTorch + `diffusers` (SD1.5 components: AutoencoderKL, UNet2DConditionModel, DDPMScheduler, CLIPTextModel, CLIPTokenizer), `accelerate.Accelerator` for mixed precision and DDP wrapping, optional `bitsandbytes.AdamW8bit`, `einops` for tensor rearrange, `safetensors.torch.load_file` for pretrained weights, and `transformers`-backed GroundingDINO/SAM for sky segmentation.

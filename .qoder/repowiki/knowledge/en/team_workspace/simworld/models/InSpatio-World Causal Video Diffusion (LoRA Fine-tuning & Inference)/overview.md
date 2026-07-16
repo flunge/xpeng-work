@@ -1,0 +1,1 @@
+Training and inference for InSpatio-World, a causal video diffusion model that generates novel-view driving videos conditioned on a reference view, 3DGS render/mask, and text prompt via block-wise KV-cache.

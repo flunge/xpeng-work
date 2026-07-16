@@ -1,0 +1,5 @@
+- Every shell wrapper uses `set -euo pipefail` and resolves `REPO_ROOT` from `$0`'s directory before delegating to the Python job.
+- Python jobs declare runtime config as module-level constants (`PROFILE`, `TARGET_USER_ID`, group/member maps) instead of reading env vars or config files.
+- External API calls are always made by shelling out to `lark-cli` via `subprocess.run(..., timeout=30)` and parsing JSON stdout, never by importing an SDK.
+- Each job builds a Feishu `post` message payload with a `msg_type: post` envelope containing a `zh_cn.content` array of `{tag: text}` blocks, then pushes it through a shared `push_message()` helper.
+- Jobs are invoked only when executed directly via the `if __name__ == "__main__": main()` guard, keeping them importable without side effects.

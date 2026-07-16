@@ -1,0 +1,1 @@
+PyTorch + torchvision.io for tensor redistortion and JPEG encoding; OpenCV (`cv2.remap`, `cv2.undistortPoints`, `cv2.initUndistortRectifyMap`) for distortion-map generation; scipy `Slerp`/`Rotation` for spherical linear rotation interpolation; shapely + cKDTree for trajectory-segment polygon masking; optional `dynamic_assets.DCCF.CameraFilterSmoother` loaded lazily.

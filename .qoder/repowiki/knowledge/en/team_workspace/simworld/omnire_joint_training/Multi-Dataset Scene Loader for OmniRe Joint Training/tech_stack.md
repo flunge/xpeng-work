@@ -1,0 +1,1 @@
+PyTorch tensors as the primary data container; OmegaConf for hierarchical dataset configs; OpenCV for undistortion and image I/O; PyTorch3D for quaternion transforms; joblib/tqdm for preprocessing pipelines; JSON metadata files per scene drive camera lists and vehicle model info.

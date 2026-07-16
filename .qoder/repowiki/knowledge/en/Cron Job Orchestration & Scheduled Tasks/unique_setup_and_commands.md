@@ -1,0 +1,1 @@
+Install or refresh the entire crontab in one shot with `bash cron/install.sh` (it replaces the existing crontab). To add/remove a task, edit both the matching `cron/scripts/xxx.sh` wrapper and the corresponding line inside `cron/install.sh`, then re-run the installer.

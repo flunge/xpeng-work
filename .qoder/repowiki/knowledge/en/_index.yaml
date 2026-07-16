@@ -1,0 +1,672 @@
+# 知识卡导出索引文件
+schema_version: 1
+locale: en-US
+branch: main
+nodes_managed: true
+exported_at: "2026-07-16T09:36:13Z"
+modules:
+    cron_jobs:
+        dir_name: Cron Job Orchestration & Scheduled Tasks
+        title: Cron Job Orchestration & Scheduled Tasks
+        scope:
+            - cron/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    meal_planner:
+        dir_name: Family Meal Planner & Daily Notification System
+        title: Family Meal Planner & Daily Notification System
+        scope:
+            - meal/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    personal_docs:
+        dir_name: Personal Resume & Cover Letter (LaTeX)
+        title: Personal Resume & Cover Letter (LaTeX)
+        scope:
+            - personal/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace:
+        dir_name: team_workspace
+        title: team_workspace
+        scope:
+            - team/
+        source_files: []
+        children:
+            - team_workspace/image_gen_pipelines
+            - team_workspace/lark_skills
+            - team_workspace/shared_scripts
+            - team_workspace/simworld
+        depends_on: []
+        related_to: []
+    team_workspace/image_gen_pipelines:
+        dir_name: image_gen_pipelines
+        title: image_gen_pipelines
+        scope:
+            - team/pipelines/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/lark_skills:
+        dir_name: Lark (Feishu) Agent Skills Catalog
+        title: Lark (Feishu) Agent Skills Catalog
+        scope:
+            - team/.agents/skills/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/shared_scripts:
+        dir_name: shared_scripts
+        title: shared_scripts
+        scope:
+            - team/scripts/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld:
+        dir_name: simworld
+        title: simworld
+        scope:
+            - team/simworld/
+        source_files: []
+        children:
+            - team_workspace/simworld/agents
+            - team_workspace/simworld/models
+            - team_workspace/simworld/omnire_joint_training
+            - team_workspace/simworld/pipeline
+            - team_workspace/simworld/sim_interface
+            - team_workspace/simworld/skills
+            - team_workspace/simworld/tools
+            - team_workspace/simworld/xpeng_data_process
+            - team_workspace/simworld/xpeng_raster_lib
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/agents:
+        dir_name: agents
+        title: agents
+        scope:
+            - team/simworld/agents/
+        source_files: []
+        children:
+            - team_workspace/simworld/agents/feishu_agent
+            - team_workspace/simworld/agents/train_sim_eval_agent
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/agents/feishu_agent:
+        dir_name: Feishu (Lark) Agent Task Orchestrator
+        title: Feishu (Lark) Agent Task Orchestrator
+        scope:
+            - team/simworld/agents/feishu-agent/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/agents/train_sim_eval_agent:
+        dir_name: Train-Sim-Eval Agent (tse)
+        title: Train-Sim-Eval Agent (tse)
+        scope:
+            - team/simworld/agents/train-sim-eval-agent/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models:
+        dir_name: models
+        title: models
+        scope:
+            - team/simworld/models/
+        source_files: []
+        children:
+            - team_workspace/simworld/models/clip_iqa
+            - team_workspace/simworld/models/difix
+            - team_workspace/simworld/models/dynamic_assets
+            - team_workspace/simworld/models/g3r
+            - team_workspace/simworld/models/inspatio_world
+            - team_workspace/simworld/models/nail_evolsplat
+            - team_workspace/simworld/models/nvfixer
+            - team_workspace/simworld/models/street_gaussians
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/clip_iqa:
+        dir_name: CLIP-IQA Image Quality Assessment (MMEditing Fork)
+        title: CLIP-IQA Image Quality Assessment (MMEditing Fork)
+        scope:
+            - team/simworld/models/CLIP-IQA/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/difix:
+        dir_name: DIFIX3D+ Single-Step Diffusion Fixer
+        title: DIFIX3D+ Single-Step Diffusion Fixer
+        scope:
+            - team/simworld/models/difix/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/dynamic_assets:
+        dir_name: dynamic_assets
+        title: dynamic_assets
+        scope:
+            - team/simworld/models/dynamic_assets/
+        source_files: []
+        children:
+            - team_workspace/simworld/models/dynamic_assets/agent_service
+            - team_workspace/simworld/models/dynamic_assets/dccf_harmonization
+            - team_workspace/simworld/models/dynamic_assets/dynamic_assets_root
+            - team_workspace/simworld/models/dynamic_assets/gaussians_splatting
+            - team_workspace/simworld/models/dynamic_assets/scenario_edit
+            - team_workspace/simworld/models/dynamic_assets/three_d_real_car_preprocess
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/dynamic_assets/agent_service:
+        dir_name: Dynamic Agent Service & Scenario Pipeline
+        title: Dynamic Agent Service & Scenario Pipeline
+        scope:
+            - team/simworld/models/dynamic_assets/agent_service/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/dynamic_assets/dccf_harmonization:
+        dir_name: dccf_harmonization
+        title: dccf_harmonization
+        scope:
+            - team/simworld/models/dynamic_assets/DCCF/
+        source_files: []
+        children:
+            - team_workspace/simworld/models/dynamic_assets/dccf_harmonization/fixed256_configs
+            - team_workspace/simworld/models/dynamic_assets/dccf_harmonization/iharm_core
+            - team_workspace/simworld/models/dynamic_assets/dccf_harmonization/scripts_and_runs
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/dynamic_assets/dccf_harmonization/fixed256_configs:
+        dir_name: DCCF Fixed-256 Training Configurations
+        title: DCCF Fixed-256 Training Configurations
+        scope:
+            - team/simworld/models/dynamic_assets/DCCF/models/fixed256/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/dynamic_assets/dccf_harmonization/iharm_core:
+        dir_name: IHARM Core — Image Harmonization Model Suite
+        title: IHARM Core — Image Harmonization Model Suite
+        scope:
+            - team/simworld/models/dynamic_assets/DCCF/iharm/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/dynamic_assets/dccf_harmonization/scripts_and_runs:
+        dir_name: DCCF Harmonization Scripts, Notebooks & Run Entrypoints
+        title: DCCF Harmonization Scripts, Notebooks & Run Entrypoints
+        scope:
+            - team/simworld/models/dynamic_assets/DCCF/scripts/
+            - team/simworld/models/dynamic_assets/DCCF/notebooks/
+            - team/simworld/models/dynamic_assets/DCCF/runs/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/dynamic_assets/dynamic_assets_root:
+        dir_name: Dynamic Assets Preprocessing & Gaussian-Splatting Pipeline
+        title: Dynamic Assets Preprocessing & Gaussian-Splatting Pipeline
+        scope:
+            - team/simworld/models/dynamic_assets/Dockerfile
+            - team/simworld/models/dynamic_assets/README.MD
+            - team/simworld/models/dynamic_assets/requirements.txt
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/dynamic_assets/gaussians_splatting:
+        dir_name: 3D Gaussian Splatting Radiance Field Engine
+        title: 3D Gaussian Splatting Radiance Field Engine
+        scope:
+            - team/simworld/models/dynamic_assets/gaussians_splatting/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/dynamic_assets/scenario_edit:
+        dir_name: Scenario Edit Pipeline (3DGS DDS & CloudSim Orchestration)
+        title: Scenario Edit Pipeline (3DGS DDS & CloudSim Orchestration)
+        scope:
+            - team/simworld/models/dynamic_assets/scenario_edit/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/dynamic_assets/three_d_real_car_preprocess:
+        dir_name: 3DRealCar Dataset Preprocessing Toolkit
+        title: 3DRealCar Dataset Preprocessing Toolkit
+        scope:
+            - team/simworld/models/dynamic_assets/three_D_real_car_preprocess/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/g3r:
+        dir_name: G3R Gaussian Reconstruction Model (Ground & Background)
+        title: G3R Gaussian Reconstruction Model (Ground & Background)
+        scope:
+            - team/simworld/models/g3r/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/inspatio_world:
+        dir_name: InSpatio-World Causal Video Diffusion (LoRA Fine-tuning & Inference)
+        title: InSpatio-World Causal Video Diffusion (LoRA Fine-tuning & Inference)
+        scope:
+            - team/simworld/models/inspatio-world/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/nail_evolsplat:
+        dir_name: EvoSplat Neural Implicit Gaussian Splatting Model
+        title: EvoSplat Neural Implicit Gaussian Splatting Model
+        scope:
+            - team/simworld/models/nail_evolsplat/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/nvfixer:
+        dir_name: NVFixer Single-Step Diffusion Refinement Model
+        title: NVFixer Single-Step Diffusion Refinement Model
+        scope:
+            - team/simworld/models/nvfixer/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/street_gaussians:
+        dir_name: street_gaussians
+        title: street_gaussians
+        scope:
+            - team/simworld/models/street_gaussians/
+        source_files: []
+        children:
+            - team_workspace/simworld/models/street_gaussians/configs_and_assets
+            - team_workspace/simworld/models/street_gaussians/core_training_rendering
+            - team_workspace/simworld/models/street_gaussians/dataset_scripts
+            - team_workspace/simworld/models/street_gaussians/lora_gaussian_pipeline
+            - team_workspace/simworld/models/street_gaussians/sim_bridge_evaluation
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/street_gaussians/configs_and_assets:
+        dir_name: Street Gaussians Training & Evaluation Configurations
+        title: Street Gaussians Training & Evaluation Configurations
+        scope:
+            - team/simworld/models/street_gaussians/configs/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/street_gaussians/core_training_rendering:
+        dir_name: core_training_rendering
+        title: core_training_rendering
+        scope:
+            - team/simworld/models/street_gaussians/lib/
+            - team/simworld/models/street_gaussians/train.py
+            - team/simworld/models/street_gaussians/render.py
+        source_files: []
+        children:
+            - team_workspace/simworld/models/street_gaussians/core_training_rendering/config
+            - team_workspace/simworld/models/street_gaussians/core_training_rendering/datasets
+            - team_workspace/simworld/models/street_gaussians/core_training_rendering/models
+            - team_workspace/simworld/models/street_gaussians/core_training_rendering/utils
+            - team_workspace/simworld/models/street_gaussians/core_training_rendering/visualizers
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/street_gaussians/core_training_rendering/config:
+        dir_name: Street Gaussians Configuration & Defaults
+        title: Street Gaussians Configuration & Defaults
+        scope:
+            - team/simworld/models/street_gaussians/lib/config/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/street_gaussians/core_training_rendering/datasets:
+        dir_name: Multi-Source Scene Dataset Readers
+        title: Multi-Source Scene Dataset Readers
+        scope:
+            - team/simworld/models/street_gaussians/lib/datasets/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/street_gaussians/core_training_rendering/models:
+        dir_name: Street Gaussian Model & Rasterization Core
+        title: Street Gaussian Model & Rasterization Core
+        scope:
+            - team/simworld/models/street_gaussians/lib/models/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/street_gaussians/core_training_rendering/utils:
+        dir_name: Street Gaussians Shared Utilities & LPIPS Wrapper
+        title: Street Gaussians Shared Utilities & LPIPS Wrapper
+        scope:
+            - team/simworld/models/street_gaussians/lib/utils/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/street_gaussians/core_training_rendering/visualizers:
+        dir_name: Street Gaussians Rendering Visualizers
+        title: Street Gaussians Rendering Visualizers
+        scope:
+            - team/simworld/models/street_gaussians/lib/visualizers/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/street_gaussians/dataset_scripts:
+        dir_name: Street Gaussians Dataset Preparation & Training Scripts
+        title: Street Gaussians Dataset Preparation & Training Scripts
+        scope:
+            - team/simworld/models/street_gaussians/script/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/street_gaussians/lora_gaussian_pipeline:
+        dir_name: LoRA Gaussian Render Fixer (Pix2Pix Diffusion)
+        title: LoRA Gaussian Render Fixer (Pix2Pix Diffusion)
+        scope:
+            - team/simworld/models/street_gaussians/lora_gaussian_render/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/models/street_gaussians/sim_bridge_evaluation:
+        dir_name: Street Gaussian Sim-Bridge Evaluation Suite
+        title: Street Gaussian Sim-Bridge Evaluation Suite
+        scope:
+            - team/simworld/models/street_gaussians/sim_bridge/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/omnire_joint_training:
+        dir_name: omnire_joint_training
+        title: omnire_joint_training
+        scope:
+            - team/simworld/omnire_joint_trainning/
+        source_files: []
+        children:
+            - team_workspace/simworld/omnire_joint_training/cli_and_metrics
+            - team_workspace/simworld/omnire_joint_training/datasets
+            - team_workspace/simworld/omnire_joint_training/engines
+            - team_workspace/simworld/omnire_joint_training/models
+            - team_workspace/simworld/omnire_joint_training/multi_vehicle_utils
+            - team_workspace/simworld/omnire_joint_training/pipelines
+            - team_workspace/simworld/omnire_joint_training/reconic_utils
+            - team_workspace/simworld/omnire_joint_training/scripts_and_deploy
+            - team_workspace/simworld/omnire_joint_training/simulator
+            - team_workspace/simworld/omnire_joint_training/trainers
+            - team_workspace/simworld/omnire_joint_training/training_loop
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/omnire_joint_training/cli_and_metrics:
+        dir_name: Training_Evaluation CLI & Offline Detection Metrics
+        title: Training/Evaluation CLI & Offline Detection Metrics
+        scope:
+            - team/simworld/omnire_joint_trainning/src/reconic/cli/
+            - team/simworld/omnire_joint_trainning/src/reconic/metrics/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/omnire_joint_training/datasets:
+        dir_name: Multi-Dataset Scene Loader for OmniRe Joint Training
+        title: Multi-Dataset Scene Loader for OmniRe Joint Training
+        scope:
+            - team/simworld/omnire_joint_trainning/src/reconic/datasets/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/omnire_joint_training/engines:
+        dir_name: Training & Inference Scheduling Engines
+        title: Training & Inference Scheduling Engines
+        scope:
+            - team/simworld/omnire_joint_trainning/src/reconic/engines/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/omnire_joint_training/models:
+        dir_name: models
+        title: models
+        scope:
+            - team/simworld/omnire_joint_trainning/src/reconic/models/
+        source_files: []
+        children:
+            - team_workspace/simworld/omnire_joint_training/models/gaussians
+            - team_workspace/simworld/omnire_joint_training/models/generative_models
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/omnire_joint_training/models/gaussians:
+        dir_name: Gaussian Splatting Model Variants (Vanilla, PVG, DeformGS, Scaffold)
+        title: Gaussian Splatting Model Variants (Vanilla, PVG, DeformGS, Scaffold)
+        scope:
+            - team/simworld/omnire_joint_trainning/src/reconic/models/gaussians/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/omnire_joint_training/models/generative_models:
+        dir_name: Generative Image Fixer Models (Difix & SD1.5 Gaussian Render Fixer)
+        title: Generative Image Fixer Models (Difix & SD1.5 Gaussian Render Fixer)
+        scope:
+            - team/simworld/omnire_joint_trainning/src/reconic/models/generative_models/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/omnire_joint_training/multi_vehicle_utils:
+        dir_name: Multi-Vehicle Scenario Orchestration & DDS Pipeline Utilities
+        title: Multi-Vehicle Scenario Orchestration & DDS Pipeline Utilities
+        scope:
+            - team/simworld/omnire_joint_trainning/src/reconic/multi_vehicle_utils/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/omnire_joint_training/pipelines:
+        dir_name: Multi-View Diffusion Pipelines & UNet for Distortion Fixing
+        title: Multi-View Diffusion Pipelines & UNet for Distortion Fixing
+        scope:
+            - team/simworld/omnire_joint_trainning/src/reconic/pipelines/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/omnire_joint_training/reconic_utils:
+        dir_name: Reconic Training Utilities (Diffusion & 3D Reconstruction)
+        title: Reconic Training Utilities (Diffusion & 3D Reconstruction)
+        scope:
+            - team/simworld/omnire_joint_trainning/src/reconic/utils/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/omnire_joint_training/scripts_and_deploy:
+        dir_name: Rendering, Evaluation & Deployment Scripts
+        title: Rendering, Evaluation & Deployment Scripts
+        scope:
+            - team/simworld/omnire_joint_trainning/src/scripts/
+            - team/simworld/omnire_joint_trainning/deploy_cmd/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/omnire_joint_training/simulator:
+        dir_name: Reconic Closed-Loop Gaussian Splatting Simulator
+        title: Reconic Closed-Loop Gaussian Splatting Simulator
+        scope:
+            - team/simworld/omnire_joint_trainning/src/reconic/simulator/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/omnire_joint_training/trainers:
+        dir_name: Gaussian Splatting Trainer Orchestration
+        title: Gaussian Splatting Trainer Orchestration
+        scope:
+            - team/simworld/omnire_joint_trainning/src/reconic/trainers/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/omnire_joint_training/training_loop:
+        dir_name: Reconic Joint Training Loop Orchestrator
+        title: Reconic Joint Training Loop Orchestrator
+        scope:
+            - team/simworld/omnire_joint_trainning/src/reconic/training_loop/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/pipeline:
+        dir_name: 3DGS Pipeline Orchestration (Fuyao & UCP)
+        title: 3DGS Pipeline Orchestration (Fuyao & UCP)
+        scope:
+            - team/simworld/pipeline/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/sim_interface:
+        dir_name: Simulation Interface & Camera Redistortion Utilities
+        title: Simulation Interface & Camera Redistortion Utilities
+        scope:
+            - team/simworld/sim_interface/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/skills:
+        dir_name: skills
+        title: skills
+        scope:
+            - team/simworld/skills/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/tools:
+        dir_name: tools
+        title: tools
+        scope:
+            - team/simworld/tools/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/xpeng_data_process:
+        dir_name: xpeng_data_process
+        title: xpeng_data_process
+        scope:
+            - team/simworld/xpeng_data_process/
+        source_files: []
+        children:
+            - team_workspace/simworld/xpeng_data_process/data_mining
+            - team_workspace/simworld/xpeng_data_process/ground_processing
+            - team_workspace/simworld/xpeng_data_process/mvsnet
+            - team_workspace/simworld/xpeng_data_process/optimization
+            - team_workspace/simworld/xpeng_data_process/sam3d
+            - team_workspace/simworld/xpeng_data_process/scube
+            - team_workspace/simworld/xpeng_data_process/shared_utils_settings
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/xpeng_data_process/data_mining:
+        dir_name: data_mining
+        title: data_mining
+        scope:
+            - team/simworld/xpeng_data_process/data_mining/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/xpeng_data_process/ground_processing:
+        dir_name: ground_processing
+        title: ground_processing
+        scope:
+            - team/simworld/xpeng_data_process/ground_processing/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/xpeng_data_process/mvsnet:
+        dir_name: mvsnet
+        title: mvsnet
+        scope:
+            - team/simworld/xpeng_data_process/mvsnet/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/xpeng_data_process/optimization:
+        dir_name: optimization
+        title: optimization
+        scope:
+            - team/simworld/xpeng_data_process/optimization/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/xpeng_data_process/sam3d:
+        dir_name: sam3d
+        title: sam3d
+        scope:
+            - team/simworld/xpeng_data_process/sam3d/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/xpeng_data_process/scube:
+        dir_name: scube
+        title: scube
+        scope:
+            - team/simworld/xpeng_data_process/scube/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/xpeng_data_process/shared_utils_settings:
+        dir_name: shared_utils_settings
+        title: shared_utils_settings
+        scope:
+            - team/simworld/xpeng_data_process/utils/
+            - team/simworld/xpeng_data_process/settings/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []
+    team_workspace/simworld/xpeng_raster_lib:
+        dir_name: XPeng EWA 3D Gaussian Splatting Rasterizer (CUDA Extension)
+        title: XPeng EWA 3D Gaussian Splatting Rasterizer (CUDA Extension)
+        scope:
+            - team/simworld/libs/xpeng_raster/
+        source_files: []
+        children: []
+        depends_on: []
+        related_to: []

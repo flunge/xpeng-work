@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: team_workspace/simworld/omnire_joint_training/multi_vehicle_utils
+title: Multi-Vehicle Scenario Orchestration & DDS Pipeline Utilities
+scope:
+    - team/simworld/omnire_joint_trainning/src/reconic/multi_vehicle_utils/
+source_files: []
+depends_on: []
+related_to: []

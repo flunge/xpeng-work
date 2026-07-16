@@ -1,0 +1,3 @@
+- Each dataset format is implemented as a standalone reader file exporting a single `read*SceneInfo(path, **kwargs)` function that returns a `SceneInfo` NamedTuple — new formats are added by creating a file and registering it in `sceneLoadTypeCallbacks`.
+- Per-frame metadata (masks, semantic labels, object bounds) is carried through `CameraInfo.metadata` dicts rather than extending the NamedTuple fields, keeping the core schema stable across readers.
+- Point clouds are lazily loaded on demand via `load_camera_on_demand` inside `__getitem__`, and optional auxiliary cameras (e.g. cam7) are filtered out using iteration counters and config-driven sample rates instead of pre-filtering the camera list.

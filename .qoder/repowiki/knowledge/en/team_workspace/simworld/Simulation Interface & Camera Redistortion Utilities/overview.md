@@ -1,0 +1,1 @@
+Defines the BaseSimulator abstract interface for vehicle-agnostic Gaussian-Splatting simulation and provides camera calibration, pose interpolation, and GPU/CPU redistortion utilities used by concrete simulators.

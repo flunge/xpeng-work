@@ -1,0 +1,1 @@
+Defines the hierarchical YAML-backed configuration schema, default hyperparameters, and semantic class constants used by the Street Gaussians training and rendering pipeline.

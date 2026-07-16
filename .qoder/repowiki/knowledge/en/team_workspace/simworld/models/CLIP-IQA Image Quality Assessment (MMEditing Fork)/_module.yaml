@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: team_workspace/simworld/models/clip_iqa
+title: CLIP-IQA Image Quality Assessment (MMEditing Fork)
+scope:
+    - team/simworld/models/CLIP-IQA/
+source_files: []
+depends_on: []
+related_to: []

@@ -1,0 +1,4 @@
+- Concrete training loops subclass `TrainingLoopHelper` and implement only `forward_step` / `backward_step` (and optionally `run_after_step_finished`), leaving setup, iteration, logging, and checkpointing in the base class.
+- Pluggable components (dataset, recon_trainer, generative engine/scheduler) are instantiated through `import_str(self.cfg.<section>.type)(...)` so behavior is selected purely by config rather than code branches.
+- Per-run state that must survive across processes is persisted as JSON under `project_dir/training_metadata.json` (fields like `next_step`, `current_shift_level`, `processed_image_indices`) and reloaded at startup to resume training.
+- Step-scoped side effects are attached by overriding specific hook methods (`run_before_train_step`, `run_after_train_step`, `run_after_step_finished`) instead of mutating the central `train()` loop.

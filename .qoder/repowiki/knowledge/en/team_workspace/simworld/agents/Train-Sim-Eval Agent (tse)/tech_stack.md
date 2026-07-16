@@ -1,0 +1,1 @@
+Python ≥3.10; Temporal Python SDK for durable workflow orchestration, FastAPI+uvicorn for the control plane, Typer for the CLI, Pydantic v2 + pydantic-settings for configuration/modeling, Lark-OAPI for Feishu integration, httpx/requests for HTTP clients, pandas/matplotlib/numpy for evaluation artifacts.

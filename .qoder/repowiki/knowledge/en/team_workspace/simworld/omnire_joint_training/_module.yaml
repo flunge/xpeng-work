@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: team_workspace/simworld/omnire_joint_training
+title: omnire_joint_training
+scope:
+    - team/simworld/omnire_joint_trainning/
+source_files: []
+depends_on: []
+related_to: []

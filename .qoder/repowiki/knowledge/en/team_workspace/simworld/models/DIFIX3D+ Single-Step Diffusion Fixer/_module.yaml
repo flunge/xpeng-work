@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: team_workspace/simworld/models/difix
+title: DIFIX3D+ Single-Step Diffusion Fixer
+scope:
+    - team/simworld/models/difix/
+source_files: []
+depends_on: []
+related_to: []

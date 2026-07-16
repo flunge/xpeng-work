@@ -1,0 +1,1 @@
+Per-scene visualizer backends that render Street Gaussians outputs (RGB, depth, normals, masks) to per-camera image folders and concatenated MP4 videos for evaluation and debugging.

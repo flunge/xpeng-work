@@ -1,0 +1,3 @@
+- Training/rendering: `bash deploy_cmd/train_cmd_feedforward.sh <workspace_path> <config> <clip_id> <cameras_id> <output_path> <priority>`
+- Evaluation: `bash deploy_cmd/eval_job.sh <checkpoint_path>` (submits via fuyao queue `adc-sim`)
+- Standalone eval: `bash deploy_cmd/eval_cmd.sh <workspace_path> <ckpt>` installs the package in-place before running `reconic/cli/eval_cli.py`.

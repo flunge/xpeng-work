@@ -1,0 +1,1 @@
+Cross-cutting helper library for the Street Gaussians model, providing geometry/pose conversions, camera abstractions, image/loss metrics, dataset loaders, and a bundled LPIPS perceptual-loss module.

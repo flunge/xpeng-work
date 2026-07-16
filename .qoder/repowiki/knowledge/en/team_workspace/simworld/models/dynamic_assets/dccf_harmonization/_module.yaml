@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: team_workspace/simworld/models/dynamic_assets/dccf_harmonization
+title: dccf_harmonization
+scope:
+    - team/simworld/models/dynamic_assets/DCCF/
+source_files: []
+depends_on: []
+related_to: []

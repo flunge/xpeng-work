@@ -1,0 +1,5 @@
+- External binaries (`ossutil64`, `lz4`, `ffmpeg`, `camera_video_xp5_decoder`) are invoked via `subprocess.run` with explicit argument lists rather than shell strings, and failures raise exceptions after printing stdout/stderr.
+- CloudSim API calls go exclusively through `cloudsim_request()`, which derives the domain from the URL, looks up a per-domain secret in `SECRETS`, and attaches an `X-Sign` header built from `app_key/version/account/timestamp/hmac`.
+- OSS paths are consistently represented as `oss://bucket/object_key` strings and parsed by stripping the prefix and splitting on the first slash before being passed to `ossutil64` commands.
+- Top-level entry points use `argparse` with `--input-dir`/`--output-dir` style flags and exit via `sys.exit(0 if success else 1)` to signal pipeline status.
+- Per-camera configuration (names, resolutions, bitrate derivation) is centralized in module-level dictionaries (`CAMERA_NAME_MAP`, `CAMERA_RESOLUTION`, `ENCODE_CAMERA_DIRS`) instead of being computed inline.

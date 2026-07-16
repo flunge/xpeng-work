@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: team_workspace/simworld/omnire_joint_training/pipelines
+title: Multi-View Diffusion Pipelines & UNet for Distortion Fixing
+scope:
+    - team/simworld/omnire_joint_trainning/src/reconic/pipelines/
+source_files: []
+depends_on: []
+related_to: []

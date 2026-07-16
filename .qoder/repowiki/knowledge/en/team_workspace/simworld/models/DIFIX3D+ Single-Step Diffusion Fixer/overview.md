@@ -1,0 +1,1 @@
+NVIDIA DIFIX3D+ single-step diffusion model for removing 3D reconstruction artifacts, providing training, inference, and a Python fixer API over a frozen SD-Turbo backbone.

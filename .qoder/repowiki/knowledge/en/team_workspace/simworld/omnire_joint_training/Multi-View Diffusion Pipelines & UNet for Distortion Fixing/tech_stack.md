@@ -1,0 +1,1 @@
+PyTorch + Hugging Face `diffusers` (`UNet2DConditionModel`, `StableDiffusionPipeline`, `StableDiffusionInstructPix2PixPipeline`) with `einops.rearrange` for view-channel reshaping; uses GLIGEN-style `PositionNet` when `diffusers.__version__ > '0.25.1'` via runtime import branching.

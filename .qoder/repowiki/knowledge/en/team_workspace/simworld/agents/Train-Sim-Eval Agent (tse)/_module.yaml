@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: team_workspace/simworld/agents/train_sim_eval_agent
+title: Train-Sim-Eval Agent (tse)
+scope:
+    - team/simworld/agents/train-sim-eval-agent/
+source_files: []
+depends_on: []
+related_to: []

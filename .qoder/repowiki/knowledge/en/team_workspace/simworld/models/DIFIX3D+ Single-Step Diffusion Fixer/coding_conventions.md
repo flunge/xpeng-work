@@ -1,0 +1,5 @@
+- Trainable parameters are kept minimal: UNet weights are frozen except where explicitly added to `layers_to_opt`, while VAE LoRA modules (`lora` in name) plus decoder `skip_conv_*` layers are the only VAE params updated.
+- Multi-process safety is enforced by rank-scoping `HF_MODULES_CACHE` per accelerator process and cleaning `diffusers_modules/local` before retrying `DifixPipeline.from_pretrained`.
+- Prompt embeddings are cached keyed by both the prompt string and its token tuple under `_text_embed_cache`, with `prime_camera_prompt_cache` preloading the seven fixed camera prompts at init.
+- Resolution batching follows a dual-bucket scheme (16:9 vs 5:4) selected by aspect ratio, driven by `enable_dual_resolution_bucket` flags in config YAMLs rather than ad-hoc branching.
+- Checkpoint format is a flat dict with separate `state_dict_unet` / `state_dict_vae` keys plus optional `optimizer`, `epoch`, `global_step`, `lr_scheduler_state`, loaded/saved via `load_ckpt_from_state_dict` / `save_ckpt`.

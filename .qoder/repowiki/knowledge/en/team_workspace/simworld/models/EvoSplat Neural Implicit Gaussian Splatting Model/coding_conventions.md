@@ -1,0 +1,5 @@
+- Each top-level script (`trainer.py`, `infer_evolsplat.py`, `model/model.py`) rewrites `sys.path` at import time by resolving `current_dir` and appending sibling directories so imports like `from nail_evolsplat.utils.cameras import Cameras` work regardless of cwd.
+- Per-scene pipelines are bootstrapped by constructing a `Datamanager(case_id, root_data_folder, output_folder)` and calling `model.set_datas_init(num_images, seed_points, output_folder)` before any forward pass.
+- Sub-networks are built as plain `nn.Module`s instantiated inside `EvolSplatModel.populate_modules()` rather than via nested class definitions, and parameter groups are exposed through `get_param_groups()` returning a dict mapping group names to parameter lists.
+- Loss and metric computation is split into dedicated `get_loss_dict` / `get_metrics_dict` / `get_image_metrics_and_images` methods on `Trainer`, each returning typed dicts keyed by string names that are later reduced or logged.
+- Configuration is loaded from YAML via `obtain_config` in `train/config.py` and consumed as an `EasyDict` throughout the trainer, with defaults filled in before use.

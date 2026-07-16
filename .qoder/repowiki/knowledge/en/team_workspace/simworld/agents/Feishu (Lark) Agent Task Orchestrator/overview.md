@@ -1,0 +1,1 @@
+FastAPI-based Feishu/Lark chat agent that parses inbound messages into typed tasks, executes them via pluggable executors, and persists state in SQLite.

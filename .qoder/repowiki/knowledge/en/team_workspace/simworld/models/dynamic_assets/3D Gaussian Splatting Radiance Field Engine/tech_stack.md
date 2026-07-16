@@ -1,0 +1,1 @@
+PyTorch + CUDA 11.x; custom rasterization via three pip-installable C++/CUDA extensions (`diff-gaussian-rasterization`, `simple-knn`, `fused-ssim`) each with their own `CMakeLists.txt`/`setup.py`; COLMAP for SfM input parsing; optional TensorBoard logging; spherical-harmonic SH(0..3) color representation.

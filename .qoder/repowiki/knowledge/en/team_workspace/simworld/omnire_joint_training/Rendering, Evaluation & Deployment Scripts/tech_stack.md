@@ -1,0 +1,1 @@
+Python + PyTorch + OpenCV + NumPy for rendering/metrics; ffmpeg (libx264) for multi-camera video stitching; fuyao batch scheduler (`fuyao deploy`) with a pinned container image for distributed job submission.

@@ -1,0 +1,4 @@
+- Each top-level script bootstraps imports by computing `current_dir = os.path.dirname(__file__)`, resolving `reconic_path` and `sim_interface_path` relative to itself, and extending `sys.path` — never relying on installed packages at import time.
+- Render pipelines share a fixed target-vis dict mapping `redistort_*` keys to display names, then run every channel through `simulator.redistort_gpu(cam_name, ...)` before saving or comparing against GT.
+- Ground-truth images are loaded from `<data_root>/<scene_idx>/images_origin/<cam>/<timestamp>.png` with a fallback to `/workspace/group_share/...`, and missing GT is filled with a zero array rather than skipped.
+- Metrics subclass an abstract `MetricBase` exposing `__call__`, `name()`, `save_result(output)`, and `result()` so new metrics plug into `render_evaluate` without changing the loop.

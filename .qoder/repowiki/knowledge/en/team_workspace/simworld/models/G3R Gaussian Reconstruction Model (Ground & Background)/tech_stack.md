@@ -1,0 +1,1 @@
+PyTorch + `torchsparse` for sparse tensor U-Net, `gsplat` for differentiable Gaussian rasterization (antialiased, packed sparse grads), `torchmetrics` SSIM, `plyfile` for PLY I/O, `torchvision.io` for PNG reads, and `concurrent.futures.ThreadPoolExecutor` for parallel frame loading.

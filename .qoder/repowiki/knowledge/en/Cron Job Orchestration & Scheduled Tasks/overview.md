@@ -1,0 +1,1 @@
+Central crontab installer and thin shell wrappers that schedule Python job scripts to scrape, summarize, and push daily reports via lark-cli.

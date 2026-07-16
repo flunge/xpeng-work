@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: team_workspace/simworld/xpeng_raster_lib
+title: XPeng EWA 3D Gaussian Splatting Rasterizer (CUDA Extension)
+scope:
+    - team/simworld/libs/xpeng_raster/
+source_files: []
+depends_on: []
+related_to: []

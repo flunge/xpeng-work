@@ -1,0 +1,1 @@
+Dataset preparation, COLMAP pipeline orchestration, and auxiliary depth/mask generation scripts for KITTI, Waymo, and XPeng inputs consumed by the Street Gaussians training loop.

@@ -1,0 +1,5 @@
+- Each CLI script exposes a `main()` function plus an `if __name__ == "__main__": main()` guard, keeping the module runnable both as a script and importable.
+- Config-driven object construction uses `import_str(cfg.<section>.type)(...)` to instantiate datasets/trainers at runtime rather than hard-coded imports.
+- CLI argument parsers always end with a `nargs=argparse.REMAINDER` `opts` positional used to merge arbitrary OmegaConf key=value overrides onto the loaded YAML.
+- Detection results are persisted as JSON alongside drawn PNGs in a `show_detection_results/` subdirectory, with filenames encoding frame index and camera name.
+- Image/bbox resizing follows a consistent scale-then-pad scheme: compute `ratio = min(target_w/w, target_h/h)`, resize proportionally, then `copyMakeBorder` with symmetric padding, and apply the same ratio+offset to xyxy coordinates.

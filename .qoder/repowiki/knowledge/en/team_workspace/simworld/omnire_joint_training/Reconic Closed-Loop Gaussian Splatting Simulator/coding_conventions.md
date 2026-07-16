@@ -1,0 +1,5 @@
+- Optional heavy components (CLIP-IQA, Difix fixer) are imported lazily inside methods and guarded by env vars or `hasattr` checks so the simulator stays importable without them.
+- Runtime behavior is driven by a single `SimulatorConfigManager` singleton whose `_parse_conditions` turns YAML conditions into callable lambdas evaluated by the strategy factory.
+- New render strategies extend `RenderStrategy` and register themselves by adding a YAML entry under `simulator.render_strategies`; the factory resolves the Python class name to a module via a fixed naming convention (`class_name` → snake_case module).
+- Pose/frame bookkeeping goes through `compute_rig2anchor` plus KDTree helpers rather than raw matrix math, keeping CP vs non-CP branches isolated in `get_novel_view_info`.
+- Debug/reference data is attached as extra keys on the returned frame dict (`image_gt`, CLIP-IQA scores) instead of changing the return signature, preserving backward compatibility.

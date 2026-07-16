@@ -1,0 +1,1 @@
+YAML configuration files that parameterize Street Gaussians training, evaluation, and ablation experiments across Waymo, XPeng M1, and RS128 datasets.

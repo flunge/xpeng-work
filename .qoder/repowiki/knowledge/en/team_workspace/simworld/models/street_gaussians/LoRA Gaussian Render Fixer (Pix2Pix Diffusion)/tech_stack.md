@@ -1,0 +1,1 @@
+diffusers `StableDiffusionInstructPix2PixPipeline` + PEFT `LoraConfig` for LoRA on UNet attention heads; `accelerate.Accelerator` for mixed-precision DDP training; `datasets.Dataset` + `torchvision.transforms` for data; `torchmetrics.image.fid.FrechetInceptionDistance` for evaluation; CLI via `tyro`; HF mirror configured through `HF_ENDPOINT`/`HF_HOME` in shell scripts.

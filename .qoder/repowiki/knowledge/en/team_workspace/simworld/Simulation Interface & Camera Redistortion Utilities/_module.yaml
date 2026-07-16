@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: team_workspace/simworld/sim_interface
+title: Simulation Interface & Camera Redistortion Utilities
+scope:
+    - team/simworld/sim_interface/
+source_files: []
+depends_on: []
+related_to: []

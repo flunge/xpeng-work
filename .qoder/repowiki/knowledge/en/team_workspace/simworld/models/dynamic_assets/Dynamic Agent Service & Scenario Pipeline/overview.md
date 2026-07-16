@@ -1,0 +1,1 @@
+Python service that injects dynamic agents (lane-change, acceleration, cut-in/out) into pre-recorded 3DGS clips by rewriting config_sim.yaml and re-uploading them to OSS.

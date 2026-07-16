@@ -1,0 +1,3 @@
+- Resume sections are split into separate `.tex` files and pulled in through `\input{...}` in `main.tex`, keeping the master document thin while allowing alternate variants (e.g. `experienceCut.tex` vs. `experience.tex`).
+- Optional content is kept as commented-out blocks rather than separate files, so toggling visibility requires only uncommenting a single line.
+- Bilingual (Chinese/English) text is wrapped in a `\begin{CJK*}{UTF8}{gbsn} ... \end{CJK*}` environment around the entire body, with English-only sections placed outside it.

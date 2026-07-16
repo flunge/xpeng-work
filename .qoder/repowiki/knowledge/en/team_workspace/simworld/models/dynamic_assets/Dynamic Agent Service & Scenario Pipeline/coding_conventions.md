@@ -1,0 +1,5 @@
+- Action types are dispatched via string constants (`ACTION_CHANGE_LANE`, `ACTION_AGENT_ACCEL`, …) matched in `AgentManager.create_actions` against a switch-like if/elif chain rather than a registry map.
+- Triggers follow a uniform interface: each subclass overrides `alive()` and `is_trigger_activated(agent_data)` and is constructed from a flat dict carrying its own params plus the parent `agent_id`.
+- Action delegates maintain a three-state life cycle (`WAITING` → `RUNNING` → `FINISHED`) via `ActionLifeSpan` and advance only when `should_trigger()` returns true after all child triggers report alive and activated.
+- Cross-package imports use explicit `sys.path.append(os.path.join(current_dir, '..'))` at module top instead of package-relative imports, keeping `actions/` and `agents/` importable regardless of working directory.
+- Per-scenario behavior is parameterized entirely through JSON/YAML files under `agent_service_configs/` and CSV manifests, never hard-coded in Python logic.

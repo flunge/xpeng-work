@@ -1,0 +1,1 @@
+Command-line entry points for training, evaluation, and offline detection-metric computation over rendered novel-view images, backed by YOLO-based 2D detection against projected 3D ground-truth boxes.

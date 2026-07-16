@@ -1,0 +1,1 @@
+PyTorch tensors as the universal data format; `roma` for unit-quaternion slerp, `faiss` (IVF+GPU) for nearest-neighbour indexing in ground-gs selection, `diff_gaussian_rasterization` for rasterizer settings, OpenCV/PIL for image I/O, and a vendored LPIPS implementation (AlexNet backbone with learned linear layers).

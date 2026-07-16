@@ -1,0 +1,1 @@
+End-to-end preprocessing pipeline that converts raw 3D scanner captures into COLMAP-compatible car datasets with SAM-based segmentation, point-cloud cleaning, coordinate standardization and ARKit-driven rescaling.

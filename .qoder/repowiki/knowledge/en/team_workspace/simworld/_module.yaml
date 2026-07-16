@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: team_workspace/simworld
+title: simworld
+scope:
+    - team/simworld/
+source_files: []
+depends_on: []
+related_to: []

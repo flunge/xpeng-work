@@ -1,0 +1,5 @@
+- Every Python file begins with an SPDX Apache-2.0 header block identifying NVIDIA Corporation & Affiliates as copyright holder.
+- Optional model components (reference token adapter, reference detail adapter) are gated by boolean args such as `use_ref_cross_attn` / `use_ref_detail_adapter` and only added to the trainable parameter list when enabled.
+- Checkpoint serialization/deserialization uses a flat dict keyed by component names (`state_dict_unet`, `state_dict_vae`, `state_dict_ref_token_adapter`, `state_dict_ref_detail_adapter`, `optimizer`, `lr_scheduler_state`) rather than saving whole objects.
+- Mixed-precision training promotes only the actively trained submodules (UNet DiT, VAE decoder, adapters) to float32 via `promote_trainable_modules_to_fp32` while keeping the rest in bf16.
+- Cosmos config is obtained once via `get_cosmos_predict2_text2image_pipeline(...)` and mutated in-place (e.g. `dit_path`, `tokenizer['vae_pth']`, `guardrail_config.enabled=False`) before importing downstream code.

@@ -1,0 +1,1 @@
+Official Inria 3DGS implementation providing a differentiable Gaussian rasterizer, scene model with adaptive densification/pruning, and training/rendering pipelines for real-time novel-view synthesis.

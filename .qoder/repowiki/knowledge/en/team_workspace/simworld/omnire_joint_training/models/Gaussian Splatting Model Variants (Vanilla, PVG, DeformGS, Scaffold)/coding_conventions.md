@@ -1,0 +1,5 @@
+- Each Gaussian variant subclasses a `*render` base class (e.g. `VanillaGaussians_render`, `PeriodicVibrationGaussians_render`) and adds training-specific logic such as `create_from_pcd`, `preprocess_per_train_step`, `postprocess_per_train_step`, and `refinement_after`.
+- Per-parameter learning-rate groups are returned via a `get_param_groups` / `get_gaussian_param_groups` method that prefixes each group name with `self.class_prefix` (e.g. `xyz`, `sh_dc`, `opacity`, `scaling`, `rotation`).
+- Densification follows a fixed template: accumulate moving-average `xys_grad_norm` and `vis_counts` in `after_train`, then in `refinement_after` compute `avg_grad_norm = xys_grad_norm / vis_counts`, combine with a screen-size threshold, and call `split_gaussians(splits, nsamps)` followed by `dup_in_optim` / `remove_from_optim`.
+- Time-dependent models expose `set_cur_frame` and `register_normalized_timestamps` hooks so the caller can inject the current timestep before forward passes.
+- All tensor outputs are guarded against NaN/Inf inside `get_gaussians` / `get_deformation`, raising a descriptive `ValueError` at the offending step.

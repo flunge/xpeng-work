@@ -1,0 +1,5 @@
+- Each executor implements `BaseExecutor.execute(task: TaskRun) -> ExecutionResult` and is registered by keying on a `TaskType` enum value inside `ExecutorRegistry.__init__`.
+- Task lifecycle mutations go through `TaskStateMachine.can_transition` before writing to the repository, keeping all valid transitions declared centrally in `state_machine.py`.
+- HTTP handlers obtain shared services by reading `request.app.state.application` rather than using dependency injection containers.
+- Infrastructure clients come in paired real/mock variants (`RealFeishu*Client` vs bare `Feishu*Client`) selected at bootstrap based on `settings.mode == 'cli'`.
+- Every task mutation writes both an updated `TaskRun` and a corresponding `TaskEvent` record via `repository.add_event(...)` before persisting the next stage.

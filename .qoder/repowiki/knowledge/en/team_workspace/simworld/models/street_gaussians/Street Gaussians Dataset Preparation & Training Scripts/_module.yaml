@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: team_workspace/simworld/models/street_gaussians/dataset_scripts
+title: Street Gaussians Dataset Preparation & Training Scripts
+scope:
+    - team/simworld/models/street_gaussians/script/
+source_files: []
+depends_on: []
+related_to: []

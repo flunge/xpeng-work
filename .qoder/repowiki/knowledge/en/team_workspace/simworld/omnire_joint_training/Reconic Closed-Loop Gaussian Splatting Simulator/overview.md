@@ -1,0 +1,1 @@
+Closed-loop and offline renderer that drives a trained Gaussian Splatting model to synthesize multi-camera images from ego poses, with pluggable render strategies and optional CLIP-IQA scoring.

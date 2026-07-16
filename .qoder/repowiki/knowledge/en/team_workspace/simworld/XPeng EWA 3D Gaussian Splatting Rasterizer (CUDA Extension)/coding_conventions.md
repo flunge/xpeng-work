@@ -1,0 +1,5 @@
+- Python wrapper uses a `_LazyC` class that imports `xpeng_raster._C` on first attribute access, keeping the native extension unloaded until a function is actually called.
+- C++ pybind11 bindings expose only plain-C types (int, bool, float, Tensor); enums like `CameraModelType` are passed as integers and cast inside the binding shim rather than registered with pybind11.
+- Every kernel follows a paired forward/backward naming scheme (`*_fwd_kernel` / `*_bwd_kernel`) and a parallel packed variant (`*_packed_*_kernel`) sharing the same input/output tensor layout.
+- All tensors passed across the C++ boundary are explicitly `.contiguous()`-ed in the Python wrapper before being forwarded to the extension.
+- Optional inputs use `c10::optional<at::Tensor>` on the C++ side and are forwarded as `None` from Python when absent.

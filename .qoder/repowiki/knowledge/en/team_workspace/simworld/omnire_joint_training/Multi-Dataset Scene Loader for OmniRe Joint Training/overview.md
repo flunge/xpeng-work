@@ -1,0 +1,1 @@
+Provides a unified scene-dataset abstraction over Waymo, KITTI, NuScenes, Argoverse, PandaSet, NuPlan and XPeng driving datasets, exposing camera + LiDAR sources with instance-level human/vehicle annotations for novel-view rendering.

@@ -1,0 +1,1 @@
+`pip install -e '.[dev]'` installs client + server + eval + dev extras; run the CLI locally with `tse run --rerun-job-id ... --sim-x-token ... --sim-x-account ...`; start the daemon with `tse-agentd` which launches uvicorn and the Temporal worker concurrently in one process. A tmux helper script `scripts/tse-tmux.sh` is provided for development sessions.

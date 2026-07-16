@@ -1,0 +1,9 @@
+schema_version: 1
+module_path: team_workspace/simworld/omnire_joint_training/cli_and_metrics
+title: Training/Evaluation CLI & Offline Detection Metrics
+scope:
+    - team/simworld/omnire_joint_trainning/src/reconic/cli/
+    - team/simworld/omnire_joint_trainning/src/reconic/metrics/
+source_files: []
+depends_on: []
+related_to: []

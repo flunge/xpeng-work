@@ -1,0 +1,6 @@
+The module follows a factory + reader pattern centered on `dataset.py`:
+- `Dataset` (PyTorch `Dataset` subclass) reads `cfg.data.type`, dispatches to one of four registered readers via the `sceneLoadTypeCallbacks` dict (`Colmap`, `Blender`, `Waymo`, `Xpeng`), then persists per-split PLYs and a `cameras.json` in `model_path`.
+- Each reader file (`colmap_readers.py`, `blender_readers.py`, `waymo_full_readers.py`, `xpeng_full_readers.py`, `xpeng_sim_readers.py`) exposes a single `read*SceneInfo(path, **kwargs)` function returning a `SceneInfo` NamedTuple with `train_cameras`, `test_cameras`, `point_cloud_dict`, `nerf_normalization`, and `ply_path`.
+- `base_readers.py` defines the shared contracts: `CameraInfo` and `SceneInfo` NamedTuples plus I/O helpers (`fetchPly`, `fetchG3RPly`, `fetchGroundSurfelPly`, `storePly`, `getNerfppNorm`, `get_Sphere_Norm`).
+- `CameraDataset` wraps a `Dataset` instance and yields individual `Camera` objects via lazy `load_camera_on_demand`, optionally sampling cam7 frames at a configurable rate before position optimization.
+- Dependency direction is strictly inward: readers depend only on `base_readers` and `lib.utils.*`; `dataset.py` depends on all readers; nothing in this package imports from higher-level training code.

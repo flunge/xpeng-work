@@ -1,0 +1,1 @@
+PyTorch + NumPy for rendering; OmegaConf for YAML-driven configuration; scipy.spatial.cKDTree for nearest-anchor pose lookup in CP simulation; PIL for debug reference image loading; environment variables (`CLIPIQA_ENABLED`, `TRIGGER_TIME_DIS`, `SCENE_IDX`) gate optional features.

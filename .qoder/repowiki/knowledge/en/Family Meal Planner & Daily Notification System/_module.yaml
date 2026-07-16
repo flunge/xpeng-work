@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: meal_planner
+title: Family Meal Planner & Daily Notification System
+scope:
+    - meal/
+source_files: []
+depends_on: []
+related_to: []

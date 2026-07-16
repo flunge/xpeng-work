@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: team_workspace/simworld/models/street_gaussians
+title: street_gaussians
+scope:
+    - team/simworld/models/street_gaussians/
+source_files: []
+depends_on: []
+related_to: []

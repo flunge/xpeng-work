@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: team_workspace/simworld/models/dynamic_assets/scenario_edit
+title: Scenario Edit Pipeline (3DGS DDS & CloudSim Orchestration)
+scope:
+    - team/simworld/models/dynamic_assets/scenario_edit/
+source_files: []
+depends_on: []
+related_to: []

@@ -1,0 +1,8 @@
+schema_version: 1
+module_path: team_workspace/shared_scripts
+title: shared_scripts
+scope:
+    - team/scripts/
+source_files: []
+depends_on: []
+related_to: []

@@ -1,0 +1,1 @@
+PyTorch + torchvision transforms; albumentations for augmentations; EasyDict for config containers; Adam optimizer with MultiStepLR scheduler; metrics are denormalized PSNR/MSE computed against ImageNet mean/std.

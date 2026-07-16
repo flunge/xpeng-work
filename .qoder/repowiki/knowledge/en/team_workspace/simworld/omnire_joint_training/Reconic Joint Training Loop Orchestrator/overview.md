@@ -1,0 +1,1 @@
+PyTorch training-loop orchestrators that drive the 3D Gaussian reconstruction trainer, with a dedicated joint-training loop that periodically synthesizes novel views via an external generative engine.

@@ -1,0 +1,1 @@
+LoRA fine-tuning and inference of a Pix2Pix-style diffusion model that edits street-view vehicle renders to fix Gaussian artifacts, driven by camera-conditioned prompts.

@@ -1,0 +1,1 @@
+Typeset personal CV, cover letter and publication list using the moderncv LaTeX class with classic/orange styling and CJK support for bilingual content.
