@@ -1,1 +1,0 @@
-`novel_eval.py` and `simulator.py` mutate `sys.path` to reach sibling `models/` and `pipeline/ucp/` directories before importing `sim_interface` and `lib`; `eval_summary.py` additionally requires OSS credentials to call `download_file_from_oss2` and expects `eval_scenarios/eval_dataset_v2.txt` listing clips to fetch.

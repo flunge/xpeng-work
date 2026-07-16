@@ -1,5 +1,0 @@
-- Each script exposes a `main(cfg)` entry point followed by separate `init_model(cfg)` and `train(model, cfg, model_cfg, start_epoch=0)` functions, keeping model wiring and training loop decoupled.
-- Models are instantiated by pulling a named template from `BMCONFIGS[...]`, then overriding `params['up_size']` to set the target crop size before calling the constructor.
-- Input normalization is consistently ImageNet mean/std `[.485,.456,.406]/[.229,.224,.225]` applied via `transforms.ToTensor()` + `Normalize`, stored in `model_cfg.input_normalization` and reused by all Denormalized* metrics.
-- Loss configuration uses an `edict()` where each loss component is paired with a `<loss>_weight` field (e.g. `pixel_loss` + `pixel_loss_weight`, `stage*_tv_loss` + `stage*_tv_loss_weight`), and weights are decayed mid-training by mutating `trainer.loss_cfg` fields inside the epoch loop.
-- Training datasets are composed from multiple `HDataset`/`HDatasetUpsample` sources (HFLICKR, HDAY2NIGHT, HCOCO, ADOBE5K) wrapped in `ComposeDataset`/`ComposeDatasetUpsample` with `keep_background_prob=0.05` for train and `-1` for val.

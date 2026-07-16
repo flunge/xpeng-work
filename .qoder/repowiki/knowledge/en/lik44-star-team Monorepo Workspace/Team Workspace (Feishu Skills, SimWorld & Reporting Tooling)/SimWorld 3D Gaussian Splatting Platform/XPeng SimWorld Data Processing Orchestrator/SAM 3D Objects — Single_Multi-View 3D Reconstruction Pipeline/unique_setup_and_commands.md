@@ -1,1 +1,0 @@
-Model weights/config are expected at `/workspace/group_share/adc-sim/users/wangyd13/checkpoints/pipeline.yaml` (hard-coded in both `demo.py` and `run_inference.py`). Rendering engine is forced to `pytorch3d` by overriding `config.rendering_engine` in `Inference.__init__`. Set `LIDRA_SKIP_INIT=true` to skip the package-level model-graph bootstrap when importing only utilities.

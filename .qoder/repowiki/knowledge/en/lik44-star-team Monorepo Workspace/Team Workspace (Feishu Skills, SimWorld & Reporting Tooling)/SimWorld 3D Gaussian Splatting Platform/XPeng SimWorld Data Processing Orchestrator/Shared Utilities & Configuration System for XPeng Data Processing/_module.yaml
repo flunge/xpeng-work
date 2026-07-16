@@ -1,9 +1,0 @@
-schema_version: 1
-module_path: team_workspace/simworld/xpeng_data_process/shared_utils_settings
-title: Shared Utilities & Configuration System for XPeng Data Processing
-scope:
-    - team/simworld/xpeng_data_process/utils/
-    - team/simworld/xpeng_data_process/settings/
-source_files: []
-depends_on: []
-related_to: []

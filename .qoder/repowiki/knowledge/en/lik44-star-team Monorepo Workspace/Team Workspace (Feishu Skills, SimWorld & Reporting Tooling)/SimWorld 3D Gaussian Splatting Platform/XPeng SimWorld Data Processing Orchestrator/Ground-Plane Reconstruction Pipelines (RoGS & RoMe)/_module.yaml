@@ -1,8 +1,0 @@
-schema_version: 1
-module_path: team_workspace/simworld/xpeng_data_process/ground_processing
-title: Ground-Plane Reconstruction Pipelines (RoGS & RoMe)
-scope:
-    - team/simworld/xpeng_data_process/ground_processing/
-source_files: []
-depends_on: []
-related_to: []

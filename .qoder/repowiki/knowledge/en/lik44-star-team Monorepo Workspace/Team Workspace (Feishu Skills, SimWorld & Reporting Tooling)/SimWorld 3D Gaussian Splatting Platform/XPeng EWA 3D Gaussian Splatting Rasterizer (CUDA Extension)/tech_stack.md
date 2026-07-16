@@ -1,1 +1,0 @@
-PyTorch C++/CUDA extension built with `torch.utils.cpp_extension.CUDAExtension` + pybind11; nvcc flags include `-O3 -lineinfo` and optional `-use_fast_math` toggled via `XPR_FAST_MATH=1`.

@@ -1,1 +1,0 @@
-End-to-end street-view Gaussian splatting system that prepares Waymo/KITTI/XPeng datasets, trains StreetGaussian scenes with multi-loss optimization, and evaluates them through a simulator bridge.

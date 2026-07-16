@@ -1,1 +1,0 @@
-PyTorch with `gsplat` CUDA wrappers (`spherical_harmonics`, `normalized_quat_to_rotmat`) for SH evaluation and quaternion→rotation conversion; `sklearn.neighbors.NearestNeighbors` for kNN-based scale initialization; `pytorch3d.transforms.quaternion_to_matrix`; `plyfile` for PCD loading; `omegaconf.OmegaConf` for config consumption in `ScaffoldGaussians`.

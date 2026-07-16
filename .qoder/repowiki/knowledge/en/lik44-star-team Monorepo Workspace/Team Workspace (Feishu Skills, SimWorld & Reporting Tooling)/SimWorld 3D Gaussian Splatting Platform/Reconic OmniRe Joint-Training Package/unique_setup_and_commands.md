@@ -1,1 +1,0 @@
-Install as `pip install -e .` to register `reconic-train` / `reconic-eval` console scripts; deployment shells live under `deploy_cmd/` (`eval_job.sh`, `train_cmd_feedforward.sh`, `render_harmonize_to_dds.sh`).

@@ -1,4 +1,0 @@
-- Every trainable submodule defines a `class_prefix = class_name + "#"` string used to namespace its parameter groups.
-- `get_param_groups(self)` returns `{self.class_prefix + "all": self.parameters()}` so optimizer construction is uniform across Gaussians, nodes, and helper modules.
-- Per-camera/per-timestep appearance is modeled as `nn.Embedding(n, dim)` indexed by `image_index` or `camera_id`, falling back to the mean embedding when no index is available.
-- Directional inputs are encoded through reusable `SinusoidalEncoder` / `PositionalEncoding` / Fourier helpers rather than ad-hoc sin/cos wiring inside each model.

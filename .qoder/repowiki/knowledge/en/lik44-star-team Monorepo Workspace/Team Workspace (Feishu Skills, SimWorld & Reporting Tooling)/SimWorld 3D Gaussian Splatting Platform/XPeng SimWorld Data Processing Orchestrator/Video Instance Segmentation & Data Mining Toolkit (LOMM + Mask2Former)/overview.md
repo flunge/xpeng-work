@@ -1,1 +1,0 @@
-Integrates LOMM and Mask2Former video instance segmentation models with Xpeng's xdata-based dataset loaders for mining, validating, and preparing multi-camera driving clips.

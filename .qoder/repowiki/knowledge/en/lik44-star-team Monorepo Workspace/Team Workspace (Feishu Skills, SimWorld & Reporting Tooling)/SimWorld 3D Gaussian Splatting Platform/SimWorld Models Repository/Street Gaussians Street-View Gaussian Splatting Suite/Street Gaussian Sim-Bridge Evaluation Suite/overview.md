@@ -1,1 +1,0 @@
-Evaluation harness that renders StreetGaussian scenes through a simulator bridge, computes PSNR/FID metrics, and generates novel-view videos for checkpoint comparison.

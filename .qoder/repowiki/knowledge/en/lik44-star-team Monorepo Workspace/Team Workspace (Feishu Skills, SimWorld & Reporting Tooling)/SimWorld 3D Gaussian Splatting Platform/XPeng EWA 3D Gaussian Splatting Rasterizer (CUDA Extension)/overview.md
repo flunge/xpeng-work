@@ -1,1 +1,0 @@
-PyTorch CUDA extension providing tile-based EWA rasterization of 3D Gaussians with fused projection, tile intersection, and pixel accumulation kernels.

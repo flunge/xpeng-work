@@ -1,1 +1,0 @@
-Each child ships its own `scripts/start_*.sh` and `.env(.example)`; feishu-agent uses `start_all.sh`/`start_event_bridge.sh`/`start_local_agent.sh`, while tse is driven via `tse/cli/main.py` CLI (`tse run`, `tse tmux`, etc.).

@@ -1,1 +1,0 @@
-Self-contained fork of Facebook Research's YACS (`yacs`) vendored as `yacs.py`; config files are YAML merged on top of Python-defined defaults via `lib.utils.cfg_utils.make_cfg`.

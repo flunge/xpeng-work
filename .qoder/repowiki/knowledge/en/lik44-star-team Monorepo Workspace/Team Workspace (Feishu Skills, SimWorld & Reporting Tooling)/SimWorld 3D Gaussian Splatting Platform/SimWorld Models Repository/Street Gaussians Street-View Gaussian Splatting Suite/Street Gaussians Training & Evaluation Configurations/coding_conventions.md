@@ -1,5 +1,0 @@
-- Config files follow a fixed top-level key layout (`task`, `source_path`, `exp_name`, `mode`, `loaded_iter`, then `data/model/train/train_xpeng/optim/render` sections) so the same loader can parse any config without schema changes.
-- Experiment groups are organized under `m1/<sequence_length>/c-<git_commit_hash>[/-release]/<run_id>.yaml`, where the commit-hash folder captures the model/code state and the `-release` variant marks production-ready configs.
-- Run identifiers inside a commit folder use a letter prefix (`runA_`, `runB_`, `runC_`, …, `runAA_`, `runAB_`) followed by a short descriptive suffix, making it easy to scan related variants.
-- Dataset-specific training phases are expressed via dedicated sections (`train` for generic steps, `train_xpeng` for XPeng multi-phase schedules) rather than ad-hoc keys, keeping Waymo and XPeng configs structurally aligned.
-- Loss weights and LR schedules are grouped as families of `lambda_*` and `*_lr*` keys under `optim`, with separate `track_position_lr_*` / `track_rotation_lr_*` blocks for tracking parameters.

@@ -1,1 +1,0 @@
-Python 3.10 with NumPy/OpenCV/Pandas for metric computation; Alibaba Cloud OSS (`oss2`) for model/data retrieval; Fuyao scheduler (`fuyao deploy`) for GPU job submission; Docker images built from `infra-registry-vpc.cn-wulanchabu.cr.aliuncs.com/data-infra/fuyao:*` base images with prebuilt CUDA wheels (torchsparse, gsplat, diff-gaussian-rasterization, simple-knn, nvdiffrast).

@@ -1,1 +1,0 @@
-PyTorch Lightning (with version-conditional DDP vs DataParallel plugin), fvdb sparse grids, gsplat rasterizer, PyTorch C++/CUDA extension loader (`torch.utils.cpp_extension.load`) for kdtree/knn, OmegaConf for config merging, pycg experiment manager, WandB/TensorBoard logging, WebDataset for streaming datasets.

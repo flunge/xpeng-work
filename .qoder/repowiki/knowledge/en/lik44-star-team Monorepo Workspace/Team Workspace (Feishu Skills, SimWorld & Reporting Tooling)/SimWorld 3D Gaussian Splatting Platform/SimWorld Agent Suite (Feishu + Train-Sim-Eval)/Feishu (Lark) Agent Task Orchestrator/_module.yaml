@@ -1,8 +1,0 @@
-schema_version: 1
-module_path: team_workspace/simworld/agents/feishu_agent
-title: Feishu (Lark) Agent Task Orchestrator
-scope:
-    - team/simworld/agents/feishu-agent/
-source_files: []
-depends_on: []
-related_to: []

@@ -1,4 +1,0 @@
-- Entry-point scripts bootstrap cross-package imports by computing `root_path = os.path.abspath(os.path.join(current_dir, '..', '..'))` and extending `sys.path` rather than relying on package installation.
-- Evaluators subclass `StreetGaussianSimulator` and reuse its `render`/`redistort` pipeline instead of reimplementing rendering, keeping metric logic separate from simulation.
-- Per-cam per-timestamp results are accumulated in a dict-of-lists inside `EvaluatorMethod` and materialized as a pandas DataFrame with `.describe()` statistics written to CSV.
-- Checkpoint selection is driven by `cfg.train.checkpoint_iterations` and `searchForMaxIteration`, so evaluators always target the latest iteration directory automatically.

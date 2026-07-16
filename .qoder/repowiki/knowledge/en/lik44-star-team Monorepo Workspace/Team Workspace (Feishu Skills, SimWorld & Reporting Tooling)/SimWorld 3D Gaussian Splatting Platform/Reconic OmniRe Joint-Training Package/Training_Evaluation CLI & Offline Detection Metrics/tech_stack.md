@@ -1,1 +1,0 @@
-YOLOv8/v11 via `ultralytics.YOLO` for 2D detection, `torchmetrics.image.fid.FrechetInceptionDistance` for FID, `skimage.metrics.structural_similarity` for SSIM, `omegaconf.OmegaConf` for YAML config overrides, and `cv2` + PIL for image I/O and bbox visualization.

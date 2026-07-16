@@ -1,1 +1,0 @@
-Python 3 stdlib (re/json/subprocess) plus `fontTools` for TTC extraction; Node.js + `satori`/`satori-html` for HTML→SVG conversion; all external I/O goes through the `lark-cli` binary (Feishu API v2).

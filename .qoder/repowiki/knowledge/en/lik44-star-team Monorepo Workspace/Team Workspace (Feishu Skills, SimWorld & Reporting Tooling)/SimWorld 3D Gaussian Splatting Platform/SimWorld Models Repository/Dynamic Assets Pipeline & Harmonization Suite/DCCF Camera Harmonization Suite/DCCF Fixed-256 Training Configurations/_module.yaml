@@ -1,8 +1,0 @@
-schema_version: 1
-module_path: team_workspace/simworld/models/dynamic_assets/dccf_harmonization/fixed256_configs
-title: DCCF Fixed-256 Training Configurations
-scope:
-    - team/simworld/models/dynamic_assets/DCCF/models/fixed256/
-source_files: []
-depends_on: []
-related_to: []

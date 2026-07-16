@@ -1,8 +1,0 @@
-schema_version: 1
-module_path: team_workspace/simworld/omnire_joint_training/models/gaussians
-title: Gaussian Splatting Model Variants (Vanilla, PVG, DeformGS, Scaffold)
-scope:
-    - team/simworld/omnire_joint_trainning/src/reconic/models/gaussians/
-source_files: []
-depends_on: []
-related_to: []

@@ -1,4 +1,0 @@
-- Monkey-patch library behavior at import time rather than subclassing — e.g. `BasicTransformerBlock.forward = new_forward` in `mv_unet.py` so all downstream blocks inherit multi-view reshaping automatically.
-- Runtime version branching for incompatible upstream APIs, using `if diffusers.__version__ > '0.25.1': ... else:` to select between `GLIGENTextBoundingboxProjection` and `PositionNet` plus different `unets.unet_2d_blocks` import paths.
-- Prompt embedding caching keyed by both the raw string and a frozen CPU tuple of token ids, populated lazily during first use and primed ahead-of-time for known camera-view prompts.
-- Pipeline classes extend `DiffusionPipeline` / `StableDiffusionInstructPix2PixPipeline` and override only `__call__` (and optionally `encode_prompt`) while delegating everything else to the parent implementation.

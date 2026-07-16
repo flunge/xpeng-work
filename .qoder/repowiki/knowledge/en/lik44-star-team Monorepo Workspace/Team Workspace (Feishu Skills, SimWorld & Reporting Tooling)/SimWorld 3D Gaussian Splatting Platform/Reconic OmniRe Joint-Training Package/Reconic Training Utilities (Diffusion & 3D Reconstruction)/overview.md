@@ -1,1 +1,0 @@
-Shared PyTorch building blocks, diffusion primitives, camera/geometry helpers, dataset config loaders, and visualization/export tools used by the Reconic omnidirectional joint-training pipeline.

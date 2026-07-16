@@ -1,1 +1,0 @@
-PyTorch + Hydra/OmegaConf for config-driven instantiation; spconv for sparse convolutions; PyTorch3D for camera/extrinsic math and rendering backend; Kaolin for visualization; Gradio for optional interactive PLY viewer; utils3d for pinhole intrinsics and look-at extrinsics.

@@ -1,8 +1,0 @@
-schema_version: 1
-module_path: team_workspace/simworld/models/dynamic_assets/gaussians_splatting
-title: 3D Gaussian Splatting Radiance Field Engine
-scope:
-    - team/simworld/models/dynamic_assets/gaussians_splatting/
-source_files: []
-depends_on: []
-related_to: []

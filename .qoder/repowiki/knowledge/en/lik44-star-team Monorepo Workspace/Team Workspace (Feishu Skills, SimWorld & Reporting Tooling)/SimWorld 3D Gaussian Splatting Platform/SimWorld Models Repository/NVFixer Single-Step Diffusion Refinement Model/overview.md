@@ -1,1 +1,0 @@
-Single-step image diffusion model (Difix3D+ / Pix2Pix-Turbo) that removes artifacts from underconstrained regions of rendered novel views by fine-tuning a Cosmos base model.

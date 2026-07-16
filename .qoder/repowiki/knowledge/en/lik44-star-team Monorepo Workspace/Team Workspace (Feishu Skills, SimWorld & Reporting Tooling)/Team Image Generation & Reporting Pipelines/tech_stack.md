@@ -1,1 +1,0 @@
-Python 3 stdlib-only HTTP clients (`urllib.request`) against SoCheap Media API (`https://socheap.ai`); Deno-style ES modules for report workflows; external CLI tool `lark-cli` (Feishu SDK wrapper) called via `subprocess.run`; optional `lark-cli docs +media-upload` integration in the Grok generator for embedding images into Feishu wiki docs.

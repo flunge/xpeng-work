@@ -1,1 +1,0 @@
-PyTorch + OmegaConf configs; dynamic class import via `reconic.utils.misc.import_str` for pluggable datasets, trainers, and generative engines; wandb for experiment tracking; imageio for saved videos; einops for tensor rearrangement; a background `threading.Thread` drains the generative scheduler's novel-view queue.

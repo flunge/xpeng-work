@@ -1,8 +1,0 @@
-schema_version: 1
-module_path: team_workspace/simworld/models/street_gaussians/core_training_rendering/visualizers
-title: Street Gaussians Rendering Visualizers
-scope:
-    - team/simworld/models/street_gaussians/lib/visualizers/
-source_files: []
-depends_on: []
-related_to: []

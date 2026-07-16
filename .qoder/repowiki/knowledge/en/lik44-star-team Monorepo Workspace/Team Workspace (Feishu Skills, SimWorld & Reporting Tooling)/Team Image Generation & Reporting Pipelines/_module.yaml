@@ -1,8 +1,0 @@
-schema_version: 1
-module_path: team_workspace/image_gen_pipelines
-title: Team Image Generation & Reporting Pipelines
-scope:
-    - team/pipelines/
-source_files: []
-depends_on: []
-related_to: []

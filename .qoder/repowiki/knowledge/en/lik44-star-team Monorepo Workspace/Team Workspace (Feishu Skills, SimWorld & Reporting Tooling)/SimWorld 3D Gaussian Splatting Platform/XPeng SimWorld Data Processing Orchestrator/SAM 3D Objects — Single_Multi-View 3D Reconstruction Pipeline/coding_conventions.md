@@ -1,4 +1,0 @@
-- Hydra config objects are validated against explicit WHITELIST/BLACKLIST filter lists before being passed to `hydra.utils.instantiate`, restricting dynamic imports to `sam3d_objects`, `torch`, `torchvision`, and `moge`.
-- Heavy package initialization is gated by the `LIDRA_SKIP_INIT` environment variable so downstream scripts can import utility modules without constructing the full neural network graph.
-- Public entry points accept numpy/PIL inputs, merge masks into RGBA channels, and return dicts keyed by output modality (`gs`, `glb`, `mesh`, `coords`) rather than custom result classes.
-- Sub-packages follow a flat `__init__.py` export pattern: each module re-exports its public classes at the package level (e.g., `SLatEncoder`, `SLatGaussianDecoder`, `SLatRadianceFieldDecoder`) instead of requiring deep dotted imports.

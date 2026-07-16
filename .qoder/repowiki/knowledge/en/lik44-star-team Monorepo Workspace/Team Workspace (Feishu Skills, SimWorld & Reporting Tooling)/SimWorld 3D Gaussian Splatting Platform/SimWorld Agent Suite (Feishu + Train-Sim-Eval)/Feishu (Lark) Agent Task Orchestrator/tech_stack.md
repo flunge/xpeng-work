@@ -1,1 +1,0 @@
-Python FastAPI server with asyncio worker loop; SQLite-backed persistence (`data/agent.db`, `data/tasks.db`); Feishu integration uses the `lark-oapi` SDK plus a local `lark-cli` auth adapter when `mode=cli`; optional OpenAI-compatible LLM probing via `openai` SDK driven by `OPENAI_API_KEY`.

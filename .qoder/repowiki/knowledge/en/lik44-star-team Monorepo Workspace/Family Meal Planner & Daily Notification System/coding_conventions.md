@@ -1,6 +1,0 @@
-- Each script sets `BASE_DIR = Path(__file__).resolve().parent.parent` and resolves `config/`, `recipes/`, `plans/` relative to it, so scripts are runnable from any working directory.
-- Recipe YAML files follow a fixed schema (`title`, `type`, `difficulty`, `total_time`, `servings`, `tools`, `tags`, `ingredient_tags`, `ingredients`, optional `night_prep`/`morning_steps`/`steps`/`notes`) and are named with a two-digit sequence prefix plus Chinese title (e.g. `01-奶香玉米汁-西葫芦鸡蛋饼.yaml`).
-- Cross-day ingredient reuse is driven by the `ingredient_tags` field: pickers compute set intersection scores against the previous day's tags and fall back to index-based round-robin when no match exists.
-- Daily card Markdown uses emoji-prefixed section headers (`## 🌅 早餐`, `## ☀️ 午餐`, `## 🌙 晚餐`, `## 🛒 当日采购清单`) which both the generator and the notifier parse by string-splitting on those exact markers.
-- Shell wrappers are intentionally thin — they only `cd` into the project root and invoke the corresponding Python script, leaving all logic in Python so cron entries stay stable.
-- Crontab entries are maintained idempotently by `setup.sh`: existing non-meal lines are preserved while old `#meal:` blocks are stripped before appending the canonical schedule.

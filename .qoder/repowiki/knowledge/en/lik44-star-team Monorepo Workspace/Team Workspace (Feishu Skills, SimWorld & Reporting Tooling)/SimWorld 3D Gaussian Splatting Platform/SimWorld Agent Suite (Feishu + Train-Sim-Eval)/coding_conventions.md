@@ -1,2 +1,0 @@
-- External configuration is modelled as a single pydantic `BaseSettings` subclass loaded from `.env` with an env prefix, then passed down to every subsystem.
-- Optional third-party SDKs (lark-oapi, requests) are imported lazily inside functions so the package can be imported without those dependencies installed.

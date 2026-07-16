@@ -1,1 +1,0 @@
-Cross-clip shared helpers (geometry, COLMAP parsing, depth/point-cloud I/O, OSS/file ops) and a YACS-based configuration system that drives the XPeng data-processing pipeline.

@@ -1,8 +1,0 @@
-schema_version: 1
-module_path: team_workspace/simworld/pipeline
-title: 3DGS Pipeline Orchestration (Fuyao & UCP)
-scope:
-    - team/simworld/pipeline/
-source_files: []
-depends_on: []
-related_to: []

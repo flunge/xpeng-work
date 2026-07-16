@@ -1,1 +1,0 @@
-PyTorch implementations of several Gaussian-splatting backends — static Vanilla3DGS, periodic-vibration PVG, deformable DeformGS, and a Scaffold wrapper — plus shared rendering helpers.

@@ -1,1 +1,0 @@
-End-to-end multi-view stereo depth estimation and TSDF mesh fusion pipeline, adapted from the open-source MVSAnywhere repo to consume XPeng vehicle sensor data.

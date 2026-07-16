@@ -1,1 +1,0 @@
-PyTorch + custom `StreetGaussianModel`/`StreetGaussianRenderer` for 3D Gaussian splatting; OpenCV for image I/O; `torch_fidelity` for FID metric; pandas for metric aggregation; scipy for pose interpolation and KNN ground-plane fitting; optional `difix.fixer.DifixFixer` gated by `cfg.render.fix`.

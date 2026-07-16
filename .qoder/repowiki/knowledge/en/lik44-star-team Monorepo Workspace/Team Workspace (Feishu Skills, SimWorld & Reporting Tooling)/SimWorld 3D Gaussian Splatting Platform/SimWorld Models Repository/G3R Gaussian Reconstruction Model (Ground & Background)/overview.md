@@ -1,1 +1,0 @@
-PyTorch implementation of G3R, a sparse-UNet-based iterative Gaussian reconstruction model trained on segmented ground/background point clouds with gsplat rasterization.

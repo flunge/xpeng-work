@@ -1,1 +1,0 @@
-Deployed inside an Agent Pod where `/workspace` holds this repo and `/platform/.lark-cli` provides the Feishu auth token; cron/trigger scripts are maintained locally and call into `personal/meal/scripts/` or `team/pipelines/` directly — nothing is installed or started from the repository itself.

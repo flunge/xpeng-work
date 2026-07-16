@@ -1,1 +1,0 @@
-Top-level entry points that wire StreetGaussianModel, Scene, Dataset, and visualizers together for training with multi-loss optimization and batch/trajectory rendering.

@@ -1,2 +1,0 @@
-- Runtime configuration is externalised via YAML config files referenced by `--config_name` rather than hardcoded, keeping model and preprocessing parameters decoupled from code.
-- External resources (dataset paths, config directories) are passed as CLI arguments or mounted volumes instead of being baked into the image, allowing reuse across different data locations.

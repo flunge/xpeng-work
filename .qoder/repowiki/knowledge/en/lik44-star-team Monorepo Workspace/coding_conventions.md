@@ -1,4 +1,0 @@
-- Local code stores only rules, tooling, and Feishu token maps; all content artifacts live in Feishu and are edited there directly.
-- Temporary / intermediate files go under a per-project `tmp/` directory and are gitignored.
-- Feishu resource locations are centralized in a small JSON/YAML map file instead of being hard-coded in scripts.
-- Scheduled jobs are invoked externally via cron; the repository contains no daemon or process manager.

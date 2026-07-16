@@ -1,5 +1,0 @@
-- LoRA adapters are always injected into UNet attention modules via `LoraConfig(target_modules=["to_k", "to_q", "to_v", "to_out.0"])` with `r=alpha=lora_rank` and `init_lora_weights="gaussian"`, then trained only on parameters where `requires_grad=True`.
-- Training and inference both construct `GaussianRenderFixerPipeline.from_pretrained(base_model_id, safety_checker=None, torch_dtype=float16)` and move it onto CUDA before use.
-- All input images are normalized to a fixed `(1920, 1280)` resolution using the shared `resize_with_padding` helper rather than direct `F.resize`, preserving aspect ratio with black padding.
-- Dataset pipelines are built as `Dataset.from_dict(...).cast_column(col, Image()).with_transform(preprocess_conditions(...))` and collated by stacking `*_pixel_values` tensors into contiguous float16 batches.
-- Shell entry points under `fuyao_run/` export `HF_HOME`/`HF_ENDPOINT` once and invoke `python lora_gaussian_render/<script>.py` with explicit `--base-model-id` and `--dataset-dict-path` arguments instead of relying on environment defaults.

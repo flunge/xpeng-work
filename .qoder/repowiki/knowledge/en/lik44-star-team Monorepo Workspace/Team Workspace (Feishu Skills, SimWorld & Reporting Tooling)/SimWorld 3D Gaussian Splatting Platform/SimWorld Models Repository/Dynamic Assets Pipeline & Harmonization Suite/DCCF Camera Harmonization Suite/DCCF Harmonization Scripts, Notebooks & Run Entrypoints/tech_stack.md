@@ -1,1 +1,0 @@
-PyTorch + Albumentations for transforms; evaluation metrics (MSE, fMSE, SSIM, PSNR, N, AvgPredictTime, COS) and predictor classes are provided by the upstream `iharm` package; distributed training uses `torch.distributed.launch`; image I/O mixes OpenCV, PIL, and NumPy.

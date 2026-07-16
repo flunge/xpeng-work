@@ -1,1 +1,0 @@
-Python 3 + FastAPI (feishu-agent); Pydantic Settings + lark-oapi SDK + requests (tse); SQLite for local persistence; Temporal as optional workflow backend for tse.

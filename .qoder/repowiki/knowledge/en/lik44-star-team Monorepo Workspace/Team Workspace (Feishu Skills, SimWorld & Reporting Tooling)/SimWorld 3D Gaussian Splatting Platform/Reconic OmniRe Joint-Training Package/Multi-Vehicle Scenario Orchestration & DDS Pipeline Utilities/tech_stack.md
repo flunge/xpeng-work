@@ -1,1 +1,0 @@
-Python 3 with external toolchain: `ossutil64` for Alibaba Cloud OSS access, `lz4` for recording compression/decompression, `ffmpeg` with NVIDIA NVENC (`hevc_nvenc`) for H265 encoding, `camera_video_xp5_decoder` binary for DDS metadata/video decoding, and `requests` plus custom HMAC-SHA256 signing for CloudSim REST API calls.

@@ -1,8 +1,0 @@
-schema_version: 1
-module_path: team_workspace/shared_scripts
-title: Weekly/Biweekly Report Publishing Gate & SVG Infographic Generator
-scope:
-    - team/scripts/
-source_files: []
-depends_on: []
-related_to: []

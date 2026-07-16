@@ -1,4 +1,0 @@
-- Each pipeline stage is a separate `*Processor` class instantiated inside its step block; stages are enabled/disabled via `cfg.steps_controller.<stage>` booleans rather than conditional imports.
-- All file I/O goes through `utils/file_utils`, `utils/oss_utils`, and `settings/config` paths derived from `cfg.clip_path`; no absolute or hardcoded filesystem locations appear in processors.
-- GPU-heavy steps wrap their body with `log_resource_status(...)` markers around start/end for cluster monitoring, and write per-step elapsed time into a shared `timing_dict` saved as `timing.json`.
-- Child algorithm repos (LOMM, Mask2Former, RoGS/RoMe, MVSAnywhere, DPVO, SCube, SAM3D) are kept as nested packages under `data_mining/`, `ground_processing/`, `optimization/`, `scube/`, `sam3d/` and are invoked only through the top-level `*_processor` wrappers.

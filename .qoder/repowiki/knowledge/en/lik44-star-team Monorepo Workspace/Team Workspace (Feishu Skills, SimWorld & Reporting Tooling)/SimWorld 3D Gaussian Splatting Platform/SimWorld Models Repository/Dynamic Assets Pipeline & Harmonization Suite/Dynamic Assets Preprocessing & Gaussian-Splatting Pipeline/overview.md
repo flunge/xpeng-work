@@ -1,1 +1,0 @@
-Containerized pipeline that preprocesses the 3D Real Car dataset (COLMAP, segmentation, cleaning) and trains Gaussian Splatting models to produce PLY assets for the simworld.

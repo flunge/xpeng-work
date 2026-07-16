@@ -1,1 +1,0 @@
-PyTorch + PyTorch Lightning (DDPStrategy) for training/inference; Kornia/TorchVision transforms; Open3D for color mesh fusion; scikit-image with a custom CUDA marching-cubes extension (`marching_cubes.cu`); NumPy/CV2/PIL for I/O; configuration via nested YAML files merged by a dataclass-based options handler.

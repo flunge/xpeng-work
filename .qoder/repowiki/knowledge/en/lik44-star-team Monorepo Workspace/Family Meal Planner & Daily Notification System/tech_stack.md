@@ -1,1 +1,0 @@
-Python 3 standard library + PyYAML for YAML parsing; `urllib.request` for Feishu Webhook HTTP POST; `lark-cli` v1.0.55 (external CLI) for group message polling; cron (system daemon) for scheduling; all data persisted as plain YAML/Markdown on a persistent volume under `/workspace/meal`.

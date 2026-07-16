@@ -1,4 +1,0 @@
-- Every trainable model class is exposed to Detectron2 through a `@META_ARCH_REGISTRY.register()` decorator paired with a `@configurable __init__` / `from_config(cls, cfg)` factory.
-- Config defaults are added via module-level `add_<name>_config(cfg)` functions that create nested `CN()` nodes (e.g. `MODEL.LOMM`, `INPUT.PSEUDO`, `MODEL.TRACKER`) rather than mutating global state.
-- Loss modules follow a fixed `loss_<name>(outputs, targets, indices, num_masks)` signature returning a dict keyed by loss names, with JIT-compiled helpers (`dice_loss_jit`, `sigmoid_ce_loss_jit`) for pointwise mask losses.
-- Dataset registration follows Detectron2 conventions: separate `register_<dataset>.py` files under `data/datasets/` and corresponding `*_dataset_mapper.py` files under `data/dataset_mappers/`.

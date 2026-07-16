@@ -1,4 +1,0 @@
-- Every config section is declared as a nested `CN()` subnode (e.g. `cfg.eval`, `cfg.train`, `cfg.optim`, `cfg.model.nsg`) rather than plain dicts, enabling dot-access throughout the codebase.
-- Boolean switches for optional features (e.g. `use_semantic`, `use_mono_depth`, `include_sky`, `use_color_correction`) default to `False`, keeping legacy behavior opt-in.
-- Loss-weight hyperparameters under `cfg.optim.lambda_*` are all initialized to `0.` unless actively used, allowing experiments to enable them without changing defaults.
-- Command-line overrides follow the `KEY=VALUE` pair convention consumed by `CfgNode.merge_from_list`, matching the dotted namespace of the config tree.

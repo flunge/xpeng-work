@@ -1,8 +1,0 @@
-schema_version: 1
-module_path: cron_jobs
-title: Crontab Installer & Daily Report Jobs
-scope:
-    - cron/
-source_files: []
-depends_on: []
-related_to: []

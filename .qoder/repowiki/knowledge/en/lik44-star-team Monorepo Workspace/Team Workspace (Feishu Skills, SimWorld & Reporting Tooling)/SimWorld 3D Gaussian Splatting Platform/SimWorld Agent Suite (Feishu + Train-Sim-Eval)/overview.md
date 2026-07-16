@@ -1,1 +1,0 @@
-Two cooperating agents — a Feishu chat task orchestrator and a train-sim-eval pipeline agent — that share Feishu bot integration and simworld evaluation tooling to drive simulation experiments end-to-end.

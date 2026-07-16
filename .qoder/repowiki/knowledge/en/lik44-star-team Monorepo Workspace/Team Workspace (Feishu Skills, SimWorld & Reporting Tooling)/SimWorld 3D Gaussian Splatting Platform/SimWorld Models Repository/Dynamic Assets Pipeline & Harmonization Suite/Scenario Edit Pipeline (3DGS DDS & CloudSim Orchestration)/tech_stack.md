@@ -1,1 +1,0 @@
-Python 3 + sqlite3 for DDS `.dat` inspection/writing; OpenCV for image resize/color conversion; numpy for pixel flattening; ffmpeg/libx265 invoked as subprocess for HEVC Annex B encoding; ossutil CLI for Alibaba Cloud OSS transfers; requests with HMAC-SHA256 signing for the CloudSim REST API; MsgBinder protobuf bindings for `CameraVideo`/`CameraImage` messages.

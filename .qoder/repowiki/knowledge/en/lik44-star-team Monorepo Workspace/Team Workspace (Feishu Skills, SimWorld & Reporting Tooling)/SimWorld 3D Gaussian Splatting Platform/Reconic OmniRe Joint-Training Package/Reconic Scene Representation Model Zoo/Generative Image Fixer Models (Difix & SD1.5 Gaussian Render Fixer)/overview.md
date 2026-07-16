@@ -1,1 +1,0 @@
-Wraps diffusion-based image-fixing pipelines — a Difix wrapper and an SD1.5 UNet fine-tuned to repair Gaussian-rendered novel views, both with optional sky-masking via GroundingDINO+SAM.

@@ -1,5 +1,0 @@
-- Each visualizer stores per-frame numpy frames in instance lists (e.g. `self.rgbs`, `self.depths`, `self.diffs`) during `visualize` and flushes them to disk only in `summarize` / `save_video_from_frames`, never per-frame.
-- Depth and diff maps are produced by `visualize_depth_numpy(..., cmap=COLMAP_JET/TURBO)[0][..., [2,1,0]]` to convert from torch float to BGR uint8 before writing.
-- Per-camera subdirectories are created lazily with `os.makedirs(..., exist_ok=True)` keyed off `camera.meta['cam']`, so each camera gets its own folder under the result root.
-- Video concatenation follows a fixed pattern: collect frames per camera, assert equal length across cameras, then `np.concatenate(..., axis=1)` along the configured `concat_cameras` order before calling `imageio.mimwrite` with `fps=cfg.render.fps`.
-- Optional fields are handled defensively via `if 'key' in result.keys()` / `hasattr(camera, ...)` guards rather than assuming a fixed schema.

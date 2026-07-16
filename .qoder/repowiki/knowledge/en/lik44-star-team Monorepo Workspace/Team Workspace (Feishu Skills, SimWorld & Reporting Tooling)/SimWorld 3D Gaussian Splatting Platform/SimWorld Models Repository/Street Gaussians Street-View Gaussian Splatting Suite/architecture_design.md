@@ -1,6 +1,0 @@
-The package is organized as a single Python project (`train.py`, `render.py`, `metrics.py`) plus two parallel pipelines sharing the same core model:
-- Core training/rendering (`lib/models/street_gaussian_model.py`, `lib/datasets/`, `lib/utils/`) provides `StreetGaussianModel`, scene management, and rasterization; top-level `train.py` / `train_2stages.py` / `train_xpeng.py` wire it to dataset loaders and visualizers.
-- LoRA fixer pipeline (`lora_gaussian_render/`) sits on top of the rendered outputs from the core pipeline, fine-tuning a Pix2Pix diffusion model conditioned on camera poses to remove Gaussian artifacts.
-- Sim-bridge evaluation (`sim_bridge/`) consumes trained checkpoints, renders novel views via `render_sim.py`, and computes PSNR/FID against simulator ground truth.
-- Dataset preparation scripts (`script/{waymo,kitti,xpeng}/`) feed COLMAP + depth/mask generation into the shared `lib/datasets/` loaders.
-- All experiments are parameterized under `configs/` (Waymo, XPeng M1, RS128) and launched via shell wrappers in `script/` and `lora_gaussian_render/fuyao_run/`; YAML configs drive both the core training loop and the LoRA diffusion stage uniformly.

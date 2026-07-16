@@ -1,7 +1,0 @@
-Flat collection of single-purpose Python modules under `lib/utils/`, each exposing pure functions or one small class consumed by higher-level training/rendering code in `models/street_gaussians/lib/`. Internal layering:
-- Geometry & pose primitives: `general_utils.py` (quaternion↔matrix, axis-angle, SO(3) exp map), `graphics_utils.py` (focal↔fov, projection/world-to-view matrices), `camera_utils.py` (`Camera`/`MiniCam` nn.Module wrapping world_view/projection/full_proj transforms and masks).
-- Data / scene IO: `colmap_utils.py`, `colmap_converter.py`, `waymo_utils.py`, `xpeng_utils.py`, `xpeng_novel_utils.py`, `data_utils.py`, `cfg_utils.py`, `system_utils.py`.
-- Image & rendering helpers: `img_utils.py`, `plt_display_utils.py`, `sh_utils.py` (spherical harmonics), `vq_utils.py`, `homography_utils.py`, `box_utils.py`, `sem_utils.py`, `sim_utils.py`.
-- Evaluation & loss: `loss_utils.py` (L1/L2/MSE/SSIM/PSNR with mask support), `metric_utils.py`, `eval_utils.py`.
-- Bundled third-party: `lpipsPyTorch/` is a self-contained copy of the LPIPS criterion (`modules/lpips.py` + `networks.py` + `utils.py`) re-exported via `lpipsPyTorch/__init__.py` as a thin `lpips(x,y)` wrapper that instantiates `LPIPS(net_type='alex')` on the input device.
-Dependency direction is strictly downward — this package imports from sibling `lib.datasets.*`, `lib.config`, and external libs (`diff_gaussian_rasterization`, `faiss`, `roma`, `cv2`, `PIL`, `tqdm`) but is not imported back by them; callers reach it through relative `lib.utils.<mod>` paths.

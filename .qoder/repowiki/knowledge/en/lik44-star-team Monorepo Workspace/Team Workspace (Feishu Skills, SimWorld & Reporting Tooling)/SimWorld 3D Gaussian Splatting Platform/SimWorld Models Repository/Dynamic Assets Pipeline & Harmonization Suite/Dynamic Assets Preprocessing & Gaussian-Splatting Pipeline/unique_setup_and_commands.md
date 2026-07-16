@@ -1,1 +1,0 @@
-Run the training script from inside the workspace as shown in `README.MD`: `python 3D_real_car_train.py --data_path {your-raw-3D-real-car-data} --config_name {your-config}`. The Dockerfile leaves `CMD` commented out, so the image is intended to be run with an explicit command rather than a default entrypoint.

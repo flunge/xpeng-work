@@ -1,6 +1,0 @@
-- Every skill starts with a YAML front-matter block declaring `name`, `version`, `description`, and `metadata.requires.bins: ["lark-cli"]` plus `metadata.cliHelp` pointing at the relevant `lark-cli <domain> --help`.
-- Product-specific reference material is placed under a `references/` subdirectory with one `.md` file per shortcut or DSL, named after the corresponding `lark-cli <domain> +<verb>` shortcut.
-- Skills that depend on shared auth/permission logic begin with a `CRITICAL` directive instructing the agent to first read `../lark-shared/SKILL.md` before any other action.
-- Routing between skills is declared explicitly in a "何时使用 / 不要使用" section, with cross-links to sibling skills for out-of-scope operations (e.g. drive import, auth recovery).
-- Complex JSON/DSL contracts (field schema, workflow steps, role config, slides XML) are kept as separate SSOT reference docs and only summarized in the top-level SKILL.md; agents must re-read them before constructing requests.
-- Identity selection follows a consistent rule: default to `--as user` unless the user explicitly asks for app/bot identity, and fall back to `lark-shared` when scope/permission errors occur instead of silently switching to bot.

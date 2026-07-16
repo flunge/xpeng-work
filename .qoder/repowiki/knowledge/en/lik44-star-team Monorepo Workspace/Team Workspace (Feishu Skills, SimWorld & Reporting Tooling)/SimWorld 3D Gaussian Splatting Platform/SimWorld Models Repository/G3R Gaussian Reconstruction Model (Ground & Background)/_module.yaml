@@ -1,8 +1,0 @@
-schema_version: 1
-module_path: team_workspace/simworld/models/g3r
-title: G3R Gaussian Reconstruction Model (Ground & Background)
-scope:
-    - team/simworld/models/g3r/
-source_files: []
-depends_on: []
-related_to: []

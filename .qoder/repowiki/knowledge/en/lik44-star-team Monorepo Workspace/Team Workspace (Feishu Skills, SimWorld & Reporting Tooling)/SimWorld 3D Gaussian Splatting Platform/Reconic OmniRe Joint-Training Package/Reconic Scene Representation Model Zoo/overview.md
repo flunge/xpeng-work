@@ -1,1 +1,0 @@
-Aggregates PyTorch scene-representation primitives — Gaussian splatting backends, SMPL-based human body priors, and diffusion image fixers — plus shared encoders, deformers, sky/lighting, and loss utilities consumed by higher-level trainers.

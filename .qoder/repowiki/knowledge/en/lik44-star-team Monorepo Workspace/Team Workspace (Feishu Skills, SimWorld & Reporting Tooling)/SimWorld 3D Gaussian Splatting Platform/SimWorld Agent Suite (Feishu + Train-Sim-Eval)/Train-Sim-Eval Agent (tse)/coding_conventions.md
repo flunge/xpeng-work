@@ -1,6 +1,0 @@
-- External side effects (git, HTTP, filesystem, subprocess) are confined to `tse.activities.*` functions invoked via `workflow.execute_activity`; workflows themselves contain no I/O or mutations.
-- Every workflow step is paired with a `self._set_status(req, Status.XXX)` call before and after the activity so the DB mirrors the exact transient state machine defined by `constants.Status`.
-- Per-step retry semantics are declared once as module-level `*_RETRY` policies in `constants.py` and attached to each `execute_activity` call rather than being configured inline.
-- Request/response payloads are typed exclusively with pydantic `BaseModel`s in `models/domain.py` (e.g. `ExperimentRequest`, `SubmitArgs`, `EvalArtifacts`); activities accept these models instead of raw dicts.
-- Feature flags flow through the single `SWITCH_REGISTRY` in `switches.py`, parsed uniformly by the CLI's `_parse_switches` and expanded by the server before submission.
-- Optional heavy dependencies are gated behind `pyproject.toml` optional-dependency groups (`client`, `server`, `eval`, `ssh`, `dev`) so consumers install only what they need.

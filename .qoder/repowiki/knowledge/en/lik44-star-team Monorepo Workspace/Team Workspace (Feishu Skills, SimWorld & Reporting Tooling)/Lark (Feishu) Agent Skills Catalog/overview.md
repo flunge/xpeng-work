@@ -1,1 +1,0 @@
-Agent-facing skill definitions that teach an LLM how to operate every Feishu product area — IM, Docs, Drive, Sheets, Slides, Base, Calendar, Tasks, OKR, Wiki, Mail, Whiteboard, VC and more — via `lark-cli` shortcuts.

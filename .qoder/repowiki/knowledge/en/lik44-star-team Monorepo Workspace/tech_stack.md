@@ -1,1 +1,0 @@
-Python3 + Node.js + `lark-cli` for Feishu API access; PyYAML for config; all data persisted in Feishu Docs/Multi-dimensional Tables rather than in git.

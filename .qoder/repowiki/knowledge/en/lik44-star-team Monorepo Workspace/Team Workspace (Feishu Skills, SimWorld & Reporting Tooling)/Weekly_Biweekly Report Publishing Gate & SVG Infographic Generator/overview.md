@@ -1,1 +1,0 @@
-CLI gate that validates Feishu weekly/biweekly reports against policy regexes, generates dark-themed SVG infographics per topic, and enforces ASR/Docx write-time hooks before publishing.

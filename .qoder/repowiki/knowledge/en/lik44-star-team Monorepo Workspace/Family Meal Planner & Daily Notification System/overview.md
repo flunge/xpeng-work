@@ -1,1 +1,0 @@
-Automated weekly/monthly meal planner for a family of four that generates non-repeating Chinese recipes, pushes daily Feishu cards with shopping lists, and monitors group feedback.

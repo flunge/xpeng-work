@@ -1,1 +1,0 @@
-Aggregates SimWorld's data-processing, model zoo, rasterizer, simulation interface, training pipeline, agents and evaluation tooling into a single workspace for end-to-end 3DGS scene reconstruction and rendering.

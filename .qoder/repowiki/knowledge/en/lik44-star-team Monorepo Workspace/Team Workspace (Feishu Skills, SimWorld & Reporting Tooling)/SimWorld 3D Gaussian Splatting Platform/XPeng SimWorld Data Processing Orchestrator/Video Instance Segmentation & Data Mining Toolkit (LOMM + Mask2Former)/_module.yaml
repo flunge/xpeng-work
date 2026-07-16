@@ -1,8 +1,0 @@
-schema_version: 1
-module_path: team_workspace/simworld/xpeng_data_process/data_mining
-title: Video Instance Segmentation & Data Mining Toolkit (LOMM + Mask2Former)
-scope:
-    - team/simworld/xpeng_data_process/data_mining/
-source_files: []
-depends_on: []
-related_to: []

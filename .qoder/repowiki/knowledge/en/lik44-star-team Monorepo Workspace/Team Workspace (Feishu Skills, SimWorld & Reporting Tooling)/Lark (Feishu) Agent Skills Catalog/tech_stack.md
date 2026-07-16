@@ -1,1 +1,0 @@
-Markdown-only skill manifests consumed by the agent runtime; all operational commands go through the external `lark-cli` binary (declared via `metadata.requires.bins: ["lark-cli"]`). Some skills ship Python helper scripts (`scripts/*.py`) invoked during planning/template resolution.

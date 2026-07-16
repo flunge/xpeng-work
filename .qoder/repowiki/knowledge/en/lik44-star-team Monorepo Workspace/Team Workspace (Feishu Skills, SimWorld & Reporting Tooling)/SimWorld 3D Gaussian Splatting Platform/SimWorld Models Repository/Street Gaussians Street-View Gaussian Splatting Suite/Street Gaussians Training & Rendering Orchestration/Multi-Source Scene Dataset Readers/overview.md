@@ -1,1 +1,0 @@
-Pluggable scene readers that load COLMAP, Blender NeRF-Synthetic, Waymo Full, and XPeng datasets into a unified CameraInfo/SceneInfo representation for Street Gaussians training.

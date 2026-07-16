@@ -1,4 +1,0 @@
-- Each standalone script bootstraps imports by extending `sys.path` with its parent `DCCF/` directory before importing `iharm` modules, ensuring they run without installing the package.
-- Evaluation entry points follow a fixed pattern: parse args → load config via `load_config_file` → resolve checkpoint with `find_checkpoint` → instantiate a `PredictorUpsampleHSL*` → build `HDatasetUpsample` per dataset → call `evaluate_dataset_upsample_hsl_refine` → aggregate results with `MetricsHub.__add__` and log via `logger.info`.
-- Resize strategies are exposed as string keys mapped to Albumentations transform objects (`NoOp`, `LongestMaxSizeIfLarger`, `Resize`) and selected through argparse `choices=RESIZE_STRATEGIES.keys()`.
-- Shell run scripts compose multi-stage pipelines by writing intermediate weight paths into variables and passing them as `--weights=${var}` to subsequent `python3 scripts/evaluate_*.py` invocations.

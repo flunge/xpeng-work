@@ -1,1 +1,0 @@
-Top-level workspace that composes 3DRealCar preprocessing, Gaussian Splatting training, DCCF camera harmonization, and agent-driven scenario generation into a single asset-to-scenario production line.

@@ -1,5 +1,0 @@
-- Region-specific behavior is gated by a `cfg['region']` string (`ground` vs `bkgd`) checked uniformly across config, dataset, decoder, and inference rather than separate classes.
-- Per-step refinement follows a fixed pattern: compute gradient feedback w.r.t. current features, concatenate `[S_t, grad_S_t]`, feed through `SparseResUNet`, then update `S_{t+1} = S_t + gammas[t] * delta` before decoding Gaussians.
-- Random seeds are re-initialized at the top of both `train_g3r.py` and `inference.py` main blocks (random, numpy, torch, cuda) to ensure reproducibility across scripts.
-- CUDA memory pressure is managed explicitly after each batch/camera by calling `gc.collect()` followed by `torch.cuda.empty_cache()`.
-- Checkpoint saving uses a step-number-prefixed filename pattern `<step>_step_model.pth` inside the timestamped log folder created per job run.

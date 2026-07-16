@@ -1,1 +1,0 @@
-Utility scripts that orchestrate multi-vehicle scenario creation, query CloudSim for openloop/closeloop events, download and decode DDS recordings, and encode camera frames to H265.

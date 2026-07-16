@@ -1,1 +1,0 @@
-Diffusers-based Stable Diffusion pipelines and a multi-view UNet that jointly denoise across camera views to correct Gaussian-render distortion in omnidirectional images.

@@ -1,1 +1,0 @@
-Build requires a matching PyTorch/CUDA toolchain; fast-math defaults on and can be disabled with `XPR_FAST_MATH=0`. Typical workflow: `python setup.py build_ext --inplace` or `pip install .`; convenience wrappers exist in `scripts/build_xpeng_raster.sh` and `scripts/build_xpeng_raster_a100.sh`.

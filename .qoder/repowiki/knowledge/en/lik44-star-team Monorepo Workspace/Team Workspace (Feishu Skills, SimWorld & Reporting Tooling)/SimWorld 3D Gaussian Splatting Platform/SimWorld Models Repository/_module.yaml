@@ -1,8 +1,0 @@
-schema_version: 1
-module_path: team_workspace/simworld/models
-title: SimWorld Models Repository
-scope:
-    - team/simworld/models/
-source_files: []
-depends_on: []
-related_to: []

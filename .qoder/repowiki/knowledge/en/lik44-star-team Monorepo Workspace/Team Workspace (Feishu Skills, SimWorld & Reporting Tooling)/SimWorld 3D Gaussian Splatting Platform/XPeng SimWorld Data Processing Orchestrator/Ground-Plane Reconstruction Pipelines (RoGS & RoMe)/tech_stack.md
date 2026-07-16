@@ -1,1 +1,0 @@
-PyTorch + PyTorch3D (KNN, transforms, Laplacian smoothing); `diff-gaussian-rasterization-depthalpha` for 2D-GS rasterization; PyTorch-Lightning with DDPStrategy for RoMe; OpenCV for image I/O and morphological masks; Mayavi (optional) for 3D visualization; `plyfile` for PLY read/write.
