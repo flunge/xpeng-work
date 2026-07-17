@@ -11,20 +11,15 @@
 import json
 import subprocess
 from datetime import datetime
-from duckduckgo_search import DDGS
+from ddgs import DDGS
 
-PROFILE = "meal"
-TARGET_USER_ID = "ou_f9cd23092a356c297d6a9f38fd7cfd5e"
+DM_CHAT = "oc_bc5bb378d432fca62a7786e26cf82578"
 
 
 def search_ai_news():
     """搜索 AI 领域新闻"""
     queries = [
-        "AI large language model news today 2026",
-        "world model AI simulation news",
-        "autonomous driving AI news today",
-        "embodied AI robotics news 2026",
-        "AI 大模型 世界模型 智驾 具身 新闻",
+        "AI", "OpenAI", "Tesla AI", "robotics", "autonomous driving",
     ]
 
     results = []
@@ -81,8 +76,8 @@ def push_message(payload):
     post_content = payload["content"]["post"]
     content_json = json.dumps(post_content, ensure_ascii=False)
     r = subprocess.run(
-        ["lark-cli", "--profile", PROFILE, "im", "+messages-send", "--as", "bot",
-         "--user-id", TARGET_USER_ID, "--msg-type", "post", "--content", content_json],
+        ["lark-cli", "im", "+messages-send", "--as", "bot",
+         "--chat-id", DM_CHAT, "--msg-type", "post", "--content", content_json],
         capture_output=True, text=True, timeout=30,
     )
     return r.returncode == 0

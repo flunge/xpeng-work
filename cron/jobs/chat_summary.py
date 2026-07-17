@@ -15,8 +15,8 @@ import subprocess
 import sys
 from datetime import datetime, timedelta
 
-# ── 配置 ──
-PROFILE = "meal"
+# 推送目标：与机器人的单聊会话
+DM_CHAT = "oc_bc5bb378d432fca62a7786e26cf82578"
 TARGET_USER_ID = "ou_f9cd23092a356c297d6a9f38fd7cfd5e"  # 李坤
 
 # 核心群列表（chat_id → 群名）
@@ -48,7 +48,7 @@ MEMBER_P2P = {
 
 
 def run_lark(args, timeout=30):
-    cmd = ["lark-cli", "--profile", PROFILE] + args
+    cmd = ["lark-cli", "--as", "user"] + args
     r = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
     if r.returncode != 0:
         return None
@@ -82,12 +82,12 @@ def get_time_range(period):
     return int(start.timestamp()), int(end.timestamp())
 
 
-def fetch_chat_messages(chat_id, start_time, end_time, page_size=50):
+def fetch_chat_messages(chat_id, start_time, end_time, page_size=50, max_pages=2):
     """拉取指定群/会话在时间范围内的消息"""
     all_messages = []
     page_token = None
 
-    while True:
+    for _ in range(max_pages):
         args = [
             "im", "+chat-messages-list",
             "--chat-id", chat_id,
@@ -268,8 +268,8 @@ def push_message(payload):
     post_content = payload["content"]["post"]
     content_json = json.dumps(post_content, ensure_ascii=False)
     r = subprocess.run(
-        ["lark-cli", "--profile", PROFILE, "im", "+messages-send", "--as", "bot",
-         "--user-id", TARGET_USER_ID, "--msg-type", "post", "--content", content_json],
+        ["lark-cli", "im", "+messages-send", "--as", "bot",
+         "--chat-id", DM_CHAT, "--msg-type", "post", "--content", content_json],
         capture_output=True, text=True, timeout=30,
     )
     return r.returncode == 0
