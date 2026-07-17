@@ -2,33 +2,57 @@
 """
 每天 09:00 — 推送 AI 圈头部 10 条新闻（去重）。
 
-重点关注：大模型 / 世界模型 / 智驾 / 具身
 数据源：ddgs (DuckDuckGo)
 输出：推送到飞书单聊
 """
 
 import json
 import subprocess
+import time
 from datetime import datetime
 from ddgs import DDGS
 
 DM_CHAT = "oc_bc5bb378d432fca62a7786e26cf82578"
 
+# 中文关键词 → 用 text 搜索（news 对中文返回空）
+CN_QUERIES = [
+    "人工智能 最新新闻",
+    "大模型 最新进展",
+    "自动驾驶 AI 最新",
+    "具身智能 机器人 最新",
+    "AI芯片 算力 最新",
+]
+
+# 英文关键词 → 用 news 搜索
+EN_QUERIES = [
+    "AI", "OpenAI", "Tesla AI", "robotics", "autonomous driving",
+]
+
 
 def search_ai_news():
-    """搜索 AI 领域新闻"""
-    queries = [
-        "AI", "OpenAI", "Tesla AI", "robotics", "autonomous driving",
-    ]
-
     results = []
     with DDGS() as ddgs:
-        for q in queries:
-            try:
-                for r in ddgs.news(q, max_results=5):
-                    results.append(r)
-            except Exception:
-                continue
+        # 中文：text 搜索
+        for q in CN_QUERIES:
+            for attempt in range(3):
+                try:
+                    for r in ddgs.text(q, max_results=5):
+                        r["_search_type"] = "text"
+                        results.append(r)
+                    break
+                except Exception:
+                    time.sleep(2)
+
+        # 英文：news 搜索
+        for q in EN_QUERIES:
+            for attempt in range(3):
+                try:
+                    for r in ddgs.news(q, max_results=5):
+                        r["_search_type"] = "news"
+                        results.append(r)
+                    break
+                except Exception:
+                    time.sleep(2)
 
     # 去重（按标题）
     seen_titles = set()
@@ -53,12 +77,15 @@ def build_post_content(news_items):
 
     for i, item in enumerate(news_items, 1):
         title_text = item.get("title", "")[:100]
-        url = item.get("url", "")
+        # text 搜索用 href，news 搜索用 url
+        url = item.get("href") or item.get("url") or ""
         source = item.get("source", "")
         date = item.get("date", "")
+        body = item.get("body", "")[:120]
 
-        # 标题行 + 来源/日期
         lines = [f"{i}. {title_text}"]
+        if body:
+            lines.append(f"   {body}")
         meta_parts = []
         if source:
             meta_parts.append(f"来源: {source}")
