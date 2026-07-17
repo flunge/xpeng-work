@@ -29,6 +29,20 @@ EN_QUERIES = [
 ]
 
 
+def summarize_body(body, max_chars=300):
+    """按句号/分号边界截取正文，不硬截断。"""
+    if not body:
+        return ""
+    if len(body) <= max_chars:
+        return body.strip()
+    truncated = body[:max_chars]
+    for sep in ["。", "！", "？", "；", ". ", "? ", "! "]:
+        idx = truncated.rfind(sep)
+        if idx > max_chars // 2:
+            return truncated[:idx + len(sep)].strip()
+    return truncated.strip() + "…"
+
+
 def search_stock_news():
     results = []
     with DDGS() as ddgs:
@@ -72,11 +86,11 @@ def build_post_content(news_items):
     ]
 
     for i, item in enumerate(news_items, 1):
-        title_text = item.get("title", "")[:100]
+        title_text = item.get("title", "")
         url = item.get("href") or item.get("url") or ""
         source = item.get("source", "")
         date = item.get("date", "")
-        body = item.get("body", "")[:120]
+        body = summarize_body(item.get("body", ""))
 
         lines = [f"{i}. {title_text}"]
         if body:
