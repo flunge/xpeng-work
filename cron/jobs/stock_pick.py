@@ -1,12 +1,8 @@
 #!/usr/bin/env python3
 """
-每天 09:00 — 推送 10 支最具投资价值的股票。
+每天 09:00 — 推送 10 条投资参考新闻。
 
-5 支长线（未来潜力最高，不一定是当前最热的）
-5 支短线（短期可获利，现在进去能获取收益）
-优先港股 / 美股。
-
-数据源：duckduckgo_search 搜索财经新闻 + 市场热点
+数据源：ddgs (DuckDuckGo)
 输出：推送到飞书单聊
 """
 
@@ -24,11 +20,18 @@ def search_stock_news():
         "stocks", "Hong Kong stocks", "US stocks", "growth stocks", "investing",
     ]
 
+    import time
     results = []
     with DDGS() as ddgs:
         for q in queries:
-            for r in ddgs.news(q, max_results=5):
-                results.append(r)
+            for attempt in range(3):
+                try:
+                    for r in ddgs.news(q, max_results=5):
+                        results.append(r)
+                    break
+                except Exception:
+                    time.sleep(2)
+                    continue
 
     # 去重
     seen_titles = set()
@@ -45,29 +48,37 @@ def search_stock_news():
 def build_post_content(news_items):
     now_str = datetime.now().strftime("%Y-%m-%d")
 
-    title = f"📈 每日股票推荐 {now_str}"
+    title = f"📈 每日投资参考 {now_str}"
 
     content_blocks = [
-        [{"tag": "text", "text": "📊 今日市场分析 & 股票推荐\n"}],
-        [{"tag": "text", "text": "🟢 长线推荐（未来潜力最高）：\n"}],
+        [{"tag": "text", "text": f"📊 今日 {len(news_items)} 条财经新闻\n"}],
     ]
 
-    # 由于没有实时行情 API，这里用新闻标题作为参考
-    for i, item in enumerate(news_items[:5], 1):
+    for i, item in enumerate(news_items[:10], 1):
         title_text = item.get("title", "")[:100]
-        body = item.get("body", "")[:150]
-        content_blocks.append([{"tag": "text", "text": f"{i}. {title_text}\n   {body}\n"}])
+        url = item.get("url", "")
+        source = item.get("source", "")
+        date = item.get("date", "")
 
-    content_blocks.append([{"tag": "text", "text": "🔴 短线推荐（短期可获利）：\n"}])
+        lines = [f"{i}. {title_text}"]
+        meta_parts = []
+        if source:
+            meta_parts.append(f"来源: {source}")
+        if date:
+            meta_parts.append(date)
+        if meta_parts:
+            lines.append("   " + " | ".join(meta_parts))
+        if url:
+            lines.append(f"   🔗 {url}")
 
-    for i, item in enumerate(news_items[5:10], 1):
-        title_text = item.get("title", "")[:100]
-        body = item.get("body", "")[:150]
-        content_blocks.append([{"tag": "text", "text": f"{i}. {title_text}\n   {body}\n"}])
+        content_blocks.append([{
+            "tag": "text",
+            "text": "\n".join(lines) + "\n"
+        }])
 
     content_blocks.append([{
         "tag": "text",
-        "text": "⚠️ 以上信息仅供参考，不构成投资建议。请根据自身风险承受能力做决策。"
+        "text": "⚠️ 以上信息仅供参考，不构成投资建议。"
     }])
 
     return {
@@ -103,7 +114,7 @@ def main():
 
         payload = build_post_content(news_items)
         if push_message(payload):
-            print("✅ 股票推荐已推送")
+            print("✅ 投资参考已推送")
         else:
             print("❌ 推送失败")
     except Exception as e:

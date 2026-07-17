@@ -82,6 +82,16 @@ def get_time_range(period):
     return int(start.timestamp()), int(end.timestamp())
 
 
+def parse_create_time(create_time):
+    """解析 lark-cli 返回的 create_time，支持 '2026-07-17 09:24' 和 '2026-07-17 09:24:30'"""
+    for fmt in ("%Y-%m-%d %H:%M:%S", "%Y-%m-%d %H:%M"):
+        try:
+            return int(datetime.strptime(create_time, fmt).timestamp())
+        except ValueError:
+            continue
+    return None
+
+
 def fetch_chat_messages(chat_id, start_time, end_time, page_size=50, max_pages=2):
     """拉取指定群/会话在时间范围内的消息"""
     all_messages = []
@@ -110,16 +120,14 @@ def fetch_chat_messages(chat_id, start_time, end_time, page_size=50, max_pages=2
             create_time = msg.get("create_time", "")
             if not create_time:
                 continue
-            # 解析 "2026-07-16 09:30:00" 格式
-            try:
-                msg_time = datetime.strptime(create_time, "%Y-%m-%d %H:%M:%S")
-                msg_ts = int(msg_time.timestamp())
-                if start_time <= msg_ts <= end_time:
-                    all_messages.append(msg)
-                elif msg_ts < start_time:
-                    return all_messages  # 已超出时间范围，停止
-            except ValueError:
+            # create_time 格式可能为 "2026-07-17 09:24" 或 "2026-07-17 09:24:30"
+            msg_ts = parse_create_time(create_time)
+            if msg_ts is None:
                 continue
+            if start_time <= msg_ts <= end_time:
+                all_messages.append(msg)
+            elif msg_ts < start_time:
+                return all_messages  # 已超出时间范围，停止
 
         page_token = result.get("data", {}).get("page_token")
         if not page_token or not result.get("data", {}).get("has_more"):

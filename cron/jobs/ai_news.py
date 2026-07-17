@@ -3,8 +3,7 @@
 每天 09:00 — 推送 AI 圈头部 10 条新闻（去重）。
 
 重点关注：大模型 / 世界模型 / 智驾 / 具身
-
-数据源：duckduckgo_search
+数据源：ddgs (DuckDuckGo)
 输出：推送到飞书单聊
 """
 
@@ -25,8 +24,11 @@ def search_ai_news():
     results = []
     with DDGS() as ddgs:
         for q in queries:
-            for r in ddgs.news(q, max_results=5):
-                results.append(r)
+            try:
+                for r in ddgs.news(q, max_results=5):
+                    results.append(r)
+            except Exception:
+                continue
 
     # 去重（按标题）
     seen_titles = set()
@@ -46,17 +48,30 @@ def build_post_content(news_items):
     title = f"🤖 AI 圈新闻 {now_str}"
 
     content_blocks = [
-        [{"tag": "text", "text": "📊 今日 AI 圈 10 条头部新闻\n"}],
+        [{"tag": "text", "text": f"📰 今日 AI 圈 {len(news_items)} 条头部新闻\n"}],
     ]
 
     for i, item in enumerate(news_items, 1):
         title_text = item.get("title", "")[:100]
-        body = item.get("body", "")[:150]
+        url = item.get("url", "")
         source = item.get("source", "")
         date = item.get("date", "")
+
+        # 标题行 + 来源/日期
+        lines = [f"{i}. {title_text}"]
+        meta_parts = []
+        if source:
+            meta_parts.append(f"来源: {source}")
+        if date:
+            meta_parts.append(date)
+        if meta_parts:
+            lines.append("   " + " | ".join(meta_parts))
+        if url:
+            lines.append(f"   🔗 {url}")
+
         content_blocks.append([{
             "tag": "text",
-            "text": f"{i}. {title_text}\n   {body}\n   来源: {source} | {date}\n"
+            "text": "\n".join(lines) + "\n"
         }])
 
     return {
