@@ -1,6 +1,46 @@
 {
   "rules": [
     {
+      "tool": "write_file",
+      "pattern": "*",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "echo \"===*",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "echo \"===*",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "echo \"===== \u62a5\u9519\u65f6\u95f4\u7ebf (\u65e5\u671f || \u62a5\u9519) \u6700\u8fd130\u6761 =====\"; awk '/^Date:/{d=$0} /Errno [0-9]+|No such file or directory/{print d\" || \"$0}' /var/mail/xpeng | tail -30",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "echo \"===== \u6240\u6709\u5165\u53e3\u811a\u672c\u5185\u5bb9 =====\"; for f in cron/scripts/*.sh; do echo \"----- $f -----\"; cat \"$f\"; echo; done; echo \"===== \u5404\u4efb\u52a1\u65e5\u5fd7\u6700\u540e\u4fee\u6539\u65f6\u95f4 =====\"; echo \"--- meal notifications ---\"; ls -la personal/meal/notifications/ 2>/dev/null; echo \"--- daily-sync log ---\"; ls -la team/memory/daily-sync/ 2>/dev/null || echo \"(\u65e0 daily-sync log \u76ee\u5f55)\"; echo \"--- week-label \u843d\u70b9 ---\"; ls -la .zod/week-label/ 2>/dev/null || echo \"(\u65e0 .zod/week-label)\"",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "echo \"===*",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "echo \"===*",
+      "action": "allow"
+    },
+    {
+      "tool": "execute",
+      "pattern": "crontab -l*",
+      "action": "allow"
+    },
+    {
       "tool": "execute",
       "pattern": "cd /Users/xpeng/Documents/daily && echo \"=== verify key files ===\" && ls -la .claude/CLAUDE.md meal/README.md team/CLAUDE.md README.md .gitignore && echo \"=== verify new directories ===\" && ls -d meal/plans/daily/ team/memory/ team/code/ team/output/ team/backups/ 2>/dev/null",
       "action": "allow"
