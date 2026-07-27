@@ -280,7 +280,7 @@ def main():
     print(f"📤 正在发送{label}({date_str})到单聊...")
     content_json = json.dumps(card_msg["card"], ensure_ascii=False)
     r = subprocess.run(
-        ["lark-cli", "im", "+messages-send", "--as", "bot",
+        ["lark-cli", "--profile", "meal", "im", "+messages-send", "--as", "bot",
          "--chat-id", DM_CHAT, "--msg-type", "interactive", "--content", content_json],
         capture_output=True, text=True, timeout=30,
     )
