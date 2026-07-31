@@ -46,7 +46,7 @@ def log(msg: str):
 def send_text(text: str):
     content = json.dumps({"text": text}, ensure_ascii=False)
     r = subprocess.run(
-        ["lark-cli", "im", "+messages-send", "--as", "bot",
+        ["lark-cli", "--profile", "meal", "im", "+messages-send", "--as", "bot",
          "--chat-id", DM_CHAT, "--msg-type", "text", "--content", content],
         capture_output=True, text=True, timeout=30,
     )
@@ -162,7 +162,7 @@ def poll_messages(processed_ids: set) -> int:
     """轮询最近消息，返回本次处理的新消息数。"""
     start = iso_minutes_ago(LOOKBACK_MINUTES)
     r = subprocess.run(
-        ["lark-cli", "im", "+chat-messages-list", "--as", "user",
+        ["lark-cli", "--profile", "meal", "im", "+chat-messages-list", "--as", "user",
          "--chat-id", DM_CHAT, "--start", start, "--order", "asc",
          "--page-size", "50"],
         capture_output=True, text=True, timeout=30,

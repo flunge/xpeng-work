@@ -48,7 +48,7 @@ MEMBER_P2P = {
 
 
 def run_lark(args, timeout=30):
-    cmd = ["lark-cli", "--as", "user"] + args
+    cmd = ["lark-cli", "--profile", "meal", "--as", "user"] + args
     r = subprocess.run(cmd, capture_output=True, text=True, timeout=timeout)
     if r.returncode != 0:
         return None
@@ -276,7 +276,7 @@ def push_message(payload):
     post_content = payload["content"]["post"]
     content_json = json.dumps(post_content, ensure_ascii=False)
     r = subprocess.run(
-        ["lark-cli", "im", "+messages-send", "--as", "bot",
+        ["lark-cli", "--profile", "meal", "im", "+messages-send", "--as", "bot",
          "--chat-id", DM_CHAT, "--msg-type", "post", "--content", content_json],
         capture_output=True, text=True, timeout=30,
     )

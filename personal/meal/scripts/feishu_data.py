@@ -29,7 +29,7 @@ def _cfg():
 def _lark_json(args, cwd=None):
     """运行 lark-cli 并解析 JSON（跳过可能的前置非 JSON 行）。
     使用 meal 专用 app (--profile meal) 的 bot 身份访问飞书资源。"""
-    r = subprocess.run(["lark-cli", "--profile", "meal", "--as", "bot"] + args,
+    r = subprocess.run(["lark-cli", "--profile", "meal", "--as", "user"] + args,
                        capture_output=True, text=True, cwd=cwd)
     out = r.stdout
     i = out.find("{")

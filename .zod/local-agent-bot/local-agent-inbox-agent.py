@@ -609,7 +609,7 @@ def execute_tool_call(tc: dict) -> dict:
 def send_text(text: str):
     content = json.dumps({"text": text}, ensure_ascii=False)
     r = subprocess.run(
-        ["lark-cli", "im", "+messages-send", "--as", "bot",
+        ["lark-cli", "--profile", "meal", "im", "+messages-send", "--as", "bot",
          "--chat-id", DM_CHAT, "--msg-type", "text", "--content", content],
         capture_output=True, text=True, timeout=30,
     )
