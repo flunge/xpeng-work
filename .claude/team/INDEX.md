@@ -8,7 +8,8 @@
 | 场景 / 触发词 | 文件 |
 |---|---|
 | **【更新记忆】** | `commands/update-memory.md`（唯一记忆同步命令） |
-| 写 **周报 / 双周报** | `commands/weekly-report.md` |
+| **【风险哨兵】**（承诺/逾期每日推送） | `team/scripts/risk_sentinel.py` — 读承诺追踪 Base（`NkIZb7eU7azZIEsegJ7cl2bfnUd` 表「承诺追踪」），每日 09:00 判级推送李坤 DM |
+| 写**周报 / 双周报** | `commands/weekly-report.md`；写之前先跑证据包：`python3 team/scripts/memory_query.py --start ... --end ... --out ...`，写完跑 `check_report.py <token> --evidence <包>` 做数字回查 [LOWCONF] |
 | 报告/修改前**信息获取**（溯源/回源/读图/数字口径/不懂就问） | `rules/sourcing.md` |
 | 写**飞书文档/表格/@人/超链接/画图**、lark-cli、身份认证 | `rules/writing.md` |
 | 记忆**写哪里/golden 模板/三线关联/什么不写/两索引** | `rules/memory-model.md` |
@@ -29,6 +30,7 @@
 | 内部索引（记了什么） | `UwiEdTJJ2oRGokxtkE2cJXjwnyb` |
 | 溯源索引（从哪读的） | `SsWCdQbVZohGHFxhE3RcCmJ2nSb` |
 | 名称 → 飞书文档 token 映射 | `/workspace/team/memory/_feishu_map.json` |
+| 承诺追踪 Base（P0 风险哨兵） | `NkIZb7eU7azZIEsegJ7cl2bfnUd`（表「承诺追踪」：承诺内容/承诺人/Deadline/状态/证据来源/最近核查日期） |
 
 - 项目 ledger / 人物画像 / chat-log / 周报 **全部在飞书**，读写靠 `_feishu_map.json` 定位。
 - **需要修改内容 = 直接改飞书文档**；本地不留任何中间产物，修改轮次结束即删。

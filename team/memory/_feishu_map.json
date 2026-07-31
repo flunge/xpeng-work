@@ -1,276 +1,283 @@
 {
-  "_comment": "仿真部记忆库=飞书为唯一权威源。本表仅建立本地↔飞书的定位关联，不在本地保存任何内容。所有 ledger/画像/chat-log/周报的读写均在飞书根文件夹下进行。",
-  "root_folder": "W7rqfwqnnlzSfUdEcIGcjcTNnqe",
-  "root_folder_url": "https://xiaopeng.feishu.cn/drive/folder/W7rqfwqnnlzSfUdEcIGcjcTNnqe",
-  "index_doc": {
-    "token": "UwiEdTJJ2oRGokxtkE2cJXjwnyb",
-    "type": "docx",
-    "url": "https://xiaopeng.feishu.cn/docx/UwiEdTJJ2oRGokxtkE2cJXjwnyb"
+ "_comment": "仿真部记忆库=飞书为唯一权威源。本表仅建立本地↔飞书的定位关联，不在本地保存任何内容。所有 ledger/画像/chat-log/周报的读写均在飞书根文件夹下进行。",
+ "root_folder": "W7rqfwqnnlzSfUdEcIGcjcTNnqe",
+ "root_folder_url": "https://xiaopeng.feishu.cn/drive/folder/W7rqfwqnnlzSfUdEcIGcjcTNnqe",
+ "index_doc": {
+  "token": "UwiEdTJJ2oRGokxtkE2cJXjwnyb",
+  "type": "docx",
+  "url": "https://xiaopeng.feishu.cn/docx/UwiEdTJJ2oRGokxtkE2cJXjwnyb"
+ },
+ "source_index": {
+  "token": "SsWCdQbVZohGHFxhE3RcCmJ2nSb",
+  "type": "docx",
+  "url": "https://xiaopeng.feishu.cn/docx/SsWCdQbVZohGHFxhE3RcCmJ2nSb",
+  "desc": "原始资料溯源总索引:9篇基线+232篇Q2纪要"
+ },
+ "projects": {
+  "慢速模式": {
+   "token": "J138dPjiBoYdBHxAniacGSlWnXe",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/J138dPjiBoYdBHxAniacGSlWnXe"
   },
-  "source_index": {
-    "token": "SsWCdQbVZohGHFxhE3RcCmJ2nSb",
-    "type": "docx",
-    "url": "https://xiaopeng.feishu.cn/docx/SsWCdQbVZohGHFxhE3RcCmJ2nSb",
-    "desc": "原始资料溯源总索引:9篇基线+232篇Q2纪要"
+  "HIL链路部署": {
+   "token": "OhGEd5E11oPTZJxWbqrcs3A9nRn",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/OhGEd5E11oPTZJxWbqrcs3A9nRn"
   },
-  "projects": {
-    "慢速模式": {
-      "token": "J138dPjiBoYdBHxAniacGSlWnXe",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/J138dPjiBoYdBHxAniacGSlWnXe"
-    },
-    "HIL链路部署": {
-      "token": "OhGEd5E11oPTZJxWbqrcs3A9nRn",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/OhGEd5E11oPTZJxWbqrcs3A9nRn"
-    },
-    "CLIP-IQA": {
-      "token": "HprzdXgC6ooqIIxUQYZcADBRnrg",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/HprzdXgC6ooqIIxUQYZcADBRnrg"
-    },
-    "Fixer优化": {
-      "token": "TBKFdCZLfo3RKJxG2Nzc5ePCned",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/TBKFdCZLfo3RKJxG2Nzc5ePCned"
-    },
-    "RC路线SIL验证": {
-      "token": "DwKhdjNZZoKwPixy4FzczXJSnMg",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/DwKhdjNZZoKwPixy4FzczXJSnMg"
-    },
-    "WM-内部探索": {
-      "token": "N65zd5za0odP0NxrNmAcGZILnsi",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/N65zd5za0odP0NxrNmAcGZILnsi"
-    },
-    "场景编辑": {
-      "token": "NAqbdVbuxoDn7jxjrEzcyHmynDe",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/NAqbdVbuxoDn7jxjrEzcyHmynDe"
-    },
-    "极速模式": {
-      "token": "QU57dwOQLoxKOnxsApAcObUynUc",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/QU57dwOQLoxKOnxsApAcObUynUc"
-    },
-    "AVM鱼眼": {
-      "token": "JeGldUTfvodnFcxun08cezZunue",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/JeGldUTfvodnFcxun08cezZunue"
-    },
-    "闭环场景集推进": {
-      "token": "Bak7dBobCodJpLxZNe5cqRjQnyc",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/Bak7dBobCodJpLxZNe5cqRjQnyc"
-    },
-    "RC路线": {
-      "token": "AC3VdcT1soh6nmxxWdxcltgXnhd",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/AC3VdcT1soh6nmxxWdxcltgXnhd"
-    },
-    "Prompt-Agent": {
-      "token": "MQrKdvOKVoO25Nx5jFmcCZWenWf",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/MQrKdvOKVoO25Nx5jFmcCZWenWf"
-    },
-    "TopDiff-Agent": {
-      "token": "NDPod85sAo0rGgxXkVgcw74Anyc",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/NDPod85sAo0rGgxXkVgcw74Anyc"
-    },
-    "复现率Agent": {
-      "token": "G9fDdbV91oxLopxFLY6cKX2qnRA",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/G9fDdbV91oxLopxFLY6cKX2qnRA"
-    },
-    "车型泛化": {
-      "token": "MeLRd4JRTojlQ5xKsuWcqiYAnmd",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/MeLRd4JRTojlQ5xKsuWcqiYAnmd"
-    }
+  "CLIP-IQA": {
+   "token": "HprzdXgC6ooqIIxUQYZcADBRnrg",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/HprzdXgC6ooqIIxUQYZcADBRnrg"
   },
-  "people": {
-    "杜思聪": {
-      "token": "PG0cdm3vcoXKcRxXv3xcchzbnKc",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/PG0cdm3vcoXKcRxXv3xcchzbnKc"
-    },
-    "zhu-xiaofeng": {
-      "token": "AcdLdk5XmoKFZ4xJDFVcaiqynub",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/AcdLdk5XmoKFZ4xJDFVcaiqynub"
-    },
-    "zhouyue": {
-      "token": "YtkgduqyBopWBXxueX4cK4Tgn5g",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/YtkgduqyBopWBXxueX4cK4Tgn5g"
-    },
-    "zhou-weixu": {
-      "token": "CVKQdjsEJoF9lgxDz89cWFGgnWc",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/CVKQdjsEJoF9lgxDz89cWFGgnWc"
-    },
-    "zhou-feng": {
-      "token": "QCK1d6WMNoXqycxnTRNcGDVQn9u",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/QCK1d6WMNoXqycxnTRNcGDVQn9u"
-    },
-    "zheng-lina": {
-      "token": "ZK2TdYxlVotLDXxIWTlcjwp5nBc",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/ZK2TdYxlVotLDXxIWTlcjwp5nBc"
-    },
-    "zhaohaonan": {
-      "token": "DrmddJms1o7ddbxZbWYcQhLLnCd",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/DrmddJms1o7ddbxZbWYcQhLLnCd"
-    },
-    "zhangyu-wangboyang": {
-      "token": "Sk6IdP8OfoFsafx4AWAc9fVHnpg",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/Sk6IdP8OfoFsafx4AWAc9fVHnpg"
-    },
-    "zhangchi": {
-      "token": "XCa7d3LU3ob8lVx6zXccvsvonPb",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/XCa7d3LU3ob8lVx6zXccvsvonPb"
-    },
-    "yangxuezhi": {
-      "token": "Wu7QdkLIVougfzxT5q1cSisgnyg",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/Wu7QdkLIVougfzxT5q1cSisgnyg"
-    },
-    "yang-xinghao": {
-      "token": "E4UQdTEhiooZlxxxqqtc1VYxnUd",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/E4UQdTEhiooZlxxxqqtc1VYxnUd"
-    },
-    "yan-xiaozhu": {
-      "token": "FLaedAw3Po6a1PxUwBFcj43jnC2",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/FLaedAw3Po6a1PxUwBFcj43jnC2"
-    },
-    "xulinkun": {
-      "token": "AXRadrolPoh7SbxeAFKcPBI7n4e",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/AXRadrolPoh7SbxeAFKcPBI7n4e"
-    },
-    "xiazhixun": {
-      "token": "SsT9dQXQWoDVfnxwWx3cVJfDnVd",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/SsT9dQXQWoDVfnxwWx3cVJfDnVd"
-    },
-    "wang-yuding": {
-      "token": "NeSsdIGJ0oQzOCxEubVc8hACnzc",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/NeSsdIGJ0oQzOCxEubVc8hACnzc"
-    },
-    "qu-xinyu": {
-      "token": "W9yRdWnbeo10TgxoqpLcOLFunoc",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/W9yRdWnbeo10TgxoqpLcOLFunoc"
-    },
-    "personality-profiles": {
-      "token": "TQCcdB52UoPXHyxJA4ccPWzZnAg",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/TQCcdB52UoPXHyxJA4ccPWzZnAg"
-    },
-    "pei-jianhong": {
-      "token": "IjvVdFZ9moV1pJxSvkTcfnkrnuc",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/IjvVdFZ9moV1pJxSvkTcfnkrnuc"
-    },
-    "lv-wenjie": {
-      "token": "IZ59d5sYUo2k7IxPhNgcNMZ1nPd",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/IZ59d5sYUo2k7IxPhNgcNMZ1nPd"
-    },
-    "liuxianming": {
-      "token": "WeBgd2fcLoCTZexLyW8cINHdn2d",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/WeBgd2fcLoCTZexLyW8cINHdn2d"
-    },
-    "liukaituo": {
-      "token": "XXtodfPiBoYTE0xsBReczT6fn8g",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/XXtodfPiBoYTE0xsBReczT6fn8g"
-    },
-    "likun": {
-      "token": "GvkodksuLo2tTwx489tcB1mdnBe",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/GvkodksuLo2tTwx489tcB1mdnBe"
-    },
-    "laixihu": {
-      "token": "O9vRdNU5BoxJjmxpDqLcQDq4nrg",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/O9vRdNU5BoxJjmxpDqLcQDq4nrg"
-    },
-    "jin-xirui": {
-      "token": "NgmCdrUMgoJVDOxp5lSc77WanFf",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/NgmCdrUMgoJVDOxp5lSc77WanFf"
-    },
-    "huangbaimin": {
-      "token": "E4Tqdxuz7oc4hSxO04ZcrXcMn1c",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/E4Tqdxuz7oc4hSxO04ZcrXcMn1c"
-    },
-    "wuyimin": {
-      "token": "ZVMmd7MnloSUwwxWZwQcEkTjncc",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/ZVMmd7MnloSUwwxWZwQcEkTjncc"
-    },
-    "gaobingtao": {
-      "token": "OT67drCymoz5u1xQ2VAcq2sEnOc",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/OT67drCymoz5u1xQ2VAcq2sEnOc"
-    },
-    "feng-meihui": {
-      "token": "IOZ5drrnOoXUanxz5e4cHKwhnKb",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/IOZ5drrnOoXUanxz5e4cHKwhnKb"
-    },
-    "fanshizhou": {
-      "token": "FSTgdMsj6oHzdnxve5QcAPCYnZg",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/FSTgdMsj6oHzdnxve5QcAPCYnZg"
-    },
-    "dengshuang": {
-      "token": "DJH0d5qMQos5DZxmvbacLfVEndb",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/DJH0d5qMQos5DZxmvbacLfVEndb"
-    }
+  "Fixer优化": {
+   "token": "TBKFdCZLfo3RKJxG2Nzc5ePCned",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/TBKFdCZLfo3RKJxG2Nzc5ePCned"
   },
-  "teams": {
-    "algo-team": {
-      "token": "Mdt9dH1QWomuH1xU4gFceERHnXg",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/Mdt9dH1QWomuH1xU4gFceERHnXg"
-    },
-    "collaboration": {
-      "token": "KvkvdNEaboMLRZxNFtkc8iiZn8g",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/KvkvdNEaboMLRZxNFtkc8iiZn8g"
-    },
-    "org-structure": {
-      "token": "G7PUdqUIRo2l4LxtAbCcQdLin2e",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/G7PUdqUIRo2l4LxtAbCcQdLin2e"
-    }
+  "RC路线SIL验证": {
+   "token": "DwKhdjNZZoKwPixy4FzczXJSnMg",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/DwKhdjNZZoKwPixy4FzczXJSnMg"
   },
-  "insights": {
-    "chat-log": {
-      "token": "EJ5TdKIJPoD2MyxAwutcxIqAn3f",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/EJ5TdKIJPoD2MyxAwutcxIqAn3f"
-    }
+  "WM-内部探索": {
+   "token": "N65zd5za0odP0NxrNmAcGZILnsi",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/N65zd5za0odP0NxrNmAcGZILnsi"
   },
-  "weekly-reports": {
-    "2026-06-11": {
-      "token": "UxPqdkcKrod0lVxBCRCcov2bnSf",
-      "type": "docx",
-      "url": "https://xiaopeng.feishu.cn/docx/UxPqdkcKrod0lVxBCRCcov2bnSf"
-    }
+  "场景编辑": {
+   "token": "NAqbdVbuxoDn7jxjrEzcyHmynDe",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/NAqbdVbuxoDn7jxjrEzcyHmynDe"
+  },
+  "极速模式": {
+   "token": "QU57dwOQLoxKOnxsApAcObUynUc",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/QU57dwOQLoxKOnxsApAcObUynUc"
+  },
+  "AVM鱼眼": {
+   "token": "JeGldUTfvodnFcxun08cezZunue",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/JeGldUTfvodnFcxun08cezZunue"
+  },
+  "闭环场景集推进": {
+   "token": "Bak7dBobCodJpLxZNe5cqRjQnyc",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/Bak7dBobCodJpLxZNe5cqRjQnyc"
+  },
+  "RC路线": {
+   "token": "AC3VdcT1soh6nmxxWdxcltgXnhd",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/AC3VdcT1soh6nmxxWdxcltgXnhd"
+  },
+  "Prompt-Agent": {
+   "token": "MQrKdvOKVoO25Nx5jFmcCZWenWf",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/MQrKdvOKVoO25Nx5jFmcCZWenWf"
+  },
+  "TopDiff-Agent": {
+   "token": "NDPod85sAo0rGgxXkVgcw74Anyc",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/NDPod85sAo0rGgxXkVgcw74Anyc"
+  },
+  "复现率Agent": {
+   "token": "G9fDdbV91oxLopxFLY6cKX2qnRA",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/G9fDdbV91oxLopxFLY6cKX2qnRA"
+  },
+  "车型泛化": {
+   "token": "MeLRd4JRTojlQ5xKsuWcqiYAnmd",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/MeLRd4JRTojlQ5xKsuWcqiYAnmd"
   }
+ },
+ "people": {
+  "杜思聪": {
+   "token": "PG0cdm3vcoXKcRxXv3xcchzbnKc",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/PG0cdm3vcoXKcRxXv3xcchzbnKc"
+  },
+  "zhu-xiaofeng": {
+   "token": "AcdLdk5XmoKFZ4xJDFVcaiqynub",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/AcdLdk5XmoKFZ4xJDFVcaiqynub"
+  },
+  "zhouyue": {
+   "token": "YtkgduqyBopWBXxueX4cK4Tgn5g",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/YtkgduqyBopWBXxueX4cK4Tgn5g"
+  },
+  "zhou-weixu": {
+   "token": "CVKQdjsEJoF9lgxDz89cWFGgnWc",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/CVKQdjsEJoF9lgxDz89cWFGgnWc"
+  },
+  "zhou-feng": {
+   "token": "QCK1d6WMNoXqycxnTRNcGDVQn9u",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/QCK1d6WMNoXqycxnTRNcGDVQn9u"
+  },
+  "zheng-lina": {
+   "token": "ZK2TdYxlVotLDXxIWTlcjwp5nBc",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/ZK2TdYxlVotLDXxIWTlcjwp5nBc"
+  },
+  "zhaohaonan": {
+   "token": "DrmddJms1o7ddbxZbWYcQhLLnCd",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/DrmddJms1o7ddbxZbWYcQhLLnCd"
+  },
+  "zhangyu-wangboyang": {
+   "token": "Sk6IdP8OfoFsafx4AWAc9fVHnpg",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/Sk6IdP8OfoFsafx4AWAc9fVHnpg"
+  },
+  "zhangchi": {
+   "token": "XCa7d3LU3ob8lVx6zXccvsvonPb",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/XCa7d3LU3ob8lVx6zXccvsvonPb"
+  },
+  "yangxuezhi": {
+   "token": "Wu7QdkLIVougfzxT5q1cSisgnyg",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/Wu7QdkLIVougfzxT5q1cSisgnyg"
+  },
+  "yang-xinghao": {
+   "token": "E4UQdTEhiooZlxxxqqtc1VYxnUd",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/E4UQdTEhiooZlxxxqqtc1VYxnUd"
+  },
+  "yan-xiaozhu": {
+   "token": "FLaedAw3Po6a1PxUwBFcj43jnC2",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/FLaedAw3Po6a1PxUwBFcj43jnC2"
+  },
+  "xulinkun": {
+   "token": "AXRadrolPoh7SbxeAFKcPBI7n4e",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/AXRadrolPoh7SbxeAFKcPBI7n4e"
+  },
+  "xiazhixun": {
+   "token": "SsT9dQXQWoDVfnxwWx3cVJfDnVd",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/SsT9dQXQWoDVfnxwWx3cVJfDnVd"
+  },
+  "wang-yuding": {
+   "token": "NeSsdIGJ0oQzOCxEubVc8hACnzc",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/NeSsdIGJ0oQzOCxEubVc8hACnzc"
+  },
+  "qu-xinyu": {
+   "token": "W9yRdWnbeo10TgxoqpLcOLFunoc",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/W9yRdWnbeo10TgxoqpLcOLFunoc"
+  },
+  "personality-profiles": {
+   "token": "TQCcdB52UoPXHyxJA4ccPWzZnAg",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/TQCcdB52UoPXHyxJA4ccPWzZnAg"
+  },
+  "pei-jianhong": {
+   "token": "IjvVdFZ9moV1pJxSvkTcfnkrnuc",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/IjvVdFZ9moV1pJxSvkTcfnkrnuc"
+  },
+  "lv-wenjie": {
+   "token": "IZ59d5sYUo2k7IxPhNgcNMZ1nPd",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/IZ59d5sYUo2k7IxPhNgcNMZ1nPd"
+  },
+  "liuxianming": {
+   "token": "WeBgd2fcLoCTZexLyW8cINHdn2d",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/WeBgd2fcLoCTZexLyW8cINHdn2d"
+  },
+  "liukaituo": {
+   "token": "XXtodfPiBoYTE0xsBReczT6fn8g",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/XXtodfPiBoYTE0xsBReczT6fn8g"
+  },
+  "likun": {
+   "token": "GvkodksuLo2tTwx489tcB1mdnBe",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/GvkodksuLo2tTwx489tcB1mdnBe"
+  },
+  "laixihu": {
+   "token": "O9vRdNU5BoxJjmxpDqLcQDq4nrg",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/O9vRdNU5BoxJjmxpDqLcQDq4nrg"
+  },
+  "jin-xirui": {
+   "token": "NgmCdrUMgoJVDOxp5lSc77WanFf",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/NgmCdrUMgoJVDOxp5lSc77WanFf"
+  },
+  "huangbaimin": {
+   "token": "E4Tqdxuz7oc4hSxO04ZcrXcMn1c",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/E4Tqdxuz7oc4hSxO04ZcrXcMn1c"
+  },
+  "wuyimin": {
+   "token": "ZVMmd7MnloSUwwxWZwQcEkTjncc",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/ZVMmd7MnloSUwwxWZwQcEkTjncc"
+  },
+  "gaobingtao": {
+   "token": "OT67drCymoz5u1xQ2VAcq2sEnOc",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/OT67drCymoz5u1xQ2VAcq2sEnOc"
+  },
+  "feng-meihui": {
+   "token": "IOZ5drrnOoXUanxz5e4cHKwhnKb",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/IOZ5drrnOoXUanxz5e4cHKwhnKb"
+  },
+  "fanshizhou": {
+   "token": "FSTgdMsj6oHzdnxve5QcAPCYnZg",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/FSTgdMsj6oHzdnxve5QcAPCYnZg"
+  },
+  "dengshuang": {
+   "token": "DJH0d5qMQos5DZxmvbacLfVEndb",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/DJH0d5qMQos5DZxmvbacLfVEndb"
+  }
+ },
+ "teams": {
+  "algo-team": {
+   "token": "Mdt9dH1QWomuH1xU4gFceERHnXg",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/Mdt9dH1QWomuH1xU4gFceERHnXg"
+  },
+  "collaboration": {
+   "token": "KvkvdNEaboMLRZxNFtkc8iiZn8g",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/KvkvdNEaboMLRZxNFtkc8iiZn8g"
+  },
+  "org-structure": {
+   "token": "G7PUdqUIRo2l4LxtAbCcQdLin2e",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/G7PUdqUIRo2l4LxtAbCcQdLin2e"
+  }
+ },
+ "insights": {
+  "chat-log": {
+   "token": "EJ5TdKIJPoD2MyxAwutcxIqAn3f",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/EJ5TdKIJPoD2MyxAwutcxIqAn3f"
+  }
+ },
+ "weekly-reports": {
+  "2026-06-11": {
+   "token": "UxPqdkcKrod0lVxBCRCcov2bnSf",
+   "type": "docx",
+   "url": "https://xiaopeng.feishu.cn/docx/UxPqdkcKrod0lVxBCRCcov2bnSf"
+  }
+ },
+ "promise_base": {
+  "token": "NkIZb7eU7azZIEsegJ7cl2bfnUd",
+  "type": "bitable",
+  "url": "https://xiaopeng.feishu.cn/base/NkIZb7eU7azZIEsegJ7cl2bfnUd",
+  "table": "承诺追踪",
+  "desc": "P0承诺追踪与风险哨兵：承诺内容/承诺人/Deadline/状态/证据来源；risk_sentinel.py每日09:00判级推送"
+ }
 }

@@ -136,7 +136,44 @@ def wartable_img_gate(wt_token, weeks, logfile="/workspace/team/tmp/.img-read-lo
 
 
 
-def carryover_gate(cur, prev_token):
+def evidence_num_gate(content, pack_path):
+    """数字回查闸（P0 防幻觉）：正文里每个带单位的非日期数字，必须在证据包原文中出现。
+    命中不到 → 标 LOWCONF 强制人工确认。规范化：去空格/HTML转义/统一全半角百分号。"""
+    import html
+    ev = json.load(open(pack_path))
+    blob_parts = []
+    for p in ev.get("projects", []):
+        blob_parts.append(p.get("current_status", ""))
+        for r in p.get("progress", []):
+            blob_parts.append(r.get("text", ""))
+    for pr in ev.get("promises", []):
+        blob_parts.append(str(pr.get("content", "")) + " " + str(pr.get("evidence", "")))
+    ev_text = html.unescape(" ".join(blob_parts))
+    ev_norm = re.sub(r"\s+", "", ev_text).replace("％", "%")
+
+    doc_text = html.unescape(content)
+    issues = []
+    seen = set()
+    # 带单位的数字（%,倍,个,km,h,h,min,例,条,款,城,组,case/Case,辆）或直接词数字 >20 且非日期片段
+    pats = [r"\d+(?:\.\d+)?\s*%", r"\d+(?:\.\d+)?\s*(?:倍|km|min|h\b|城|款车?|个case|条|项|例|辆)", r">\d+(?:\.\d+)?"]
+    for pat in pats:
+        for m in re.finditer(pat, doc_text):
+            num = re.search(r"\d+(?:\.\d+)?", m.group(0)).group(0)
+            if num in seen:
+                continue
+            seen.add(num)
+            if num in ("2025", "2026", "2027"):
+                continue
+            if num not in ev_norm:
+                ctx = doc_text[max(0, m.start()-25):m.end()+10]
+                issues.append(("数字未溯源", "LOWCONF：该数字不在本次证据包内，人工回源或删除",
+                               html.unescape(m.group(0)) + " ← …" + re.sub(r"<[^>]+>", "", ctx).strip()[-50:]))
+            if len(issues) >= 20:
+                return issues
+    return issues
+
+
+
     import re as _re
     r=subprocess.run(["lark-cli","docs","+fetch","--api-version","v2","--doc",prev_token,"--doc-format","markdown","--format","json"],capture_output=True,text=True)
     prev=json.loads(r.stdout).get("data",{}).get("document",{}).get("content","")
@@ -175,6 +212,10 @@ def main():
         print(f"作战表贴图({','.join(weeks)}): 已读 {len(readt)}/{len(toks)}")
         for t in unread:
             issues.append(("作战表图未读", f"{','.join(weeks)}窗口贴图未逐张读", t))
+    if "--evidence" in sys.argv:
+        evp = sys.argv[sys.argv.index("--evidence") + 1]
+        for i in evidence_num_gate(c, evp):
+            issues.append(i)
     if "--prev" in sys.argv:
         pv=sys.argv[sys.argv.index("--prev")+1]
         dup=carryover_gate(c,pv)
