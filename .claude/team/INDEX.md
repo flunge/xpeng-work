@@ -30,7 +30,7 @@
 | 内部索引（记了什么） | `UwiEdTJJ2oRGokxtkE2cJXjwnyb` |
 | 溯源索引（从哪读的） | `SsWCdQbVZohGHFxhE3RcCmJ2nSb` |
 | 名称 → 飞书文档 token 映射 | `/workspace/team/memory/_feishu_map.json` |
-| 承诺追踪 Base（P0 风险哨兵） | `NkIZb7eU7azZIEsegJ7cl2bfnUd`（表「承诺追踪」：承诺内容/承诺人/Deadline/状态/证据来源/最近核查日期） |
+| 承诺追踪 Base（P0 风险哨兵） | `NkIZb7eU7azZIEsegJ7cl2bfnUd`（表「承诺追踪」：承诺内容/承诺人/Deadline/状态/证据来源/最近核查日期；表「开口项追踪」tblZ7Mp5mLhY2Cnw：各项目 PENDING/风险/遗留事项的开口+状态闭坏，与 ledger 互锁） |
 
 - 项目 ledger / 人物画像 / chat-log / 周报 **全部在飞书**，读写靠 `_feishu_map.json` 定位。
 - **需要修改内容 = 直接改飞书文档**；本地不留任何中间产物，修改轮次结束即删。
