@@ -34,3 +34,16 @@
 - `team/scripts/harvest_open_items.py`：开口项策展清单 + 入库。
 - `team/scripts/seed_episode.py`：Episode 首批种子（模板=可跑模式）。
 - 待做：Episode 每日增量 ingestion；risk_sentinel 接入开口项追踪（stale 检测：最近核查日期>N 天）。
+
+## 附：Storyline主线卡设计（P2，已建表）
+
+**表**：`Storyline主线卡` @ 追踪Base（NkIZb7eU7azZIEsegJ7cl2bfnUd）。
+
+**字段**：项目 / 周期（W##）/ ①定位一句话 / ②本周发生了什么（必引 Episode record_id）/ ③数字与证据（引 Episode 关键数字）/ ④状态与风险（引开口项 record_id）/ ⑤下周预判 / 生成依据EpisodeIDs / 人工确认（已确认|待确认）/ 生成时间。
+
+**生产流程（v1 人审半自动）**：
+1. 每周五 20:00：命令生成器拉取当周 Week element（项目级），用 `memory_query.py` 恩证据包集会产出候选卡；（自动化可接 xai -p ）
+2. 周六：李坤人审（IM 推送 URL），点掉错误、落到 ledger 可读界面；
+3. ledger 引用 storyline，不在 ledger 重复写叙事。
+
+**与 ledger 分工**：故事性事件/数字只在 Episode；Suspension 类判断在开口项；ledger 只在「当前状态」读 storyline，不再手写 叙述。
