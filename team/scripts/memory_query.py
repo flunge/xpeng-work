@@ -94,18 +94,61 @@ def parse_status(content):
     return strip_tags(sec)[:800] if sec else ""
 
 
-def fetch_promises(start_d, end_d):
-    out = cli("base", "+record-list", "--base-token", PROMISE_BASE,
-              "--table-id", "承诺追踪", "--limit", "500", "--page-all")
-    if not out.get("ok"):
+def _list_records(table):
+    """record-list markdown 表解析（当前 lark-cli 完整载荷）。返回 [{字段名: 值}]"""
+    r = subprocess.run(["lark-cli", "--profile", PROFILE, "base", "+record-list",
+                        "--base-token", PROMISE_BASE, "--table-id", table,
+                        "--limit", "200", "--as", "user", "--format", "markdown"],
+                       capture_output=True, text=True, timeout=90)
+    return _parse_md_table(r.stdout)
+
+
+def _parse_md_table(text):
+    lines = [ln for ln in text.splitlines() if ln.startswith("| ")]
+    if len(lines) < 2:
         return []
+    header = [c.strip() for c in lines[0].strip("|").split("|")]
+    rows = []
+    for ln in lines[2:]:
+        cells = [c.strip() for c in ln.split("|")][1:-1]
+        if len(cells) < len(header):
+            continue
+        rows.append(dict(zip(header, cells)))
+    return rows
+
+
+def fetch_episodes(start_d, end_d):
+    """从 Episode事件流 拉窗口内记录：日期过滤 + 项目缝合。"""
+    rows = _list_records("Episode事件流")
     items = []
-    for r in out["data"].get("records", []):
-        f = r["fields"]
-        items.append({"record_id": r["record_id"],
-                      "content": f.get("承诺内容"), "owner": f.get("承诺人"),
-                      "deadline": f.get("Deadline"), "status": f.get("状态"),
-                      "projects": f.get("相关项目"), "evidence": f.get("证据来源")})
+    for r in rows:
+        t = r.get("时间", "")
+        m = DATE_RE.search(t)
+        if not m:
+            continue
+        try:
+            d = datetime.strptime(m.group(1).replace("/", "-"), "%Y-%m-%d").date()
+        except ValueError:
+            continue
+        if not (start_d <= d <= end_d):
+            continue
+        items.append({
+            "date": str(d), "summary": r.get("事件摘要", ""),
+            "src_type": r.get("来源类型", ""), "src": r.get("来源定位", ""),
+            "projects": [p.strip() for p in r.get("涉及项目", "").split(",") if p.strip()],
+            "key_numbers": r.get("关键数字", ""), "action": r.get("动作", ""),
+            "url": r.get("原文链接", "")})
+    return items
+
+
+def fetch_promises(start_d, end_d):
+    rows = _list_records("承诺追踪")
+    items = []
+    for r in rows:
+        items.append({"record_id": r.get("_record_id", ""),
+                      "content": r.get("承诺内容", ""), "owner": r.get("承诺人", ""),
+                      "deadline": r.get("Deadline", ""), "status": r.get("状态", ""),
+                      "projects": r.get("相关项目", ""), "evidence": r.get("证据来源", "")})
     return items
 
 
@@ -124,7 +167,13 @@ def main():
 
     pack = {"window": {"start": args.start, "end": args.end},
             "generated_at": datetime.now().isoformat(timespec="seconds"),
-            "projects": [], "promises": fetch_promises(start_d, end_d)}
+            "projects": [], "promises": fetch_promises(start_d, end_d),
+            "open_items": _add_open_items(), "episodes": fetch_episodes(start_d, end_d)}
+
+    # 把 Episode 按项目贴合
+    for proj in pack["projects"]:
+        proj["episodes"] = [e for e in pack["episodes"]
+                            if proj["name"] in e["projects"]]
 
     for name, meta in fmap.get("projects", {}).items():
         if wanted and name not in wanted:
@@ -143,9 +192,25 @@ def main():
     out_json = json.dumps(pack, ensure_ascii=False, indent=2)
     if args.out:
         Path(args.out).write_text(out_json, encoding="utf-8")
-        print(f"written: {args.out} ({len(out_json)} chars)")
+        print(f"written: {args.out} ({len(out_json)} chars) "
+              f"episodes={len(pack['episodes'])} promises={len(pack['promises'])} "
+              f"open_items={len(pack['open_items'])}")
     else:
         print(out_json)
+
+
+def _add_open_items():
+    rows = _list_records("开口项追踪")
+    out = []
+    for r in rows:
+        st = r.get("状态", "").strip('"[] ')
+        out.append({
+            "record_id": r.get("_record_id", ""),
+            "project": r.get("项目", ""), "item": r.get("事项", ""),
+            "status": st, "open_date": r.get("开口日期", ""),
+            "open_src": r.get("开口来源", ""), "close_src": r.get("关闭来源", ""),
+            "evidence": r.get("证据原文", "")})
+    return out
 
 
 if __name__ == "__main__":
