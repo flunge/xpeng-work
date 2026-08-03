@@ -73,20 +73,18 @@ def norm_text(v):
 
 
 def _list_records(table):
-    """统一分页拉取（移植自 lark-cli 当前的默认限制/结构）。"""
-    recs, offset = [], 0
-    while True:
-        out = cli("base", "+record-list", "--base-token", BASE_TOKEN,
-                  "--table-id", table, "--limit", "200",
-                  "--offset", str(offset), "--format", "json")
-        if not out.get("ok"):
-            return out, None
-        data = out.get("data") or {}
-        page = data.get("records") or data.get("items") or []
-        recs.extend(page)
-        if not data.get("has_more") or len(page) == 0:
-            break
-        offset += len(page)
+    """json 模式拼装：data.data 权行 + fields 字段名 + record_id_list 合并。"""
+    out = cli("base", "+record-list", "--base-token", BASE_TOKEN,
+              "--table-id", table, "--limit", "200", "--format", "json")
+    if not out.get("ok"):
+        return out, []
+    data = out.get("data") or {}
+    fields = data.get("fields") or []
+    rows = data.get("data") or []
+    ids = data.get("record_id_list") or []
+    recs = []
+    for rid, values in zip(ids, rows):
+        recs.append({"record_id": rid, "fields": dict(zip(fields, values))})
     return {"ok": True}, recs
 
 
