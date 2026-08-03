@@ -10,4 +10,4 @@
 	url = https://github.com/NousResearch/hermes-agent.git
 [submodule "repos/xai"]
 	path = repos/xai
-	url = https://github.com/earendil-works/pi.git
+	url = git@github.com:flunge/xai.git
