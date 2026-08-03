@@ -56,9 +56,9 @@ for (x, y, max_px, items, size, lh, gap) in BODIES:
         prev = base + (n - 1) * lh
 
 json.dump(doc, open(f".nb_{WHICH}.json", "w"), ensure_ascii=False)
-r = subprocess.run(["lark-cli", "whiteboard", "+update", "--whiteboard-token", TOKEN,
+r = subprocess.run(["lark-cli", "--profile", "xpeng", "whiteboard", "+update", "--whiteboard-token", TOKEN,
                     "--source", f"@.nb_{WHICH}.json", "--input_format", "raw",
                     "--idempotent-token", f"nb-{WHICH}-{TOKEN[:6]}-c", "--as", "user", "--overwrite"],
-                   capture_output=True, text=True)
+                   capture_output=True, text=True, timeout=180)
 print(f"{WHICH}: 节点 {len(nodes)}（含标签+内容框 {bi}）；push:",
       "OK" if '"ok": true' in r.stdout else "FAIL " + r.stdout[:150])

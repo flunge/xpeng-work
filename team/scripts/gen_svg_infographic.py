@@ -429,9 +429,126 @@ def team_org():
 
 GENERATORS = {"topic1": topic1, "topic2": topic2, "topic3": topic3, "topic4": topic4, "team_org": team_org}
 
+
+# ============== 2026-07-31 (W31) 重写：与 0731 双周报正文对齐的四个 Topic ==============
+
+def topic1_w31():
+    global H; H=560
+    s=_header("Topic 1\uff5c车型泛化","Q3 优先级第一：12 车型 PAT 8/10 收口；参数偏差与 CCES 跨车型可比规律")
+    y=112
+    s+=_kpi(36,y,300,"12 车型 PAT","h93aes/f01xccp/f30bes/g01/g02/d01a/d02es/d03es/v01/e29/f57aes/e38be",h=92)
+    s+=_kpi(352,y,300,"7.40% vs 6.02%","车型间离散 vs 同车型车辆间离散（口径收紧）",h=92)
+    s+=_kpi(668,y,320,"🔴 F57 冲突","实车安全 KPI 与泛化结论方向相反、未解除",h=92)
+    cy=y+112
+    s+=_card(36,cy,448,298,"⭐ 效率优化：历史基线 vs 新口径（三层 benchmark）")
+    _a,_=_wbullets(58,cy+66,412,[
+        ("历史路径",ACCENT,"0701 51 → 0707 nvfixer+解 OOM 17 → 0713 共用解码/加载 11.8 min/卡"),
+        ("7/31 新口径",NUM,"开环约 40 min/case；闭环泛化近乎即时；批量 1 卡 4 case 平均约 10 min/卡/case"),
+        ("待统一",WARN,"两套口径不可直接替换；W32 统一单帧 latency / 单 case 吞吐 / 端到端三层 benchmark"),
+    ],size=12,lh=17,gap=8)
+    s+=_a
+    s+=_card(508,cy,480,298,"诊断依据（NNHA 12 组实验）+ 结论口径")
+    _b,_=_wbullets(530,cy+66,444,[
+        ("单车诊断",NUM,"G02 不加速=side front left 外参；D03 偏右=右前外参 2°；斑马车衣→不加速"),
+        ("F57 主假设",WARN,"个体外参差异：两辆 F57 测试车 cost 均高于 good case；17 项安全类对比 13/3/1 不足以定论"),
+        ("口径收紧",ACCENT,"结论限定「同车型不同车辆」；异常样本分层（f01xccp 偏差 369mm/211 异常、g01 36mm/9）"),
+        ("下一闭环",TXT,"A/D/E/B 四格消融 + 平移外参；代表外参均值 vs p10/p50/p90；metric 分级+三套口径，支撑 8/10"),
+    ],size=12,lh=17,gap=8)
+    s+=_b
+    return wrap(s)
+
+
+def topic2_w31():
+    global H; H=560
+    s=_header("Topic 2\uff5c闭环仿真 + HIL","从链路可跑到可量产验收：先闭数据有效率，再完成大样本 A/B 与一致性验证")
+    y=112
+    s+=_kpi(36,y,300,"60 条 ≈2000km","新版 RC 冻结路线（W31 口径）",h=92)
+    s+=_kpi(352,y,300,"175 条 event","本周新增，backfill 已触发、有效率待产出",h=92)
+    s+=_kpi(668,y,320,"95% / 85%","W31 周目标：可用率 / 多次一致性优秀率",h=92)
+    cy=y+112
+    s+=_card(36,cy,300,298,"RC 长里程 + 数据链路")
+    _a,_=_wbullets(58,cy+66,264,[
+        ("数据生产",NUM,"新采集路线已生产处理；subrunID 生成失败 28/111（数据闭环部补偿、拟切 lance 新链路）"),
+        ("链路修复",NUM,"SF topic 全量缺失 + 时序匹配已闭环修复"),
+        ("风险",WARN,"数据有效率/留存率尚未闭环（🔴 本期最大项）"),
+    ],size=12,lh=17,gap=9)
+    s+=_a
+    s+=_card(360,cy,300,298,"HIL / A/B 压测")
+    _b,_=_wbullets(382,cy+66,264,[
+        ("A/B 测试",NUM,"双版本各 2000 case 已启动；4 节点端到端约 20 小时"),
+        ("压测效率",NUM,"500km 压测与交付对齐：正常状态 1:2.4"),
+        ("RTM",WARN,"切换问题已修复：正常车速 5 秒内重建、怠速重建受限；Road 加载偏慢待优化"),
+    ],size=12,lh=17,gap=9)
+    s+=_b
+    s+=_card(688,cy,300,298,"慢速模式 + 计划")
+    _c,_=_wbullets(710,cy+66,264,[
+        ("一致性",NUM,"100 测试集×常规/慢速各 5 次；常规模式轨迹异常已重跑、分析继续"),
+        ("平台集成",ACCENT,"前端可操作传参 + SimWorld 代码就绪，待机器调试后合入主线"),
+        ("计划",TXT,"W32 出 backfill 后数据有效率 + 完成 A/B；下双周 Road 加载 + 量产级资源/日里程评估"),
+    ],size=12,lh=17,gap=9)
+    s+=_c
+    return wrap(s)
+
+
+def topic3_w31():
+    global H; H=560
+    s=_header("Topic 3\uff5c极速模式 / 生产链路","NVFixer 提效基线确立；nvfixer 替代 difix 打通生产链路；复现率冲 50%")
+    y=112
+    s+=_kpi(36,y,300,"120 → 17 min/clip","增量式生产提效（-86%），转向复现率上限",h=92)
+    s+=_kpi(352,y,300,"单图 -70%","nvfixer 0.249s vs difix 0.814s（降幅 ~69.4%）",h=92)
+    s+=_kpi(668,y,320,"冲 50%","W31 复现率周目标；feedforward 提上限",h=92)
+    cy=y+112
+    s+=_card(36,cy,448,298,"⭐ nvfixer 替代 difix（生产链路已打通）")
+    _a,_=_wbullets(58,cy+66,412,[
+        ("工程链路",NUM,"代码打通 + Holmes 两种尺寸 .engine 制成；PPU 显存最大 18.64GB"),
+        ("批量验证",NUM,"UCP/CloudSim 半卡批量测试通过；单 case 省 0.2h（2.8h→2.6h）；CloudSim 全量批跑推进中"),
+        ("待解",WARN,"5090 主线适配跑通但 FM 无输出，调查中；效果 vs pytorch 版本统计中"),
+    ],size=12,lh=17,gap=8)
+    s+=_a
+    s+=_card(508,cy,480,298,"数据生产 + 复现率上限 + 场景编辑")
+    _b,_=_wbullets(530,cy+66,444,[
+        ("训练数据",NUM,"7200 通过验收 → 10000 clip 完成（含 8832/10000）；失败 clip 复跑；看板：发起 12831/成功 9601/通过 7236/质检失败 2661"),
+        ("复现率",WARN,"上限受 feedforward 重建质量制约（核心瓶颈）；DVGT-2 A100 24 卡训练、Dino feature 多卡 loss 正常"),
+        ("场景编辑",ACCENT,"分层渲染链路重构、旁车屏蔽修复、cut-in 轨迹生成"),
+        ("计划",TXT,"复现率冲 50% + feedforward 提上限；切出/跟车/对向各 100 个泛化库 + 需求方反馈收口"),
+    ],size=12,lh=17,gap=8)
+    s+=_b
+    return wrap(s)
+
+
+def topic4_w31():
+    global H; H=560
+    s=_header("Topic 4\uff5cAI Agent 产品化","从『能跑』到自动触发、生产验收、成本可控")
+    y=112
+    s+=_kpi(36,y,300,"21 项 / 90%","Diff Review Agent metric 覆盖 / 测试集平均准确率",h=92)
+    s+=_kpi(352,y,300,"66.7%","Oncall 回答准确率（流程类问题）",h=92)
+    s+=_kpi(668,y,320,"Qwen3.5-9B","复现 Agent 本地部署模型选型已确定",h=92)
+    cy=y+112
+    s+=_card(36,cy,448,298,"Diff Review Agent：自主迭代闭环已跑通")
+    _a,_=_wbullets(58,cy+66,412,[
+        ("闭环",ACCENT,"训练→使用→人工复核→错误 Case 回流→自主迭代，已跑通"),
+        ("W31 目标",NUM,"验收通过 >8 项 + 新增开发 2 项；上线及新类别开发推进中"),
+    ],size=12,lh=17,gap=8)
+    s+=_a
+    s+=_card(508,cy,480,298,"Oncall / 复现 Agent / 产品准入口径")
+    _b,_=_wbullets(530,cy+66,444,[
+        ("Oncall",NUM,"已投入使用；覆盖 FM 仿真/Webviz/CloudSim 流程类；问题种类扩充中；全部上线产品化（W31 目标）"),
+        ("复现 Agent",NUM,"后端—算法链路打通；本地模型 = Qwen3.5-9B；微调可行性验证中"),
+        ("准入口径",WARN,"测试集准确率 ≠ 生产验收：转向自动触发 + 生产验收集 + token 成本统计（本期主要差距）"),
+        ("计划",TXT,"下双周出场景集自动触发联调 + 验收集/成本统计 + 本地模型验证结论"),
+    ],size=12,lh=17,gap=8)
+    s+=_b
+    return wrap(s)
+
+
+GENERATORS["topic1"] = topic1_w31
+GENERATORS["topic2"] = topic2_w31
+GENERATORS["topic3"] = topic3_w31
+GENERATORS["topic4"] = topic4_w31
+
 if __name__ == "__main__":
     import sys, os
-    OUT = "/workspace/team/tmp"
+    OUT = os.environ.get("GS_OUT", "/workspace/team/tmp")
     os.makedirs(OUT, exist_ok=True)
     which = sys.argv[1] if len(sys.argv) > 1 else "topic1"
     _reset_geom()                      # 清空上一张图的几何登记
