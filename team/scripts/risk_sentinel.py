@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
-"""每日 09:00 承诺风险哨兵（P0 版）
+"""每日 09:00 风险哨兵（P0 版）
 
-数据源：飞书 Base「承诺追踪与风险哨兵」（承诺追踪表），token 由 --base-token 指定。
-行为：
+数据源：飞书 Base「追踪Base」（承诺追踪表 + 开口项追踪表）。
+承诺模块（原有）：
   1. 拉全部记录，按规则计算风险等级（规则引擎，非 LLM）：
      - Deadline < 今天 且 状态 ∈ {进行中,低风险}   → 已逾期（高风险等级）
      - 今天 ≤ Deadline ≤ 今天+2 且 最近核查日期 < 昨天 → 高风险
@@ -10,6 +10,11 @@
   2. 将自动判级的状态写回 Base（幂等：只在状态变化时更新）。
   3. 只向李坤 DM 推送「状态变化」的记录（即本次运行中等级变化的项，
      防止每天重复轰炸）；若全部为头版运行则推送全量非完成项。
+开口项模块（2026-08-03 新增）：
+  - 扫「开口项追踪」表：
+    * suspected-close 条目 → 每日提醒「疑似已关闭，待有人确认」；
+    * open 条目 且 最近核查日期 > 7 天（或为空） → 提醒「开口项失联，需重新悬挂」。
+  - 只做提醒推送、不回写；防止每天重复轰炸 → 同样基于首次/状态变化状态文件记忆。
 运行：python3 team/scripts/risk_sentinel.py [--dry-run] [--push]
 依赖：lark-cli（--profile xpeng，user+bot 双身份已配置）
 """
@@ -23,6 +28,7 @@ from datetime import date, datetime, timedelta
 PROFILE = "xpeng"
 BASE_TOKEN = "NkIZb7eU7azZIEsegJ7cl2bfnUd"
 TABLE_NAME = "承诺追踪"
+OPEN_TABLE = "开口项追踪"
 DM_CHAT = "oc_bc5bb378d432fca62a7786e26cf82578"  # 与 xpeng 机器人的单聊
 STATE_FILE = "/tmp/risk_sentinel_state.json"
 
@@ -66,13 +72,30 @@ def norm_text(v):
     return str(v) if v is not None else ""
 
 
+def _list_records(table):
+    """统一分页拉取（移植自 lark-cli 当前的默认限制/结构）。"""
+    recs, offset = [], 0
+    while True:
+        out = cli("base", "+record-list", "--base-token", BASE_TOKEN,
+                  "--table-id", table, "--limit", "200",
+                  "--offset", str(offset), "--format", "json")
+        if not out.get("ok"):
+            return out, None
+        data = out.get("data") or {}
+        page = data.get("records") or data.get("items") or []
+        recs.extend(page)
+        if not data.get("has_more") or len(page) == 0:
+            break
+        offset += len(page)
+    return {"ok": True}, recs
+
+
 def fetch_records():
-    out = cli("base", "+record-list", "--base-token", BASE_TOKEN,
-              "--table-id", TABLE_NAME, "--limit", "500", "--page-all")
+    out, recs = _list_records(TABLE_NAME)
     if not out.get("ok"):
         print(json.dumps(out, ensure_ascii=False, indent=2), file=sys.stderr)
         sys.exit(1)
-    return out["data"].get("records", [])
+    return recs or []
 
 
 def grade(rec, today):
@@ -177,6 +200,64 @@ def main():
         print("push:", "ok" if ok else "failed")
         if ok:
             save_prev(state)
+
+    # ── 开口项模块：suspected-close 提醒 + stale 失联提醒 ──
+    open_changed, open_report = check_open_items(today)
+    prev_open = prev.get("_open_items", {}) if isinstance(prev, dict) else {}
+    if open_report:
+        print("\n开口项提醒:")
+        for r, lvl, reasons in open_report:
+            f = r["fields"]
+            print(f"  - [{lvl}] {norm_text(f.get('项目'))}｜{norm_text(f.get('事项'))[:40]} | {';'.join(reasons)}")
+    if args.push and not args.dry_run:
+        # 每级只推新出现的一组（防止每日重发同一批）
+        alerts = [(r, lvl, reasons) for (r, lvl, reasons) in open_report
+                  if prev_open.get(r["record_id"]) != lvl]
+        if alerts:
+            lines = []
+            for r, lvl, reasons in alerts:
+                f = r["fields"]
+                lines.append(
+                    f"[{lvl}] {norm_text(f.get('项目'))}｜{norm_text(f.get('事项'))[:40]}"
+                    f"\n    原因：{'；'.join(reasons)}")
+            text = "📌 开口项状态提醒 " + str(date.today()) + "\n\n" + "\n".join(lines)
+            out = cli("im", "+messages-send", "--chat-id", DM_CHAT,
+                      "--msg-type", "text",
+                      "--content", json.dumps({"text": text}, ensure_ascii=False),
+                      as_identity="bot")
+            print("open-push:", "ok" if out.get("ok") else "failed", f"({len(alerts)}条)")
+        new_open = {"_open_items": {r["record_id"]: lvl for (r, lvl, _) in open_report}}
+        prev.update(new_open)
+        save_prev(prev)
+
+
+def fetch_open_records():
+    out, recs = _list_records(OPEN_TABLE)
+    return recs or []
+
+
+def check_open_items(today):
+    """返回 (changed, report): report=[(rec, level, [reasons])]，level∈{疑似关闭,开口项失联}"""
+    report = []
+    state = {}
+    changed = []
+    for r in fetch_open_records():
+        f = r["fields"]
+        status = norm_text(f.get("状态")) or "open"
+        checked = to_date(f.get("最近核查日期"))
+        stale = checked is None or checked <= today - timedelta(days=7)
+        lv = None
+        reasons = []
+        if status == "suspected-close":
+            lv, reasons = "疑似关闭", [
+                "已具备关闭候选证据，需人工确认", norm_text(f.get("证据原文"))[:60]]
+        elif status == "open" and stale:
+            lv = "开口项失联"
+            reasons = ["开口超7天未核查" if checked is None else f"最近核查 {checked} 超 7 天"]
+        if lv:
+            report.append((r, lv, reasons))
+            state[r["record_id"]] = lv
+    return changed, report
 
 
 if __name__ == "__main__":
