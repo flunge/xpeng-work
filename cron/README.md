@@ -8,7 +8,7 @@ macOS 的 cron 由系统 launchd 启动，缺少 `~/Documents` 的"完全磁盘�
 导致所有任务执行时报 `Operation not permitted`。现已改用**用户级 LaunchAgent**：
 launchd 在用户登录会话中运行，继承对 `~/Documents` 的完整访问权。
 
-进一步优化：**9/10 任务直接用 Python 运行**（Python 已有完全磁盘访问权限），
+进一步优化：**11/12 任务直接用 Python 运行**（Python 已有完全磁盘访问权限），
 完全绕过 `/bin/bash` 的 TCC 限制。仅 `daily-sync` 因含 bash heredoc 仍需 bash。
 
 ## 安装
@@ -18,7 +18,7 @@ bash cron/install.sh
 ```
 
 安装脚本会：
-1. 生成 10 个 plist 到 `~/Library/LaunchAgents/`
+1. 生成 12 个 plist 到 `~/Library/LaunchAgents/`
 2. 用 `launchctl load` 加载全部任务
 3. 备份并清空 crontab（备份在 `cron/crontab.backup.*`）
 
@@ -60,6 +60,8 @@ cron/
 | 任务 | Label | 调度 | 运行方式 |
 |------|-------|------|----------|
 | 数据同步 | com.xpeng.daily-sync | 每天 22:00 | bash（需 FDA） |
+| **文档镜像+索引** | com.xpeng.larkdocs-sync | 每天 23:00 | Python direct（P0/P1：larkdocs_sync.py 镜像→doc_rag.py 建库） |
+| **Storyline 主线卡** | com.xpeng.storyline-gen | 每周五 20:00 | Python direct（P2：写 Base 待确认 → 推送李坤周六审） |
 | 周标题更新 | com.xpeng.week-label | 每周一 08:00 | Python direct |
 | 项目风险播报 | com.xpeng.risk-push | 每天 09:00 | Python direct |
 | 10支股票推荐 | com.xpeng.stock-pick | 每天 09:00 | Python direct |
@@ -101,7 +103,7 @@ tail -20 cron/logs/com.xpeng.risk-push.log
 1. 系统设置 → 隐私与安全性 → **完全磁盘访问权限**
 2. 点 `+`，按 `⌘⇧G` 输入 `/bin/bash`，添加并打开开关
 
-其余 9 个任务直接用 Python 运行，无需此步骤。
+其余 11 个任务直接用 Python 运行，无需此步骤。
 
 如果不想给 bash 授权，daily-sync 的数据同步功能可以手动运行：
 ```bash

@@ -30,6 +30,8 @@ LABELS=(
     com.xpeng.evening-chat
     com.xpeng.meal-notify
     com.xpeng.meal-generate-month
+    com.xpeng.larkdocs-sync
+    com.xpeng.storyline-gen
 )
 
 mkdir -p "$LAUNCH_DIR" "$LOG_DIR"
@@ -93,7 +95,7 @@ MONTHLY_END='<array>
 
 echo "📝 生成 plist 文件…"
 
-# ===== 9 个 Python-direct 任务（绕过 bash，直接用 Python）=====
+# ===== 10 个 Python-direct 任务（绕过 bash，直接用 Python）=====
 
 # 1. 周标题更新 — 每周一 08:00
 emit_plist com.xpeng.week-label "$(weekly 1 8)" \
@@ -147,6 +149,16 @@ emit_plist com.xpeng.daily-sync "$(daily 22)" \
     "$REPO_ROOT/team/memory/daily-sync/launchd-stdout.log" \
     /bin/bash "$REPO_ROOT/cron/scripts/daily-sync.sh"
 
+# 11. larkdocs 文档镜像+索引 — 每天 23:00（P0 持久镜像 -> P1 FTS5 索引重建）
+emit_plist com.xpeng.larkdocs-sync "$(daily 23)" \
+    "$LOG_DIR/com.xpeng.larkdocs-sync.log" \
+    "$PYTHON" "$REPO_ROOT/team/scripts/larkdocs_sync.py"
+
+# 12. Storyline 主线卡候选生成 — 每周五 20:00（P2 半自动；写库为候选待确认，李坤周六审）
+emit_plist com.xpeng.storyline-gen "$(weekly 5 20)" \
+    "$LOG_DIR/com.xpeng.storyline-gen.log" \
+    "$PYTHON" "$REPO_ROOT/team/scripts/storyline_gen.py"
+
 # ---- 加载所有 plist ----
 echo "🚀 加载 LaunchAgent…"
 for label in "${LABELS[@]}"; do
@@ -166,7 +178,7 @@ fi
 
 # ---- 打印状态 ----
 echo ""
-echo "✅ 已安装 ${#LABELS[@]} 个 LaunchAgent（9 个 Python-direct + 1 个 bash）："
+echo "✅ 已安装 ${#LABELS[@]} 个 LaunchAgent（11 个 Python-direct + 1 个 bash）："
 echo ""
 for label in "${LABELS[@]}"; do
     info=$(launchctl list "$label" 2>/dev/null || true)
@@ -179,7 +191,7 @@ done
 echo ""
 echo "⚠️  daily-sync 仍通过 /bin/bash 运行，需在系统设置 → 隐私与安全性 →"
 echo "   完全磁盘访问权限 中添加 /bin/bash（⌘⇧G 输入 /bin/bash）。"
-echo "   其余 9 个任务直接用 Python 运行，无需此步骤。"
+echo "   其余 11 个任务直接用 Python 运行，无需此步骤。"
 echo ""
 echo "日志目录: $LOG_DIR/"
 echo "卸载:     bash cron/uninstall.sh"

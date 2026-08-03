@@ -17,6 +17,8 @@ LABELS=(
     com.xpeng.evening-chat
     com.xpeng.meal-notify
     com.xpeng.meal-generate-month
+    com.xpeng.larkdocs-sync
+    com.xpeng.storyline-gen
 )
 
 echo "🔄 卸载 LaunchAgent…"

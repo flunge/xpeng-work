@@ -161,6 +161,54 @@ def push_post(items):
     return out.get("ok", False)
 
 
+PROJECT_STALE_DAYS = 7
+EPISODE_TABLE = "Episode事件流"
+
+
+def check_project_stall(today):
+    """项目级停摆哨兵：某项目 Episode 最近一条 > 7 天（且开口项还有未闭环项）→ 风险提示。
+    返回 report=[(project, last_date, days_stale, open_count)]"""
+    # Episode 事件流：按项目取最近日期
+    out, recs = _list_records(EPISODE_TABLE)
+    proj_last = {}
+    for r in recs:
+        f = r["fields"]
+        proj_raw = norm_text(f.get("涉及项目"))
+        tstr = norm_text(f.get("时间"))
+        if not proj_raw or not tstr:
+            continue
+        d = to_date(tstr)
+        if not d:
+            continue
+        for p in proj_raw.replace("，", ",").replace("、", ",").split(","):
+            p = p.strip()
+            if d > proj_last.get(p, date(2000, 1, 1)):
+                proj_last[p] = d
+    # 开口项：有 open 的项目才给提示（已全部闭环就不报）
+    open_by_proj = {}
+    for r in fetch_open_records():
+        f = r["fields"]
+        st = norm_text(f.get("状态")) or "open"
+        if st not in ("open", "suspected-close"):
+            continue
+        for p in norm_text(f.get("项目")).replace("，", ",").replace("、", ",").split(","):
+            p = p.strip()
+            if p:
+                open_by_proj[p] = open_by_proj.get(p, 0) + 1
+    # 重点监控项目集合（有跟踪价值的）
+    keys = set(open_by_proj) | {k for k, v in proj_last.items() if v >= date(2026, 7, 1)}
+    report = []
+    for p in sorted(keys):
+        last = proj_last.get(p)
+        if last is None:
+            days = 999
+        else:
+            days = (today - last).days
+        if days >= PROJECT_STALE_DAYS and open_by_proj.get(p, 0) > 0:
+            report.append((p, last, days, open_by_proj[p]))
+    return report
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--dry-run", action="store_true")
@@ -227,6 +275,24 @@ def main():
         new_open = {"_open_items": {r["record_id"]: lvl for (r, lvl, _) in open_report}}
         prev.update(new_open)
         save_prev(prev)
+
+    # ── 项目级停摆哨兵 ──
+    stall = check_project_stall(today)
+    if stall:
+        print("\n项目停摆提醒（Episode>7 天未更新 + 尚有未闭环开口项）:")
+        for p, last, days, open_n in stall:
+            print(f"  - {p}: 最后 Episode {last}（{days}天前），未闭环开口 {open_n} 条")
+    if args.push and not args.dry_run and stall:
+        lines = []
+        for p, last, days, open_n in stall:
+            last_s = str(last) if last else "无记录"
+            lines.append(f"{p}：最后 Episode {last_s}（{days} 天前），仍有 {open_n} 条 open/suspected-close 开口项")
+        text = "📊 项目停摆哨兵 " + str(date.today()) + "\n\n" + "\n".join(lines)
+        out = cli("im", "+messages-send", "--chat-id", DM_CHAT,
+                  "--msg-type", "text",
+                  "--content", json.dumps({"text": text}, ensure_ascii=False),
+                  as_identity="bot")
+        print("stall-push:", "ok" if out.get("ok") else "failed", f"({len(stall)}条)")
 
 
 def fetch_open_records():

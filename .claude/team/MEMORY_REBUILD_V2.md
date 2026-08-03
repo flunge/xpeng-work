@@ -22,6 +22,7 @@
 2. 状态转移**必须有来源**：suspected-close → closed 需逐字稿/纪要/日报断言；无可判来源则保留 open 并在风险哨兵中浮现。
 3. 数字唯一归属：叙事性数字只存在于 Episode（关键数字字段）；ledger/报告引用 episode 行。
 4. 慢速模式案例（2026-08-03 修正）作为范式：7/16 判定 PENDING（等实车答辩）→ 实际 7/21 已恢复推进，记忆未捕捉出入 → 以逐字稿 token 链（Rxbgd…/Qrbdd…/VzlV…）修正并入库。
+5. **延续性铁律（2026-08-03 补，用户口径）**：项目跨多季度运行，**ledger「三、持续推进」=人类可读全量历史**，永久保留、不削减；**Episode = 从 ledger 派生的机读索引**（backfill 幂等反推）。权威在 L0 飞书原文，ledger 与 Episode 都是派生物；新事件单边走 ledger → L1，Episode 不回写 ledger。
 
 ## 日常流（目标态）
 
@@ -29,11 +30,16 @@
 - 【更新记忆】= 消化 L0 新料 → 落 L1 → 改 L2 状态 → 只改 L3 的"当前状态"。
 - 报告写作 = `memory_query.py` 证据包（L1 数字 + L2 状态）+ `check_report.py --evidence` 数字闸。
 
-## 工具链状态
+## 工具链状态（2026-08-03 核盘）
 
 - `team/scripts/harvest_open_items.py`：开口项策展清单 + 入库。
 - `team/scripts/seed_episode.py`：Episode 首批种子（模板=可跑模式）。
-- 待做：Episode 每日增量 ingestion；risk_sentinel 接入开口项追踪（stale 检测：最近核查日期>N 天）。
+- ✅ Episode 每日增量 ingestion：`team/scripts/episode_ingest.py`（挂 daily-sync 22:00）。
+- ✅ risk_sentinel 接入开口项追踪（stale 检测：最近核查日期>N 天）+ **项目级停摆哨兵**。
+- ✅ **backfill 范式**：`team/scripts/backfill_episode_from_ledger.py`+`backfill_all.py` — 从 ledger「持续进展」逆推 L1，幂等键 `ledger://`，防重跑；挂 larkdocs_sync 23:00 后自动跑，storyline W32 不缺失。
+- ✅ 强制开口项闸：`team/scripts/sync_open_items_from_ledger.py [--apply]`。
+- ✅ Storyline：`team/scripts/storyline_gen.py`，周五 20:00 生成、周六李坤 DM 审；W31 已入 5 张；`_ALIASES` 交并：RC路线≠RC路线SIL验证 拆分不交并。
+- ✅ 文档库 RAG：`team/scripts/larkdocs_sync.py`（23:00 镜像）+ `doc_rag.py`（检索）+ xai extension `~/.pi/agent/extensions/lark-rag.ts`（`docs_search`/`docs_locate` tool）。
 
 ## 附：Storyline主线卡设计（P2，已建表）
 
