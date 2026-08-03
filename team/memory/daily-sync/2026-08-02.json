@@ -1,0 +1,41 @@
+{
+  "date": "2026-08-02",
+  "window_start": "2026-08-02T00:00:00+08:00",
+  "window_end": "2026-08-02T23:59:59+08:00",
+  "team_members": [
+    "郑丽娜",
+    "杨星昊",
+    "周蔚旭",
+    "裴健宏",
+    "周冯",
+    "吕文杰",
+    "王禹丁",
+    "朱啸峰",
+    "瞿鑫宇",
+    "严潇竹",
+    "靳希睿",
+    "樊世洲",
+    "李祉浚",
+    "谷佳萱"
+  ],
+  "sync_time": "2026-08-02T14:00:02Z",
+  "calendar": [],
+  "vc_messages": {
+    "error": "exit=1",
+    "stderr": "{\n  \"ok\": false,\n  \"identity\": \"user\",\n  \"error\": {\n    \"type\": \"api\",\n    \"subtype\": \"unknown\",\n    \"code\": 230002,\n    \"message\": \"Bot/User can NOT be out of the chat.\",\n    \"log_id\": \"202608022200034CC13268D316CFB8AE9A\",\n    \"troubleshooter\": \"排查建议查看(Troubleshooting suggestions): https://open.feishu.cn/search?from=openapi&log_id=202608022200034CC13268D316CFB8AE9A&code=230002&method_id=6936075528891187228\"\n  },\n  \"_notice\": {\n    \"update\": {\n      \"command\": \"lark-cli update\",\n      \"current\":"
+  },
+  "today_docs": [],
+  "meeting_docs": [],
+  "wiki_doc": {
+    "error": "exit=1",
+    "stderr": "{\n  \"ok\": false,\n  \"identity\": \"user\",\n  \"error\": {\n    \"type\": \"api\",\n    \"subtype\": \"unknown\",\n    \"code\": 3380004,\n    \"message\": \"No permission to operate on this document: the current user lacks view or edit access. Confirm the current user has edit permission on the target document; if not, contact the document owner for authorization\",\n    \"log_id\": \"20260802220004ED9DF3F18BC66B58AF03\",\n    \"troubleshooter\": \"排查建议查看(Troubleshooting suggestions): https://open.feishu.cn/search?from=openapi&"
+  },
+  "im_member_searches": {},
+  "im_chat_messages": {},
+  "im_at_me": [],
+  "im_boss": {
+    "sent": [],
+    "p2p": []
+  },
+  "ledger_updates": []
+}

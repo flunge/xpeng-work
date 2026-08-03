@@ -1,7 +1,13 @@
-[submodule "team/simworld"]
-	path = team/simworld
+[submodule "repos/simworld"]
+	path = repos/simworld
 	url = git@gitlab-adc.xiaopeng.link:simworld/simworld.git
 [submodule "personal/resume"]
 	path = personal/resume
 	url = git@github.com:flunge/resume.git
 	branch = master
+[submodule "repos/hermes-agent"]
+	path = repos/hermes-agent
+	url = https://github.com/NousResearch/hermes-agent.git
+[submodule "repos/xai"]
+	path = repos/xai
+	url = https://github.com/earendil-works/pi.git
