@@ -8,6 +8,7 @@
 | 场景 / 触发词 | 文件 |
 |---|---|
 | **【更新记忆】** | `commands/update-memory.md`（唯一记忆同步命令） |
+| **输出纪律**（长输出退化/乱码/畸形 tool call） | `rules/output-discipline.md` — 一次一个动作、大 payload 先落盘、退化即中断、阶段即落账 |
 | **文档库检索**（工程/项目文档事实、规范参数、设计细节） | 用 `docs_search` / `docs_locate` 工具（xai extension `~/.pi/agent/extensions/lark-rag.ts`），底层= `team/scripts/larkdocs_sync.py` 每日 23:00 镜像 + `team/scripts/doc_rag.py` 建索引；镜像根 `team/memory/larkdocs/`（96篇=jiangji 星际骑遇 46 + team 记忆库 50，只读缓存禁止手编）；拿到 token 需原文精读用 `docs +fetch` |
 | **lid 叙事反哺 L1**（从 ledger 持续进展表逆推 Episode） | `team/scripts/backfill_episode_from_ledger.py --ledger memory/larkdocs/team/projects/<项目>.md --project <项目名> [--dry-run]`（每周五 23:00 自动跑全项目） |
 | **ledger 🔴🟡 → 开口项**（强制互查） | `team/scripts/sync_open_items_from_ledger.py [--apply]`（同步开口项 Base，防 ledger 空谈） |

@@ -17,11 +17,25 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 SCRIPT = BASE_DIR / "scripts" / "backfill_episode_from_ledger.py"
 PROJ_DIR = BASE_DIR / "memory" / "larkdocs" / "team" / "projects"
+FEISHU_MAP = BASE_DIR / "memory" / "_feishu_map.json"
+
+
+def ledger_whitelist():
+    """只跑 _feishu_map.json 里声明的 ledger（wiki 镜像的 docx 不是 ledger，跳过）。"""
+    try:
+        import json
+        m = json.loads(FEISHU_MAP.read_text(encoding="utf-8"))
+        return set((m.get("projects") or {}).keys())
+    except Exception:
+        return None
 
 
 def main():
     dry_run = "--dry-run" in sys.argv
     ledgers = sorted(PROJ_DIR.glob("*.md"))
+    wl = ledger_whitelist()
+    if wl:
+        ledgers = [f for f in ledgers if f.stem in wl]
     total, ok, empty, fail = 0, 0, 0, 0
     for f in ledgers:
         project = f.stem

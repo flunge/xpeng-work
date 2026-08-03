@@ -1,9 +1,9 @@
 {
  "_comment": "larkdocs 镜像清单：飞书为唯一权威源，本目录只是只读缓存，禁止手工编辑 .md",
  "mirror_root": "/Users/xpeng/Documents/daily/team/memory/larkdocs",
- "updated_at": "2026-08-03T14:59:16",
+ "updated_at": "2026-08-03T19:34:07",
  "stats": {
-  "total": 96
+  "total": 106
  },
  "docs": [
   {
@@ -589,7 +589,7 @@
    "revision": 23,
    "md5": "fcdc3badfb24e14bf774010d06bd667e",
    "bytes": 8405,
-   "fetched_at": "2026-08-03T14:58:15"
+   "fetched_at": "2026-08-03T19:31:01"
   },
   {
    "group": "team",
@@ -602,7 +602,7 @@
    "revision": 82,
    "md5": "117ae64b006991a4f02087daf5ceb8f1",
    "bytes": 66085,
-   "fetched_at": "2026-08-03T14:58:17"
+   "fetched_at": "2026-08-03T19:31:02"
   },
   {
    "group": "team",
@@ -615,7 +615,7 @@
    "revision": 48,
    "md5": "d67e5e56e619867feff24646b0daed05",
    "bytes": 25009,
-   "fetched_at": "2026-08-03T14:59:16"
+   "fetched_at": "2026-08-03T19:33:01"
   },
   {
    "group": "team",
@@ -628,7 +628,7 @@
    "revision": 5,
    "md5": "4002d7ad8da9e975308fad87e26718b5",
    "bytes": 2509,
-   "fetched_at": "2026-08-03T14:58:22"
+   "fetched_at": "2026-08-03T19:31:14"
   },
   {
    "group": "team",
@@ -641,7 +641,7 @@
    "revision": 7,
    "md5": "58d4a98a57f113bb2fffd928612adf69",
    "bytes": 2669,
-   "fetched_at": "2026-08-03T14:58:22"
+   "fetched_at": "2026-08-03T19:31:13"
   },
   {
    "group": "team",
@@ -654,7 +654,7 @@
    "revision": 5,
    "md5": "d21ac67bec91e906fa8ad32a01f3b690",
    "bytes": 1472,
-   "fetched_at": "2026-08-03T14:58:22"
+   "fetched_at": "2026-08-03T19:31:13"
   },
   {
    "group": "team",
@@ -667,7 +667,7 @@
    "revision": 5,
    "md5": "d050a32ac5ed393650cfe48147968bd6",
    "bytes": 3687,
-   "fetched_at": "2026-08-03T14:58:22"
+   "fetched_at": "2026-08-03T19:31:13"
   },
   {
    "group": "team",
@@ -680,7 +680,7 @@
    "revision": 5,
    "md5": "88610a2ce8f1df453a4fd2b8a399c8b5",
    "bytes": 2017,
-   "fetched_at": "2026-08-03T14:58:21"
+   "fetched_at": "2026-08-03T19:31:12"
   },
   {
    "group": "team",
@@ -693,7 +693,7 @@
    "revision": 5,
    "md5": "86506d69d92165c7d72f5abff49e6d79",
    "bytes": 2206,
-   "fetched_at": "2026-08-03T14:58:21"
+   "fetched_at": "2026-08-03T19:31:12"
   },
   {
    "group": "team",
@@ -706,7 +706,7 @@
    "revision": 5,
    "md5": "e6c224337cb66efa68b3c7265f7e121f",
    "bytes": 1599,
-   "fetched_at": "2026-08-03T14:58:21"
+   "fetched_at": "2026-08-03T19:31:12"
   },
   {
    "group": "team",
@@ -719,7 +719,7 @@
    "revision": 6,
    "md5": "6aad072d36c318e3f6fd70711bed9ac7",
    "bytes": 7854,
-   "fetched_at": "2026-08-03T14:58:21"
+   "fetched_at": "2026-08-03T19:31:12"
   },
   {
    "group": "team",
@@ -732,7 +732,7 @@
    "revision": 7,
    "md5": "07dff86c5e60f5ed3c9a59a877a0c701",
    "bytes": 3543,
-   "fetched_at": "2026-08-03T14:58:21"
+   "fetched_at": "2026-08-03T19:31:11"
   },
   {
    "group": "team",
@@ -745,7 +745,7 @@
    "revision": 5,
    "md5": "46c1d9ad0dfb40adeae2b1073c083039",
    "bytes": 3474,
-   "fetched_at": "2026-08-03T14:58:21"
+   "fetched_at": "2026-08-03T19:31:11"
   },
   {
    "group": "team",
@@ -758,7 +758,7 @@
    "revision": 12,
    "md5": "c5be81e4d1fb8a9bbc31f95673045c01",
    "bytes": 6421,
-   "fetched_at": "2026-08-03T14:58:20"
+   "fetched_at": "2026-08-03T19:31:11"
   },
   {
    "group": "team",
@@ -771,7 +771,7 @@
    "revision": 23,
    "md5": "b3f48226bc06b0a0e6a8646bf3419f4a",
    "bytes": 8794,
-   "fetched_at": "2026-08-03T14:58:20"
+   "fetched_at": "2026-08-03T19:31:11"
   },
   {
    "group": "team",
@@ -784,7 +784,7 @@
    "revision": 4,
    "md5": "86bbd4892e463aabde8ac41efd119cf4",
    "bytes": 7964,
-   "fetched_at": "2026-08-03T14:58:20"
+   "fetched_at": "2026-08-03T19:31:10"
   },
   {
    "group": "team",
@@ -797,7 +797,7 @@
    "revision": 17,
    "md5": "5c375f1590e0a4821c344af673abc9b6",
    "bytes": 6126,
-   "fetched_at": "2026-08-03T14:58:20"
+   "fetched_at": "2026-08-03T19:31:10"
   },
   {
    "group": "team",
@@ -810,7 +810,7 @@
    "revision": 15,
    "md5": "0ed125aff55e4f8623ce8f41a48f2f01",
    "bytes": 6729,
-   "fetched_at": "2026-08-03T14:58:20"
+   "fetched_at": "2026-08-03T19:31:10"
   },
   {
    "group": "team",
@@ -823,7 +823,7 @@
    "revision": 5,
    "md5": "5a9121e6799e37ed6ba09a1cb76777af",
    "bytes": 1668,
-   "fetched_at": "2026-08-03T14:58:22"
+   "fetched_at": "2026-08-03T19:31:13"
   },
   {
    "group": "team",
@@ -836,7 +836,7 @@
    "revision": 5,
    "md5": "9f578b20efd2fdeca7a6b9a38b00ea8c",
    "bytes": 2812,
-   "fetched_at": "2026-08-03T14:58:20"
+   "fetched_at": "2026-08-03T19:31:09"
   },
   {
    "group": "team",
@@ -849,7 +849,7 @@
    "revision": 5,
    "md5": "3b5eb099b4cabf96f394e346e427b2dc",
    "bytes": 2156,
-   "fetched_at": "2026-08-03T14:58:20"
+   "fetched_at": "2026-08-03T19:31:09"
   },
   {
    "group": "team",
@@ -862,7 +862,7 @@
    "revision": 5,
    "md5": "fe20bea523a517068a67e7ddce2ce66f",
    "bytes": 2087,
-   "fetched_at": "2026-08-03T14:58:20"
+   "fetched_at": "2026-08-03T19:31:10"
   },
   {
    "group": "team",
@@ -875,7 +875,7 @@
    "revision": 22,
    "md5": "83aeca9fdb6a7dc1be03d3a8d07e0d0f",
    "bytes": 12035,
-   "fetched_at": "2026-08-03T14:58:19"
+   "fetched_at": "2026-08-03T19:31:08"
   },
   {
    "group": "team",
@@ -888,7 +888,7 @@
    "revision": 7,
    "md5": "2202b7ceb4e4cda279362d3a0cdc4fe8",
    "bytes": 2615,
-   "fetched_at": "2026-08-03T14:58:19"
+   "fetched_at": "2026-08-03T19:31:08"
   },
   {
    "group": "team",
@@ -901,7 +901,7 @@
    "revision": 5,
    "md5": "313d602219c52e1595856e4f7ebbdd71",
    "bytes": 1859,
-   "fetched_at": "2026-08-03T14:58:19"
+   "fetched_at": "2026-08-03T19:31:08"
   },
   {
    "group": "team",
@@ -914,7 +914,7 @@
    "revision": 5,
    "md5": "779a503f0c084c0471bd151881ab91be",
    "bytes": 2353,
-   "fetched_at": "2026-08-03T14:58:19"
+   "fetched_at": "2026-08-03T19:31:07"
   },
   {
    "group": "team",
@@ -927,7 +927,7 @@
    "revision": 6,
    "md5": "c14e5ca1cbcca6742d7669cbc23fde2a",
    "bytes": 2377,
-   "fetched_at": "2026-08-03T14:58:19"
+   "fetched_at": "2026-08-03T19:31:07"
   },
   {
    "group": "team",
@@ -940,7 +940,7 @@
    "revision": 14,
    "md5": "896433cf668c782961e0f690f630bc69",
    "bytes": 6782,
-   "fetched_at": "2026-08-03T14:58:19"
+   "fetched_at": "2026-08-03T19:31:07"
   },
   {
    "group": "team",
@@ -953,7 +953,7 @@
    "revision": 17,
    "md5": "74fd67190edc4a358e50e66cbbde84ce",
    "bytes": 7773,
-   "fetched_at": "2026-08-03T14:58:18"
+   "fetched_at": "2026-08-03T19:31:07"
   },
   {
    "group": "team",
@@ -966,7 +966,7 @@
    "revision": 13,
    "md5": "abf86c775ec05085b1f37e3205f67cef",
    "bytes": 7100,
-   "fetched_at": "2026-08-03T14:58:18"
+   "fetched_at": "2026-08-03T19:31:07"
   },
   {
    "group": "team",
@@ -979,7 +979,7 @@
    "revision": 5,
    "md5": "7c7161caf3697d38e0902ed2ec331634",
    "bytes": 1682,
-   "fetched_at": "2026-08-03T14:58:18"
+   "fetched_at": "2026-08-03T19:31:06"
   },
   {
    "group": "team",
@@ -992,7 +992,7 @@
    "revision": 15,
    "md5": "ad32a951843324717728d6b28cc9812c",
    "bytes": 6770,
-   "fetched_at": "2026-08-03T14:58:18"
+   "fetched_at": "2026-08-03T19:31:06"
   },
   {
    "group": "team",
@@ -1005,7 +1005,35 @@
    "revision": 5,
    "md5": "ab8a4b32055801fef4aa92d46d146c1b",
    "bytes": 1834,
-   "fetched_at": "2026-08-03T14:58:18"
+   "fetched_at": "2026-08-03T19:31:06"
+  },
+  {
+   "group": "team",
+   "name": "3dgs闭环换车型说明",
+   "path": "projects/3dgs闭环换车型说明",
+   "rel_path": "team/projects/3dgs闭环换车型说明.md",
+   "token": "DNcjdCQIgoURJLxPY4mctvY2nEe",
+   "url": "https://xiaopeng.feishu.cn/docx/DNcjdCQIgoURJLxPY4mctvY2nEe",
+   "profile": "xpeng",
+   "revision": 329,
+   "md5": "afc35597592af58822422048a0ecf4a7",
+   "bytes": 5082,
+   "fetched_at": "2026-08-03T19:33:04",
+   "_brief": "3dgs 闭环换车配文 = 4月4日仿真的神奇拆分分析（quo cue stuff立）"
+  },
+  {
+   "group": "team",
+   "name": "7月车型泛化/SIL仿真/场景编辑/算法预研周目标",
+   "path": "projects/7月车型泛化/SIL仿真/场景编辑/算法预研周目标",
+   "rel_path": "team/projects/7月车型泛化/SIL仿真/场景编辑/算法预研周目标.md",
+   "token": "NEiKd7i3Bol9VyxLFm4c5G6NnLT",
+   "url": "https://xiaopeng.feishu.cn/docx/NEiKd7i3Bol9VyxLFm4c5G6NnLT",
+   "profile": "xpeng",
+   "revision": 1778,
+   "md5": "3fe4b5cc1dc3608b273abfae90f703b8",
+   "bytes": 13325,
+   "fetched_at": "2026-08-03T19:33:04",
+   "_brief": "7月核心：车型泛化最高优先级→闭环+HIL第二"
   },
   {
    "group": "team",
@@ -1018,7 +1046,7 @@
    "revision": 23,
    "md5": "4b9da66ffdb4c83c3862086b4d1afd43",
    "bytes": 7286,
-   "fetched_at": "2026-08-03T14:58:17"
+   "fetched_at": "2026-08-03T19:31:04"
   },
   {
    "group": "team",
@@ -1031,7 +1059,7 @@
    "revision": 20,
    "md5": "54732bcc596f5c3b233844ce91a7b5e1",
    "bytes": 15795,
-   "fetched_at": "2026-08-03T14:58:16"
+   "fetched_at": "2026-08-03T19:31:02"
   },
   {
    "group": "team",
@@ -1044,7 +1072,7 @@
    "revision": 34,
    "md5": "846cb19b2f399618f9574c5b3c4dea10",
    "bytes": 23561,
-   "fetched_at": "2026-08-03T14:58:16"
+   "fetched_at": "2026-08-03T19:31:03"
   },
   {
    "group": "team",
@@ -1057,7 +1085,7 @@
    "revision": 22,
    "md5": "03fdf5924fced53300da07f9b787bb12",
    "bytes": 23971,
-   "fetched_at": "2026-08-03T14:58:16"
+   "fetched_at": "2026-08-03T19:31:02"
   },
   {
    "group": "team",
@@ -1070,7 +1098,7 @@
    "revision": 19,
    "md5": "8b7f5554fc6b3b4376028e9895bbb37c",
    "bytes": 13462,
-   "fetched_at": "2026-08-03T14:58:17"
+   "fetched_at": "2026-08-03T19:31:05"
   },
   {
    "group": "team",
@@ -1083,7 +1111,7 @@
    "revision": 23,
    "md5": "12e9871c8264e0c92cd6fca49fd82799",
    "bytes": 16959,
-   "fetched_at": "2026-08-03T14:58:17"
+   "fetched_at": "2026-08-03T19:31:04"
   },
   {
    "group": "team",
@@ -1096,7 +1124,7 @@
    "revision": 18,
    "md5": "725bdb91d5ddc5c9c2161be53776283c",
    "bytes": 11494,
-   "fetched_at": "2026-08-03T14:58:16"
+   "fetched_at": "2026-08-03T19:31:03"
   },
   {
    "group": "team",
@@ -1109,7 +1137,7 @@
    "revision": 24,
    "md5": "433cba53040f94d433d460c09caefb52",
    "bytes": 15473,
-   "fetched_at": "2026-08-03T14:58:17"
+   "fetched_at": "2026-08-03T19:31:05"
   },
   {
    "group": "team",
@@ -1122,7 +1150,49 @@
    "revision": 26,
    "md5": "2b2fc1c12e6bd04be56986f4afed0d86",
    "bytes": 22451,
-   "fetched_at": "2026-08-03T14:58:17"
+   "fetched_at": "2026-08-03T19:31:03"
+  },
+  {
+   "group": "team",
+   "name": "difix ref图模式优化",
+   "path": "projects/difix ref图模式优化",
+   "rel_path": "team/projects/difix ref图模式优化.md",
+   "token": "KsV2d2LOtoY9wcxY6gxcB4t1nqT",
+   "url": "https://xiaopeng.feishu.cn/docx/KsV2d2LOtoY9wcxY6gxcB4t1nqT",
+   "profile": "xpeng",
+   "revision": 540,
+   "md5": "99505117c7fd4c565a438f3e6909066a",
+   "bytes": 12876,
+   "fetched_at": "2026-08-03T19:33:03",
+   "_brief": "V1+ ref(6:4)→V3 加车身mask，主要算法改进"
+  },
+  {
+   "group": "team",
+   "name": "仿真车型泛化验证报告",
+   "path": "projects/仿真车型泛化验证报告",
+   "rel_path": "team/projects/仿真车型泛化验证报告.md",
+   "token": "Xrrtds7Troa6gaxaT6AcEofxncg",
+   "url": "https://xiaopeng.feishu.cn/docx/Xrrtds7Troa6gaxaT6AcEofxncg",
+   "profile": "xpeng",
+   "revision": 1328,
+   "md5": "eb10e4266dfaa15f9eba0e8c9657b597",
+   "bytes": 56412,
+   "fetched_at": "2026-08-03T19:33:03",
+   "_brief": "阶段1-5对线泛化验证结论（全文10000+米）"
+  },
+  {
+   "group": "team",
+   "name": "仿真链接备份",
+   "path": "projects/仿真链接备份",
+   "rel_path": "team/projects/仿真链接备份.md",
+   "token": "VAw6dXhW2o4kxLxMp3TcohJQnuf",
+   "url": "https://xiaopeng.feishu.cn/docx/VAw6dXhW2o4kxLxMp3TcohJQnuf",
+   "profile": "xpeng",
+   "revision": 644,
+   "md5": "056b0ba12dea21b4ba35e754bb13aa3c",
+   "bytes": 74133,
+   "fetched_at": "2026-08-03T19:33:02",
+   "_brief": "3dgs 环境链接备份、 code面和最终环境"
   },
   {
    "group": "team",
@@ -1135,7 +1205,7 @@
    "revision": 48,
    "md5": "cfe163e578b17e47dbcdf2ce5826e490",
    "bytes": 15867,
-   "fetched_at": "2026-08-03T14:58:17"
+   "fetched_at": "2026-08-03T19:31:03"
   },
   {
    "group": "team",
@@ -1148,7 +1218,7 @@
    "revision": 28,
    "md5": "379d8e443df6b4fe380d51d6493a7002",
    "bytes": 19165,
-   "fetched_at": "2026-08-03T14:58:18"
+   "fetched_at": "2026-08-03T19:31:05"
   },
   {
    "group": "team",
@@ -1161,7 +1231,7 @@
    "revision": 23,
    "md5": "8250d1f012974fd28aa9eb2d04c7851c",
    "bytes": 15106,
-   "fetched_at": "2026-08-03T14:58:16"
+   "fetched_at": "2026-08-03T19:31:01"
   },
   {
    "group": "team",
@@ -1174,7 +1244,7 @@
    "revision": 21,
    "md5": "620eb2a0210b4e98a7d21cfcd6ae62e3",
    "bytes": 14758,
-   "fetched_at": "2026-08-03T14:58:17"
+   "fetched_at": "2026-08-03T19:31:03"
   },
   {
    "group": "team",
@@ -1187,7 +1257,63 @@
    "revision": 46,
    "md5": "d13df8674dfadf0f636bcb43e353a18e",
    "bytes": 32951,
-   "fetched_at": "2026-08-03T14:58:03"
+   "fetched_at": "2026-08-03T19:31:05"
+  },
+  {
+   "group": "team",
+   "name": "车型泛化仿真正向分析方案",
+   "path": "projects/车型泛化仿真正向分析方案",
+   "rel_path": "team/projects/车型泛化仿真正向分析方案.md",
+   "token": "QgpHd0TByouegnxFqx7ci8REndc",
+   "url": "https://xiaopeng.feishu.cn/docx/QgpHd0TByouegnxFqx7ci8REndc",
+   "profile": "xpeng",
+   "revision": 328,
+   "md5": "4617bfb3bbb9ef362075f9305f33d25e",
+   "bytes": 13289,
+   "fetched_at": "2026-08-03T19:33:04",
+   "_brief": "正向分析人格/不加速/不居中/超慢车/偏右（外参加扰动）"
+  },
+  {
+   "group": "team",
+   "name": "车型泛化场景统计",
+   "path": "projects/车型泛化场景统计",
+   "rel_path": "team/projects/车型泛化场景统计.md",
+   "token": "Iv4mdIO5noGhF0xz1fRc5XW4nOI",
+   "url": "https://xiaopeng.feishu.cn/docx/Iv4mdIO5noGhF0xz1fRc5XW4nOI",
+   "profile": "xpeng",
+   "revision": 2407,
+   "md5": "99d34f0f395ef2461bcc3191f78f4bed",
+   "bytes": 16200,
+   "fetched_at": "2026-08-03T19:32:02",
+   "_brief": "各车型的场景集统计（含 F30 检测车 vs E29 全 charliest�集的参数分布）"
+  },
+  {
+   "group": "team",
+   "name": "车型泛化正向分析汇总",
+   "path": "projects/车型泛化正向分析汇总",
+   "rel_path": "team/projects/车型泛化正向分析汇总.md",
+   "token": "ZGTxdYMWYopTZsxsKmOcR0Aqncd",
+   "url": "https://xiaopeng.feishu.cn/docx/ZGTxdYMWYopTZsxsKmOcR0Aqncd",
+   "profile": "xpeng",
+   "revision": 4780,
+   "md5": "f781c10e9dc24679c75172183c2704d6",
+   "bytes": 39272,
+   "fetched_at": "2026-08-03T19:32:03",
+   "_brief": "正向分析切割矩阵汇总「综述」（ validate 图中所有车型系数差异表， 猎旅型）"
+  },
+  {
+   "group": "team",
+   "name": "车端模型车型泛化能力分析报告",
+   "path": "projects/车端模型车型泛化能力分析报告",
+   "rel_path": "team/projects/车端模型车型泛化能力分析报告.md",
+   "token": "CT1JdlblAoTn8axS5iNcw2dPntc",
+   "url": "https://xiaopeng.feishu.cn/docx/CT1JdlblAoTn8axS5iNcw2dPntc",
+   "profile": "xpeng",
+   "revision": 156,
+   "md5": "26911a2db0c7341129d1871d6eeb2c69",
+   "bytes": 1091,
+   "fetched_at": "2026-08-03T19:32:01",
+   "_brief": "车端模型对车型泛化能力 turn 总体评估（三月 / Q2 /四月）"
   },
   {
    "group": "team",
@@ -1200,7 +1326,7 @@
    "revision": 33,
    "md5": "f5dfcfc3f15ec9793c0e8651095a0719",
    "bytes": 17022,
-   "fetched_at": "2026-08-03T14:58:17"
+   "fetched_at": "2026-08-03T19:31:04"
   },
   {
    "group": "team",
@@ -1213,7 +1339,7 @@
    "revision": 7,
    "md5": "684fa130464c5a6e3d2e69b6377b8bc7",
    "bytes": 7372,
-   "fetched_at": "2026-08-03T14:59:15"
+   "fetched_at": "2026-08-03T19:31:14"
   },
   {
    "group": "team",
@@ -1226,7 +1352,7 @@
    "revision": 3,
    "md5": "1c1130bbd94254860ec23856cb5e7c79",
    "bytes": 992,
-   "fetched_at": "2026-08-03T14:59:15"
+   "fetched_at": "2026-08-03T19:31:14"
   },
   {
    "group": "team",
@@ -1239,7 +1365,7 @@
    "revision": 5,
    "md5": "20de0a793da1031c3acb290bde015e92",
    "bytes": 5119,
-   "fetched_at": "2026-08-03T14:59:15"
+   "fetched_at": "2026-08-03T19:33:01"
   },
   {
    "group": "team",
@@ -1252,7 +1378,21 @@
    "revision": 3,
    "md5": "5febead4f5f89ce9f465db09e81ce27a",
    "bytes": 8508,
-   "fetched_at": "2026-08-03T14:59:16"
+   "fetched_at": "2026-08-03T19:33:02"
+  },
+  {
+   "group": "team",
+   "name": "simworld 代码提交汇总（2026年1月-6月）",
+   "path": "未收录/simworld 代码提交汇总（2026年1月-6月）",
+   "rel_path": "team/未收录/simworld 代码提交汇总（2026年1月-6月）.md",
+   "token": "NGx0ddABmoftevxgQxxc29WlnEb",
+   "url": "https://xiaopeng.feishu.cn/docx/NGx0ddABmoftevxgQxxc29WlnEb",
+   "profile": "xpeng",
+   "_discovered": true,
+   "revision": 8,
+   "md5": "e4af51b2f6bd50cd2efbc792fed3e8b5",
+   "bytes": 32242,
+   "fetched_at": "2026-08-03T19:32:03"
   }
  ]
 }
