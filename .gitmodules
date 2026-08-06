@@ -11,3 +11,9 @@
 [submodule "repos/xai"]
 	path = repos/xai
 	url = git@github.com:flunge/xai.git
+[submodule "repos/reference/difix3d"]
+	path = repos/reference/difix3d
+	url = https://github.com/nv-tlabs/Difix3D.git
+[submodule "repos/reference/nv-fixer"]
+	path = repos/reference/nv-fixer
+	url = https://github.com/nv-tlabs/Fixer.git
