@@ -51,3 +51,7 @@
 > 说明：严潇竹6/9刚入职，日会信号极少，后续迭代补充。来源均可回溯至溯源索引的会议纪要清单。
 
 [[team-members]] [[zheng-lina]]
+
+## W31 开题评审增量（2026-07-31）
+
+**复现率与 Diff Agent 已形成可量化进展。** <cite type="user" user-id="ou_9b65b8c67807ce544a5cef3efe5cbf8a" user-name="严潇竹"></cite> 汇报提示词对比一致率由约 63% 提升至约 85%，单类 Diff Agent 与人工一致率达到 90% 以上，多类复现判断达到 86%–90% 以上；本地模型对比后选择千问 3.5 9B 作为速度、准确率和资源间的当前平衡方案。评审指出最大风险是局部优化导致原本正确 case 回退，必须建立冻结全量回归集和不回退门槛。能力信号是已掌握“跑基线—聚类错误—优先修复—全量回归”的方法；后续优先核心功能交付，不再扩散范围。来源：<cite doc-id="Dm5ZdwiuToVJFRx6HJDc71mPnSd" file-type="docx" title="智能纪要：AI实习生③班-开题报告（5） 2026年7月31日" type="doc"></cite>、<cite doc-id="MQzldSixToM2xexthQNcIzoXnmg" file-type="docx" title="文字记录： AI实习生③班-开题报告（5） 2026年7月31日" type="doc"></cite>。

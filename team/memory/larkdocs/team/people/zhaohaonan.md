@@ -48,3 +48,7 @@
 | 2026-07-20\~24（W30） | 作战表 W30 周一 | 首次出现实质产出：训练 7 视角可控驾驶视频自回归生成，分别验证 Feedforward 3dgs / 高质量 3dgs / nvfixer 优化 3dgs 渲染视频作为 control video 的效果；尝试将训练模型用于场景泛化 day2night。**跨项目协作**：为王禹丁场景泛化提供泛化后黑夜效果图作为开环所需 dds（王禹丁 7/23 据此得出夜间画龙对比结论）。方向落到 WM 预研 + 场景泛化落地结合处。（来源：Q3作战表 W30 周一） |
 
 > 说明：本表以周为粒度汇总；赵浩南为新入职实习生，后续从日报/周五预研评审持续补充。
+
+## W31 开题评审增量（2026-07-31）
+
+**可控世界模型方向被明确要求从通用研究收缩为仿真特化落地。** <cite type="user" user-id="ou_f3ec31ec2eeff018016f5eeba3aaded1" user-name="赵浩南"></cite> 已完成基础视频生成和初步多视角、白天转黑夜能力，当前主要难点是短窗口自回归的累计误差。评审认为其 3DGS 控制和仿真闭环是差异化优势，但单人无法覆盖通用世界模型，应优先选择车衣、黑夜或新视角中的一个刚需做可验收 demo，再扩展能力。GPU 资源仍有缺口。来源：<cite doc-id="Dm5ZdwiuToVJFRx6HJDc71mPnSd" file-type="docx" title="智能纪要：AI实习生③班-开题报告（5） 2026年7月31日" type="doc"></cite>、<cite doc-id="MQzldSixToM2xexthQNcIzoXnmg" file-type="docx" title="文字记录： AI实习生③班-开题报告（5） 2026年7月31日" type="doc"></cite>。

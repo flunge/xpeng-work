@@ -1,0 +1,158 @@
+{
+  "date": "2026-08-05",
+  "window_start": "2026-08-05T00:00:00+08:00",
+  "window_end": "2026-08-05T23:59:59+08:00",
+  "team_members": [
+    "郑丽娜",
+    "杨星昊",
+    "周蔚旭",
+    "裴健宏",
+    "周冯",
+    "吕文杰",
+    "王禹丁",
+    "朱啸峰",
+    "瞿鑫宇",
+    "严潇竹",
+    "靳希睿",
+    "樊世洲",
+    "李祉浚",
+    "谷佳萱"
+  ],
+  "sync_time": "2026-08-05T14:00:02Z",
+  "calendar": [
+    {
+      "app_link": "https://applink.feishu.cn/client/calendar/event/detail?calendarId=7354970104633786372&key=dfb37036-759f-4940-a3e7-81a8d4b3dee1&originalTime=0&startTime=1785895200",
+      "attendee_ability": "can_modify_event",
+      "color": -1,
+      "end_time": {
+        "datetime": "2026-08-05T11:00:00+08:00",
+        "timezone": "Asia/Shanghai"
+      },
+      "event_id": "dfb37036-759f-4940-a3e7-81a8d4b3dee1_1785895200",
+      "event_organizer": {
+        "display_name": "李坤",
+        "user_id": "ou_ef9ffede830b69e0b991b3fdb28df8ed"
+      },
+      "free_busy_status": "busy",
+      "is_exception": false,
+      "organizer_calendar_id": "feishu.cn_IQKOvzUVfudHoL7dI5VCRb@group.calendar.feishu.cn",
+      "recurring_event_id": "dfb37036-759f-4940-a3e7-81a8d4b3dee1_0",
+      "self_rsvp_status": "accept",
+      "start_time": {
+        "datetime": "2026-08-05T10:00:00+08:00",
+        "timezone": "Asia/Shanghai"
+      },
+      "summary": "内部沟通",
+      "vchat": {
+        "meeting_url": "https://vc.feishu.cn/j/930354381",
+        "vc_type": "vc"
+      },
+      "visibility": "default"
+    },
+    {
+      "app_link": "https://applink.feishu.cn/client/calendar/event/detail?calendarId=7354970104633786372&key=a7ef357e-fb50-45e0-9703-651b0bf03679&originalTime=0&startTime=1785906000",
+      "attendee_ability": "can_modify_event",
+      "color": -1,
+      "end_time": {
+        "datetime": "2026-08-05T14:00:00+08:00",
+        "timezone": "Asia/Shanghai"
+      },
+      "event_id": "a7ef357e-fb50-45e0-9703-651b0bf03679_1785906000",
+      "event_organizer": {
+        "display_name": "李坤",
+        "user_id": "ou_ef9ffede830b69e0b991b3fdb28df8ed"
+      },
+      "free_busy_status": "busy",
+      "is_exception": false,
+      "organizer_calendar_id": "feishu.cn_IQKOvzUVfudHoL7dI5VCRb@group.calendar.feishu.cn",
+      "recurring_event_id": "a7ef357e-fb50-45e0-9703-651b0bf03679_0",
+      "self_rsvp_status": "accept",
+      "start_time": {
+        "datetime": "2026-08-05T13:00:00+08:00",
+        "timezone": "Asia/Shanghai"
+      },
+      "summary": "内部沟通",
+      "vchat": {
+        "meeting_url": "https://vc.feishu.cn/j/640860135",
+        "vc_type": "vc"
+      },
+      "visibility": "default"
+    },
+    {
+      "app_link": "https://applink.feishu.cn/client/calendar/event/detail?calendarId=7354970104633786372&key=66ef09cf-e680-4ddc-916e-78a49d82d04c&originalTime=0&startTime=1785920400",
+      "attendee_ability": "can_modify_event",
+      "color": -1,
+      "end_time": {
+        "datetime": "2026-08-05T18:00:00+08:00",
+        "timezone": "Asia/Shanghai"
+      },
+      "event_id": "66ef09cf-e680-4ddc-916e-78a49d82d04c_1785920400",
+      "event_organizer": {
+        "display_name": "李坤",
+        "user_id": "ou_ef9ffede830b69e0b991b3fdb28df8ed"
+      },
+      "free_busy_status": "busy",
+      "is_exception": false,
+      "organizer_calendar_id": "feishu.cn_IQKOvzUVfudHoL7dI5VCRb@group.calendar.feishu.cn",
+      "recurring_event_id": "66ef09cf-e680-4ddc-916e-78a49d82d04c_0",
+      "self_rsvp_status": "accept",
+      "start_time": {
+        "datetime": "2026-08-05T17:00:00+08:00",
+        "timezone": "Asia/Shanghai"
+      },
+      "summary": "内部沟通",
+      "vchat": {
+        "meeting_url": "https://vc.feishu.cn/j/888949772",
+        "vc_type": "vc"
+      },
+      "visibility": "default"
+    },
+    {
+      "app_link": "https://applink.feishu.cn/client/calendar/event/detail?calendarId=7354970104633786372&key=046ce689-9e1b-4352-a2e6-77bb34d35472&originalTime=0&startTime=1785934800",
+      "attendee_ability": "can_modify_event",
+      "color": -1,
+      "end_time": {
+        "datetime": "2026-08-05T22:00:00+08:00",
+        "timezone": "Asia/Shanghai"
+      },
+      "event_id": "046ce689-9e1b-4352-a2e6-77bb34d35472_1785934800",
+      "event_organizer": {
+        "display_name": "李坤",
+        "user_id": "ou_ef9ffede830b69e0b991b3fdb28df8ed"
+      },
+      "free_busy_status": "busy",
+      "is_exception": false,
+      "organizer_calendar_id": "feishu.cn_IQKOvzUVfudHoL7dI5VCRb@group.calendar.feishu.cn",
+      "recurring_event_id": "046ce689-9e1b-4352-a2e6-77bb34d35472_0",
+      "self_rsvp_status": "accept",
+      "start_time": {
+        "datetime": "2026-08-05T21:00:00+08:00",
+        "timezone": "Asia/Shanghai"
+      },
+      "summary": "内部沟通",
+      "vchat": {
+        "meeting_url": "https://vc.feishu.cn/j/696494222",
+        "vc_type": "vc"
+      },
+      "visibility": "default"
+    }
+  ],
+  "vc_messages": {
+    "error": "exit=1",
+    "stderr": "{\n  \"ok\": false,\n  \"identity\": \"user\",\n  \"error\": {\n    \"type\": \"api\",\n    \"subtype\": \"unknown\",\n    \"code\": 230002,\n    \"message\": \"Bot/User can NOT be out of the chat.\",\n    \"log_id\": \"202608052200030C909051BB0994307BD1\",\n    \"troubleshooter\": \"排查建议查看(Troubleshooting suggestions): https://open.feishu.cn/search?from=openapi&log_id=202608052200030C909051BB0994307BD1&code=230002&method_id=6936075528891187228\"\n  },\n  \"_notice\": {\n    \"update\": {\n      \"command\": \"lark-cli update\",\n      \"current\":"
+  },
+  "today_docs": [],
+  "meeting_docs": [],
+  "wiki_doc": {
+    "error": "exit=1",
+    "stderr": "{\n  \"ok\": false,\n  \"identity\": \"user\",\n  \"error\": {\n    \"type\": \"api\",\n    \"subtype\": \"unknown\",\n    \"code\": 3380004,\n    \"message\": \"No permission to operate on this document: the current user lacks view or edit access. Confirm the current user has edit permission on the target document; if not, contact the document owner for authorization\",\n    \"log_id\": \"2026080522000335DBF805D08CD420B45D\",\n    \"troubleshooter\": \"排查建议查看(Troubleshooting suggestions): https://open.feishu.cn/search?from=openapi&"
+  },
+  "im_member_searches": {},
+  "im_chat_messages": {},
+  "im_at_me": [],
+  "im_boss": {
+    "sent": [],
+    "p2p": []
+  },
+  "ledger_updates": []
+}

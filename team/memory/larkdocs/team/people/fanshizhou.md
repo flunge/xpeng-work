@@ -51,3 +51,7 @@
 | 2026-07-20（W30 周一） | 作战表 W30 | Smart Agent 方向：复现了 ProSim 论文，但在我们的数据上效果很差（PsmrdYcC）——如实暴露负结果，未粉饰。（来源：Q3作战表 W30 周一） |
 
 > 说明：樊世洲 2026-06-12 入职，当前已加载资料中日常表现记录有限，后续积累更多信号后补充。
+
+## W31 开题评审增量（2026-07-31）
+
+**关键交通场景泛化整体约完成 60%–70%。** <cite type="user" user-id="ou_41c1fbbdee2aa8ced7cbe495a0e4b9c3" user-name="樊世洲"></cite> 已完成 LLM 直接修改 DDS 的初版和 ProSim、SceneStreamer 复现；当前方案能修改编辑车轨迹，但周边车辆缺乏联动，新 Learning-based 组合方案尚未真正启动。评审判断剩余约 1 个月不足以同时完成两套系统，要求收缩目标、优先交付可用主链，并借助公司 AI 编码工具加速。能力信号是调研和复现较扎实；短板是前期需求定义不清、方案范围过大。来源：<cite doc-id="Dm5ZdwiuToVJFRx6HJDc71mPnSd" file-type="docx" title="智能纪要：AI实习生③班-开题报告（5） 2026年7月31日" type="doc"></cite>、<cite doc-id="MQzldSixToM2xexthQNcIzoXnmg" file-type="docx" title="文字记录： AI实习生③班-开题报告（5） 2026年7月31日" type="doc"></cite>。
