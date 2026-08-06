@@ -17,3 +17,21 @@
 [submodule "repos/reference/nv-fixer"]
 	path = repos/reference/nv-fixer
 	url = https://github.com/nv-tlabs/Fixer.git
+[submodule "repos/reference/drivestudio"]
+	path = repos/reference/drivestudio
+	url = https://github.com/ziyc/drivestudio.git
+[submodule "repos/reference/street-gaussians"]
+	path = repos/reference/street-gaussians
+	url = https://github.com/zju3dv/street_gaussians.git
+[submodule "repos/reference/mvsanywhere"]
+	path = repos/reference/mvsanywhere
+	url = https://github.com/nianticlabs/mvsanywhere.git
+[submodule "repos/reference/dpvo"]
+	path = repos/reference/dpvo
+	url = https://github.com/princeton-vl/DPVO.git
+[submodule "repos/reference/sam-3d-objects"]
+	path = repos/reference/sam-3d-objects
+	url = https://github.com/facebookresearch/sam-3d-objects.git
+[submodule "repos/reference/rogs"]
+	path = repos/reference/rogs
+	url = https://github.com/fzhiheng/RoGS.git
